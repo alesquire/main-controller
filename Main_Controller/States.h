@@ -21,16 +21,24 @@
 class States
 {
 private:
-	Motor motorState;
-	Microlift microliftStates;
-	Relays relaysState;
-	TonearmState tonearmState;
-	TonearmButtons tonearmButtons;
-	SpeedButtons speedButtons;
-	DiskLed diskLed;
+	Motor* motorState;
+	Microlift* microliftStates;
+	Relays* relaysState;
+	TonearmState* tonearmState;
+	TonearmButtons* tonearmButtons;
+	SpeedButtons* speedButtons;
+	DiskLed* diskLed;
+	AutostopTimer* autostopTimer;
 
 public:
-	States(Motor _motorState, Microlift _microliftStates, Relays _relaysState, TonearmState _tonearmState, TonearmButtons _tonearmButtons, SpeedButtons _speedButtons, DiskLed _diskLed);
+	States(Motor _motorState, 
+			Microlift _microliftStates, 
+		Relays _relaysState, 
+		TonearmState _tonearmState, 
+		TonearmButtons _tonearmButtons, 
+		SpeedButtons _speedButtons, 
+		DiskLed _diskLed, 
+		AutostopTimer _autostopTimer);
 };
 #endif
 

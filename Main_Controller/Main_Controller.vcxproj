@@ -95,6 +95,18 @@
     <ClInclude Include="TonearmState.h" />
     <ClInclude Include="__vm\.Main_Controller.vsarduino.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutostopTimer.cpp" />
+    <ClCompile Include="DiskLed.cpp" />
+    <ClCompile Include="Events.cpp" />
+    <ClCompile Include="Microlift.cpp" />
+    <ClCompile Include="Motor.cpp" />
+    <ClCompile Include="Relays.cpp" />
+    <ClCompile Include="SpeedButtons.cpp" />
+    <ClCompile Include="States.cpp" />
+    <ClCompile Include="TonearmButtons.cpp" />
+    <ClCompile Include="TonearmState.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
