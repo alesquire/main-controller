@@ -21,5 +21,38 @@
     <ClInclude Include="__vm\.Main_Controller.vsarduino.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Appliable.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DiskLed.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Events.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Microlift.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Motor.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Relays.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SpeedButtons.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="States.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TonearmButtons.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TonearmState.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AutostopTimer.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
