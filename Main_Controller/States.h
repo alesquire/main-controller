@@ -16,6 +16,7 @@
 #include "TonearmState.h"
 #include "TonearmButtons.h"
 #include "DiskLed.h"
+#include "AutostopTimer.h"
 
 class States
 {

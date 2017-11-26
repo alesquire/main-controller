@@ -82,6 +82,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Appliable.h" />
+    <ClInclude Include="AutostopTimer.h" />
+    <ClInclude Include="DiskLed.h" />
+    <ClInclude Include="Events.h" />
+    <ClInclude Include="Microlift.h" />
+    <ClInclude Include="Motor.h" />
+    <ClInclude Include="Relays.h" />
+    <ClInclude Include="SpeedButtons.h" />
+    <ClInclude Include="States.h" />
+    <ClInclude Include="TonearmButtons.h" />
+    <ClInclude Include="TonearmState.h" />
     <ClInclude Include="__vm\.Main_Controller.vsarduino.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

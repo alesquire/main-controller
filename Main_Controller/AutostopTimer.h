@@ -10,7 +10,7 @@
 #endif
 
 #include "Appliable.h"
-/*
+
 class AutostopTimer : public Appliable
 {
 public:
@@ -27,6 +27,6 @@ public:
 	static const AutostopTimer ON;
 	static const AutostopTimer OFF;
 };
-*/
+
 #endif
 
