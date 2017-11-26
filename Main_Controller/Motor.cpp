@@ -27,5 +27,3 @@ void Motor::apply(void)
 const Motor Motor::OFF = Motor(LOW, LOW);
 const Motor Motor::Mode33 = Motor(HIGH, LOW);
 const Motor Motor::Mode45 = Motor(LOW, HIGH);
-
-
