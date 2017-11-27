@@ -42,9 +42,6 @@
     <ClInclude Include="SpeedButtons.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
-    <ClInclude Include="States.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
     <ClInclude Include="TonearmButtons.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
@@ -52,6 +49,12 @@
       <Filter>Resource Files</Filter>
     </ClInclude>
     <ClInclude Include="AutostopTimer.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StateProcessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="State.h">
       <Filter>Resource Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -83,7 +86,10 @@
     <ClCompile Include="TonearmState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="States.cpp">
+    <ClCompile Include="StateProcessor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="State.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
