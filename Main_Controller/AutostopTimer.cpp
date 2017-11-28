@@ -4,7 +4,7 @@
 
 #include "AutostopTimer.h"
 
-/*class AutostopTimerON : public AutostopTimer
+class AutostopTimerON : public AutostopTimer
 {
 public:
 	virtual void apply()
@@ -24,4 +24,3 @@ public:
 	}
 };
 const AutostopTimer AutostopTimer::OFF = AutostopTimerOFF();
-*/
