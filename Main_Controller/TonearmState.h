@@ -4,10 +4,9 @@
 #define _TONEARMSTATE_h
 
 #if defined(ARDUINO) && ARDUINO >= 100
-	#include "Arduino.h"
-#else
-	#include "WProgram.h"
+	#include "ArduinoHeader.h"
 #endif
+
 #include "PinConstants.h"
 #include "Appliable.h"
 

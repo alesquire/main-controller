@@ -6,9 +6,7 @@
 #include "Appliable.h"
 
 #if defined(ARDUINO) && ARDUINO >= 100
-	#include "Arduino.h"
-#else
-	#include "WProgram.h"
+	#include "ArduinoHeader.h"
 #endif
 
 class Motor : public Appliable
