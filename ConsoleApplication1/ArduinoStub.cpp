@@ -8,6 +8,8 @@
 #include <conio.h>
 #include <time.h>
 
+#include "ArduinoPinsRegistry.h"
+
 extern void setup();
 extern void loop();
 
@@ -39,9 +41,7 @@ void pinMode(int, int)
 
 void digitalWrite(int pin, int value)
 {
-	printf("Set value of pin %i", pin);
-	printf(" with value %i", value);
-	printf("\n");
+	ArduinoPinsRegistry::arduinoPinsRegistry.setPinValue(pin, (float)(value));
 }
 
 bool digitalRead(int)

@@ -89,6 +89,7 @@
     <ClInclude Include="Events.h" />
     <ClInclude Include="Microlift.h" />
     <ClInclude Include="Motor.h" />
+    <ClInclude Include="PinConstants.h" />
     <ClInclude Include="Relays.h" />
     <ClInclude Include="SpeedButtons.h" />
     <ClInclude Include="StateProcessor.h" />

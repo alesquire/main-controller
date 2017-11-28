@@ -4,6 +4,10 @@
 // Arduino Console Stub
 //--------------------------------------------------------------------
 
+#ifndef _ARDUIONOSTUB_H_
+#define _ARDUIONOSTUB_H_
+
+
 #if _MSC_VER 
 
 #pragma once
@@ -59,6 +63,27 @@
 #define DEFAULT 1
 #define EXTERNAL 0
 
+/*
+* Analog pins
+*/
+#define  A0  54
+#define  A1  55
+#define  A2  56
+#define  A3  57
+#define  A4  58
+#define  A5  59
+#define  A6  60
+#define  A7  61
+#define  A8  62
+#define  A9  63
+#define  A10  64
+#define  A11  65
+#define  DAC0  66
+#define  DAC1  67
+#define  CANRX  68
+#define  CANTX  69
+
+
 class CSerial
 {
 public:
@@ -89,4 +114,5 @@ extern void pinMode(int, int);
 extern void digitalWrite(int, int);
 extern bool digitalRead(int);
 
+#endif
 #endif
