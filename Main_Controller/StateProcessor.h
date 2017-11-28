@@ -53,6 +53,8 @@ public:
 	State* getCurrentState();
 
 	void processEvent(Events _event);
+
+	void init();
 };
 
 #endif

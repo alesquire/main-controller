@@ -56,7 +56,7 @@ protected:
 	/*
 	to be defined in subclasses the correspond particular tonearm states
 	*/
-	virtual int defineValue() {};
+	virtual int defineValue() { return 0; };
 
 public:
 	virtual void init();

@@ -44,7 +44,17 @@ void digitalWrite(int pin, int value)
 	ArduinoPinsRegistry::arduinoPinsRegistry.setPinValue(pin, (float)(value));
 }
 
+void analogWrite(int pin, int value)
+{
+	ArduinoPinsRegistry::arduinoPinsRegistry.setPinValue(pin, (float)(value));
+}
+
 bool digitalRead(int)
+{
+	return 0;
+}
+
+extern int analogRead(int)
 {
 	return 0;
 }
