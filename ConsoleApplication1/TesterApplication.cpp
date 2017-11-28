@@ -3,9 +3,9 @@
 
 #include "stdafx.h"
 #include "ArduinoStub.h"
-#include "..\Main_Controller\Events.h"
-#include "..\Main_Controller\DiskLed.h"
+#include "..\Main_Controller\StateProcessor.h"
 #include "..\Main_Controller\DiskLed.cpp"
+#include "..\Main_Controller\Microlift.cpp"
 
 
 int main()
