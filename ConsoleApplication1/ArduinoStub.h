@@ -112,7 +112,9 @@ extern unsigned long millis();
 extern void delay(unsigned long);
 extern void pinMode(int, int);
 extern void digitalWrite(int, int);
+extern void analogWrite(int, int);
 extern bool digitalRead(int);
+extern int analogRead(int);
 
 #endif
 #endif

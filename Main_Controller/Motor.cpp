@@ -3,7 +3,7 @@
 // 
 
 #include "Motor.h"
-#include <Arduino.h>
+//#include <Arduino.h>
 
 
 Motor::Motor(bool _pin33Value, bool _pin45Value)
