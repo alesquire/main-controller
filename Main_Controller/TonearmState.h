@@ -63,13 +63,13 @@ public:
 
 	virtual void apply();
 
-	const static TonearmState PLAY;			//tonearm is on plate, antiscate force is applied. joystick is ignored
-	const static TonearmState MOVE;			//tonearm can be moved to any side by joystick
-	const static TonearmState AUTOSTOP;		// tonearm is on autostop and can move only rightwards
-	const static TonearmState HOLDER;		// tonearm is on holder and can move only leftwards
-	const static TonearmState STOP;			//tonearm is steady in horyzontal plane			   
-	const static TonearmState FULL_RIGHT;	//automatic move right on full speed
-	const static TonearmState FULL_LEFT;	//automatic move left on full speed
+	static TonearmState* const PLAY;			//tonearm is on plate, antiscate force is applied. joystick is ignored
+	static TonearmState* const MOVE;			//tonearm can be moved to any side by joystick
+	static TonearmState* const AUTOSTOP;		// tonearm is on autostop and can move only rightwards
+	static TonearmState* const HOLDER;		// tonearm is on holder and can move only leftwards
+	static TonearmState* const STOP;			//tonearm is steady in horyzontal plane			   
+	static TonearmState* const FULL_RIGHT;	//automatic move right on full speed
+	static TonearmState* const FULL_LEFT;	//automatic move left on full speed
 };
 #endif
 

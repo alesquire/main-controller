@@ -84,7 +84,7 @@ protected:
 		return getZeroOutputValue();
 	}
 };
-const TonearmState TonearmState::STOP = StopMode();
+TonearmState* const TonearmState::STOP = new StopMode();
 
 //-----------------------------------------------------------------------------------
 
@@ -96,7 +96,7 @@ protected:
 		return transformAntiscateToOutput(readNormalizedAntiscateValue());
 	}
 };
-const TonearmState TonearmState::PLAY = Play();
+TonearmState* const TonearmState::PLAY = new Play();
 
 //-----------------------------------------------------------------------------------
 
@@ -108,7 +108,7 @@ protected:
 		return transformJoystickToOutput(readNormalizedJoystickValue());
 	}
 };
-const TonearmState TonearmState::MOVE = Move();
+TonearmState* const TonearmState::MOVE = new Move();
 
 //-----------------------------------------------------------------------------------
 
@@ -124,7 +124,7 @@ protected:
 			return transformJoystickToOutput(value);
 	}
 };
-const TonearmState TonearmState::AUTOSTOP = Autostop();
+TonearmState* const TonearmState::AUTOSTOP = new Autostop();
 
 //-----------------------------------------------------------------------------------
 
@@ -140,7 +140,7 @@ protected:
 			return transformJoystickToOutput(value);
 	}
 };
-const TonearmState TonearmState::HOLDER = Holder();
+TonearmState* const TonearmState::HOLDER = new Holder();
 
 //-----------------------------------------------------------------------------------
 
@@ -152,7 +152,7 @@ protected:
 		return returnFullLeftValue();
 	}
 };
-const TonearmState TonearmState::FULL_LEFT = FullLeft();
+TonearmState* const TonearmState::FULL_LEFT = new FullLeft();
 
 //-----------------------------------------------------------------------------------
 
@@ -164,4 +164,4 @@ protected:
 		return returnFullRightValue();
 	}
 };
-const TonearmState TonearmState::FULL_RIGHT = FullRight();
+TonearmState* const TonearmState::FULL_RIGHT = new FullRight();

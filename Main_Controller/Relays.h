@@ -23,8 +23,8 @@ public:
 
 	virtual void apply();
 
-	const static Relays PLAY;
-	const static Relays MOVE;
+	static Relays* const PLAY;
+	static Relays* const MOVE;
 };
 
 #endif

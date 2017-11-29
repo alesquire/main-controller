@@ -22,8 +22,8 @@ void TonearmButtons::apply()
 }
 
 
-const TonearmButtons TonearmButtons::OFF = TonearmButtons(LOW, LOW, LOW);
-const TonearmButtons TonearmButtons::PLAY = TonearmButtons(HIGH, LOW, LOW);
-const TonearmButtons TonearmButtons::ROTATE = TonearmButtons(LOW, HIGH, LOW);
-const TonearmButtons TonearmButtons::STOP = TonearmButtons(LOW, LOW, HIGH);
+TonearmButtons* const TonearmButtons::OFF = new TonearmButtons(LOW, LOW, LOW);
+TonearmButtons* const TonearmButtons::PLAY = new TonearmButtons(HIGH, LOW, LOW);
+TonearmButtons* const TonearmButtons::ROTATE = new TonearmButtons(LOW, HIGH, LOW);
+TonearmButtons* const TonearmButtons::STOP = new TonearmButtons(LOW, LOW, HIGH);
 

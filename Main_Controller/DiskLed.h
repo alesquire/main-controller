@@ -25,10 +25,10 @@ public:
 
 	virtual void apply();
 
-	const static DiskLed OFF;
-	const static DiskLed RED;
-	const static DiskLed GREEN;
-	const static DiskLed BLUE;
+	static DiskLed* const OFF;
+	static DiskLed* const RED;
+	static DiskLed* const GREEN;
+	static DiskLed* const BLUE;
 };
 
 #endif

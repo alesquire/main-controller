@@ -9,17 +9,17 @@
 #include "..\Main_Controller\Motor.cpp"
 #include "..\Main_Controller\Relays.cpp"
 #include "..\Main_Controller\SpeedButtons.cpp"
-#include "..\Main_Controller\State.cpp"
-#include "..\Main_Controller\StateProcessor.cpp"
 #include "..\Main_Controller\TonearmButtons.cpp"
 #include "..\Main_Controller\TonearmState.cpp"
 #include "..\Main_Controller\AutostopTimer.cpp"
+#include "..\Main_Controller\State.cpp"
+#include "..\Main_Controller\StateProcessor.cpp"
 
 int main()
 {
 	//StateProcessor processor;
 	//processor.init();
-	State* initialState = &State::Initial;
+	State* initialState = State::Stop33FullStop;
 	initialState->apply();
 	//Motor motor = Motor::Mode33;
 	//Motor *motorPtr = &motor;

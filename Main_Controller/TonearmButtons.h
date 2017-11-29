@@ -24,10 +24,10 @@ public:
 
 	void apply();
 
-	const static TonearmButtons OFF;
-	const static TonearmButtons PLAY;
-	const static TonearmButtons ROTATE;
-	const static TonearmButtons STOP;
+	static TonearmButtons* const OFF;
+	static TonearmButtons* const PLAY;
+	static TonearmButtons* const ROTATE;
+	static TonearmButtons* const STOP;
 
 };
 #endif

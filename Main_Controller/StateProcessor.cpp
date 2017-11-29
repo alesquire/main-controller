@@ -29,5 +29,5 @@ void StateProcessor::processEvent(Events _event)
 
 void StateProcessor::init() //todo - replace with correct state read-out and initialization
 {
-	applyNextState(&State::Initial);
+	applyNextState(State::Initial);
 }

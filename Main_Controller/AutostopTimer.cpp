@@ -12,7 +12,7 @@ public:
 		//todo : turn on timer
 	}
 };
-const AutostopTimer AutostopTimer::ON = AutostopTimerON();
+AutostopTimer* const AutostopTimer::ON = new  AutostopTimerON();
 
 
 class AutostopTimerOFF : public AutostopTimer
@@ -23,4 +23,4 @@ public:
 		//todo : turn on timer
 	}
 };
-const AutostopTimer AutostopTimer::OFF = AutostopTimerOFF();
+AutostopTimer* const AutostopTimer::OFF = new AutostopTimerOFF();

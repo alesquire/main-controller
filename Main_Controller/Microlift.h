@@ -23,9 +23,9 @@ public:
 
 	virtual void apply();
 
-	const static Microlift UP;
-	const static Microlift DOWN;
-	const static Microlift HOLD;
+	static Microlift* const UP;
+	static Microlift* const DOWN;
+	static Microlift* const HOLD;
 
 };
 
