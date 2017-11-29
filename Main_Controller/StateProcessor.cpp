@@ -3,11 +3,11 @@
 // 
 
 #include "StateProcessor.h"
-void StateProcessor::applyNextState(const State *state)
+void StateProcessor::applyNextState(State *state)
 {
 	if (state)
 	{
-		currentState = const_cast<State*>(state);
+		currentState = state;
 		currentState->apply();
 	}
 }
@@ -20,7 +20,7 @@ State* StateProcessor::getCurrentState()
 void StateProcessor::processEvent(Events _event)
 {
 	int currentStateOrder = currentState->getStateOrderNumber();
-	const State *nextState = transitionTable[currentStateOrder][_event];
+	State *nextState = transitionTable[currentStateOrder][_event];
 	if (nextState)// most of transition table items are nulls - as event shouldn't be processed on particular state
 	{
 		applyNextState(nextState);
@@ -29,5 +29,5 @@ void StateProcessor::processEvent(Events _event)
 
 void StateProcessor::init() //todo - replace with correct state read-out and initialization
 {
-	applyNextState(State::Initial);
+	applyNextState(State::Stop33FullStop);
 }
