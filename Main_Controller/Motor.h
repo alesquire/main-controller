@@ -2,6 +2,7 @@
 #ifndef _MOTOR_H_
 #define _MOTOR_H_
 
+
 #include "PinConstants.h"
 #include "Appliable.h"
 
@@ -9,7 +10,7 @@
 	#include "ArduinoHeader.h"
 #endif
 
-class Motor : public Appliable
+class Motor : virtual public Appliable
 {
 private:
 	bool pin33Value = LOW;
@@ -17,15 +18,16 @@ private:
 
 public:
 
-	Motor(bool _pin33Value, bool _pin45Value);
+
+	Motor(bool _pin33Value, bool _pin45Value) : pin33Value(_pin33Value), pin45Value(_pin45Value) {};
 
 	virtual void init();
 
 	virtual void apply(void);
 
-	static const Motor OFF;
-	static const Motor Mode33;
-	static const Motor Mode45;
+	static Motor * const OFF;
+	static Motor * const Mode33;
+	static Motor * const Mode45;
 
 };
 #endif

@@ -38,15 +38,17 @@ private:
 	AutostopTimer*  autostopTimer;
 	
 public:
-	State(int _orderNumber,
-			Motor _motorState, 
-			Microlift _microliftStates, 
-			Relays _relaysState, 
-			TonearmState _tonearmState, 
-			TonearmButtons _tonearmButtons, 
-			SpeedButtons _speedButtons, 
-			DiskLed _diskLed, 
-			AutostopTimer _autostopTimer);
+	State(int _orderNumber, Motor* _motorState) :stateOrderNumber(_orderNumber), motorState(_motorState) {};
+
+	//State(int _orderNumber,
+	//		Motor* _motorState, 
+	//		Microlift _microliftStates, 
+	//		Relays _relaysState, 
+	//		TonearmState _tonearmState, 
+	//		TonearmButtons _tonearmButtons, 
+	//		SpeedButtons _speedButtons, 
+	//		DiskLed _diskLed, 
+	//		AutostopTimer _autostopTimer);
 	
 	virtual void init();
 
@@ -54,33 +56,33 @@ public:
 
 	int getStateOrderNumber();
 
-	const static State Initial;
-	const static State Stop33FullStop;
-	const static State Rotate33;
-	const static State Play33AutoMoveToFirstTrack;
-	const static State Play33AutoLowerPickup;
-	const static State Play33Play;
-	const static State Play33ManualPickupIsRaising;
-	const static State Play33ManualPickupMoveOverDisk;
-	const static State Play33ManualPickupMoveOverGap;
-	const static State Play33ManualPickupMoveAutostop;
-	const static State Play33ManualPickupFalls;
-	const static State Stop33PickupOnAutostopPause;
-	const static State Stop33PickupIsRaising;
-	const static State Stop33PickupIsAutomaticallyMovingToHolder;
-	const static State Stop45FullStop;
-	const static State Rotate45;
-	const static State Play45AutoMoveToFirstTrack;
-	const static State Play45AutoLowerPickup;
-	const static State Play45Play;
-	const static State Play45ManualPickupIsRaising;
-	const static State Play45ManualPickupMoveOverDisk;
-	const static State Play45ManualPickupMoveOverGap;
-	const static State Play45ManualPickupMoveAutostop;
-	const static State Play45ManualPickupFalls;
-	const static State Stop45PickupOnAutostopPause;
-	const static State Stop45PickupIsRaising;
-	const static State Stop45PickupIsAutomaticallyMovingToHolder;
+	static State Initial;
+	//const static State Stop33FullStop;
+	//const static State Rotate33;
+	//const static State Play33AutoMoveToFirstTrack;
+	//const static State Play33AutoLowerPickup;
+	//const static State Play33Play;
+	//const static State Play33ManualPickupIsRaising;
+	//const static State Play33ManualPickupMoveOverDisk;
+	//const static State Play33ManualPickupMoveOverGap;
+	//const static State Play33ManualPickupMoveAutostop;
+	//const static State Play33ManualPickupFalls;
+	//const static State Stop33PickupOnAutostopPause;
+	//const static State Stop33PickupIsRaising;
+	//const static State Stop33PickupIsAutomaticallyMovingToHolder;
+	//const static State Stop45FullStop;
+	//const static State Rotate45;
+	//const static State Play45AutoMoveToFirstTrack;
+	//const static State Play45AutoLowerPickup;
+	//const static State Play45Play;
+	//const static State Play45ManualPickupIsRaising;
+	//const static State Play45ManualPickupMoveOverDisk;
+	//const static State Play45ManualPickupMoveOverGap;
+	//const static State Play45ManualPickupMoveAutostop;
+	//const static State Play45ManualPickupFalls;
+	//const static State Stop45PickupOnAutostopPause;
+	//const static State Stop45PickupIsRaising;
+	//const static State Stop45PickupIsAutomaticallyMovingToHolder;
 
 };
 #endif

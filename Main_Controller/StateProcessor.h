@@ -16,7 +16,7 @@ private:
 
 	State* getNextState(Events _event);
 
-	const State* transitionTable[27][16] = 
+	const State* transitionTable[27][16];/* =
 	{
 		{ NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL, },
 		{ NULL,	&State::Rotate33,	&State::Play33AutoMoveToFirstTrack,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	&State::Stop45FullStop,	NULL, },
@@ -44,7 +44,7 @@ private:
 		{ &State::Stop45PickupIsRaising,	NULL,	NULL,	&State::Play45ManualPickupIsRaising,	NULL,	NULL,	NULL,	&State::Play45Play,	NULL,	NULL,	NULL,	NULL,	NULL,	&State::Play33ManualPickupFalls,	NULL,	NULL, },
 		{ &State::Stop45PickupIsRaising,	NULL,	NULL,	&State::Play45ManualPickupIsRaising,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	&State::Stop33PickupOnAutostopPause,	NULL,	&State::Stop45PickupIsRaising, },
 		{ NULL,	NULL,	NULL,	NULL,	NULL,	&State::Stop45PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	&State::Stop33PickupIsRaising,	NULL,	NULL }
-	};
+	};*/
 
 	void applyNextState(const State *state);
 

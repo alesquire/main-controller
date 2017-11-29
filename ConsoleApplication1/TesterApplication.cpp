@@ -17,8 +17,14 @@
 
 int main()
 {
-	StateProcessor processor;
-	processor.init();
+	//StateProcessor processor;
+	//processor.init();
+	State* initialState = &State::Initial;
+	initialState->apply();
+	//Motor motor = Motor::Mode33;
+	//Motor *motorPtr = &motor;
+	//motor.apply();
+	//motorPtr->apply();
 	return 0;
 }
 

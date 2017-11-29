@@ -41,12 +41,12 @@ void pinMode(int, int)
 
 void digitalWrite(int pin, int value)
 {
-	ArduinoPinsRegistry::arduinoPinsRegistry.setPinValue(pin, (float)(value));
+	ArduinoPinsRegistry::arduinoPinsRegistry.setPinValue(pin, value);
 }
 
 void analogWrite(int pin, int value)
 {
-	ArduinoPinsRegistry::arduinoPinsRegistry.setPinValue(pin, (float)(value));
+	ArduinoPinsRegistry::arduinoPinsRegistry.setPinValue(pin, value);
 }
 
 bool digitalRead(int)
