@@ -22,8 +22,8 @@ public:
 		//empty method - should be overridden in child classes with apply behavior
 	}
 
-	static const AutostopTimer ON;
-	static const AutostopTimer OFF;
+	static AutostopTimer * const ON;
+	static AutostopTimer * const OFF;
 };
 
 #endif

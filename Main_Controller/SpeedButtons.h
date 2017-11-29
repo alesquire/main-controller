@@ -25,9 +25,9 @@ public:
 
 	virtual void apply();
 
-	const static SpeedButtons OFF;
-	const static SpeedButtons LED33;
-	const static SpeedButtons LED45;
+	static SpeedButtons* const OFF;
+	static SpeedButtons* const LED33;
+	static SpeedButtons* const LED45;
 };
 
 #endif

@@ -24,8 +24,8 @@ void DiskLed::apply()
 	digitalWrite(PIN_BLUE_DISK_LED, pinBlueLedValue);
 }
 
-const DiskLed DiskLed::OFF = DiskLed(LOW, LOW, LOW);
-const DiskLed DiskLed::RED = DiskLed(HIGH, LOW, LOW);
-const DiskLed DiskLed::GREEN = DiskLed(LOW, HIGH, LOW);
-const DiskLed DiskLed::BLUE = DiskLed(LOW, LOW, HIGH);
+DiskLed* const DiskLed::OFF = new DiskLed(LOW, LOW, LOW);
+DiskLed* const DiskLed::RED = new DiskLed(HIGH, LOW, LOW);
+DiskLed* const DiskLed::GREEN = new DiskLed(LOW, HIGH, LOW);
+DiskLed* const DiskLed::BLUE = new DiskLed(LOW, LOW, HIGH);
 

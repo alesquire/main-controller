@@ -35,8 +35,8 @@
 19	{
 20		//StateProcessor processor;
 21		//processor.init();
---&gt;22		State* initialState = &amp;State::Initial;
-23		initialState-&gt;init();
+--&gt;22		State* initialState = State::Stop33FullStop;
+23		initialState-&gt;apply();
 24		//Motor motor = Motor::Mode33;
 25		//Motor *motorPtr = &amp;motor;
 26		//motor.apply();

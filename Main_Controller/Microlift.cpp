@@ -25,6 +25,6 @@ void Microlift::apply()
 	digitalWrite(PIN_SOLENOID_UP_OUTPUT, pinUpValue);
 }
 
-const Microlift Microlift::DOWN = Microlift(LOW, LOW);
-const Microlift Microlift::UP = Microlift(LOW, HIGH);
-const Microlift Microlift::HOLD = Microlift(HIGH, LOW);
+Microlift* const Microlift::DOWN = new Microlift(LOW, LOW);
+Microlift* const Microlift::UP = new Microlift(LOW, HIGH);
+Microlift* const Microlift::HOLD = new Microlift(HIGH, LOW);
