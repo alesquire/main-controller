@@ -17,14 +17,12 @@
 
 int main()
 {
-	//StateProcessor processor;
-	//processor.init();
-	State* initialState = State::Stop33FullStop;
-	initialState->apply();
-	//Motor motor = Motor::Mode33;
-	//Motor *motorPtr = &motor;
-	//motor.apply();
-	//motorPtr->apply();
+	StateProcessor processor;
+	processor.init();
+	processor.processEvent(Events::RotateButtonPress);
+	//State* initialState = State::Stop33FullStop;
+	//initialState->apply();
+
 	return 0;
 }
 
