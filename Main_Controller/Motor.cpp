@@ -6,11 +6,7 @@
 //#include <Arduino.h>
 
 
-Motor::Motor(bool _pin33Value, bool _pin45Value)
-{
-	pin33Value = _pin33Value;
-	pin45Value = _pin45Value;
-};
+
 
 void Motor::init()
 {
@@ -24,6 +20,6 @@ void Motor::apply(void)
 	digitalWrite(PIN_45_RPM, pin45Value);
 };
 
-const Motor Motor::OFF = Motor(LOW, LOW);
-const Motor Motor::Mode33 = Motor(HIGH, LOW);
-const Motor Motor::Mode45 = Motor(LOW, HIGH);
+Motor* const Motor::OFF = new Motor(LOW, LOW);
+Motor* const Motor::Mode33 = new Motor(HIGH, LOW);
+Motor* const Motor::Mode45 = new Motor(LOW, HIGH);

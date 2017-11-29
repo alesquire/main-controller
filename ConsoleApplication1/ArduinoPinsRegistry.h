@@ -10,11 +10,17 @@ struct PinState
 {
 	const char* name; //name of constant that corresponds to pin
 	int number; //number in array
-	float value=0;// value assigned to pin
+	int value;// value assigned to pin
 
-	PinState() :name("error"), number(PINS_ARRAY_SIZE-1) {};
+	PinState() :name("error"), number(PINS_ARRAY_SIZE-1) 
+	{
+		value = -1;//error value, not allowed for pins
+	};
 
-	PinState(char* _name, int _number) : name(_name), number(_number) {}
+	PinState(char* _name, int _number) : name(_name), number(_number) 
+	{
+		value = 0;//initial value
+	}
 
 };
 
@@ -23,6 +29,49 @@ class ArduinoPinsRegistry
 {
 private:
 	PinState pins[PINS_ARRAY_SIZE];
+
+	void printPinState(int pinNumber, int previousValue)
+	{
+		PinState& currentPin = pins[pinNumber];
+		printf("Pin %s", currentPin.name);
+
+		if (previousValue == 0)
+		{
+			printf("=%s", "OFF");
+		}
+		else if (previousValue == 1)
+		{
+			printf("=%s", "ON");
+		}
+		else if (previousValue == -1)
+		{
+			printf("=%s", "ERROR - currelt pin is not in use");
+		}
+		else
+		{
+			printf("= %i", previousValue);
+		}
+
+
+		int pinValue = currentPin.value;
+		if (pinValue == 0)
+		{
+			printf("->%s", "OFF");
+		}
+		else if (pinValue == 1)
+		{
+			printf("->%s", "ON");
+		}
+		else if (pinValue == -1)
+		{
+			printf("->%s", "ERROR - currelt pin is not in use");
+		}
+		else
+		{
+			printf("-> %i", currentPin.value);
+		}
+		printf("\n");
+	}
 
 public: 
 	ArduinoPinsRegistry()
@@ -64,19 +113,38 @@ public:
 	{
 		PinState& currentPin = pins[pinNumber];
 		printf("Pin %s", currentPin.name);
-		printf("= %2.1f", currentPin.value);
+		int pinValue = currentPin.value;
+		if (pinValue == 0)
+		{
+			printf("=%s", "OFF");
+		}
+		else if (pinValue == 1)
+		{
+			printf("=%s", "ON");
+		}
+		else if (pinValue == -1)
+		{
+			printf("=%s", "ERROR - currelt pin is not in use");
+		}
+		else
+		{
+			printf("= %i", currentPin.value);
+		}
 		printf("\n");
 	}
 
-	float getPinValue(int pinNumber)
+
+
+	int getPinValue(int pinNumber)
 	{
 		return pins[pinNumber].value;
 	}
 
-	void setPinValue(int pinNumber, float value)
+	void setPinValue(int pinNumber, int value)
 	{
+		int previousValue = pins[pinNumber].value;
 		pins[pinNumber].value=value;
-		printPinState(pinNumber);
+		printPinState(pinNumber, previousValue);
 	}
 	
 	static  ArduinoPinsRegistry arduinoPinsRegistry;
