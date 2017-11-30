@@ -19,9 +19,16 @@ int main()
 {
 	StateProcessor processor;
 	processor.init();
-	processor.processEvent(Events::RotateButtonPress);
-	//State* initialState = State::Stop33FullStop;
-	//initialState->apply();
+	processor.processEvent(Events::TonearmLevelUp);
+	processor.processEvent(Events::TonearmPositionHolder);
+	processor.processEvent(Events::PlayButtonPress);
+	processor.processEvent(Events::TonearmPositionOverFirstTrack);
+	processor.processEvent(Events::TonearmLevelDown);
+	processor.processEvent(Events::TonearmPositionOnAutostop);
+	processor.processEvent(Events::AutostopTimerEvent);
+	processor.processEvent(Events::TonearmLevelUp);
+	processor.processEvent(Events::TonearmPositionHolder);
+
 
 	return 0;
 }
