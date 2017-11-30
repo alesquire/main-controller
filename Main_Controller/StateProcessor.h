@@ -16,8 +16,10 @@ private:
 
 	State* getNextState(Events _event);
 
-	State* const transitionTable[27][16] = {
-		{ NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL, },
+	State* const  transitionTable[29][16] = {
+		{ NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33FullStop,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL, },
+		{ NULL,	NULL,	NULL,	NULL,	NULL,	State::InitialPickupIsMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL, },
+		{ NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33FullStop,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL, },
 		{ NULL,	State::Rotate33,	State::Play33AutoMoveToFirstTrack,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45FullStop,	NULL, },
 		{ State::Stop33FullStop,	NULL,	State::Play33AutoMoveToFirstTrack,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play33ManualPickupMoveOverGap,	NULL,	NULL,	NULL,	NULL,	State::Rotate45,	NULL, },
 		{ State::Stop33PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play33AutoLowerPickup,	NULL,	NULL,	NULL,	State::Play45AutoMoveToFirstTrack,	NULL, },
@@ -42,7 +44,7 @@ private:
 		{ State::Stop45PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45ManualPickupMoveOverDisk,	NULL,	State::Play33ManualPickupMoveAutostop,	NULL,	NULL, },
 		{ State::Stop45PickupIsRaising,	NULL,	NULL,	State::Play45ManualPickupIsRaising,	NULL,	NULL,	NULL,	State::Play45Play,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play33ManualPickupFalls,	NULL,	NULL, },
 		{ State::Stop45PickupIsRaising,	NULL,	NULL,	State::Play45ManualPickupIsRaising,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupOnAutostopPause,	NULL,	State::Stop45PickupIsRaising, },
-		{ NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsRaising,	NULL,	NULL }
+		{ NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsRaising,	NULL,	NULL, }
 	};
 
 	void applyNextState(State *state);
