@@ -15,11 +15,19 @@
 #include "..\Main_Controller\JoystickUpDownState.cpp"
 #include "..\Main_Controller\State.cpp"
 #include "..\Main_Controller\StateProcessor.cpp"
+#include "ArduinoInputPinSource.h"
 
-int main()
+StateProcessor processor;
+
+void init()
 {
-	StateProcessor processor;
 	processor.init();
+	processor.processEvent(Events::TonearmLevelUp);//when turntable is powered on- microlift goes up until tonearm is up
+	processor.processEvent(Events::TonearmPositionHolder); // and moved to holder
+}
+
+void automaticPlaybackTest()
+{
 	processor.processEvent(Events::TonearmLevelUp);
 	processor.processEvent(Events::TonearmPositionHolder);
 	processor.processEvent(Events::PlayButtonPress);
@@ -29,8 +37,20 @@ int main()
 	processor.processEvent(Events::AutostopTimerEvent);
 	processor.processEvent(Events::TonearmLevelUp);
 	processor.processEvent(Events::TonearmPositionHolder);
+}
 
+void joystickMoveTest()
+{
+	processor.processEvent(Events::RotateButtonPress);
+	//ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_JOYSTICK_LEFT_RIGHT, 10);
+	processor.onTimer();
 
+}
+
+int main()
+{
+	init();
+	joystickMoveTest();
 	return 0;
 }
 
