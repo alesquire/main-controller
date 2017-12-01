@@ -9,12 +9,16 @@
 
 #include "Events.h"
 #include "State.h"
+#include "JoystickUpDownState.h"
+
 class StateProcessor
 {
 private:
 	State* currentState;
 
 	State* getNextState(Events _event);
+
+	JoystickUpDownState joystickUpDownState;
 
 	State* const  transitionTable[29][16] = {
 		{ NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33FullStop,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL, },
@@ -56,6 +60,15 @@ public:
 	void processEvent(Events _event);
 
 	void init();
+
+	/*
+		joystick doesn't produce events because it is an analog input. To process joystick position change we should periodically check state and:
+		- for up-down axis- check if joysticlk is up and down, and if it is so- produce event. But only once per position.
+		- for left-right action we should call current TonearmState class instance to read joystick position input and write DAC pin output
+		onTimer method itself should be caled externally
+
+	*/
+	void onTimer();
 };
 
 #endif

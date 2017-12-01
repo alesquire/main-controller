@@ -27,7 +27,24 @@ void StateProcessor::processEvent(Events _event)
 	}
 }
 
-void StateProcessor::init() //todo - replace with correct state read-out and initialization
+void StateProcessor::init() //todo  - replace with correct state read-out and initialization
 {
 	applyNextState(State::InitialPickupIsRaisingOutsideHolder);
+}
+
+void StateProcessor::onTimer()
+{
+	currentState->getTonearmState()->apply();
+	JoystickPositionPair joystickPositionPair= joystickUpDownState.getJoystickPositionPair();
+	if (joystickPositionPair.current != joystickPositionPair.previous)
+	{
+		if (joystickPositionPair.current == UP)
+		{
+			processEvent(Events::UpJoystickPress);
+		}
+		else if (joystickPositionPair.current == DOWN)
+		{
+			processEvent(Events::DownJoystickPress);
+		}
+	}
 }

@@ -41,7 +41,7 @@ int TonearmState::readNormalizedJoystickValue()
 */
 int TonearmState::getZeroOutputValue()
 {
-	return 0;
+	return ANALOG_RESOLUTION/2;
 }
 
 /*
@@ -65,6 +65,8 @@ void TonearmState::init()
 	pinMode(PIN_TONEARM_VOLTAGE_OUTPUT, OUTPUT);
 	pinMode(PIN_ANTISCATE, INPUT);
 	pinMode(PIN_DAMPER, INPUT);
+	pinMode(PIN_JOYSTICK_LEFT_RIGHT, INPUT);
+	pinMode(PIN_JOYSTICK_UP_DOWN, INPUT);
 
 }
 
