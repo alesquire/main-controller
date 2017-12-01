@@ -54,6 +54,11 @@ int State::getStateOrderNumber()
 	return stateOrderNumber;
 }
 
+TonearmState* State::getTonearmState()
+{
+	return tonearmState;
+}
+
 // initialize states table
 State* const  State::InitialPickupIsRaisingOnHolder = new State(0, Motor::OFF, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::OFF, SpeedButtons::OFF, DiskLed::OFF, AutostopTimer::OFF);
 State* const  State::InitialPickupIsRaisingOutsideHolder = new State(1, Motor::OFF, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::OFF, SpeedButtons::OFF, DiskLed::OFF, AutostopTimer::OFF);

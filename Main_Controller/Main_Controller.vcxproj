@@ -87,6 +87,7 @@
     <ClInclude Include="AutostopTimer.h" />
     <ClInclude Include="DiskLed.h" />
     <ClInclude Include="Events.h" />
+    <ClInclude Include="JoystickUpDownState.h" />
     <ClInclude Include="Microlift.h" />
     <ClInclude Include="Motor.h" />
     <ClInclude Include="PinConstants.h" />
@@ -102,6 +103,7 @@
     <ClCompile Include="AutostopTimer.cpp" />
     <ClCompile Include="DiskLed.cpp" />
     <ClCompile Include="Events.cpp" />
+    <ClCompile Include="JoystickUpDownState.cpp" />
     <ClCompile Include="Microlift.cpp" />
     <ClCompile Include="Motor.cpp" />
     <ClCompile Include="Relays.cpp" />

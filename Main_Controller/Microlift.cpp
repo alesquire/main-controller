@@ -15,14 +15,14 @@ Microlift::Microlift(bool _pinHoldValue, bool _pinUpValue)
 
 void Microlift::init()
 {
-	pinMode(PIN_SOLENOID_HOLD_OUTPUT, OUTPUT);
-	pinMode(PIN_SOLENOID_UP_OUTPUT, OUTPUT);
+	pinMode(PIN_MICROLIFT_HOLD_OUTPUT, OUTPUT);
+	pinMode(PIN_MICROLIFT_UP_OUTPUT, OUTPUT);
 }
 
 void Microlift::apply()
 {
-	digitalWrite(PIN_SOLENOID_HOLD_OUTPUT, pinHoldValue);
-	digitalWrite(PIN_SOLENOID_UP_OUTPUT, pinUpValue);
+	digitalWrite(PIN_MICROLIFT_HOLD_OUTPUT, pinHoldValue);
+	digitalWrite(PIN_MICROLIFT_UP_OUTPUT, pinUpValue);
 }
 
 Microlift* const Microlift::DOWN = new Microlift(LOW, LOW);

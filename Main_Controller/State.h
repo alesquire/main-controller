@@ -55,6 +55,8 @@ public:
 
 	int getStateOrderNumber();
 
+	TonearmState* getTonearmState();
+
 	static State* const  InitialPickupIsRaisingOnHolder;
 	static State* const  InitialPickupIsRaisingOutsideHolder;
 	static State* const  InitialPickupIsMovingToHolder;
