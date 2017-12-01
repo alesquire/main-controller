@@ -9,6 +9,7 @@
 #include <time.h>
 
 #include "ArduinoPinsRegistry.h"
+#include "ArduinoInputPinSource.h"
 
 extern void setup();
 extern void loop();
@@ -49,14 +50,14 @@ void analogWrite(int pin, int value)
 	ArduinoPinsRegistry::arduinoPinsRegistry.setPinValue(pin, value);
 }
 
-bool digitalRead(int)
+bool digitalRead(int pin)
 {
-	return 0;
+	return ArduinoInputPinSource::arduinoInputPinSource.readValue(pin);
 }
 
-extern int analogRead(int)
+extern int analogRead(int pin)
 {
-	return 0;
+	return ArduinoInputPinSource::arduinoInputPinSource.readValue(pin);
 }
 
 //--------------------------------------------------------------------
