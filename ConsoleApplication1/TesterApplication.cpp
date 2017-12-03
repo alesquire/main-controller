@@ -18,31 +18,40 @@
 #include "ArduinoInputPinSource.h"
 
 StateProcessor processor;
+void processEvent(Events _event)
+{
+	printf("Processing event %i",_event);
+	printf("\n");
+	processor.processEvent(_event);
+	printf("________________________________________\n");
+}
 
 void init()
 {
 	processor.init();
-	processor.processEvent(Events::TonearmLevelUp);//when turntable is powered on- microlift goes up until tonearm is up
-	processor.processEvent(Events::TonearmPositionHolder); // and moved to holder
+	processEvent(Events::TonearmLevelUp);//when turntable is powered on- microlift goes up until tonearm is up
+	processEvent(Events::TonearmPositionHolder); // and moved to holder
 }
 
 void automaticPlaybackTest()
 {
-	processor.processEvent(Events::TonearmLevelUp);
-	processor.processEvent(Events::TonearmPositionHolder);
-	processor.processEvent(Events::PlayButtonPress);
-	processor.processEvent(Events::TonearmPositionOverFirstTrack);
-	processor.processEvent(Events::TonearmLevelDown);
-	processor.processEvent(Events::TonearmPositionOnAutostop);
-	processor.processEvent(Events::AutostopTimerEvent);
-	processor.processEvent(Events::TonearmLevelUp);
-	processor.processEvent(Events::TonearmPositionHolder);
+	processEvent(Events::TonearmLevelUp);
+	processEvent(Events::TonearmPositionHolder);
+	processEvent(Events::PlayButtonPress);
+	processEvent(Events::TonearmPositionOverFirstTrack);
+	processEvent(Events::TonearmLevelDown);
+	processEvent(Events::TonearmPositionOnAutostop);
+	processEvent(Events::AutostopTimerEvent);
+	processEvent(Events::TonearmLevelUp);
+	processEvent(Events::TonearmPositionHolder);
 }
 
 void joystickMoveTest()
 {
-	processor.processEvent(Events::RotateButtonPress);
-	//ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_JOYSTICK_LEFT_RIGHT, 10);
+	processEvent(Events::RotateButtonPress);
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_JOYSTICK_LEFT_RIGHT, 10);
+	processEvent(Events::TonearmPositionOverGap);
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_JOYSTICK_LEFT_RIGHT, 3000);
 	processor.onTimer();
 
 }

@@ -16,6 +16,14 @@
 	2. Move mode- voltage is driven by joystick
 */
 
+enum TonearmDirection
+{
+	LEFT,
+	RIGHT,
+	IDLE,  //is returned when tonearm is not in PLAY mode and when it is nod moving
+	ANTISCATE
+};
+
 class TonearmState : public Appliable
 {
 protected:
@@ -58,10 +66,21 @@ protected:
 	*/
 	virtual int defineValue() { return 0; };
 
+	TonearmDirection getDirectionByOutputValue(int _value)
+	{
+		return IDLE; //TODO - implement
+	}
+
 public:
 	virtual void init();
 
 	virtual void apply();
+	
+	virtual TonearmDirection getDirection()
+	{
+		int outputValue = defineValue();
+		return getDirectionByOutputValue(outputValue);
+	}
 
 	static TonearmState* const PLAY;			//tonearm is on plate, antiscate force is applied. joystick is ignored
 	static TonearmState* const MOVE;			//tonearm can be moved to any side by joystick

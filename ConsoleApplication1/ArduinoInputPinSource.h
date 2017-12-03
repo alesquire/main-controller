@@ -50,15 +50,15 @@ public:
 class ArduinoInputPinSource
 {
 private:
-	std::map <int, InputPinValueGenerator> inputPins;
+	std::map <int, InputPinValueGenerator* > inputPins;
 
 public:
 	ArduinoInputPinSource()
 	{
-		inputPins[PIN_JOYSTICK_UP_DOWN] = RandomInputPinValueGenerator(0, ANALOG_RESOLUTION);
-		inputPins[PIN_JOYSTICK_LEFT_RIGHT] = RandomInputPinValueGenerator(0, ANALOG_RESOLUTION);
-		inputPins[PIN_ANTISCATE] = RandomInputPinValueGenerator(0, ANALOG_RESOLUTION);
-		inputPins[PIN_DAMPER] = RandomInputPinValueGenerator(0, ANALOG_RESOLUTION);
+		inputPins[PIN_JOYSTICK_UP_DOWN] = new RandomInputPinValueGenerator(0, ANALOG_RESOLUTION);
+		inputPins[PIN_JOYSTICK_LEFT_RIGHT] = new RandomInputPinValueGenerator(0, ANALOG_RESOLUTION);
+		inputPins[PIN_ANTISCATE] = new RandomInputPinValueGenerator(0, ANALOG_RESOLUTION);
+		inputPins[PIN_DAMPER] = new RandomInputPinValueGenerator(0, ANALOG_RESOLUTION);
 	}
 
 	int readValue(int pin)
@@ -67,12 +67,21 @@ public:
 		{
 			return -1; 
 		}
-		return inputPins[pin].readValue();
+		return inputPins[pin]->readValue();
 	}
 
+	/*
+		if value already exists- it is replaced. if doesn't exist- new one is created
+	*/
 	void setPinValue(int pin, int value)
 	{
-		ConstantInputPinValueGenerator constant(value);
+		if (inputPins.find(pin) != inputPins.end())
+		{
+			InputPinValueGenerator* previous = inputPins[pin];
+			delete previous;
+		}
+
+		ConstantInputPinValueGenerator* constant = new  ConstantInputPinValueGenerator(value);
 		inputPins[pin] = constant;
 	}
 
