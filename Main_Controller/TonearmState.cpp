@@ -78,6 +78,10 @@ void TonearmState::apply()
 
 
 //-----------------------------------------------------------------------------------
+/*
+	Tonearm is not moving despite on joystick state
+*/
+
 class StopMode : public TonearmState
 {
 protected:
@@ -85,11 +89,17 @@ protected:
 	{
 		return getZeroOutputValue();
 	}
+	virtual TonearmDirection getDirection()
+	{
+		return IDLE;
+	}
 };
 TonearmState* const TonearmState::STOP = new StopMode();
 
 //-----------------------------------------------------------------------------------
-
+/*
+	Poickup is on disk- antiscate force is applied. joystick is ignored
+*/
 class Play : public TonearmState
 {
 protected:
@@ -97,11 +107,19 @@ protected:
 	{
 		return transformAntiscateToOutput(readNormalizedAntiscateValue());
 	}
+
+	virtual TonearmDirection getDirection()
+	{
+		return ANTISCATE;
+	}
+
 };
 TonearmState* const TonearmState::PLAY = new Play();
 
 //-----------------------------------------------------------------------------------
-
+/*
+	tonearm can be moved to any direction
+*/
 class Move : public TonearmState
 {
 protected:
@@ -109,6 +127,7 @@ protected:
 	{
 		return transformJoystickToOutput(readNormalizedJoystickValue());
 	}
+
 };
 TonearmState* const TonearmState::MOVE = new Move();
 
@@ -125,6 +144,7 @@ protected:
 		else
 			return transformJoystickToOutput(value);
 	}
+
 };
 TonearmState* const TonearmState::AUTOSTOP = new Autostop();
 
