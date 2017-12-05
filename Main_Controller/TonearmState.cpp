@@ -63,11 +63,16 @@ int TonearmState::returnFullRightValue()
 void TonearmState::init()
 {
 	pinMode(PIN_TONEARM_VOLTAGE_OUTPUT, OUTPUT);
+	pinMode(PIN_TONEARM_REFERENCE_OUTPUT, OUTPUT);
 	pinMode(PIN_ANTISCATE, INPUT);
 	pinMode(PIN_DAMPER, INPUT);
 	pinMode(PIN_JOYSTICK_LEFT_RIGHT, INPUT);
 	pinMode(PIN_JOYSTICK_UP_DOWN, INPUT);
+	pinMode(PIN_TONEARM_HOLDER, INPUT);
+	pinMode(PIN_FIRST_TRACK, INPUT);
+	pinMode(PIN_AUTOSTOP, INPUT);
 
+	analogWrite(PIN_TONEARM_REFERENCE_OUTPUT,tonearmReferenceOutput);
 }
 
 void TonearmState::apply()

@@ -12,6 +12,9 @@ void TonearmButtons::init()
 	pinMode(PIN_PLAY_LED, OUTPUT);
 	pinMode(PIN_ROTATE_LED, OUTPUT);
 	pinMode(PIN_STOP_LED, OUTPUT);
+	pinMode(PIN_PLAY_BUTTON, INPUT);
+	pinMode(PIN_ROTATE_BUTTON, INPUT);
+	pinMode(PIN_STOP_BUTTON, INPUT);
 }
 
 void TonearmButtons::apply()

@@ -49,9 +49,11 @@ void automaticPlaybackTest()
 void joystickMoveTest()
 {
 	processEvent(Events::RotateButtonPress);
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_JOYSTICK_LEFT_RIGHT, 10);
 	processEvent(Events::TonearmPositionOverGap);
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_JOYSTICK_LEFT_RIGHT, 10);
+	TonearmDirection direction = processor.getCurrentState()->getTonearmState()->getDirection();
 	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_JOYSTICK_LEFT_RIGHT, 3000);
+	direction = processor.getCurrentState()->getTonearmState()->getDirection();
 	processor.onTimer();
 
 }

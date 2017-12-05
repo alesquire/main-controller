@@ -19,7 +19,7 @@ private:
 public:
 	Relays(bool _pinPickupRelayValue, bool _pinDamperRelayValue);
 
-	virtual void init();
+	static void init();
 
 	virtual void apply();
 

@@ -34,15 +34,14 @@ struct JoystickPositionPair
 	JoystickPosition current;
 };
 
-
 class JoystickUpDownState
 {
 private:
 	JoystickPosition previousPosition = JoystickPosition::MIDDLE;
 
-	int upThreshold = (int)ANALOG_RESOLUTION*0.8;
+	int upThreshold = ANALOG_RESOLUTION*80/100;
 
-	int downThreshold = (int)ANALOG_RESOLUTION*0.2;
+	int downThreshold = (int)ANALOG_RESOLUTION*20/100;
 
 public:
 	

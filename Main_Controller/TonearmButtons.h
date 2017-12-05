@@ -20,7 +20,7 @@ private:
 public:
 	TonearmButtons(bool _pinPlayValue, bool _pinRotateValue, bool _pinStopValue);
 
-	void init();
+	static void init();
 
 	void apply();
 

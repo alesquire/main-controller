@@ -21,7 +21,7 @@ public:
 
 	Motor(bool _pin33Value, bool _pin45Value) : pin33Value(_pin33Value), pin45Value(_pin45Value) {};
 
-	virtual void init();
+	static void init();
 
 	virtual void apply(void);
 
