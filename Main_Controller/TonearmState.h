@@ -104,6 +104,11 @@ public:
 		return getDirectionByOutputValue(outputValue);
 	}
 
+	/*
+		method is used for initialization to define - is in necessary to move tonearm back to holder or not
+	*/
+	static bool isTonearmOnHolder();
+
 	static TonearmState* const PLAY;			//tonearm is on plate, antiscate force is applied. joystick is ignored
 	static TonearmState* const MOVE;			//tonearm can be moved to any side by joystick
 	static TonearmState* const AUTOSTOP;		// tonearm is on autostop and can move only rightwards
