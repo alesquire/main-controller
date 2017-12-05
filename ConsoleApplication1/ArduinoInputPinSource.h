@@ -59,6 +59,7 @@ public:
 		inputPins[PIN_JOYSTICK_LEFT_RIGHT] = new RandomInputPinValueGenerator(0, ANALOG_RESOLUTION);
 		inputPins[PIN_ANTISCATE] = new RandomInputPinValueGenerator(0, ANALOG_RESOLUTION);
 		inputPins[PIN_DAMPER] = new RandomInputPinValueGenerator(0, ANALOG_RESOLUTION);
+		inputPins[PIN_TONEARM_HOLDER] = new ConstantInputPinValueGenerator(LOW);
 	}
 
 	int readValue(int pin)
