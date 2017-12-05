@@ -21,7 +21,7 @@ private:
 public:
 	SpeedButtons(bool _pin33LedValue, bool _pin45LedValue);
 
-	virtual void init();
+	static void init();
 
 	virtual void apply();
 

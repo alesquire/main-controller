@@ -27,14 +27,14 @@ State::State(int _orderNumber,
 
 void State::init()
 {
-	motorState->init();
-	microliftStates->init();
-	relaysState->init();
-	tonearmState->init();
-	tonearmButtons->init();
-	speedButtons->init();
-	diskLed->init();
-	autostopTimer->init();
+	Motor::init();
+	Microlift::init();
+	Relays::init();
+	TonearmState::init();
+	TonearmButtons::init();
+	SpeedButtons::init();
+	DiskLed::init();
+	AutostopTimer::init();
 }
 
 void State::apply()

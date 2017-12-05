@@ -14,6 +14,8 @@ void SpeedButtons::init()
 {
 	pinMode(PIN_33_LED, OUTPUT);
 	pinMode(PIN_45_LED, OUTPUT);
+	pinMode(PIN_33_BUTTON, INPUT);
+	pinMode(PIN_45_BUTTON, INPUT);
 }
 
 void SpeedButtons::apply()

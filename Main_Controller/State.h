@@ -49,7 +49,10 @@ public:
 			DiskLed* _diskLed, 
 			AutostopTimer* _autostopTimer);
 	
-	virtual void init();
+	/*
+		Initializes all child classes
+	*/
+	static void init();
 
 	virtual void apply();
 

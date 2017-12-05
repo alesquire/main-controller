@@ -21,7 +21,7 @@ private:
 public:
 	DiskLed(bool _pinRedLedValue, bool _pinGreenLedValue, bool _pinBlueLedValue);
 
-	virtual void init();
+	static void init();
 
 	virtual void apply();
 

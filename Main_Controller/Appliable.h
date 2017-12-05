@@ -16,11 +16,6 @@ public:
 	*/
 	virtual void apply() = 0;
 
-	/*
-		function is called to initialise class and pins on turntable start	
-	*/
-	virtual void init()  = 0;
-
 };
 
 #endif

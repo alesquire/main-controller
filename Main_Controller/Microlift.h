@@ -19,7 +19,7 @@ private:
 public:
 	Microlift(bool _pinHoldValue, bool _pinUpValue);
 
-	virtual void init();
+	static void init();
 
 	virtual void apply();
 

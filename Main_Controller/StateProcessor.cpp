@@ -27,9 +27,12 @@ void StateProcessor::processEvent(Events _event)
 	}
 }
 
-void StateProcessor::init() //todo  - replace with correct state read-out and initialization
+void StateProcessor::init() 
 {
-	applyNextState(State::InitialPickupIsRaisingOutsideHolder);
+	State::init();
+	pinMode(PIN_CHASSIS_LIGHT, OUTPUT);
+	digitalWrite(PIN_CHASSIS_LIGHT, HIGH);
+	applyNextState(State::InitialPickupIsRaisingOutsideHolder);//todo  - replace with correct state read-out and initialization
 }
 
 void StateProcessor::onTimer()

@@ -12,7 +12,7 @@
 class AutostopTimer : public Appliable
 {
 public:
-	virtual void init()
+	static void init()
 	{
 		//todo - init timer if necessary
 	}

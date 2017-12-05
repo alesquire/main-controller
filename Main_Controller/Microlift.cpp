@@ -17,6 +17,8 @@ void Microlift::init()
 {
 	pinMode(PIN_MICROLIFT_HOLD_OUTPUT, OUTPUT);
 	pinMode(PIN_MICROLIFT_UP_OUTPUT, OUTPUT);
+	pinMode(PIN_TONEARM_DOWN, INPUT);
+	pinMode(PIN_TONEARM_UP, INPUT);
 }
 
 void Microlift::apply()
