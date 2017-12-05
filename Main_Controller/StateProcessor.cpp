@@ -32,7 +32,10 @@ void StateProcessor::init()
 	State::init();
 	pinMode(PIN_CHASSIS_LIGHT, OUTPUT);
 	digitalWrite(PIN_CHASSIS_LIGHT, HIGH);
-	applyNextState(State::InitialPickupIsRaisingOutsideHolder);//todo  - replace with correct state read-out and initialization
+	if(TonearmState::isTonearmOnHolder())
+		applyNextState(State::InitialPickupIsRaisingOnHolder);
+	else
+		applyNextState(State::InitialPickupIsRaisingOutsideHolder);
 }
 
 void StateProcessor::onTimer()

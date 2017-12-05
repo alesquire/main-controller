@@ -75,6 +75,11 @@ void TonearmState::init()
 	analogWrite(PIN_TONEARM_REFERENCE_OUTPUT,tonearmReferenceOutput);
 }
 
+bool TonearmState::isTonearmOnHolder()
+{
+	return digitalRead(PIN_TONEARM_HOLDER);//todo - check correct input value
+}
+
 void TonearmState::apply()
 {
 	int outputValue = defineValue();
