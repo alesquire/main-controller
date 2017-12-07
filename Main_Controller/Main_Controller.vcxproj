@@ -86,6 +86,7 @@
     <ClInclude Include="ArduinoHeader.h" />
     <ClInclude Include="AutostopTimer.h" />
     <ClInclude Include="DiskLed.h" />
+    <ClInclude Include="DueTimer.h" />
     <ClInclude Include="Events.h" />
     <ClInclude Include="JoystickUpDownState.h" />
     <ClInclude Include="Microlift.h" />
@@ -102,6 +103,7 @@
   <ItemGroup>
     <ClCompile Include="AutostopTimer.cpp" />
     <ClCompile Include="DiskLed.cpp" />
+    <ClCompile Include="DueTimer.cpp" />
     <ClCompile Include="Events.cpp" />
     <ClCompile Include="JoystickUpDownState.cpp" />
     <ClCompile Include="Microlift.cpp" />

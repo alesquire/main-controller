@@ -22,6 +22,8 @@
 
 // Add CPU hardware definitions
 
+#define __arm__
+
 #define _AVR_IO_H_
 #define _SFR_IO8(io_addr) ((io_addr))
 
