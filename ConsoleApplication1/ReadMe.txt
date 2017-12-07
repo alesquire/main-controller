@@ -4,3 +4,8 @@ Bugs
 2. Implement antiscate regulator and damper regulator
 3. Implement stroboscope
 4. Implement reference tonearm output value
+5. Extend DutTimer library to use one time call functions
+6. Implement timers
+	- delayed autostop
+	- stroboscope
+	- tonearm control onTimer 
