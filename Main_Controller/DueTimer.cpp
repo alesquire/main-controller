@@ -8,7 +8,7 @@
   Released into the public domain.
 */
 
-#include <Arduino.h>
+//#include <Arduino.h>
 #if defined(_SAM3XA_)
 #include "DueTimer.h"
 
@@ -43,6 +43,7 @@ const DueTimer::Timer DueTimer::Timers[NUM_TIMERS] = {
 #endif
 double DueTimer::_frequency[NUM_TIMERS] = {-1,-1,-1,-1,-1,-1,-1,-1,-1};
 
+bool DueTimer::oneTimeExecution[NUM_TIMERS] = { false,false,false,false,false,false,false,false,false };
 /*
 	Initializing all timers, so you can use them like this: Timer0.start();
 */
@@ -108,6 +109,7 @@ DueTimer& DueTimer::start(double microseconds){
 		If a period is set, then sets the period and start the timer
 	*/
 
+	DueTimer::oneTimeExecution[timer] = false;
 	if(microseconds > 0)
 		setPeriod(microseconds);
 	
@@ -119,6 +121,13 @@ DueTimer& DueTimer::start(double microseconds){
 	
 	TC_Start(Timers[timer].tc, Timers[timer].channel);
 
+	return *this;
+}
+
+DueTimer& DueTimer::executeOneTime(double delay)
+{
+	DueTimer::oneTimeExecution[timer] = true;
+	start(delay);
 	return *this;
 }
 
@@ -268,11 +277,15 @@ double DueTimer::getPeriod(void) const {
 void TC0_Handler(void){
 	TC_GetStatus(TC0, 0);
 	DueTimer::callbacks[0]();
+	if (DueTimer::oneTimeExecution[0])
+		Timer0.stop();
 }
 #endif
 void TC1_Handler(void){
 	TC_GetStatus(TC0, 1);
 	DueTimer::callbacks[1]();
+	if (DueTimer::oneTimeExecution[1])
+		Timer1.stop();
 }
 // Fix for compatibility with Servo library
 #ifndef USING_SERVO_LIB
