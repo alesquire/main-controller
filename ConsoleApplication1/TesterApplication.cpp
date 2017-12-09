@@ -15,6 +15,8 @@
 #include "..\Main_Controller\JoystickUpDownState.cpp"
 #include "..\Main_Controller\State.cpp"
 #include "..\Main_Controller\StateProcessor.cpp"
+#include "..\Main_Controller\DueTimer.cpp"
+
 #include "ArduinoInputPinSource.h"
 
 StateProcessor processor;

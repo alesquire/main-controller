@@ -12,7 +12,9 @@
 #ifndef DueTimer_h
 #define DueTimer_h
 
-#include "Arduino.h"
+#if defined(ARDUINO) && ARDUINO >= 100
+	#include "ArduinoHeader.h"
+#endif
 
 #include <inttypes.h>
 
@@ -70,6 +72,8 @@ protected:
 	// Store timer configuration (static, as it's fixed for every object)
 	static const Timer Timers[NUM_TIMERS];
 
+	static bool oneTimeExecution[NUM_TIMERS];
+
 public:
 
 	static DueTimer getAvailable(void);
@@ -78,6 +82,8 @@ public:
 	DueTimer& attachInterrupt(void (*isr)());
 	DueTimer& detachInterrupt(void);
 	DueTimer& start(double microseconds = -1);
+
+	DueTimer& executeOneTime(double delay = -1);
 	DueTimer& stop(void);
 	DueTimer& setFrequency(double frequency);
 	DueTimer& setPeriod(double microseconds);

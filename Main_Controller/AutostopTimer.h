@@ -8,6 +8,7 @@
 #endif
 
 #include "Appliable.h"
+#include "DueTimer.h"
 
 class AutostopTimer : public Appliable
 {
