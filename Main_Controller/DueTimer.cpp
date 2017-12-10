@@ -8,7 +8,8 @@
   Released into the public domain.
 */
 
-#include <Arduino.h>
+//#include <Arduino.h>
+#include "ArduinoHeader.h"
 #if defined(_SAM3XA_)
 #include "DueTimer.h"
 
@@ -104,6 +105,7 @@ DueTimer& DueTimer::detachInterrupt(void){
 	return *this;
 }
 
+#if defined(ARDUINO)
 DueTimer& DueTimer::start(double microseconds){
 	/*
 		Start the timer
@@ -123,6 +125,13 @@ DueTimer& DueTimer::start(double microseconds){
 
 	return *this;
 }
+#else
+DueTimer& DueTimer::start(double microseconds)
+{
+	return *this;
+}
+#endif
+
 
 DueTimer& DueTimer::executeOneTime(double delay)
 {
@@ -132,7 +141,7 @@ DueTimer& DueTimer::executeOneTime(double delay)
  
 }
 
-
+#if defined(ARDUINO)
 DueTimer& DueTimer::stop(void){
 	/*
 		Stop the timer
@@ -144,7 +153,14 @@ DueTimer& DueTimer::stop(void){
 
 	return *this;
 }
+#else
+DueTimer& DueTimer::stop(void) 
+{
+	return *this;
+}
+#endif
 
+#if defined(ARDUINO)
 uint8_t DueTimer::bestClock(double frequency, uint32_t& retRC){
 	/*
 		Pick the best Clock, thanks to Ogle Basil Hall!
@@ -184,8 +200,14 @@ uint8_t DueTimer::bestClock(double frequency, uint32_t& retRC){
 	retRC = (uint32_t) round(ticks);
 	return clockConfig[bestClock].flag;
 }
+#else
+uint8_t DueTimer::bestClock(double frequency, uint32_t& retRC) 
+{
+		return 1;
+}
+#endif
 
-
+#if defined(ARDUINO)
 DueTimer& DueTimer::setFrequency(double frequency){
 	/*
 		Set the timer frequency (in Hz)
@@ -241,6 +263,13 @@ DueTimer& DueTimer::setFrequency(double frequency){
 
 	return *this;
 }
+#else
+DueTimer& DueTimer::setFrequency(double frequency) 
+{
+	return *this;
+}
+#endif
+
 
 DueTimer& DueTimer::setPeriod(double microseconds){
 	/*
@@ -276,48 +305,76 @@ double DueTimer::getPeriod(void) const {
 */
 // Fix for compatibility with Servo library
 #ifndef USING_SERVO_LIB
+
+#if defined(ARDUINO)
+uint32_t TC_GetStatusWrapper(Tc *p_tc, uint32_t ul_channel) 
+{ 
+	return TC_GetStatus(p_tc, ul_channel);
+}
+#else
+uint32_t TC_GetStatusWrapper(Tc *p_tc, uint32_t ul_channel)
+{
+	return 0;
+}
+#endif
+
 void TC0_Handler(void){
-	TC_GetStatus(TC0, 0);
+	TC_GetStatusWrapper(TC0, 0);
 	DueTimer::callbacks[0]();
   if (DueTimer::oneTimeExecution[0])
     Timer0.stop();
-
 }
 #endif
 void TC1_Handler(void){
-	TC_GetStatus(TC0, 1);
+	TC_GetStatusWrapper(TC0, 1);
 	DueTimer::callbacks[1]();
+	if (DueTimer::oneTimeExecution[1])
+		Timer1.stop();
 }
 // Fix for compatibility with Servo library
 #ifndef USING_SERVO_LIB
 void TC2_Handler(void){
-	TC_GetStatus(TC0, 2);
+	TC_GetStatusWrapper(TC0, 2);
 	DueTimer::callbacks[2]();
+	if (DueTimer::oneTimeExecution[2])
+		Timer2.stop();
 }
 void TC3_Handler(void){
-	TC_GetStatus(TC1, 0);
+	TC_GetStatusWrapper(TC1, 0);
 	DueTimer::callbacks[3]();
+	if (DueTimer::oneTimeExecution[3])
+		Timer3.stop();
 }
 void TC4_Handler(void){
-	TC_GetStatus(TC1, 1);
+	TC_GetStatusWrapper(TC1, 1);
 	DueTimer::callbacks[4]();
+	if (DueTimer::oneTimeExecution[4])
+		Timer4.stop();
 }
 void TC5_Handler(void){
-	TC_GetStatus(TC1, 2);
+	TC_GetStatusWrapper(TC1, 2);
 	DueTimer::callbacks[5]();
+	if (DueTimer::oneTimeExecution[5])
+		Timer5.stop();
 }
 #endif
 void TC6_Handler(void){
-	TC_GetStatus(TC2, 0);
+	TC_GetStatusWrapper(TC2, 0);
 	DueTimer::callbacks[6]();
+	if (DueTimer::oneTimeExecution[6])
+		Timer6.stop();
 }
 void TC7_Handler(void){
-	TC_GetStatus(TC2, 1);
+	TC_GetStatusWrapper(TC2, 1);
 	DueTimer::callbacks[7]();
+	if (DueTimer::oneTimeExecution[7])
+		Timer7.stop();
 }
 void TC8_Handler(void){
-	TC_GetStatus(TC2, 2);
+	TC_GetStatusWrapper(TC2, 2);
 	DueTimer::callbacks[8]();
+	if (DueTimer::oneTimeExecution[8])
+		Timer8.stop();
 }
 #endif
 

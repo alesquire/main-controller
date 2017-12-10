@@ -85,6 +85,11 @@
 #define  CANRX  68
 #define  CANTX  69
 
+/*
+	Due constants
+*/
+
+#define _SAM3XA_
 
 class CSerial
 {
@@ -122,6 +127,12 @@ typedef unsigned int       uint32_t;
 typedef volatile       uint32_t WoReg; /**< Write only 32-bit register (volatile unsigned int) */
 typedef volatile       uint32_t RwReg; /**< Read-Write 32-bit register (volatile unsigned int) */
 typedef volatile       uint32_t RoReg; /**< Read only 32-bit register (volatile const unsigned int) */
+
+#define TC0        ((Tc     *)0x40080000U) /**< \brief (TC0       ) Base Address */
+#define TC1        ((Tc     *)0x40084000U) /**< \brief (TC1       ) Base Address */
+#define TC2        ((Tc     *)0x40088000U) /**< \brief (TC2       ) Base Address */
+
+
 
 typedef struct {
 	RwReg      TC_CCR;        /**< \brief (TcChannel Offset: 0x0) Channel Control Register */
