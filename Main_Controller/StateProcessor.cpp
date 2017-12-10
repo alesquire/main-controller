@@ -3,6 +3,9 @@
 // 
 
 #include "StateProcessor.h"
+
+StateProcessor StateProcessor::stateProcessor;
+
 void StateProcessor::applyNextState(State *state)
 {
 	if (state)

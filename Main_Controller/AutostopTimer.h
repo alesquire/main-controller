@@ -7,15 +7,21 @@
 	#include "ArduinoHeader.h"
 #endif
 
+
 #include "Appliable.h"
 #include "DueTimer.h"
+#include "EventFunctions.h"
+
+#define AUTOSTOP_DELAY 5E6 //delay in microseconde 
 
 class AutostopTimer : public Appliable
 {
+protected:
+
 public:
 	static void init()
 	{
-		//todo - init timer if necessary
+		Timer1.attachInterrupt(onAutostopTimerEvent);
 	}
 
 	virtual void apply()

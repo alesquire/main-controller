@@ -9,7 +9,7 @@ class AutostopTimerON : public AutostopTimer
 public:
 	virtual void apply()
 	{
-		//todo : turn on timer
+		Timer1.executeOneTime(AUTOSTOP_DELAY);
 	}
 };
 AutostopTimer* const AutostopTimer::ON = new  AutostopTimerON();
@@ -20,7 +20,7 @@ class AutostopTimerOFF : public AutostopTimer
 public:
 	virtual void apply()
 	{
-		//todo : turn on timer
+		//nothing is performed when timer is off
 	}
 };
 AutostopTimer* const AutostopTimer::OFF = new AutostopTimerOFF();

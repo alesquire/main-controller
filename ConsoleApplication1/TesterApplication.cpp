@@ -4,6 +4,8 @@
 #include "stdafx.h"
 #include "ArduinoStub.h"
 #include "..\Main_Controller\StateProcessor.h"
+#include "..\Main_Controller\DueTimer.cpp"
+#include "..\Main_Controller\EventFunctions.cpp"
 #include "..\Main_Controller\DiskLed.cpp"
 #include "..\Main_Controller\Microlift.cpp"
 #include "..\Main_Controller\Motor.cpp"
@@ -15,7 +17,9 @@
 #include "..\Main_Controller\JoystickUpDownState.cpp"
 #include "..\Main_Controller\State.cpp"
 #include "..\Main_Controller\StateProcessor.cpp"
-#include "..\Main_Controller\DueTimer.cpp"
+
+
+
 
 #include "ArduinoInputPinSource.h"
 
