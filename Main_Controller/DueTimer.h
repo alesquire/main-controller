@@ -96,6 +96,7 @@ public:
 extern DueTimer Timer;
 
 extern DueTimer Timer1;
+
 // Fix for compatibility with Servo library
 #ifndef USING_SERVO_LIB
 	extern DueTimer Timer0;
@@ -108,7 +109,10 @@ extern DueTimer Timer6;
 extern DueTimer Timer7;
 extern DueTimer Timer8;
 
+
 #endif
+
+
 
 #else
 	#error Oops! Trying to include DueTimer on another device?

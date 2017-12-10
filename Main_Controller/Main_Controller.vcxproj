@@ -54,6 +54,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ShowProgress>LinkVerbose</ShowProgress>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -88,6 +89,7 @@
     <ClInclude Include="DiskLed.h" />
     <ClInclude Include="DueTimer.h" />
     <ClInclude Include="Events.h" />
+    <ClInclude Include="EventFunctions.h" />
     <ClInclude Include="JoystickUpDownState.h" />
     <ClInclude Include="Microlift.h" />
     <ClInclude Include="Motor.h" />
@@ -104,6 +106,7 @@
     <ClCompile Include="AutostopTimer.cpp" />
     <ClCompile Include="DiskLed.cpp" />
     <ClCompile Include="DueTimer.cpp" />
+    <ClCompile Include="EventFunctions.cpp" />
     <ClCompile Include="Events.cpp" />
     <ClCompile Include="JoystickUpDownState.cpp" />
     <ClCompile Include="Microlift.cpp" />

@@ -9,6 +9,7 @@
 */
 
 //#include <Arduino.h>
+
 #if defined(_SAM3XA_)
 #include "DueTimer.h"
 
@@ -292,6 +293,8 @@ void TC1_Handler(void){
 void TC2_Handler(void){
 	TC_GetStatus(TC0, 2);
 	DueTimer::callbacks[2]();
+	if (DueTimer::oneTimeExecution[2])
+		Timer2.stop();
 }
 void TC3_Handler(void){
 	TC_GetStatus(TC1, 0);
