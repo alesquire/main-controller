@@ -12,7 +12,7 @@
 #include "DueTimer.h"
 #include "EventFunctions.h"
 
-#define AUTOSTOP_DELAY 5E6 //delay in microseconde 
+#define AUTOSTOP_DELAY 5E5 //delay in microseconde 
 
 class AutostopTimer : public Appliable
 {
@@ -21,7 +21,7 @@ protected:
 public:
 	static void init()
 	{
-		Timer1.attachInterrupt(onAutostopTimerEvent);
+		Timer0.attachInterrupt(onAutostopTimerEvent);
 	}
 
 	virtual void apply()
@@ -32,6 +32,20 @@ public:
 	static AutostopTimer * const ON;
 	static AutostopTimer * const OFF;
 };
+
+class AutostopTimerON : public AutostopTimer
+{
+public:
+	virtual void apply();
+};
+
+
+class AutostopTimerOFF : public AutostopTimer
+{
+public:
+	virtual void apply();
+};
+
 
 #endif
 
