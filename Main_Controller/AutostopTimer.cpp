@@ -4,23 +4,17 @@
 
 #include "AutostopTimer.h"
 
-class AutostopTimerON : public AutostopTimer
+void AutostopTimerON :: apply()
 {
-public:
-	virtual void apply()
-	{
-		Timer1.executeOneTime(AUTOSTOP_DELAY);
-	}
-};
+	Timer0.executeOneTime(AUTOSTOP_DELAY);
+}
+
 AutostopTimer* const AutostopTimer::ON = new  AutostopTimerON();
 
 
-class AutostopTimerOFF : public AutostopTimer
+void AutostopTimerOFF::apply()
 {
-public:
-	virtual void apply()
-	{
-		//nothing is performed when timer is off
-	}
-};
+	//nothing is performed when timer is off
+}
+
 AutostopTimer* const AutostopTimer::OFF = new AutostopTimerOFF();

@@ -12,9 +12,7 @@
 #ifndef DueTimer_h
 #define DueTimer_h
 
-#if defined(ARDUINO) && ARDUINO >= 100
-	#include "ArduinoHeader.h"
-#endif
+#include "Arduino.h"
 
 #include <inttypes.h>
 
@@ -71,8 +69,7 @@ protected:
 
 	// Store timer configuration (static, as it's fixed for every object)
 	static const Timer Timers[NUM_TIMERS];
-
-	static bool oneTimeExecution[NUM_TIMERS];
+  static bool oneTimeExecution[NUM_TIMERS];
 
 public:
 
@@ -82,8 +79,7 @@ public:
 	DueTimer& attachInterrupt(void (*isr)());
 	DueTimer& detachInterrupt(void);
 	DueTimer& start(double microseconds = -1);
-
-	DueTimer& executeOneTime(double delay = -1);
+  DueTimer& executeOneTime(double delay = -1);
 	DueTimer& stop(void);
 	DueTimer& setFrequency(double frequency);
 	DueTimer& setPeriod(double microseconds);
@@ -96,7 +92,6 @@ public:
 extern DueTimer Timer;
 
 extern DueTimer Timer1;
-
 // Fix for compatibility with Servo library
 #ifndef USING_SERVO_LIB
 	extern DueTimer Timer0;
@@ -109,11 +104,9 @@ extern DueTimer Timer6;
 extern DueTimer Timer7;
 extern DueTimer Timer8;
 
-
 #endif
-
-
 
 #else
 	#error Oops! Trying to include DueTimer on another device?
 #endif
+

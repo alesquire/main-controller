@@ -30,7 +30,6 @@
 
 #define boolean bool
 
-// From "c:\program files\arduino\hardware\cores\arduino\print.h"
 
 #define DEC 10
 #define HEX 16
