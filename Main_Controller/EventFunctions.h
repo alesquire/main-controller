@@ -6,8 +6,21 @@
 
 void onAutostopTimerEvent();
 
+/*
+	function that is called on regular basis to read tonerarm controls (joystick, autorsop and damper regulators
+*/
+void onTonearmTimerEvent();
 
+void onStopButtonPress();
 
+void onRotateButtonPress();
+
+void onPlayButtonPress();
+
+/*
+	one listener funiction for all microlift-based events- to be called for both sensors (PIN_TONEARM_UPPER_SENSOR, PIN_TONEARM_LOWER_SENSOR)
+*/
+void onMicroliftSensorEvent();
 
 #endif // !_EVENTFUNCTIONS_H_
 
