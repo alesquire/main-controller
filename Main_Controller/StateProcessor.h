@@ -11,6 +11,8 @@
 #include "State.h"
 #include "JoystickUpDownState.h"
 
+#define TONEARM_ANALOG_PARAMS_READOUT_INTERVAL 1E5 //(0.1 ms)
+
 class StateProcessor
 {
 private:

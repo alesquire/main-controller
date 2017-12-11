@@ -39,6 +39,8 @@ void StateProcessor::init()
 		applyNextState(State::InitialPickupIsRaisingOnHolder);
 	else
 		applyNextState(State::InitialPickupIsRaisingOutsideHolder);
+	//when all controller classes are initilaized- we start timer to read tonearm analog inputs
+	Timer1.attachInterrupt(onTonearmTimerEvent).start(TONEARM_ANALOG_PARAMS_READOUT_INTERVAL);
 }
 
 void StateProcessor::onTimer()

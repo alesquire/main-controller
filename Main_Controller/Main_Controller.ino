@@ -8,18 +8,36 @@
 #include "StateProcessor.h"
 
 /*
-	TODO: the following block is an assumption that should be checked
-	___________
-	Every button press means value transition LOW->HIGH
-	Optical sensor value - when sensor is closed - level is LOW. When it is onen- value is HIGH
-	This statement could be changed for every particular pin in interrupt attachment function
+Main documentation
+_____________________________________________________
+
+	Timers:
+	* Timer0 is used for autostop delayed function call. Autostop is ititiated not immediately after sensor is activated, but after interval for two reasons:
+		- to simplify sensor position adjustment- sensor detects autostop somewhere near autostop position,
+		- to play recordings in autostop trask (St.Peppers Lonly Hearts Club Band
+	* Timer1 is used to periodicaly check tonearm analog controls that can't produce events (joystick, damper and antiscate regulators) and update solenoid output voltage. 
+
+	Buttons have HIGH voltage in board input when is not presed and LOW when buttn is pressed. 
+	Main event for buttons is presion, so- interrupt FALLING
 
 */
 
+StateProcessor processor;
 
-// the setup function runs once when you press reset or power the board
-void setup() {
 
+void setup() 
+{
+	
+	
+	attachInterrupt(digitalPinToInterrupt(PIN_STOP_BUTTON), onStopButtonPress, FALLING);
+	attachInterrupt(digitalPinToInterrupt(PIN_ROTATE_BUTTON), onRotateButtonPress, FALLING);
+	attachInterrupt(digitalPinToInterrupt(PIN_PLAY_BUTTON), onPlayButtonPress, FALLING);
+
+	attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_UPPER_SENSOR), onMicroliftSensorEvent, CHANGE);
+	attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_LOWER_SENSOR), onMicroliftSensorEvent, CHANGE);
+
+
+	processor.init();
 }
 
 // the loop function runs over and over again until power down or reset
