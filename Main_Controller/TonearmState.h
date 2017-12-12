@@ -10,27 +10,6 @@
 #include "PinConstants.h"
 #include "Appliable.h"
 
-/*
-	Tonearm direction is controlled by operational amplifier, both inputs of amplifier are supplied by arduino DAC0 and DAC1.
-
-	DAC0 controls reference value applied to non-inverting input and is a constant.
-	DAC1 is connected to inverting op-amp input (trough resistors- see scheme) and controls output voltage and tus - tonearm direction. 
-
-	Output voltage is controlled by several input signals that can be grouped in two groups depending on two basic tonearm work modes:
-
-	Play mode. 
-	In this mode - pickup is on disk and playing the record. Antiscate force is applied. Force is defined by two manual controls, provided as input 
-	voltages read from potentiometers:
-		- antiscate level. Is read from input PIN_ANTISCATE
-		- damper level. Is read from inpu pin PIN_DAMPER
-	Damper is a resistance put in series to output solenoid to control reaction from move sensor voltage applied to solenoid. When resistance is increased- to keep
-	constant output voltage (and this - antiscate force)- we should increase DAC1 output voltage
-	
-	Class applies voltage to solenoid according to mode. Two global modes defines - which input will drive solenoid voltage ( and force):
-	1. Play mode- when tonearm is on disk. Antiscate voltage is applied
-	2. Move mode- voltage is driven by joystick
-
-*/
 
 enum TonearmDirection
 {
@@ -39,7 +18,11 @@ enum TonearmDirection
 	IDLE,  //is returned when tonearm is not in PLAY mode and when it is nod moving
 	ANTISCATE
 };
-
+/*
+	Class applies voltage to solenoid according to mode. Two global modes defines - which input will drive solenoid voltage ( and force):
+	1. Play mode- when tonearm is on disk. Antiscate voltage is applied
+	2. Move mode- voltage is driven by joystick
+*/
 class TonearmState : public Appliable
 {
 protected:

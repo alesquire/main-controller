@@ -25,5 +25,19 @@ void onSpeed45ButtonPress();
 */
 void onMicroliftSensorEvent();
 
+void onHolderSensorRisingEvent();
+
+void onHolderSensorFallingEvent();
+
+void onFirstTrackSensorRisingEvent();
+
+void onFirstTrackSensorFallingEvent();
+
+void onAutostopSensorRisingEvent();
+
+void onAutostopSensorFallingEvent();
+
+void onStroboscope();
+
 #endif // !_EVENTFUNCTIONS_H_
 

@@ -44,7 +44,7 @@ void automaticPlaybackTest()
 	processEvent(Events::TonearmLevelUp);
 	processEvent(Events::TonearmPositionHolder);
 	processEvent(Events::PlayButtonPress);
-	processEvent(Events::TonearmPositionOverFirstTrack);
+	processEvent(Events::TonearmPositionOverDisk);
 	processEvent(Events::TonearmLevelDown);
 	processEvent(Events::TonearmPositionOnAutostop);
 	processEvent(Events::AutostopTimerEvent);

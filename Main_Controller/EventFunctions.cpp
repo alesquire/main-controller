@@ -54,3 +54,40 @@ void onMicroliftSensorEvent()
 		StateProcessor::stateProcessor.processEvent(Events::TonearmLevelMiddle);
 	}
 }
+
+void onHolderSensorRisingEvent()
+{
+	StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOverGap);
+}
+
+void onHolderSensorFallingEvent()
+{
+	StateProcessor::stateProcessor.processEvent(Events::TonearmPositionHolder);
+}
+
+void onFirstTrackSensorRisingEvent()
+{
+	if(StateProcessor::stateProcessor.getTonearmDirection()==LEFT)
+		StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOverDisk);
+}
+
+void onFirstTrackSensorFallingEvent()
+{
+	if (StateProcessor::stateProcessor.getTonearmDirection() == RIGHT)
+		StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOverGap);
+}
+
+void onAutostopSensorRisingEvent()
+{
+	StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOverDisk);
+}
+
+void onAutostopSensorFallingEvent()
+{
+	StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOnAutostop);
+}
+
+void onStroboscope()
+{
+	//todo - implement
+}
