@@ -77,7 +77,7 @@ void TonearmState::init()
 
 bool TonearmState::isTonearmOnHolder()
 {
-	return digitalRead(PIN_TONEARM_HOLDER);//todo - check correct input value
+	return !digitalRead(PIN_TONEARM_HOLDER); //when tonearm is on holder- optical path of optosensor is shaded and output level is LOW
 }
 
 void TonearmState::apply()

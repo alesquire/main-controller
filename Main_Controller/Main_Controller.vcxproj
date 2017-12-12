@@ -98,6 +98,7 @@
     <ClInclude Include="SpeedButtons.h" />
     <ClInclude Include="StateProcessor.h" />
     <ClInclude Include="State.h" />
+    <ClInclude Include="Stroboscope.h" />
     <ClInclude Include="TonearmButtons.h" />
     <ClInclude Include="TonearmState.h" />
     <ClInclude Include="__vm\.Main_Controller.vsarduino.h" />
@@ -115,6 +116,7 @@
     <ClCompile Include="SpeedButtons.cpp" />
     <ClCompile Include="StateProcessor.cpp" />
     <ClCompile Include="State.cpp" />
+    <ClCompile Include="Stroboscope.cpp" />
     <ClCompile Include="TonearmButtons.cpp" />
     <ClCompile Include="TonearmState.cpp" />
   </ItemGroup>

@@ -59,3 +59,8 @@ void StateProcessor::onTimer()
 		}
 	}
 }
+
+TonearmDirection StateProcessor::getTonearmDirection() 
+{
+	return currentState->getTonearmState()->getDirection();
+}

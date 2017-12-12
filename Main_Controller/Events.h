@@ -19,7 +19,6 @@ enum Events
 	TonearmLevelDown,
 	TonearmPositionHolder,
 	TonearmPositionOverGap,
-	TonearmPositionOverFirstTrack,
 	TonearmPositionOverDisk,
 	TonearmPositionOnAutostop,
 	Speed33ButtonPress,

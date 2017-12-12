@@ -16,6 +16,7 @@
 #include "TonearmButtons.h"
 #include "DiskLed.h"
 #include "AutostopTimer.h"
+#include "Stroboscope.h"
 /*
 	Class declares all consistent state that can be in turntable. State is a set of all outputs - leds, motor driver, relays etc  (and some auxiliary elements as timers). 
 	When state is changed - apply method should be called to set new walues of outputs.
@@ -36,7 +37,7 @@ private:
 	SpeedButtons*  speedButtons;
 	DiskLed*  diskLed;
 	AutostopTimer*  autostopTimer;
-	
+	Stroboscope*  stroboscope;
 public:
 
 	State(int _orderNumber,
@@ -47,7 +48,8 @@ public:
 			TonearmButtons* _tonearmButtons, 
 			SpeedButtons* _speedButtons, 
 			DiskLed* _diskLed, 
-			AutostopTimer* _autostopTimer);
+			AutostopTimer* _autostopTimer,
+			Stroboscope*  _stroboscope);
 	
 	/*
 		Initializes all child classes

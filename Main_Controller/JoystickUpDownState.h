@@ -12,15 +12,6 @@
 #include "PinConstants.h"
 
 
-/*
-	Nevertheless yoystick has analog output value for axis- it is used as a "button" - up - down.
-	When joystick is moved up- there is a threshold. below the threshold it is considered ad MIDDLE- (i.e. it is not touched)
-	After the threshold- it is considered as UP. I.e. value is "binarized" but to three values.
-
-	Class JoystickUpDownState role is to detect when joystick events UpJoystickPress and DownJoystickPress are generated. But it doesn't perform this detection itself.
-	It only reads current state from board and holds previous. External class that calls JoystickUpDownState will check if state is changeâ and will generate and event. 
-
-*/
 enum JoystickPosition
 {
 	UP,
