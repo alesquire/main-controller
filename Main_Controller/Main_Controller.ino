@@ -10,6 +10,30 @@
 /*
 Main documentation
 _____________________________________________________
+Entire solution consists of three class levels, each aggregates/manages underlying level
+Unit states. 
+	Turntable itself is divided onto several almost independent units - Motor, Tonearm, Microlift etc. Every unit has associated Arduino input and output pins 
+	that should be managed dyring turntable work cycle. Unit class encapsulates pin management logiñ for unit. 
+	Unit has set of states - states of all pins. (For example when Play button is lit). Every such state is represented by Unit state class instance- static constant
+	delivered together with class. 
+	Unit classes are polyumorofhic and have two specific methods 
+	- init. To ititialize pins (pinMode) - static method
+	- apply. To set particular pin values that correspond to current unit state. 
+	The following classes sre unit states:
+	- Motor
+	- TonearmState
+	- DiskLed
+	- Relays
+	- SpeedButtons
+	- TonearmButtons
+	- TonearmState
+	- Microlift
+	- AutostopTimer
+	
+Global State
+	Is represented by class State. Class aggregates particular instances of unit states into set of turntable global state. For example state when turntable is playing a record.
+	Tohearm should be down, antiscate force should be applied, play button should lit etc. 
+	See States and Events.xls for detailed list of states.
 
 Timers:
 	* Timer0 is used for autostop delayed function call. Autostop is ititiated not immediately after sensor is activated, but after interval for two reasons:
