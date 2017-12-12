@@ -26,6 +26,16 @@ void onPlayButtonPress()
 	StateProcessor::stateProcessor.processEvent(Events::PlayButtonPress);
 }
 
+void onSpeed33ButtonPress()
+{
+	StateProcessor::stateProcessor.processEvent(Events::Speed33ButtonPress);
+}
+
+void onSpeed45ButtonPress()
+{
+	StateProcessor::stateProcessor.processEvent(Events::Speed45ButtonPress);
+}
+
 void onMicroliftSensorEvent()
 {
 	bool upperSensorValue = digitalRead(PIN_MICROLIFT_UPPER_SENSOR);

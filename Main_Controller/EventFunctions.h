@@ -17,6 +17,9 @@ void onRotateButtonPress();
 
 void onPlayButtonPress();
 
+void onSpeed33ButtonPress();
+
+void onSpeed45ButtonPress();
 /*
 	one listener funiction for all microlift-based events- to be called for both sensors (PIN_TONEARM_UPPER_SENSOR, PIN_TONEARM_LOWER_SENSOR)
 */
