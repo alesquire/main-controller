@@ -55,6 +55,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ShowProgress>LinkVerbose</ShowProgress>
+      <RegisterOutput>true</RegisterOutput>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -86,6 +87,7 @@
     <ClInclude Include="Appliable.h" />
     <ClInclude Include="ArduinoHeader.h" />
     <ClInclude Include="AutostopTimer.h" />
+    <ClInclude Include="DebugFunctions.h" />
     <ClInclude Include="DiskLed.h" />
     <ClInclude Include="DueTimer.h" />
     <ClInclude Include="Events.h" />
@@ -105,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutostopTimer.cpp" />
+    <ClCompile Include="DebugFunctions.cpp" />
     <ClCompile Include="DiskLed.cpp" />
     <ClCompile Include="DueTimer.cpp" />
     <ClCompile Include="EventFunctions.cpp" />
