@@ -14,11 +14,10 @@
 #include "..\Main_Controller\TonearmButtons.cpp"
 #include "..\Main_Controller\TonearmState.cpp"
 #include "..\Main_Controller\AutostopTimer.cpp"
+#include "..\Main_Controller\Stroboscope.cpp"
 #include "..\Main_Controller\JoystickUpDownState.cpp"
 #include "..\Main_Controller\State.cpp"
 #include "..\Main_Controller\StateProcessor.cpp"
-
-
 
 
 #include "ArduinoInputPinSource.h"
