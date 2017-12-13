@@ -5,6 +5,7 @@
 */
 
 
+#include "DebugFunctions.h"
 #include "Stroboscope.h"
 #include "StateProcessor.h"
 

@@ -4,6 +4,7 @@
 
 #include "StateProcessor.h"
 
+
 StateProcessor StateProcessor::stateProcessor;
 
 void StateProcessor::applyNextState(State *state)
@@ -22,6 +23,9 @@ State* StateProcessor::getCurrentState()
 
 void StateProcessor::processEvent(Events _event)
 {
+	debug("Processing Event: ");
+	//debug(eventNames[_event]);
+
 	int currentStateOrder = currentState->getStateOrderNumber();
 	State *nextState = transitionTable[currentStateOrder][_event];
 	if (nextState)// most of transition table items are nulls - as event shouldn't be processed on particular state

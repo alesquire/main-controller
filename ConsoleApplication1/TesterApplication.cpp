@@ -18,7 +18,8 @@
 #include "..\Main_Controller\JoystickUpDownState.cpp"
 #include "..\Main_Controller\State.cpp"
 #include "..\Main_Controller\StateProcessor.cpp"
-
+#include "..\Main_Controller\DebugFunctions.h"
+#include "..\Main_Controller\DebugFunctions.cpp"
 
 #include "ArduinoInputPinSource.h"
 
@@ -26,9 +27,9 @@ StateProcessor processor;
 void processEvent(Events _event)
 {
 	printf("Processing event %i",_event);
-	printf("\n");
+	debug("\n");
 	processor.processEvent(_event);
-	printf("________________________________________\n");
+	debug("________________________________________\n");
 }
 
 void init()
