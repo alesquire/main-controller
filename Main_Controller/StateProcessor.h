@@ -56,6 +56,8 @@ private:
 
 	void applyNextState(State *state);
 
+	StateProcessor() {};
+
 public:
 	
 	State* getCurrentState();

@@ -3,7 +3,7 @@
 // 
 
 #include "StateProcessor.h"
-
+#include "DebugFunctions.cpp"
 
 StateProcessor StateProcessor::stateProcessor;
 
@@ -21,16 +21,29 @@ State* StateProcessor::getCurrentState()
 	return currentState;
 }
 
+
 void StateProcessor::processEvent(Events _event)
 {
-	debug("Processing Event: ");
-	//debug(eventNames[_event]);
 
 	int currentStateOrder = currentState->getStateOrderNumber();
+	debug("Current state = ");
+	debug(currentState->getStateName());
+	debug("\n");
+	debug("Processing Event: ");
+	debug(eventNames[_event]);
+	debug("\n");
+
 	State *nextState = transitionTable[currentStateOrder][_event];
 	if (nextState)// most of transition table items are nulls - as event shouldn't be processed on particular state
 	{
+		debug("Next state = ");
+		debug(nextState->getStateName());
+		debug("\n");
 		applyNextState(nextState);
+	}
+	else
+	{
+		debug("Event is ignored \n");
 	}
 }
 
