@@ -7,6 +7,7 @@ void Stroboscope::init()
 {
 	pinMode(PIN_STROBOSCOPE, OUTPUT);
 	Timer2.attachInterrupt(onStroboscope);
+	Timer3.attachInterrupt(turnOffStroboLed);
 };
 
 class OffStroboscope :public Stroboscope

@@ -45,7 +45,7 @@ private:
 		}
 		else if (previousValue == -1)
 		{
-			printf("=%s", "ERROR - currelt pin is not in use");
+			printf("=%s", "ERROR - current pin is not in use");
 		}
 		else
 		{
