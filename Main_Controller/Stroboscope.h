@@ -17,16 +17,12 @@
 #define STROBO_PULSE_DURATION
 
 /*
-	Stroboscope used Timer 2
+	Stroboscope useû Timer 2
 */
 class Stroboscope : public Appliable
 {
 public:
-	static void init()
-	{
-		pinMode(PIN_STROBOSCOPE, OUTPUT);
-		Timer2.attachInterrupt(onStroboscope);
-	};
+	static void init();
 
 	virtual void apply() {};
 
@@ -38,34 +34,5 @@ public:
 
 };
 
-class OffStroboscope :public Stroboscope
-{
-public:
-	virtual void apply()
-	{
-		Timer2.stop();
-	}
-};
-Stroboscope* const Stroboscope::OFF = new OffStroboscope();
-
-class Stroboscope33 :public Stroboscope
-{
-public:
-	virtual void apply()
-	{
-		Timer2.start(SPEED_33_STROBO_INTERVAL);
-	}
-};
-Stroboscope* const Stroboscope::STROBO_33 = new Stroboscope33();
-
-class Stroboscope45 :public Stroboscope
-{
-public:
-	virtual void apply()
-	{
-		Timer2.start(SPEED_45_STROBO_INTERVAL);
-	}
-};
-Stroboscope* const Stroboscope::STROBO_45 = new Stroboscope45();
 #endif
 
