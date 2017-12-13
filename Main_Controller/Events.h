@@ -26,5 +26,24 @@ enum Events
 	AutostopTimerEvent
 };
 
+static const char * const ___eventNames[15] = {
+	"StopButtonPress",
+	"RotateButtonPress",
+	"PlayButtonPress",
+	"UpJoystickPress",
+	"DownJoystickPress",
+	"TonearmLevelUp",
+	"TonearmLevelMiddle",
+	"TonearmLevelDown",
+	"TonearmPositionHolder",
+	"TonearmPositionOverGap",
+	"TonearmPositionOverDisk",
+	"TonearmPositionOnAutostop",
+	"Speed33ButtonPress",
+	"Speed45ButtonPress",
+	"AutostopTimerEvent" 
+};
+
+
 #endif
 

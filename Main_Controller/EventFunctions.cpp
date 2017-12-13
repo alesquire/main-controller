@@ -89,5 +89,11 @@ void onAutostopSensorFallingEvent()
 
 void onStroboscope()
 {
-	//todo - implement
+	digitalWrite(PIN_33_BUTTON, HIGH);
+	Timer3.executeOneTime(STROBO_PULSE_DURATION);
+}
+
+void turnOffStroboLed()
+{
+	digitalWrite(PIN_33_BUTTON, LOW);
 }

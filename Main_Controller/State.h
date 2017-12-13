@@ -29,6 +29,7 @@ class State : public Appliable
 {
 private:
 	int stateOrderNumber; 
+	char* stateName;
 	Motor*  motorState ;
 	Microlift*  microliftStates;
 	Relays*  relaysState;
@@ -41,7 +42,8 @@ private:
 public:
 
 	State(int _orderNumber,
-			Motor* _motorState, 
+			char* stateName,
+			Motor* _motorState,
 			Microlift* _microliftStates, 
 			Relays* _relaysState, 
 			TonearmState* _tonearmState, 

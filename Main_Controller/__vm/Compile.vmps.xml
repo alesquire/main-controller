@@ -9,39 +9,39 @@
       <VCCodeMacros />
     </VCCodeModel>
     <BreakPoints>
-      <BreakPoint Index="1" Name="TesterApplication.cpp, строка 57" Id="45d84b64-fbc4-42d5-9e4d-4a5d2b5d0759" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\consoleapplication1\testerapplication.cpp" FileLine="57" FileColumn="1" FunctionName="joystickMoveTest()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='45d84b64-fbc4-42d5-9e4d-4a5d2b5d0759'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>50		processEvent(Events::AutostopTimerEvent);
-51		processEvent(Events::TonearmLevelUp);
-52		processEvent(Events::TonearmPositionHolder);
-53	}
-54	
-55	void joystickMoveTest()
-56	{
---&gt;57		processEvent(Events::RotateButtonPress);
-58		processEvent(Events::TonearmPositionOverGap);
-59		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_JOYSTICK_LEFT_RIGHT, 10);
-60		TonearmDirection direction = processor.getCurrentState()-&gt;getTonearmState()-&gt;getDirection();
-61		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_JOYSTICK_LEFT_RIGHT, 3000);
-62		direction = processor.getCurrentState()-&gt;getTonearmState()-&gt;getDirection();
-63		processor.onTimer();
-64	
-65	}
-66	
+      <BreakPoint Index="1" Name="TesterApplication.cpp, строка 56" Id="45d84b64-fbc4-42d5-9e4d-4a5d2b5d0759" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\consoleapplication1\testerapplication.cpp" FileLine="56" FileColumn="1" FunctionName="joystickMoveTest()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='45d84b64-fbc4-42d5-9e4d-4a5d2b5d0759'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>49		processEvent(Events::AutostopTimerEvent);
+50		processEvent(Events::TonearmLevelUp);
+51		processEvent(Events::TonearmPositionHolder);
+52	}
+53	
+54	void joystickMoveTest()
+55	{
+--&gt;56		processEvent(Events::RotateButtonPress);
+57		processEvent(Events::TonearmPositionOverGap);
+58		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_JOYSTICK_LEFT_RIGHT, 10);
+59		TonearmDirection direction = processor.getCurrentState()-&gt;getTonearmState()-&gt;getDirection();
+60		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_JOYSTICK_LEFT_RIGHT, 3000);
+61		direction = processor.getCurrentState()-&gt;getTonearmState()-&gt;getDirection();
+62		processor.onTimer();
+63	
+64	}
+65	
 </Source>
       </BreakPoint>
-      <BreakPoint Index="2" Name="TesterApplication.cpp, строка 69" Id="b3453d61-dade-4bdd-a3dd-951604650a34" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\consoleapplication1\testerapplication.cpp" FileLine="69" FileColumn="1" FunctionName="main()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='b3453d61-dade-4bdd-a3dd-951604650a34'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>62		direction = processor.getCurrentState()-&gt;getTonearmState()-&gt;getDirection();
-63		processor.onTimer();
-64	
-65	}
-66	
-67	int main()
-68	{
---&gt;69		init();
-70		joystickMoveTest();
-71		return 0;
-72	}
-73	
+      <BreakPoint Index="2" Name="TesterApplication.cpp, строка 68" Id="b3453d61-dade-4bdd-a3dd-951604650a34" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\consoleapplication1\testerapplication.cpp" FileLine="68" FileColumn="1" FunctionName="main()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='b3453d61-dade-4bdd-a3dd-951604650a34'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>61		direction = processor.getCurrentState()-&gt;getTonearmState()-&gt;getDirection();
+62		processor.onTimer();
+63	
+64	}
+65	
+66	int main()
+67	{
+--&gt;68		init();
+69		joystickMoveTest();
+70		return 0;
+71	}
+72	
 </Source>
       </BreakPoint>
     </BreakPoints>

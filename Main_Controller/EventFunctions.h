@@ -39,5 +39,8 @@ void onAutostopSensorFallingEvent();
 
 void onStroboscope();
 
+void turnOffStroboLed();
+
+
 #endif // !_EVENTFUNCTIONS_H_
 
