@@ -26,7 +26,7 @@ enum Events
 	AutostopTimerEvent
 };
 
-static const char * const eventNames[15] = {
+static  char *  eventNames[15] = {
 	"StopButtonPress",
 	"RotateButtonPress",
 	"PlayButtonPress",

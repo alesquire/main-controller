@@ -62,6 +62,8 @@ public:
 
 	int getStateOrderNumber();
 
+	char * getStateName();
+
 	TonearmState* getTonearmState();
 
 	static State* const  InitialPickupIsRaisingOnHolder;

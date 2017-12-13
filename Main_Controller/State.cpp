@@ -60,6 +60,11 @@ int State::getStateOrderNumber()
 	return stateOrderNumber;
 }
 
+char * State::getStateName()
+{
+	return stateName;
+}
+
 TonearmState* State::getTonearmState()
 {
 	return tonearmState;

@@ -23,20 +23,22 @@
 
 #include "ArduinoInputPinSource.h"
 
-StateProcessor processor;
+
 void processEvent(Events _event)
 {
-	printf("Processing event %i",_event);
-	debug("\n");
-	processor.processEvent(_event);
+	StateProcessor::stateProcessor.processEvent(_event);
 	debug("________________________________________\n");
 }
 
 void init()
 {
-	processor.init();
-	processEvent(Events::TonearmLevelUp);//when turntable is powered on- microlift goes up until tonearm is up
-	processEvent(Events::TonearmPositionHolder); // and moved to holder
+	StateProcessor::stateProcessor.init();
+	
+	//emulate that microlidt sensor all are in tonearm up position
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_LOWER_SENSOR, HIGH);
+	onMicroliftSensorEvent(); //tonearm is up
+	onHolderSensorFallingEvent();//tonearm is on holder
 }
 
 void automaticPlaybackTest()
@@ -57,17 +59,17 @@ void joystickMoveTest()
 	processEvent(Events::RotateButtonPress);
 	processEvent(Events::TonearmPositionOverGap);
 	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_JOYSTICK_LEFT_RIGHT, 10);
-	TonearmDirection direction = processor.getCurrentState()->getTonearmState()->getDirection();
+	TonearmDirection direction = StateProcessor::stateProcessor.getCurrentState()->getTonearmState()->getDirection();
 	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_JOYSTICK_LEFT_RIGHT, 3000);
-	direction = processor.getCurrentState()->getTonearmState()->getDirection();
-	processor.onTimer();
+	direction = StateProcessor::stateProcessor.getCurrentState()->getTonearmState()->getDirection();
+	StateProcessor::stateProcessor.onTimer();
 
 }
 
 int main()
 {
 	init();
-	joystickMoveTest();
+	//joystickMoveTest();
 	return 0;
 }
 
