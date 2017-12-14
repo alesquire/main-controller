@@ -67,9 +67,9 @@ protected:
 
 	TonearmDirection getDirectionByOutputValue(int _value)
 	{
-		if (_value < getZeroOutputValue())
-			return TonearmDirection::RIGHT;
 		if (_value > getZeroOutputValue())
+			return TonearmDirection::RIGHT;
+		if (_value < getZeroOutputValue())
 			return TonearmDirection::LEFT;
 		return TonearmDirection::IDLE;
 	}
