@@ -42,8 +42,8 @@ void init()
 	StateProcessor::stateProcessor.init();
 
 	onMicroliftSensorEvent(); //tonearm is up
-	onHolderSensorFallingEvent();//tonearm is on holder
 	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_TONEARM_HOLDER, LOW);
+	onHolderSensorFallingEvent();//tonearm is on holder
 }
 
 void automaticPlaybackTest()
@@ -57,16 +57,31 @@ void automaticPlaybackTest()
 	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, HIGH);
 	onFirstTrackSensorRisingEvent();
 
-	//processEvent(Events::TonearmPositionOverDisk);
 	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
 	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_LOWER_SENSOR, LOW);
 	onMicroliftSensorEvent();
 
-	processEvent(Events::TonearmLevelDown);
-	processEvent(Events::TonearmPositionOnAutostop);
-	processEvent(Events::AutostopTimerEvent);
-	processEvent(Events::TonearmLevelUp);
-	processEvent(Events::TonearmPositionHolder);
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_AUTOSTOP, LOW);
+	onAutostopSensorFallingEvent();
+
+	onAutostopTimerEvent();
+
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_LOWER_SENSOR, HIGH);
+	onMicroliftSensorEvent();
+
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_AUTOSTOP, HIGH);
+	onAutostopSensorRisingEvent();
+
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, LOW);
+	onFirstTrackSensorFallingEvent();
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, HIGH);
+	onFirstTrackSensorRisingEvent();
+
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_TONEARM_HOLDER, LOW);
+	onHolderSensorFallingEvent();//tonearm is on holder
+
+
 }
 
 void joystickMoveTest()
