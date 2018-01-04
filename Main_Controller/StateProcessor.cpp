@@ -3,7 +3,7 @@
 // 
 
 #include "StateProcessor.h"
-#include "DebugFunctions.cpp"
+//#include "DebugFunctions.cpp"
 
 StateProcessor StateProcessor::stateProcessor;
 
@@ -50,8 +50,10 @@ void StateProcessor::processEvent(Events _event)
 void StateProcessor::init() 
 {
 	State::init();
-	pinMode(PIN_CHASSIS_LIGHT, OUTPUT);
-	digitalWrite(PIN_CHASSIS_LIGHT, HIGH);
+	pinMode(PIN_BOTTOM_CHASSIS_LIGHT, OUTPUT);
+	digitalWrite(PIN_BOTTOM_CHASSIS_LIGHT, HIGH);
+	pinMode(PIN_UPPER_CHASSIS_LIGHT, OUTPUT);
+	digitalWrite(PIN_UPPER_CHASSIS_LIGHT, HIGH);
 	if(TonearmState::isTonearmOnHolder())
 		applyNextState(State::InitialPickupIsRaisingOnHolder);
 	else
