@@ -14,20 +14,24 @@
 */
 void debug(char* value)
 {
-#if defined(ARDUINO)
-	Serial.print(value);
-#else
-	printf(value);
-#endif // (ARDUINO)
+#if defined (DEBUG)
+	#if defined(ARDUINO)
+		Serial.print(value);
+	#else
+		printf(value);
+	#endif // (ARDUINO)
+#endif //(DEBUG)
 }
 
 void debug(int value)
 {
-#if defined(ARDUINO)
-	Serial.print(value);
-#else
-	printf("%i", value);
-#endif // (ARDUINO)
+#if defined (DEBUG)
+	#if defined(ARDUINO)
+		Serial.print(value);
+	#else
+		printf("%i", value);
+	#endif // (ARDUINO)
+#endif //(DEBUG)
 }
 
 #endif

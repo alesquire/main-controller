@@ -110,20 +110,16 @@ Buttons and switches
 
 void setup() 
 {
+#if defined (DEBUG)	
 	Serial.begin(115200);//debug 
-	Serial.print("1___\n") ;//debug
+#endif
+	debug("start\n") ;//debug
 	StateProcessor::stateProcessor.init();
-	//Serial.print("2____\n");//debug 
 
-	initInput(11);
-	
-	//attachInterrupt(11, onRotateButtonPress, FALLING);
-	onRotateButtonPress();
+	attachInterrupt(digitalPinToInterrupt(PIN_STOP_BUTTON), onStopButtonPress, FALLING);
+	attachInterrupt(digitalPinToInterrupt(PIN_ROTATE_BUTTON), onRotateButtonPress, FALLING);
+	attachInterrupt(digitalPinToInterrupt(PIN_PLAY_BUTTON), onPlayButtonPress, FALLING);
 
-
-	//attachInterrupt(digitalPinToInterrupt(PIN_ROTATE_BUTTON), onRotateButtonPress, FALLING);
-	/*attachInterrupt(digitalPinToInterrupt(PIN_PLAY_BUTTON), onPlayButtonPress, FALLING);
-    Serial.println(3) ;//debug
 	attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_UPPER_SENSOR), onMicroliftSensorEvent, CHANGE);
 	attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_LOWER_SENSOR), onMicroliftSensorEvent, CHANGE);
 
@@ -134,28 +130,22 @@ void setup()
 	attachInterrupt(digitalPinToInterrupt(PIN_FIRST_TRACK), onFirstTrackSensorFallingEvent, FALLING);
 
 	attachInterrupt(digitalPinToInterrupt(PIN_AUTOSTOP), onAutostopSensorRisingEvent, RISING);
-	attachInterrupt(digitalPinToInterrupt(PIN_AUTOSTOP), onAutostopSensorFallingEvent, FALLING);*/
+	attachInterrupt(digitalPinToInterrupt(PIN_AUTOSTOP), onAutostopSensorFallingEvent, FALLING);
 
-
+	//debug - uncomment when all sensors are configured
 	//StateProcessor::stateProcessor.initTonearmState();
 
-  pinMode(13,OUTPUT);
+	pinMode(13,OUTPUT);
 }
 
 // the loop function runs over and over again until power down or reset
 void loop() 
 {
-
-  
   digitalWrite(13,HIGH);
-
+  DiskLed::RED->apply();
   delay(1000);  
   digitalWrite(13,LOW);
-
-  delay(1000);   
-  /*DiskLed::OFF->apply(); 
+  DiskLed::GREEN->apply(); 
   delay(1000);
-  DiskLed::RED->apply(); 
-  delay(1000);*/
 }
 
