@@ -12,8 +12,8 @@ Relays::Relays(bool _pinPickupRelayValue, bool _pinDamperRelayValue)
 
 void Relays::init()
 {
-	pinMode(PIN_PICKUP_RELAY, OUTPUT);
-	pinMode(PIN_DAMPER_RELAY, OUTPUT);
+	initOutput(PIN_PICKUP_RELAY);
+	initOutput(PIN_DAMPER_RELAY);
 }
 
 void Relays::apply()

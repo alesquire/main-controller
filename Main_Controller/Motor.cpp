@@ -10,8 +10,8 @@
 
 void Motor::init()
 {
-	pinMode(PIN_33_RPM, OUTPUT);
-	pinMode(PIN_45_RPM, OUTPUT);
+	initOutput(PIN_33_RPM);
+	initOutput(PIN_45_RPM);
 };
 
 void Motor::apply(void)

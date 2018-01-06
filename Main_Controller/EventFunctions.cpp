@@ -16,9 +16,19 @@ void onStopButtonPress()
 	StateProcessor::stateProcessor.processEvent(Events::StopButtonPress);
 }
 
+bool inFunction = false;
 void onRotateButtonPress()
 {
+	if (inFunction)
+		return;
+	inFunction = true;
+	//noInterrupts();
+	digitalWrite(13, !digitalRead(13));
+	//Serial.print("void onRotateButtonPress()");
 	StateProcessor::stateProcessor.processEvent(Events::RotateButtonPress);
+	//interrupts();
+	inFunction = false;
+
 }
 
 void onPlayButtonPress()
@@ -89,11 +99,11 @@ void onAutostopSensorFallingEvent()
 
 void onStroboscope()
 {
-	digitalWrite(PIN_33_BUTTON, HIGH);
+	digitalWrite(PIN_STROBOSCOPE, HIGH);
 	Timer3.executeOneTime(STROBO_PULSE_DURATION);
 }
 
 void turnOffStroboLed()
 {
-	digitalWrite(PIN_33_BUTTON, LOW);
+	digitalWrite(PIN_STROBOSCOPE, LOW);
 }

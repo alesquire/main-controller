@@ -27,7 +27,7 @@
 
 class State : public Appliable
 {
-private:
+public:  //debug- remove publuic - change to private 
 	int stateOrderNumber; 
 	char* stateName;
 	Motor*  motorState ;
@@ -57,6 +57,8 @@ public:
 		Initializes all child classes
 	*/
 	static void init();
+
+	static void initStates();
 
 	virtual void apply();
 

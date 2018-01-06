@@ -1,10 +1,10 @@
 <VisualMicro>
   <Program Name="Main_Controller" Ext=".ino" Location="D:\Документы\Al\Turntable\Программа\Main controller\v2\Main_Controller\Main_Controller">
-    <Compile IsDebugStart="1" IsGdb="0" CompilerErrors="0" ConfigurationName="Debug" UseConfigurationNameInBuildFolder="True" StopOnError="False" OptimiseLibs="True" OptimiseCore="True" BuildPath="C:\Users\Al\AppData\Local\Temp\VMBuilds\Main_Controller\arduino_due_x_dbg\Debug" ReCompileIfSourceIsNewer="1" SketchName="Main_Controller" ReportDigitalPins="0" ReportAnalogPins="0" ReportI2C="0" ReportFreeMemory="0" IncludeDebug="1" LastDebugPreProcessorDefinitions="VM_DEBUG;VM_DEBUG_ENABLE 1;VM_DEBUG_BANDWIDTH_THROTTLE_MS 33;VM_DEBUGGER_TYPE_HARDWARESERIAL 0;VM_DEBUGGER_TYPE_SOFTWARESERIAL 1;VM_DEBUGGER_TYPE_FASTSERIAL 2;VM_DEBUGGER_TYPE_USB 3;VM_DEBUGGER_TYPE_TEENSY 4;VM_DEBUGGER_TYPE_UART 5;VM_DEBUGGER_TYPE_USART 6;VM_DEBUGGER_TYPE_USBSERIAL 7;VM_DEBUGGER_TYPE_TTYUART 8;VM_DEBUGGER_TYPE_NET_CONSOLE 9;VM_DEBUGGER_TYPE_Uart 10;VM_DEBUGGER_TYPE_COSA 11;VM_DEBUGGER_TYPE_CDCSerialClass 12;VM_DEBUGGER_TYPE_HARDWARESERIAL1 13;VM_DEBUGGER_TYPE_HARDWARESERIAL2 14;VM_DEBUGGER_TYPE_HARDWARESERIAL3 15;VM_DEBUGGER_TYPE_NET_UDP 16;VM_DEBUGGER_TYPE_USBAPI 17;VM_DEBUGGER_TYPE_SERIALUSB 18;VM_DEBUGGER_TYPE VM_DEBUGGER_TYPE_UART;VM_DEBUG_BREAKPAUSE;" IncludesDebug="1" IsCompiled="1" />
+    <Compile IsDebugStart="1" IsGdb="0" CompilerErrors="0" ConfigurationName="Debug" UseConfigurationNameInBuildFolder="True" StopOnError="False" OptimiseLibs="True" OptimiseCore="True" BuildPath="C:\Users\Al\AppData\Local\Temp\VMBuilds\Main_Controller\arduino_due_x_dbg\Debug" ReCompileIfSourceIsNewer="1" SketchName="Main_Controller" ReportDigitalPins="0" ReportAnalogPins="0" ReportI2C="0" ReportFreeMemory="0" IncludeDebug="1" LastDebugPreProcessorDefinitions="VM_DEBUG;VM_DEBUG_ENABLE 1;VM_DEBUG_BANDWIDTH_THROTTLE_MS 33;VM_DEBUGGER_TYPE_HARDWARESERIAL 0;VM_DEBUGGER_TYPE_SOFTWARESERIAL 1;VM_DEBUGGER_TYPE_FASTSERIAL 2;VM_DEBUGGER_TYPE_USB 3;VM_DEBUGGER_TYPE_TEENSY 4;VM_DEBUGGER_TYPE_UART 5;VM_DEBUGGER_TYPE_USART 6;VM_DEBUGGER_TYPE_USBSERIAL 7;VM_DEBUGGER_TYPE_TTYUART 8;VM_DEBUGGER_TYPE_NET_CONSOLE 9;VM_DEBUGGER_TYPE_Uart 10;VM_DEBUGGER_TYPE_COSA 11;VM_DEBUGGER_TYPE_CDCSerialClass 12;VM_DEBUGGER_TYPE_HARDWARESERIAL1 13;VM_DEBUGGER_TYPE_HARDWARESERIAL2 14;VM_DEBUGGER_TYPE_HARDWARESERIAL3 15;VM_DEBUGGER_TYPE_NET_UDP 16;VM_DEBUGGER_TYPE_USBAPI 17;VM_DEBUGGER_TYPE_SERIALUSB 18;VM_DEBUGGER_TYPE VM_DEBUGGER_TYPE_UART;VM_DEBUG_BREAKPAUSE;VM_DEBUG_AUTO_REPORTING;VM_DEBUG_READ_DIGITAL_PORTS 1;" IncludesDebug="1" IsCompiled="1" />
     <Platform Name="arduino16x" Package="arduino" Platform="sam" Architecture="4.8.3-2014q1">
-      <Board Name="arduino_due_x_dbg" Description="Arduino Due (Programming Port)" CoreFolder="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\cores\arduino" VariantFullPath="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\variants\arduino_due_x" McuIdePath="C:\Program Files (x86)\Arduino" McuSketchBookPath="D:\Документы\Al\Arduino" name="Arduino Due (Programming Port)" vid.0="0x2341" pid.0="0x003d" vid.1="0x2A03" pid.1="0x003d" upload.tool="bossac" upload.protocol="sam-ba" upload.maximum_size="524288" upload.use_1200bps_touch="true" upload.wait_for_upload_port="false" upload.native_usb="false" build.mcu="cortex-m3" build.f_cpu="84000000L" build.usb_manufacturer="&quot;Arduino LLC&quot;" build.usb_product="&quot;Arduino Due&quot;" build.board="SAM_DUE" build.core="arduino" build.extra_flags="-D__SAM3X8E__ -mthumb {build.usb_flags}" build.ldscript="linker_scripts/gcc/flash.ld" build.variant="arduino_due_x" build.variant_system_lib="libsam_sam3x8e_gcc_rel.a" build.vid="0x2341" build.pid="0x003e" runtime.ide.path="C:\Program Files (x86)\Arduino" runtime.os="windows" build.system.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\system" runtime.ide.version="106012" target_package="arduino" target_platform="sam" runtime.hardware.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam" originalid="arduino_due_x_dbg" intellisense.tools.path="{runtime.ide.path}/hardware/tools/g++_arm_none_eabi" intellisense.include.paths="{runtime.tools.arm-none-eabi-gcc.path}/arm-none-eabi\include\c++\4.8.3;{runtime.tools.arm-none-eabi-gcc.path}/arm-none-eabi/include/c++/4.8.3/arm-none-eabi/;{runtime.tools.arm-none-eabi-gcc.path}/arm-none-eabi/include/;{runtime.tools.arm-none-eabi-gcc.path}\lib\gcc\arm-none-eabi\4.8.3\include;{build.core.coresparentfolder.vmresolved}\system\CMSIS\Device\ATMEL\;{build.core.coresparentfolder.vmresolved}\system\libsam;{build.core.coresparentfolder.vmresolved}\system\libsam\include;{build.core.coresparentfolder.vmresolved}\system\CMSIS\CMSIS\Include\;{build.core.coresparentfolder.vmresolved}\system\CMSIS\CMSIS\Include\;{vm.boardsource.path}\system\CMSIS\CMSIS\Include\;{vm.boardsource.path}\system\CMSIS\Device\ATMEL\;{vm.boardsource.path}\system\libsam;{vm.boardsource.path}\system\libsam\include;{intellisense.tools.path}\arm-none-eabi\include;{intellisense.tools.path}\arm_none_eabi\include\;{intellisense.tools.path}\lib\gcc\arm-none-eabi\4.4.1\include;{intellisense.tools.path}\lib\gcc\arm-none-eabi\4.4.1\include\;{build.core.coresparentfolder.vmresolved}/system/CMSIS/Device/ATMEL/sam3xa/include/pio;{build.core.coresparentfolder.vmresolved}/system/libsam/include;{build.core.coresparentfolder.vmresolved}/CMSIS/CMSIS/Include/;{build.core.coresparentfolder.vmresolved}/system/CMSIS/Device/ATMEL/sam3xa/include;{build.core.coresparentfolder.vmresolved}\system/libsam;{build.core.coresparentfolder.vmresolved}\system/CMSIS/Device/ATMEL;{build.core.coresparentfolder.vmresolved}\system/CMSIS/Device/ATMEL/sam3xa/include;" tools.atprogram.cmd.path="%AVRSTUDIO_EXE_PATH%\atbackend\atprogram" tools.atprogram.cmd.setwinpath="true" tools.atprogram.program.params.verbose="-v" tools.atprogram.program.params.quiet="-q" tools.atprogram.program.pattern="&quot;{cmd.path}&quot; -d {build.mcu} {program.verbose} {program.extra_params} program -c -f &quot;{build.path}\{build.project_name}.hex&quot;" tools.atprogram.program.xpattern="&quot;{cmd.path}&quot; {AVRSTUDIO_BACKEND_CONNECTION} -d {build.mcu} {program.verbose} {program.extra_params} program -c -f &quot;{build.path}\{build.project_name}.hex&quot;" version="1.6.9" compiler.warning_flags="-w" compiler.warning_flags.none="-w" compiler.warning_flags.default="" compiler.warning_flags.more="-Wall" compiler.warning_flags.all="-Wall -Wextra" compiler.path="{runtime.tools.arm-none-eabi-gcc.path}/bin/" compiler.c.cmd="arm-none-eabi-gcc" compiler.c.flags="-c -g -Os {compiler.warning_flags} -std=gnu11 -ffunction-sections -fdata-sections -nostdlib --param max-inline-insns-single=500 -Dprintf=iprintf -MMD" compiler.c.elf.cmd="arm-none-eabi-gcc" compiler.c.elf.flags="-Os -Wl,--gc-sections" compiler.S.cmd="arm-none-eabi-gcc" compiler.S.flags="-c -g -x assembler-with-cpp" compiler.cpp.cmd="arm-none-eabi-g++" compiler.cpp.flags="-c -g -Os {compiler.warning_flags} -std=gnu++11 -ffunction-sections -fdata-sections -nostdlib -fno-threadsafe-statics --param max-inline-insns-single=500 -fno-rtti -fno-exceptions -Dprintf=iprintf -MMD" compiler.ar.cmd="arm-none-eabi-ar" compiler.ar.flags="rcs" compiler.objcopy.cmd="arm-none-eabi-objcopy" compiler.objcopy.eep.flags="-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0" compiler.elf2hex.flags="-O binary" compiler.elf2hex.cmd="arm-none-eabi-objcopy" compiler.ldflags="" compiler.size.cmd="arm-none-eabi-size" compiler.define="-DARDUINO=" compiler.combine.flags="-u _sbrk -u link -u _close -u _fstat -u _isatty -u _lseek -u _read -u _write -u _exit -u kill -u _getpid" compiler.c.extra_flags="" compiler.c.elf.extra_flags="" compiler.cpp.extra_flags="" compiler.S.extra_flags="" compiler.ar.extra_flags="" compiler.elf2hex.extra_flags="" compiler.libsam.c.flags="&quot;-I{build.system.path}/libsam&quot; &quot;-I{build.system.path}/CMSIS/CMSIS/Include/&quot; &quot;-I{build.system.path}/CMSIS/Device/ATMEL/&quot;" build.usb_flags="-DUSB_VID={build.vid} -DUSB_PID={build.pid} -DUSBCON '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'" recipe.c.o.pattern="&quot;{compiler.path}{compiler.c.cmd}&quot; {compiler.c.flags} -mcpu={build.mcu} -mthumb -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.c.extra_flags} {build.extra_flags} {compiler.libsam.c.flags} {includes} &quot;{source_file}&quot; -o &quot;{object_file}&quot;" recipe.cpp.o.pattern="&quot;{compiler.path}{compiler.cpp.cmd}&quot; {compiler.cpp.flags} -mcpu={build.mcu} -mthumb -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {compiler.libsam.c.flags} {includes} &quot;{source_file}&quot; -o &quot;{object_file}&quot;" recipe.S.o.pattern="&quot;{compiler.path}{compiler.S.cmd}&quot; {compiler.S.flags} -mcpu={build.mcu} -mthumb -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.S.extra_flags} {build.extra_flags} {compiler.libsam.c.flags} {includes} &quot;{source_file}&quot; -o &quot;{object_file}&quot;" archive_file_path="{build.path}/{archive_file}" recipe.ar.pattern="&quot;{compiler.path}{compiler.ar.cmd}&quot; {compiler.ar.flags} {compiler.ar.extra_flags} &quot;{archive_file_path}&quot; &quot;{object_file}&quot;" recipe.c.combine.pattern="&quot;{compiler.path}{compiler.c.elf.cmd}&quot; -mcpu={build.mcu} -mthumb {compiler.c.elf.flags} &quot;-T{build.variant.path}/{build.ldscript}&quot; &quot;-Wl,-Map,{build.path}/{build.project_name}.map&quot; {compiler.c.elf.extra_flags} -o &quot;{build.path}/{build.project_name}.elf&quot; &quot;-L{build.path}&quot; -Wl,--cref -Wl,--check-sections -Wl,--gc-sections -Wl,--entry=Reset_Handler -Wl,--unresolved-symbols=report-all -Wl,--warn-common -Wl,--warn-section-align -Wl,--start-group {compiler.combine.flags} {object_files} &quot;{build.variant.path}/{build.variant_system_lib}&quot; &quot;{build.path}/{archive_file}&quot; -Wl,--end-group -lm -gcc" recipe.objcopy.bin.pattern="&quot;{compiler.path}{compiler.elf2hex.cmd}&quot; {compiler.elf2hex.flags} {compiler.elf2hex.extra_flags} &quot;{build.path}/{build.project_name}.elf&quot; &quot;{build.path}/{build.project_name}.bin&quot;" recipe.output.tmp_file="{build.project_name}.bin" recipe.output.save_file="{build.project_name}.{build.variant}.bin" recipe.size.pattern="&quot;{compiler.path}{compiler.size.cmd}&quot; -A &quot;{build.path}/{build.project_name}.elf&quot;" recipe.size.regex="\.text\s+([0-9]+).*" tools.bossac.path="{runtime.tools.bossac.path}" tools.bossac.cmd="bossac.exe" tools.bossac.cmd.windows="bossac.exe" tools.bossac.upload.params.verbose="-i -d" tools.bossac.upload.params.quiet="" tools.bossac.upload.params.verify="-v" tools.bossac.upload.pattern="&quot;{path}/{cmd}&quot; {upload.verbose} --port={serial.port.file} -U {upload.native_usb} -e -w {upload.verify} -b &quot;{build.path}/{build.project_name}.bin&quot; -R" tools.bossac_remote.upload.pattern="/usr/bin/run-bossac {upload.verbose} --port=ttyATH0 -U {upload.native_usb} -e -w -v -b /tmp/sketch.bin -R" vm.platform.root.path="C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\Extensions\pbd1usl1.2ll\Micro Platforms\arduino16x" runtime.tools.arm-none-eabi-gcc.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1" runtime.tools.arm-none-eabi-gcc-4.8.3-2014q1.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1" runtime.tools.bossac.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\tools\bossac\1.6.1-arduino" runtime.tools.bossac-1.6.1-arduino.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\tools\bossac\1.6.1-arduino" runtime.tools.avrdude.path="C:\Program Files (x86)\Arduino\hardware\tools\avr" runtime.tools.avrdude-6.3.0-arduino6.path="C:\Program Files (x86)\Arduino\hardware\tools\avr" runtime.tools.avr-gcc.path="C:\Program Files (x86)\Arduino\hardware\tools\avr" runtime.tools.avr-gcc-4.9.2-atmel3.5.3-arduino2.path="C:\Program Files (x86)\Arduino\hardware\tools\avr" runtime.tools.tools-avr.path="C:\Program Files (x86)\Arduino\hardware\tools\avr" runtime.vm.boardinfo.id="arduino_due_x_dbg" runtime.vm.boardinfo.name="arduino_due_x_dbg" runtime.vm.boardinfo.desc="Arduino Due (Programming Port)" runtime.vm.boardinfo.src_location="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9" ide.hint="Use installed IDE. Provides built-in hardware, reference/help and libraries." ide.location.key="Arduino16x" ide.location.ide.winreg="Arduino 1.6.x Application" ide.location.sketchbook.winreg="Arduino 1.6.x Sketchbook" ide.location.sketchbook.preferences="sketchbook.path" ide.default.revision_name="1.9.0" ide.default.version="10800" ide.default.package="arduino" ide.default.platform="avr" ide.multiplatform="true" ide.includes="Arduino.h" ide.exe_name="arduino" ide.platformswithoutpackage="false" ide.includes.fallback="wprogram.h" ide.extension="ino" ide.extension.fallback="pde" ide.versionGTEQ="160" ide.exe="arduino.exe" ide.builder.exe="arduinobuilder.exe" ide.builder.name="Arduino Builder" ide.hosts="atmel" ide.url="http://arduino.cc/en/Main/Software" ide.help.reference.path="reference" ide.help.reference.path2="reference\www.arduino.cc\en\Reference" ide.help.reference.serial="reference\www.arduino.cc\en\Serial" ide.location.preferences.portable="{runtime.ide.path}\portable" ide.location.preferences.arduinoData="{runtime.sketchbook.path}\ArduinoData" ide.location.preferences="%VM_APPDATA_LOCAL%\arduino15\preferences.txt" ide.location.preferences_fallback="%VM_APPDATA_ROAMING%\arduino15\preferences.txt" ide.location.contributions="%VM_APPDATA_LOCAL%\arduino15" ide.location.contributions_fallback="%VM_APPDATA_ROAMING%\arduino15" ide.contributions.boards.allow="true" ide.contributions.boards.ignore_unless_rewrite_found="true" ide.contributions.libraries.allow="true" ide.contributions.boards.support.urls.wiki="https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls" ide.create_platforms_from_boardsTXT.teensy="build.core" vm.debug="true" software="ARDUINO" ssh.user.name="root" ssh.user.default.password="arduino" ssh.host.wwwfiles.path="/www/sd" build.working_directory="{runtime.ide.path}\java\bin" ide.appid="arduino16x" location.sketchbook="D:\Документы\Al\Arduino" build.core.vmresolved="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\cores\arduino" build.core.parentfolder.vmresolved="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\cores" build.core.coresparentfolder.vmresolved="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9" build.core.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\cores\arduino" vm.core.include="Arduino.h" vm.boardsource.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9" runtime.platform.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9" vm.platformname.name="sam" build.arch="SAM" builder.noino="false" build.variant.vmresolved.name="arduino_due_x" build.variant.vmresolved.full_path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\variants\arduino_due_x" build.architecture="4.8.3-2014q1" vmresolved.compiler.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\bin\" vmresolved.tools.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1" build.path="C:\Users\Al\AppData\Local\Temp\VMBuilds\Main_Controller\arduino_due_x_dbg\Debug" build.project_name="Main_Controller.ino" build.project_path="D:\Документы\Al\Turntable\Программа\Main controller\v2\Main_Controller\Main_Controller" ProjectDir="D:\Документы\Al\Turntable\Программа\Main controller\v2\Main_Controller\Main_Controller\" vm.runtime.compiler.showwarnings="false" vm.runtime.upload.verbose="false" vm.runtime.upload.verify="false" serial.port.file="COM4" serial.port="COM4" serial.port.num="4" vm.runtime.compiler.auto_discover_includes="true" vm.runtime.compiler.auto_discover_includes_cache="true" build.vm.build.vmdebug="1" build.vm.build.isgdb="0" build.vm.build.optimised="1" vm.last.buildpath="C:\Users\Al\AppData\Local\Temp\VMBuilds\Main_Controller\arduino_due_x_dbg\Debug" />
+      <Board Name="arduino_due_x_dbg" Description="Arduino Due (Programming Port)" CoreFolder="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\cores\arduino" VariantFullPath="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\variants\arduino_due_x" McuIdePath="C:\Program Files (x86)\Arduino" McuSketchBookPath="D:\Документы\Al\Arduino" name="Arduino Due (Programming Port)" vid.0="0x2341" pid.0="0x003d" vid.1="0x2A03" pid.1="0x003d" upload.tool="bossac" upload.protocol="sam-ba" upload.maximum_size="524288" upload.use_1200bps_touch="true" upload.wait_for_upload_port="false" upload.native_usb="false" build.mcu="cortex-m3" build.f_cpu="84000000L" build.usb_manufacturer="&quot;Arduino LLC&quot;" build.usb_product="&quot;Arduino Due&quot;" build.board="SAM_DUE" build.core="arduino" build.extra_flags="-D__SAM3X8E__ -mthumb {build.usb_flags}" build.ldscript="linker_scripts/gcc/flash.ld" build.variant="arduino_due_x" build.variant_system_lib="libsam_sam3x8e_gcc_rel.a" build.vid="0x2341" build.pid="0x003e" runtime.ide.path="C:\Program Files (x86)\Arduino" runtime.os="windows" build.system.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\system" runtime.ide.version="106012" target_package="arduino" target_platform="sam" runtime.hardware.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam" originalid="arduino_due_x_dbg" intellisense.tools.path="{runtime.ide.path}/hardware/tools/g++_arm_none_eabi" intellisense.include.paths="{runtime.tools.arm-none-eabi-gcc.path}/arm-none-eabi\include\c++\4.8.3;{runtime.tools.arm-none-eabi-gcc.path}/arm-none-eabi/include/c++/4.8.3/arm-none-eabi/;{runtime.tools.arm-none-eabi-gcc.path}/arm-none-eabi/include/;{runtime.tools.arm-none-eabi-gcc.path}\lib\gcc\arm-none-eabi\4.8.3\include;{build.core.coresparentfolder.vmresolved}\system\CMSIS\Device\ATMEL\;{build.core.coresparentfolder.vmresolved}\system\libsam;{build.core.coresparentfolder.vmresolved}\system\libsam\include;{build.core.coresparentfolder.vmresolved}\system\CMSIS\CMSIS\Include\;{build.core.coresparentfolder.vmresolved}\system\CMSIS\CMSIS\Include\;{vm.boardsource.path}\system\CMSIS\CMSIS\Include\;{vm.boardsource.path}\system\CMSIS\Device\ATMEL\;{vm.boardsource.path}\system\libsam;{vm.boardsource.path}\system\libsam\include;{intellisense.tools.path}\arm-none-eabi\include;{intellisense.tools.path}\arm_none_eabi\include\;{intellisense.tools.path}\lib\gcc\arm-none-eabi\4.4.1\include;{intellisense.tools.path}\lib\gcc\arm-none-eabi\4.4.1\include\;{build.core.coresparentfolder.vmresolved}/system/CMSIS/Device/ATMEL/sam3xa/include/pio;{build.core.coresparentfolder.vmresolved}/system/libsam/include;{build.core.coresparentfolder.vmresolved}/CMSIS/CMSIS/Include/;{build.core.coresparentfolder.vmresolved}/system/CMSIS/Device/ATMEL/sam3xa/include;{build.core.coresparentfolder.vmresolved}\system/libsam;{build.core.coresparentfolder.vmresolved}\system/CMSIS/Device/ATMEL;{build.core.coresparentfolder.vmresolved}\system/CMSIS/Device/ATMEL/sam3xa/include;" tools.atprogram.cmd.path="%AVRSTUDIO_EXE_PATH%\atbackend\atprogram" tools.atprogram.cmd.setwinpath="true" tools.atprogram.program.params.verbose="-v" tools.atprogram.program.params.quiet="-q" tools.atprogram.program.pattern="&quot;{cmd.path}&quot; -d {build.mcu} {program.verbose} {program.extra_params} program -c -f &quot;{build.path}\{build.project_name}.hex&quot;" tools.atprogram.program.xpattern="&quot;{cmd.path}&quot; {AVRSTUDIO_BACKEND_CONNECTION} -d {build.mcu} {program.verbose} {program.extra_params} program -c -f &quot;{build.path}\{build.project_name}.hex&quot;" version="1.6.9" compiler.warning_flags="-w" compiler.warning_flags.none="-w" compiler.warning_flags.default="" compiler.warning_flags.more="-Wall" compiler.warning_flags.all="-Wall -Wextra" compiler.path="{runtime.tools.arm-none-eabi-gcc.path}/bin/" compiler.c.cmd="arm-none-eabi-gcc" compiler.c.flags="-c -g -Os {compiler.warning_flags} -std=gnu11 -ffunction-sections -fdata-sections -nostdlib --param max-inline-insns-single=500 -Dprintf=iprintf -MMD" compiler.c.elf.cmd="arm-none-eabi-gcc" compiler.c.elf.flags="-Os -Wl,--gc-sections" compiler.S.cmd="arm-none-eabi-gcc" compiler.S.flags="-c -g -x assembler-with-cpp" compiler.cpp.cmd="arm-none-eabi-g++" compiler.cpp.flags="-c -g -Os {compiler.warning_flags} -std=gnu++11 -ffunction-sections -fdata-sections -nostdlib -fno-threadsafe-statics --param max-inline-insns-single=500 -fno-rtti -fno-exceptions -Dprintf=iprintf -MMD" compiler.ar.cmd="arm-none-eabi-ar" compiler.ar.flags="rcs" compiler.objcopy.cmd="arm-none-eabi-objcopy" compiler.objcopy.eep.flags="-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0" compiler.elf2hex.flags="-O binary" compiler.elf2hex.cmd="arm-none-eabi-objcopy" compiler.ldflags="" compiler.size.cmd="arm-none-eabi-size" compiler.define="-DARDUINO=" compiler.combine.flags="-u _sbrk -u link -u _close -u _fstat -u _isatty -u _lseek -u _read -u _write -u _exit -u kill -u _getpid" compiler.c.extra_flags="" compiler.c.elf.extra_flags="" compiler.cpp.extra_flags="" compiler.S.extra_flags="" compiler.ar.extra_flags="" compiler.elf2hex.extra_flags="" compiler.libsam.c.flags="&quot;-I{build.system.path}/libsam&quot; &quot;-I{build.system.path}/CMSIS/CMSIS/Include/&quot; &quot;-I{build.system.path}/CMSIS/Device/ATMEL/&quot;" build.usb_flags="-DUSB_VID={build.vid} -DUSB_PID={build.pid} -DUSBCON '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'" recipe.c.o.pattern="&quot;{compiler.path}{compiler.c.cmd}&quot; {compiler.c.flags} -mcpu={build.mcu} -mthumb -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.c.extra_flags} {build.extra_flags} {compiler.libsam.c.flags} {includes} &quot;{source_file}&quot; -o &quot;{object_file}&quot;" recipe.cpp.o.pattern="&quot;{compiler.path}{compiler.cpp.cmd}&quot; {compiler.cpp.flags} -mcpu={build.mcu} -mthumb -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {compiler.libsam.c.flags} {includes} &quot;{source_file}&quot; -o &quot;{object_file}&quot;" recipe.S.o.pattern="&quot;{compiler.path}{compiler.S.cmd}&quot; {compiler.S.flags} -mcpu={build.mcu} -mthumb -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.S.extra_flags} {build.extra_flags} {compiler.libsam.c.flags} {includes} &quot;{source_file}&quot; -o &quot;{object_file}&quot;" archive_file_path="{build.path}/{archive_file}" recipe.ar.pattern="&quot;{compiler.path}{compiler.ar.cmd}&quot; {compiler.ar.flags} {compiler.ar.extra_flags} &quot;{archive_file_path}&quot; &quot;{object_file}&quot;" recipe.c.combine.pattern="&quot;{compiler.path}{compiler.c.elf.cmd}&quot; -mcpu={build.mcu} -mthumb {compiler.c.elf.flags} &quot;-T{build.variant.path}/{build.ldscript}&quot; &quot;-Wl,-Map,{build.path}/{build.project_name}.map&quot; {compiler.c.elf.extra_flags} -o &quot;{build.path}/{build.project_name}.elf&quot; &quot;-L{build.path}&quot; -Wl,--cref -Wl,--check-sections -Wl,--gc-sections -Wl,--entry=Reset_Handler -Wl,--unresolved-symbols=report-all -Wl,--warn-common -Wl,--warn-section-align -Wl,--start-group {compiler.combine.flags} {object_files} &quot;{build.variant.path}/{build.variant_system_lib}&quot; &quot;{build.path}/{archive_file}&quot; -Wl,--end-group -lm -gcc" recipe.objcopy.bin.pattern="&quot;{compiler.path}{compiler.elf2hex.cmd}&quot; {compiler.elf2hex.flags} {compiler.elf2hex.extra_flags} &quot;{build.path}/{build.project_name}.elf&quot; &quot;{build.path}/{build.project_name}.bin&quot;" recipe.output.tmp_file="{build.project_name}.bin" recipe.output.save_file="{build.project_name}.{build.variant}.bin" recipe.size.pattern="&quot;{compiler.path}{compiler.size.cmd}&quot; -A &quot;{build.path}/{build.project_name}.elf&quot;" recipe.size.regex="\.text\s+([0-9]+).*" tools.bossac.path="{runtime.tools.bossac.path}" tools.bossac.cmd="bossac.exe" tools.bossac.cmd.windows="bossac.exe" tools.bossac.upload.params.verbose="-i -d" tools.bossac.upload.params.quiet="" tools.bossac.upload.params.verify="-v" tools.bossac.upload.pattern="&quot;{path}/{cmd}&quot; {upload.verbose} --port={serial.port.file} -U {upload.native_usb} -e -w {upload.verify} -b &quot;{build.path}/{build.project_name}.bin&quot; -R" tools.bossac_remote.upload.pattern="/usr/bin/run-bossac {upload.verbose} --port=ttyATH0 -U {upload.native_usb} -e -w -v -b /tmp/sketch.bin -R" vm.platform.root.path="C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE\Extensions\pbd1usl1.2ll\Micro Platforms\arduino16x" runtime.tools.arm-none-eabi-gcc.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1" runtime.tools.arm-none-eabi-gcc-4.8.3-2014q1.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1" runtime.tools.bossac.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\tools\bossac\1.6.1-arduino" runtime.tools.bossac-1.6.1-arduino.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\tools\bossac\1.6.1-arduino" runtime.tools.avrdude.path="C:\Program Files (x86)\Arduino\hardware\tools\avr" runtime.tools.avrdude-6.3.0-arduino6.path="C:\Program Files (x86)\Arduino\hardware\tools\avr" runtime.tools.avr-gcc.path="C:\Program Files (x86)\Arduino\hardware\tools\avr" runtime.tools.avr-gcc-4.9.2-atmel3.5.3-arduino2.path="C:\Program Files (x86)\Arduino\hardware\tools\avr" runtime.tools.tools-avr.path="C:\Program Files (x86)\Arduino\hardware\tools\avr" runtime.vm.boardinfo.id="arduino_due_x_dbg" runtime.vm.boardinfo.name="arduino_due_x_dbg" runtime.vm.boardinfo.desc="Arduino Due (Programming Port)" runtime.vm.boardinfo.src_location="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9" ide.hint="Use installed IDE. Provides built-in hardware, reference/help and libraries." ide.location.key="Arduino16x" ide.location.ide.winreg="Arduino 1.6.x Application" ide.location.sketchbook.winreg="Arduino 1.6.x Sketchbook" ide.location.sketchbook.preferences="sketchbook.path" ide.default.revision_name="1.9.0" ide.default.version="10800" ide.default.package="arduino" ide.default.platform="avr" ide.multiplatform="true" ide.includes="Arduino.h" ide.exe_name="arduino" ide.platformswithoutpackage="false" ide.includes.fallback="wprogram.h" ide.extension="ino" ide.extension.fallback="pde" ide.versionGTEQ="160" ide.exe="arduino.exe" ide.builder.exe="arduinobuilder.exe" ide.builder.name="Arduino Builder" ide.hosts="atmel" ide.url="http://arduino.cc/en/Main/Software" ide.help.reference.path="reference" ide.help.reference.path2="reference\www.arduino.cc\en\Reference" ide.help.reference.serial="reference\www.arduino.cc\en\Serial" ide.location.preferences.portable="{runtime.ide.path}\portable" ide.location.preferences.arduinoData="{runtime.sketchbook.path}\ArduinoData" ide.location.preferences="%VM_APPDATA_LOCAL%\arduino15\preferences.txt" ide.location.preferences_fallback="%VM_APPDATA_ROAMING%\arduino15\preferences.txt" ide.location.contributions="%VM_APPDATA_LOCAL%\arduino15" ide.location.contributions_fallback="%VM_APPDATA_ROAMING%\arduino15" ide.contributions.boards.allow="true" ide.contributions.boards.ignore_unless_rewrite_found="true" ide.contributions.libraries.allow="true" ide.contributions.boards.support.urls.wiki="https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls" ide.create_platforms_from_boardsTXT.teensy="build.core" vm.debug="true" software="ARDUINO" ssh.user.name="root" ssh.user.default.password="arduino" ssh.host.wwwfiles.path="/www/sd" build.working_directory="{runtime.ide.path}\java\bin" ide.appid="arduino16x" location.sketchbook="D:\Документы\Al\Arduino" build.core.vmresolved="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\cores\arduino" build.core.parentfolder.vmresolved="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\cores" build.core.coresparentfolder.vmresolved="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9" build.core.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\cores\arduino" vm.core.include="Arduino.h" vm.boardsource.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9" runtime.platform.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9" vm.platformname.name="sam" build.arch="SAM" builder.noino="false" build.variant.vmresolved.name="arduino_due_x" build.variant.vmresolved.full_path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.9\variants\arduino_due_x" build.architecture="4.8.3-2014q1" vmresolved.compiler.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1\bin\" vmresolved.tools.path="C:\Users\Al\AppData\Local\arduino15\packages\arduino\tools\arm-none-eabi-gcc\4.8.3-2014q1" build.path="C:\Users\Al\AppData\Local\Temp\VMBuilds\Main_Controller\arduino_due_x_dbg\Debug" build.project_name="Main_Controller.ino" build.project_path="D:\Документы\Al\Turntable\Программа\Main controller\v2\Main_Controller\Main_Controller" ProjectDir="D:\Документы\Al\Turntable\Программа\Main controller\v2\Main_Controller\Main_Controller\" vm.runtime.compiler.showwarnings="false" vm.runtime.upload.verbose="false" vm.runtime.upload.verify="false" serial.port.file="COM4" serial.port="COM4" serial.port.num="4" serial.port.caption="COM4   - Arduino Due Programming Port" serial.Caption="Arduino Due Programming Port (COM4)" serial.ClassGuid="{4d36e978-e325-11ce-bfc1-08002be10318}" serial.CompatibleID.value0="USB\Class_02" serial.ConfigManagerErrorCode="0" serial.ConfigManagerUserConfig="False" serial.CreationClassName="Win32_PnPEntity" serial.Description="Arduino Due Programming Port" serial.DeviceID="USB\VID_2341&amp;PID_003D\7553335353735121D042" serial.HardwareID.value0="USB\VID_2341&amp;PID_003D" serial.Manufacturer="Arduino LLC (www.arduino.cc)" serial.Name="Arduino Due Programming Port (COM4)" serial.PNPClass="Ports" serial.PNPDeviceID="USB\VID_2341&amp;PID_003D\7553335353735121D042" serial.Present="True" serial.Service="usbser" serial.Status="OK" serial.SystemCreationClassName="Win32_ComputerSystem" serial.SystemName="STATION" serial.vid="0x2341" serial.pid="0x003D" serial.iserial="7553335353735121D042" serial.port.iserial="7553335353735121D042" vm.runtime.compiler.auto_discover_includes="true" vm.runtime.compiler.auto_discover_includes_cache="true" build.vm.build.vmdebug="1" build.vm.build.isgdb="0" build.vm.build.optimised="1" vm.last.buildpath="C:\Users\Al\AppData\Local\Temp\VMBuilds\Main_Controller\arduino_due_x_dbg\Debug" />
     </Platform>
-    <Debug EnableBreak="1" DebugEnabled="1" InBreakLiveView="1" PerfStats="1" IsGdb="0" RemotePortSpeedWrittenToDebugSource="115200" />
+    <Debug EnableBreak="1" DebugEnabled="1" InBreakLiveView="1" PerfStats="1" AutoReportDigitalPins="1" IsGdb="0" RemotePortSpeedWrittenToDebugSource="115200" />
     <VCCodeModel>
       <VCCodeMacros />
     </VCCodeModel>
@@ -47,6 +47,1068 @@
 74		onAutostopSensorRisingEvent();
 75	
 76		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, LOW);
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="3" Name="StateProcessor.cpp, строка 29" Id="e7711aeb-099d-4f43-9cf3-b7883100b1ba" Enabled="1" Message="{currentStateOrder}" MessageTextType="2" PreProcessedMessage="{0}" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="29" FileColumn="1" FunctionName="processEvent(Events _event)" FunctionLineOffset="3" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='e7711aeb-099d-4f43-9cf3-b7883100b1ba'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
+        <Source>22		return currentState;
+23	}
+24	
+25	
+26	void StateProcessor::processEvent(Events _event)
+27	{
+28	
+--&gt;29		int currentStateOrder = currentState-&gt;getStateOrderNumber();
+30		debug("Current state = ");
+31		debug(currentState-&gt;getStateName());
+32		debug("\n");
+33		debug("Processing Event: ");
+34		debug(eventNames[_event]);
+35		debug("\n");
+36	
+37		State *nextState = transitionTable[currentStateOrder][_event];
+38		if (nextState)// most of transition table items are nulls - as event shouldn't be processed on particular state
+</Source>
+        <MessageVariables>
+          <MessageVariable Name="currentStateOrder" Index="1" />
+        </MessageVariables>
+      </BreakPoint>
+      <BreakPoint Index="4" Name="StateProcessor.cpp, строка 30" Id="4290248b-8475-4361-bd94-bf52d2320515" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="30" FileColumn="1" FunctionName="processEvent(Events _event)" FunctionLineOffset="4" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='4290248b-8475-4361-bd94-bf52d2320515'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>23	}
+24	
+25	
+26	void StateProcessor::processEvent(Events _event)
+27	{
+28	
+29		int currentStateOrder = currentState-&gt;getStateOrderNumber();
+--&gt;30		debug("Current state = ");
+31		debug(currentState-&gt;getStateName());
+32		debug("\n");
+33		debug("Processing Event: ");
+34		debug(eventNames[_event]);
+35		debug("\n");
+36	
+37		State *nextState = transitionTable[currentStateOrder][_event];
+38		if (nextState)// most of transition table items are nulls - as event shouldn't be processed on particular state
+39		{
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="5" Name="StateProcessor.cpp, строка 31" Id="9be8b725-872d-43d9-b430-0f1250f42ece" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="31" FileColumn="1" FunctionName="processEvent(Events _event)" FunctionLineOffset="5" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='9be8b725-872d-43d9-b430-0f1250f42ece'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>24	
+25	
+26	void StateProcessor::processEvent(Events _event)
+27	{
+28	
+29		int currentStateOrder = currentState-&gt;getStateOrderNumber();
+30		debug("Current state = ");
+--&gt;31		debug(currentState-&gt;getStateName());
+32		debug("\n");
+33		debug("Processing Event: ");
+34		debug(eventNames[_event]);
+35		debug("\n");
+36	
+37		State *nextState = transitionTable[currentStateOrder][_event];
+38		if (nextState)// most of transition table items are nulls - as event shouldn't be processed on particular state
+39		{
+40			debug("Next state = ");
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="6" Name="StateProcessor.cpp, строка 32" Id="78aa2f60-3273-4ac3-b6fc-7b41af51130d" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="32" FileColumn="1" FunctionName="processEvent(Events _event)" FunctionLineOffset="6" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='78aa2f60-3273-4ac3-b6fc-7b41af51130d'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>25	
+26	void StateProcessor::processEvent(Events _event)
+27	{
+28	
+29		int currentStateOrder = currentState-&gt;getStateOrderNumber();
+30		debug("Current state = ");
+31		debug(currentState-&gt;getStateName());
+--&gt;32		debug("\n");
+33		debug("Processing Event: ");
+34		debug(eventNames[_event]);
+35		debug("\n");
+36	
+37		State *nextState = transitionTable[currentStateOrder][_event];
+38		if (nextState)// most of transition table items are nulls - as event shouldn't be processed on particular state
+39		{
+40			debug("Next state = ");
+41			debug(nextState-&gt;getStateName());
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="7" Name="StateProcessor.cpp, строка 33" Id="48ecebc1-44bc-491b-bec1-2cfc4aa48515" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="33" FileColumn="1" FunctionName="processEvent(Events _event)" FunctionLineOffset="7" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='48ecebc1-44bc-491b-bec1-2cfc4aa48515'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>26	void StateProcessor::processEvent(Events _event)
+27	{
+28	
+29		int currentStateOrder = currentState-&gt;getStateOrderNumber();
+30		debug("Current state = ");
+31		debug(currentState-&gt;getStateName());
+32		debug("\n");
+--&gt;33		debug("Processing Event: ");
+34		debug(eventNames[_event]);
+35		debug("\n");
+36	
+37		State *nextState = transitionTable[currentStateOrder][_event];
+38		if (nextState)// most of transition table items are nulls - as event shouldn't be processed on particular state
+39		{
+40			debug("Next state = ");
+41			debug(nextState-&gt;getStateName());
+42			debug("\n");
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="8" Name="StateProcessor.cpp, строка 34" Id="edaa98bd-182b-4b98-8800-924037212475" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="34" FileColumn="1" FunctionName="processEvent(Events _event)" FunctionLineOffset="8" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='edaa98bd-182b-4b98-8800-924037212475'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>27	{
+28	
+29		int currentStateOrder = currentState-&gt;getStateOrderNumber();
+30		debug("Current state = ");
+31		debug(currentState-&gt;getStateName());
+32		debug("\n");
+33		debug("Processing Event: ");
+--&gt;34		debug(eventNames[_event]);
+35		debug("\n");
+36	
+37		State *nextState = transitionTable[currentStateOrder][_event];
+38		if (nextState)// most of transition table items are nulls - as event shouldn't be processed on particular state
+39		{
+40			debug("Next state = ");
+41			debug(nextState-&gt;getStateName());
+42			debug("\n");
+43			applyNextState(nextState);
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="9" Name="StateProcessor.cpp, строка 35" Id="7a4dd877-d6c4-45e3-8854-68e4944ad92a" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="35" FileColumn="1" FunctionName="processEvent(Events _event)" FunctionLineOffset="9" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='7a4dd877-d6c4-45e3-8854-68e4944ad92a'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>28	
+29		int currentStateOrder = currentState-&gt;getStateOrderNumber();
+30		debug("Current state = ");
+31		debug(currentState-&gt;getStateName());
+32		debug("\n");
+33		debug("Processing Event: ");
+34		debug(eventNames[_event]);
+--&gt;35		debug("\n");
+36	
+37		State *nextState = transitionTable[currentStateOrder][_event];
+38		if (nextState)// most of transition table items are nulls - as event shouldn't be processed on particular state
+39		{
+40			debug("Next state = ");
+41			debug(nextState-&gt;getStateName());
+42			debug("\n");
+43			applyNextState(nextState);
+44		}
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="10" Name="StateProcessor.cpp, строка 37" Id="6e35eb4f-8def-4a51-8b7e-515b66339fb6" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="37" FileColumn="1" FunctionName="processEvent(Events _event)" FunctionLineOffset="11" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='6e35eb4f-8def-4a51-8b7e-515b66339fb6'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>30		debug("Current state = ");
+31		debug(currentState-&gt;getStateName());
+32		debug("\n");
+33		debug("Processing Event: ");
+34		debug(eventNames[_event]);
+35		debug("\n");
+36	
+--&gt;37		State *nextState = transitionTable[currentStateOrder][_event];
+38		if (nextState)// most of transition table items are nulls - as event shouldn't be processed on particular state
+39		{
+40			debug("Next state = ");
+41			debug(nextState-&gt;getStateName());
+42			debug("\n");
+43			applyNextState(nextState);
+44		}
+45		else
+46		{
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="11" Name="StateProcessor.cpp, строка 40" Id="1a0db1c1-d458-4de8-a17c-b42263ca2492" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="40" FileColumn="1" FunctionName="processEvent(Events _event)" FunctionLineOffset="14" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='1a0db1c1-d458-4de8-a17c-b42263ca2492'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>33		debug("Processing Event: ");
+34		debug(eventNames[_event]);
+35		debug("\n");
+36	
+37		State *nextState = transitionTable[currentStateOrder][_event];
+38		if (nextState)// most of transition table items are nulls - as event shouldn't be processed on particular state
+39		{
+--&gt;40			debug("Next state = ");
+41			debug(nextState-&gt;getStateName());
+42			debug("\n");
+43			applyNextState(nextState);
+44		}
+45		else
+46		{
+47			debug("Event is ignored \n");
+48		}
+49	}
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="12" Name="StateProcessor.cpp, строка 41" Id="d659aaa7-b220-404e-bf59-a87456d3fc28" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="41" FileColumn="1" FunctionName="processEvent(Events _event)" FunctionLineOffset="15" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='d659aaa7-b220-404e-bf59-a87456d3fc28'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>34		debug(eventNames[_event]);
+35		debug("\n");
+36	
+37		State *nextState = transitionTable[currentStateOrder][_event];
+38		if (nextState)// most of transition table items are nulls - as event shouldn't be processed on particular state
+39		{
+40			debug("Next state = ");
+--&gt;41			debug(nextState-&gt;getStateName());
+42			debug("\n");
+43			applyNextState(nextState);
+44		}
+45		else
+46		{
+47			debug("Event is ignored \n");
+48		}
+49	}
+50	
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="13" Name="StateProcessor.cpp, строка 42" Id="c666cac2-ee51-4047-88f1-fc6e8c6d7ec9" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="42" FileColumn="1" FunctionName="processEvent(Events _event)" FunctionLineOffset="16" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='c666cac2-ee51-4047-88f1-fc6e8c6d7ec9'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>35		debug("\n");
+36	
+37		State *nextState = transitionTable[currentStateOrder][_event];
+38		if (nextState)// most of transition table items are nulls - as event shouldn't be processed on particular state
+39		{
+40			debug("Next state = ");
+41			debug(nextState-&gt;getStateName());
+--&gt;42			debug("\n");
+43			applyNextState(nextState);
+44		}
+45		else
+46		{
+47			debug("Event is ignored \n");
+48		}
+49	}
+50	
+51	void StateProcessor::init() 
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="14" Name="StateProcessor.cpp, строка 43" Id="ba2d5b28-b3b8-419f-9219-9ff7ef76ad44" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="43" FileColumn="1" FunctionName="processEvent(Events _event)" FunctionLineOffset="17" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='ba2d5b28-b3b8-419f-9219-9ff7ef76ad44'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>36	
+37		State *nextState = transitionTable[currentStateOrder][_event];
+38		if (nextState)// most of transition table items are nulls - as event shouldn't be processed on particular state
+39		{
+40			debug("Next state = ");
+41			debug(nextState-&gt;getStateName());
+42			debug("\n");
+--&gt;43			applyNextState(nextState);
+44		}
+45		else
+46		{
+47			debug("Event is ignored \n");
+48		}
+49	}
+50	
+51	void StateProcessor::init() 
+52	{
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="15" Name="Main_Controller.ino, строка 148" Id="6f79963f-f518-4f27-8a68-8a2123949e32" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\main_controller.ino" FileLine="148" FileColumn="1" FunctionName="setup()" FunctionLineOffset="10" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='6f79963f-f518-4f27-8a68-8a2123949e32'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>141		Serial.print("1___\n") ;//debug
+142		StateProcessor::stateProcessor.init();
+143		//Serial.print("2____\n");//debug 
+144	
+145		initInput(11);
+146		
+147		//attachInterrupt(11, onRotateButtonPress, FALLING);
+--&gt;148		onRotateButtonPress();
+149	
+150	
+151		//attachInterrupt(digitalPinToInterrupt(PIN_ROTATE_BUTTON), onRotateButtonPress, FALLING);
+152		/*attachInterrupt(digitalPinToInterrupt(PIN_PLAY_BUTTON), onPlayButtonPress, FALLING);
+153	    Serial.println(3) ;//debug
+154		attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_UPPER_SENSOR), onMicroliftSensorEvent, CHANGE);
+155		attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_LOWER_SENSOR), onMicroliftSensorEvent, CHANGE);
+156	
+157		attachInterrupt(digitalPinToInterrupt(PIN_TONEARM_HOLDER), onHolderSensorRisingEvent,RISING);
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="16" Name="EventFunctions.cpp, строка 28" Id="480bfdd7-a827-4bc2-93e9-953a8ded3e84" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\eventfunctions.cpp" FileLine="28" FileColumn="1" FunctionName="onRotateButtonPress()" FunctionLineOffset="8" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='480bfdd7-a827-4bc2-93e9-953a8ded3e84'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>21	{
+22		if (inFunction)
+23			return;
+24		inFunction = true;
+25		//noInterrupts();
+26		digitalWrite(13, !digitalRead(13));
+27		//Serial.print("void onRotateButtonPress()");
+--&gt;28		StateProcessor::stateProcessor.processEvent(Events::RotateButtonPress);
+29		//interrupts();
+30		inFunction = false;
+31	
+32	}
+33	
+34	void onPlayButtonPress()
+35	{
+36		StateProcessor::stateProcessor.processEvent(Events::PlayButtonPress);
+37	}
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="17" Name="Main_Controller.ino, строка 142" Id="b4b77918-7316-46e7-8847-461c2bd9fc12" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\main_controller.ino" FileLine="142" FileColumn="1" FunctionName="setup()" FunctionLineOffset="5" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='b4b77918-7316-46e7-8847-461c2bd9fc12'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>135	
+136	
+137	void setup() 
+138	{
+139	
+140		Serial.begin(115200);//debug 
+141		Serial.print("1___\n") ;//debug
+--&gt;142		StateProcessor::stateProcessor.init();
+143		//Serial.print("2____\n");//debug 
+144	
+145		initInput(11);
+146		
+147		//attachInterrupt(11, onRotateButtonPress, FALLING);
+148		onRotateButtonPress();
+149	
+150	
+151		//attachInterrupt(digitalPinToInterrupt(PIN_ROTATE_BUTTON), onRotateButtonPress, FALLING);
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="18" Name="Main_Controller.ino, строка 145" Id="dad7bfc7-2170-41a7-a2c6-a5707cc49210" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\main_controller.ino" FileLine="145" FileColumn="1" FunctionName="setup()" FunctionLineOffset="8" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='dad7bfc7-2170-41a7-a2c6-a5707cc49210'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>138	{
+139	
+140		Serial.begin(115200);//debug 
+141		Serial.print("1___\n") ;//debug
+142		StateProcessor::stateProcessor.init();
+143		//Serial.print("2____\n");//debug 
+144	
+--&gt;145		initInput(11);
+146		
+147		//attachInterrupt(11, onRotateButtonPress, FALLING);
+148		onRotateButtonPress();
+149	
+150	
+151		//attachInterrupt(digitalPinToInterrupt(PIN_ROTATE_BUTTON), onRotateButtonPress, FALLING);
+152		/*attachInterrupt(digitalPinToInterrupt(PIN_PLAY_BUTTON), onPlayButtonPress, FALLING);
+153	    Serial.println(3) ;//debug
+154		attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_UPPER_SENSOR), onMicroliftSensorEvent, CHANGE);
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="19" Name="EventFunctions.cpp, строка 24" Id="c631090f-6fb1-41f6-9efa-67aa226d92e8" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\eventfunctions.cpp" FileLine="24" FileColumn="1" FunctionName="onRotateButtonPress()" FunctionLineOffset="4" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='c631090f-6fb1-41f6-9efa-67aa226d92e8'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>17	}
+18	
+19	bool inFunction = false;
+20	void onRotateButtonPress()
+21	{
+22		if (inFunction)
+23			return;
+--&gt;24		inFunction = true;
+25		//noInterrupts();
+26		digitalWrite(13, !digitalRead(13));
+27		//Serial.print("void onRotateButtonPress()");
+28		StateProcessor::stateProcessor.processEvent(Events::RotateButtonPress);
+29		//interrupts();
+30		inFunction = false;
+31	
+32	}
+33	
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="20" Name="EventFunctions.cpp, строка 22" Id="7e9463f7-31df-47b4-9c86-42ae3ba67174" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\eventfunctions.cpp" FileLine="22" FileColumn="1" FunctionName="onRotateButtonPress()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='7e9463f7-31df-47b4-9c86-42ae3ba67174'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>15	{
+16		StateProcessor::stateProcessor.processEvent(Events::StopButtonPress);
+17	}
+18	
+19	bool inFunction = false;
+20	void onRotateButtonPress()
+21	{
+--&gt;22		if (inFunction)
+23			return;
+24		inFunction = true;
+25		//noInterrupts();
+26		digitalWrite(13, !digitalRead(13));
+27		//Serial.print("void onRotateButtonPress()");
+28		StateProcessor::stateProcessor.processEvent(Events::RotateButtonPress);
+29		//interrupts();
+30		inFunction = false;
+31	
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="21" Name="EventFunctions.cpp, строка 26" Id="140e1bf4-c8f1-4699-a699-dbc2725efea4" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\eventfunctions.cpp" FileLine="26" FileColumn="1" FunctionName="onRotateButtonPress()" FunctionLineOffset="6" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='140e1bf4-c8f1-4699-a699-dbc2725efea4'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>19	bool inFunction = false;
+20	void onRotateButtonPress()
+21	{
+22		if (inFunction)
+23			return;
+24		inFunction = true;
+25		//noInterrupts();
+--&gt;26		digitalWrite(13, !digitalRead(13));
+27		//Serial.print("void onRotateButtonPress()");
+28		StateProcessor::stateProcessor.processEvent(Events::RotateButtonPress);
+29		//interrupts();
+30		inFunction = false;
+31	
+32	}
+33	
+34	void onPlayButtonPress()
+35	{
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="22" Name="StateProcessor.cpp, строка 60" Id="fd3b837f-b0c4-4318-9291-bde7ff704ee0" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="60" FileColumn="1" FunctionName="init()" FunctionLineOffset="9" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='fd3b837f-b0c4-4318-9291-bde7ff704ee0'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>53		State::init();
+54		initOutput(PIN_BOTTOM_CHASSIS_LIGHT);
+55		digitalWrite(PIN_BOTTOM_CHASSIS_LIGHT, HIGH);
+56		initOutput(PIN_UPPER_CHASSIS_LIGHT);
+57		digitalWrite(PIN_UPPER_CHASSIS_LIGHT, HIGH);
+58	
+59		//todo - temporary, remove after debug
+--&gt;60		Serial.print(State::Stop33FullStop-&gt;getStateName());
+61		Serial.print('\n');
+62		Serial.print((int)State::Stop33FullStop-&gt;tonearmButtons);
+63		Serial.print('\n');
+64		Serial.print((int)State::Stop33FullStop-&gt;stroboscope);
+65		Serial.print('\n');
+66		applyNextState(State::Stop33FullStop);
+67		return;
+68		// end of debug
+69	
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="23" Name="StateProcessor.cpp, строка 67" Id="b7962007-fedb-417e-8b22-4ff2a803e0e3" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="67" FileColumn="1" FunctionName="init()" FunctionLineOffset="10" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='b7962007-fedb-417e-8b22-4ff2a803e0e3'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>60		Serial.print(State::Stop33FullStop-&gt;getStateName());
+61		Serial.print('\n');
+62		Serial.print((int)State::Stop33FullStop-&gt;tonearmButtons);
+63		Serial.print('\n');
+64		Serial.print((int)State::Stop33FullStop-&gt;stroboscope);
+65		Serial.print('\n');
+66		applyNextState(State::Stop33FullStop);
+--&gt;67		return;
+68		// end of debug
+69	
+70	}
+71	
+72	void StateProcessor::initTonearmState()
+73	{
+74		if (TonearmState::isTonearmOnHolder())
+75			applyNextState(State::InitialPickupIsRaisingOnHolder);
+76		else
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="24" Name="StateProcessor.cpp, строка 53" Id="f65252d3-0f69-4c93-967c-a8c7d312241a" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="53" FileColumn="1" FunctionName="init()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='f65252d3-0f69-4c93-967c-a8c7d312241a'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>46		{
+47			debug("Event is ignored \n");
+48		}
+49	}
+50	
+51	void StateProcessor::init() 
+52	{
+--&gt;53		State::init();
+54		initOutput(PIN_BOTTOM_CHASSIS_LIGHT);
+55		digitalWrite(PIN_BOTTOM_CHASSIS_LIGHT, HIGH);
+56		initOutput(PIN_UPPER_CHASSIS_LIGHT);
+57		digitalWrite(PIN_UPPER_CHASSIS_LIGHT, HIGH);
+58	
+59		//todo - temporary, remove after debug
+60		Serial.print(State::Stop33FullStop-&gt;getStateName());
+61		Serial.print('\n');
+62		Serial.print((int)State::Stop33FullStop-&gt;tonearmButtons);
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="25" Name="StateProcessor.cpp, строка 57" Id="8a7d000a-36ab-4bb6-8bce-4d9b8a2eb306" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="57" FileColumn="1" FunctionName="init()" FunctionLineOffset="6" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='8a7d000a-36ab-4bb6-8bce-4d9b8a2eb306'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>50	
+51	void StateProcessor::init() 
+52	{
+53		State::init();
+54		initOutput(PIN_BOTTOM_CHASSIS_LIGHT);
+55		digitalWrite(PIN_BOTTOM_CHASSIS_LIGHT, HIGH);
+56		initOutput(PIN_UPPER_CHASSIS_LIGHT);
+--&gt;57		digitalWrite(PIN_UPPER_CHASSIS_LIGHT, HIGH);
+58	
+59		//todo - temporary, remove after debug
+60		Serial.print(State::Stop33FullStop-&gt;getStateName());
+61		Serial.print('\n');
+62		Serial.print((int)State::Stop33FullStop-&gt;tonearmButtons);
+63		Serial.print('\n');
+64		Serial.print((int)State::Stop33FullStop-&gt;stroboscope);
+65		Serial.print('\n');
+66		applyNextState(State::Stop33FullStop);
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="26" Name="StateProcessor.cpp, строка 16" Id="6e6c0f30-e554-467c-a914-42ee4082c1b0" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="16" FileColumn="1" FunctionName="applyNextState(State *state)" FunctionLineOffset="5" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='6e6c0f30-e554-467c-a914-42ee4082c1b0'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>9	
+10	void StateProcessor::applyNextState(State *state)
+11	{
+12		if (state)
+13		{
+14			currentState = state;
+15			int stateNumber = state-&gt;getStateOrderNumber();//debug
+--&gt;16			currentState-&gt;apply();
+17		}
+18	}
+19	
+20	State* StateProcessor::getCurrentState()
+21	{
+22		return currentState;
+23	}
+24	
+25	
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="27" Name="State.cpp, строка 48" Id="035eee0c-0ef1-43d0-9cd6-79c62e6dc4e8" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="48" FileColumn="1" FunctionName="apply()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='035eee0c-0ef1-43d0-9cd6-79c62e6dc4e8'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>41		AutostopTimer::init();
+42		Stroboscope::init();
+43		initStates();
+44	}
+45	
+46	void State::apply()
+47	{
+--&gt;48		Serial.print("motorState=");
+49		Serial.print((int)motorState);
+50		Serial.print('\n');
+51	
+52		Serial.print("tonearmState=");
+53		Serial.print((int)tonearmState);
+54		Serial.print('\n');
+55	
+56		Serial.print("tonearmButtons=");
+57		Serial.print((int)tonearmButtons);
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="28" Name="StateProcessor.cpp, строка 15" Id="696bd51d-fe7c-4c77-a489-df5931334899" Enabled="1" Message="{stateNumber}" MessageTextType="2" PreProcessedMessage="{0}" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="15" FileColumn="1" FunctionName="applyNextState(State *state)" FunctionLineOffset="5" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='696bd51d-fe7c-4c77-a489-df5931334899'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
+        <Source>8	StateProcessor StateProcessor::stateProcessor;
+9	
+10	void StateProcessor::applyNextState(State *state)
+11	{
+12		if (state)
+13		{
+14			currentState = state;
+--&gt;15			int stateNumber = state-&gt;getStateOrderNumber();//debug
+16			currentState-&gt;apply();
+17		}
+18	}
+19	
+20	State* StateProcessor::getCurrentState()
+21	{
+22		return currentState;
+23	}
+24	
+</Source>
+        <MessageVariables>
+          <MessageVariable Name="stateNumber" Index="1" />
+        </MessageVariables>
+      </BreakPoint>
+      <BreakPoint Index="29" Name="State.cpp, строка 65" Id="fe4ec447-d4aa-468d-88dc-a784c386a065" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="65" FileColumn="1" FunctionName="apply()" FunctionLineOffset="3" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='fe4ec447-d4aa-468d-88dc-a784c386a065'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>58		Serial.print('\n');
+59	
+60		Serial.print("speedButtons=");
+61		Serial.print((int)speedButtons);
+62		Serial.print('\n');	
+63		
+64		motorState-&gt;apply();
+--&gt;65		microliftStates-&gt;apply();
+66		relaysState-&gt;apply();
+67	
+68		//debug
+69		int i = 0;
+70		char* tonearmStateName=NULL;
+71		//if (tonearmState)
+72		//{
+73		//	int z = 0;
+74		//	tonearmStateName = tonearmState-&gt;getTonearmStateName();
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="30" Name="State.cpp, строка 66" Id="d9e74717-9a1e-419c-bf30-acfabea30ab6" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="66" FileColumn="1" FunctionName="apply()" FunctionLineOffset="4" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='d9e74717-9a1e-419c-bf30-acfabea30ab6'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>59	
+60		Serial.print("speedButtons=");
+61		Serial.print((int)speedButtons);
+62		Serial.print('\n');	
+63		
+64		motorState-&gt;apply();
+65		microliftStates-&gt;apply();
+--&gt;66		relaysState-&gt;apply();
+67	
+68		//debug
+69		int i = 0;
+70		char* tonearmStateName=NULL;
+71		//if (tonearmState)
+72		//{
+73		//	int z = 0;
+74		//	tonearmStateName = tonearmState-&gt;getTonearmStateName();
+75		//}
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="31" Name="TonearmState.cpp, строка 85" Id="3feb8e37-da53-4fd8-b590-bd463978acde" Enabled="1" Message="{outputValue}" MessageTextType="2" PreProcessedMessage="{0}" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\tonearmstate.cpp" FileLine="85" FileColumn="1" FunctionName="apply()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='3feb8e37-da53-4fd8-b590-bd463978acde'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>78	bool TonearmState::isTonearmOnHolder()
+79	{
+80		return !digitalRead(PIN_TONEARM_HOLDER); //when tonearm is on holder- optical path of optosensor is shaded and output level is LOW
+81	}
+82	
+83	void TonearmState::apply()
+84	{
+--&gt;85		int outputValue = defineValue();
+86		analogWrite(PIN_TONEARM_VOLTAGE_OUTPUT, outputValue);
+87	}
+88	
+89	
+90	//-----------------------------------------------------------------------------------
+91	/*
+92		Tonearm is not moving despite on joystick state
+93	*/
+94	
+</Source>
+        <MessageVariables>
+          <MessageVariable Name="outputValue" Index="1" />
+        </MessageVariables>
+      </BreakPoint>
+      <BreakPoint Index="32" Name="TonearmState.cpp, строка 86" Id="c01c2205-6f60-42eb-ba94-ed15a2b677a2" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\tonearmstate.cpp" FileLine="86" FileColumn="1" FunctionName="apply()" FunctionLineOffset="3" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='c01c2205-6f60-42eb-ba94-ed15a2b677a2'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>79	{
+80		return !digitalRead(PIN_TONEARM_HOLDER); //when tonearm is on holder- optical path of optosensor is shaded and output level is LOW
+81	}
+82	
+83	void TonearmState::apply()
+84	{
+85		int outputValue = defineValue();
+--&gt;86		analogWrite(PIN_TONEARM_VOLTAGE_OUTPUT, outputValue);
+87	}
+88	
+89	
+90	//-----------------------------------------------------------------------------------
+91	/*
+92		Tonearm is not moving despite on joystick state
+93	*/
+94	
+95	class StopMode : public TonearmState
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="33" Name="State.cpp, строка 69" Id="615e6703-785f-48f6-b67b-46ec26dead6b" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="69" FileColumn="1" FunctionName="apply()" FunctionLineOffset="7" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='615e6703-785f-48f6-b67b-46ec26dead6b'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>62		Serial.print('\n');	
+63		
+64		motorState-&gt;apply();
+65		microliftStates-&gt;apply();
+66		relaysState-&gt;apply();
+67	
+68		//debug
+--&gt;69		int i = 0;
+70		char* tonearmStateName=NULL;
+71		//if (tonearmState)
+72		//{
+73		//	int z = 0;
+74		//	tonearmStateName = tonearmState-&gt;getTonearmStateName();
+75		//}
+76		//else
+77		//{
+78		//	int y = 0;
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="34" Name="State.cpp, строка 73" Id="1baf001d-ef09-4549-bfed-b32c7aa08485" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="73" FileColumn="1" FunctionName="apply()" FunctionLineOffset="11" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='1baf001d-ef09-4549-bfed-b32c7aa08485'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>66		relaysState-&gt;apply();
+67	
+68		//debug
+69		int i = 0;
+70		char* tonearmStateName=NULL;
+71		//if (tonearmState)
+72		//{
+--&gt;73		//	int z = 0;
+74		//	tonearmStateName = tonearmState-&gt;getTonearmStateName();
+75		//}
+76		//else
+77		//{
+78		//	int y = 0;
+79		//}
+80		//end debug
+81		//tonearmState-&gt;apply();
+82		//tonearmButtons-&gt;apply();
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="35" Name="State.cpp, строка 74" Id="d0860d6d-9807-4a21-b6d2-abb481447084" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="74" FileColumn="1" FunctionName="apply()" FunctionLineOffset="12" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='d0860d6d-9807-4a21-b6d2-abb481447084'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>67	
+68		//debug
+69		int i = 0;
+70		char* tonearmStateName=NULL;
+71		//if (tonearmState)
+72		//{
+73		//	int z = 0;
+--&gt;74		//	tonearmStateName = tonearmState-&gt;getTonearmStateName();
+75		//}
+76		//else
+77		//{
+78		//	int y = 0;
+79		//}
+80		//end debug
+81		//tonearmState-&gt;apply();
+82		//tonearmButtons-&gt;apply();
+83		speedButtons-&gt;apply();
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="36" Name="State.cpp, строка 78" Id="9785aa37-10b0-4b14-9a9a-547a5c6e3529" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="78" FileColumn="1" FunctionName="apply()" FunctionLineOffset="16" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='9785aa37-10b0-4b14-9a9a-547a5c6e3529'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>71		//if (tonearmState)
+72		//{
+73		//	int z = 0;
+74		//	tonearmStateName = tonearmState-&gt;getTonearmStateName();
+75		//}
+76		//else
+77		//{
+--&gt;78		//	int y = 0;
+79		//}
+80		//end debug
+81		//tonearmState-&gt;apply();
+82		//tonearmButtons-&gt;apply();
+83		speedButtons-&gt;apply();
+84		diskLed-&gt;apply();
+85		//autostopTimer-&gt;apply();
+86		//stroboscope-&gt;apply();
+87	}
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="37" Name="State.cpp, строка 81" Id="9334cd17-72ae-4c90-b02e-2d547afba03f" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="81" FileColumn="1" FunctionName="apply()" FunctionLineOffset="19" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='9334cd17-72ae-4c90-b02e-2d547afba03f'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>74		//	tonearmStateName = tonearmState-&gt;getTonearmStateName();
+75		//}
+76		//else
+77		//{
+78		//	int y = 0;
+79		//}
+80		//end debug
+--&gt;81		//tonearmState-&gt;apply();
+82		//tonearmButtons-&gt;apply();
+83		speedButtons-&gt;apply();
+84		diskLed-&gt;apply();
+85		//autostopTimer-&gt;apply();
+86		//stroboscope-&gt;apply();
+87	}
+88	
+89	int State::getStateOrderNumber()
+90	{
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="38" Name="State.cpp, строка 82" Id="879461e9-ff00-4066-bd47-9f1966f058db" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="82" FileColumn="1" FunctionName="apply()" FunctionLineOffset="20" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='879461e9-ff00-4066-bd47-9f1966f058db'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>75		//}
+76		//else
+77		//{
+78		//	int y = 0;
+79		//}
+80		//end debug
+81		//tonearmState-&gt;apply();
+--&gt;82		//tonearmButtons-&gt;apply();
+83		speedButtons-&gt;apply();
+84		diskLed-&gt;apply();
+85		//autostopTimer-&gt;apply();
+86		//stroboscope-&gt;apply();
+87	}
+88	
+89	int State::getStateOrderNumber()
+90	{
+91		return stateOrderNumber;
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="39" Name="State.cpp, строка 83" Id="6a1a662b-df97-4569-b7c5-b3299a5d7e95" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="83" FileColumn="1" FunctionName="apply()" FunctionLineOffset="21" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='6a1a662b-df97-4569-b7c5-b3299a5d7e95'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>76		//else
+77		//{
+78		//	int y = 0;
+79		//}
+80		//end debug
+81		//tonearmState-&gt;apply();
+82		//tonearmButtons-&gt;apply();
+--&gt;83		speedButtons-&gt;apply();
+84		diskLed-&gt;apply();
+85		//autostopTimer-&gt;apply();
+86		//stroboscope-&gt;apply();
+87	}
+88	
+89	int State::getStateOrderNumber()
+90	{
+91		return stateOrderNumber;
+92	}
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="40" Name="State.cpp, строка 84" Id="11a6c819-9b5e-4c05-81dc-17d006b04ac4" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="84" FileColumn="1" FunctionName="apply()" FunctionLineOffset="22" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='11a6c819-9b5e-4c05-81dc-17d006b04ac4'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>77		//{
+78		//	int y = 0;
+79		//}
+80		//end debug
+81		//tonearmState-&gt;apply();
+82		//tonearmButtons-&gt;apply();
+83		speedButtons-&gt;apply();
+--&gt;84		diskLed-&gt;apply();
+85		//autostopTimer-&gt;apply();
+86		//stroboscope-&gt;apply();
+87	}
+88	
+89	int State::getStateOrderNumber()
+90	{
+91		return stateOrderNumber;
+92	}
+93	
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="41" Name="State.cpp, строка 85" Id="1ef181bd-ff00-492c-a5a0-61dfceba41ca" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="85" FileColumn="1" FunctionName="apply()" FunctionLineOffset="23" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='1ef181bd-ff00-492c-a5a0-61dfceba41ca'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>78		//	int y = 0;
+79		//}
+80		//end debug
+81		//tonearmState-&gt;apply();
+82		//tonearmButtons-&gt;apply();
+83		speedButtons-&gt;apply();
+84		diskLed-&gt;apply();
+--&gt;85		//autostopTimer-&gt;apply();
+86		//stroboscope-&gt;apply();
+87	}
+88	
+89	int State::getStateOrderNumber()
+90	{
+91		return stateOrderNumber;
+92	}
+93	
+94	char * State::getStateName()
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="42" Name="State.cpp, строка 86" Id="477b8189-8c14-4e66-9359-b6001d2869a4" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="86" FileColumn="1" FunctionName="apply()" FunctionLineOffset="24" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='477b8189-8c14-4e66-9359-b6001d2869a4'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>79		//}
+80		//end debug
+81		//tonearmState-&gt;apply();
+82		//tonearmButtons-&gt;apply();
+83		speedButtons-&gt;apply();
+84		diskLed-&gt;apply();
+85		//autostopTimer-&gt;apply();
+--&gt;86		//stroboscope-&gt;apply();
+87	}
+88	
+89	int State::getStateOrderNumber()
+90	{
+91		return stateOrderNumber;
+92	}
+93	
+94	char * State::getStateName()
+95	{
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="43" Name="Main_Controller.ino, строка 140" Id="eaa49501-bc24-4948-bed7-a76c62425abf" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\main_controller.ino" FileLine="140" FileColumn="1" FunctionName="setup()" FunctionLineOffset="3" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='eaa49501-bc24-4948-bed7-a76c62425abf'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>133	State* const  State::Stop45PickupIsRaising = new State(27, "Stop45PickupIsRaising", Motor::OFF, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::STOP, SpeedButtons::LED45, DiskLed::RED, AutostopTimer::OFF, Stroboscope::STROBO_45);
+134	State* const  State::Stop45PickupIsAutomaticallyMovingToHolder = new State(28, "Stop45PickupIsAutomaticallyMovingToHolder", Motor::OFF, Microlift::HOLD, Relays::MOVE, TonearmState::FULL_RIGHT, TonearmButtons::STOP, SpeedButtons::LED45, DiskLed::RED, AutostopTimer::OFF, Stroboscope::STROBO_45);
+135	
+136	
+137	void setup() 
+138	{
+139	
+--&gt;140		Serial.begin(115200);//debug 
+141		Serial.print("1___\n") ;//debug
+142		StateProcessor::stateProcessor.init();
+143		//Serial.print("2____\n");//debug 
+144	
+145		initInput(11);
+146		
+147		//attachInterrupt(11, onRotateButtonPress, FALLING);
+148		onRotateButtonPress();
+149	
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="44" Name="Main_Controller.ino, строка 141" Id="47d78ce9-aa42-47ec-bcfa-feb544c415c1" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\main_controller.ino" FileLine="141" FileColumn="1" FunctionName="setup()" FunctionLineOffset="4" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='47d78ce9-aa42-47ec-bcfa-feb544c415c1'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>134	State* const  State::Stop45PickupIsAutomaticallyMovingToHolder = new State(28, "Stop45PickupIsAutomaticallyMovingToHolder", Motor::OFF, Microlift::HOLD, Relays::MOVE, TonearmState::FULL_RIGHT, TonearmButtons::STOP, SpeedButtons::LED45, DiskLed::RED, AutostopTimer::OFF, Stroboscope::STROBO_45);
+135	
+136	
+137	void setup() 
+138	{
+139	
+140		Serial.begin(115200);//debug 
+--&gt;141		Serial.print("1___\n") ;//debug
+142		StateProcessor::stateProcessor.init();
+143		//Serial.print("2____\n");//debug 
+144	
+145		initInput(11);
+146		
+147		//attachInterrupt(11, onRotateButtonPress, FALLING);
+148		onRotateButtonPress();
+149	
+150	
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="45" Name="Stroboscope.cpp, строка 18" Id="3ae546a9-0c78-4548-8d32-8a2188e4bcc6" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stroboscope.cpp" FileLine="18" FileColumn="1" FunctionName="class OffStroboscope::apply()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='3ae546a9-0c78-4548-8d32-8a2188e4bcc6'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>11	};
+12	
+13	class OffStroboscope :public Stroboscope
+14	{
+15	public:
+16		virtual void apply()
+17		{
+--&gt;18			Timer2.stop();
+19		}
+20	};
+21	Stroboscope* const Stroboscope::OFF = new OffStroboscope();
+22	
+23	class Stroboscope33 :public Stroboscope
+24	{
+25	public:
+26		virtual void apply()
+27		{
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="46" Name="Stroboscope.cpp, строка 28" Id="50df82e1-3583-4dc0-b1f0-595367ca31cf" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stroboscope.cpp" FileLine="28" FileColumn="1" FunctionName="class Stroboscope33::apply()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='50df82e1-3583-4dc0-b1f0-595367ca31cf'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>21	Stroboscope* const Stroboscope::OFF = new OffStroboscope();
+22	
+23	class Stroboscope33 :public Stroboscope
+24	{
+25	public:
+26		virtual void apply()
+27		{
+--&gt;28			Timer2.start(SPEED_33_STROBO_INTERVAL);
+29		}
+30	};
+31	Stroboscope* const Stroboscope::STROBO_33 = new Stroboscope33();
+32	
+33	class Stroboscope45 :public Stroboscope
+34	{
+35	public:
+36		virtual void apply()
+37		{
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="47" Name="Stroboscope.cpp, строка 38" Id="1d500f9c-e1ba-4ea5-a887-bef457cf6bfa" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stroboscope.cpp" FileLine="38" FileColumn="1" FunctionName="class Stroboscope45::apply()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='1d500f9c-e1ba-4ea5-a887-bef457cf6bfa'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>31	Stroboscope* const Stroboscope::STROBO_33 = new Stroboscope33();
+32	
+33	class Stroboscope45 :public Stroboscope
+34	{
+35	public:
+36		virtual void apply()
+37		{
+--&gt;38			Timer2.start(SPEED_45_STROBO_INTERVAL);
+39		}
+40	};
+41	Stroboscope* const Stroboscope::STROBO_45 = new Stroboscope45();
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="48" Name="TonearmButtons.cpp, строка 23" Id="2e9c2e67-9ad1-472a-8139-42393b1f1622" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\tonearmbuttons.cpp" FileLine="23" FileColumn="1" FunctionName="apply()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='2e9c2e67-9ad1-472a-8139-42393b1f1622'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>16		initInput(PIN_PLAY_BUTTON);
+17		initInput(PIN_ROTATE_BUTTON);
+18		initInput(PIN_STOP_BUTTON);
+19	}
+20	
+21	void TonearmButtons::apply()
+22	{
+--&gt;23		digitalWrite(PIN_PLAY_LED, pinPlayValue);
+24		digitalWrite(PIN_ROTATE_LED, pinRotateValue);
+25		digitalWrite(PIN_STOP_LED, pinStopValue);
+26	}
+27	
+28	
+29	TonearmButtons* const TonearmButtons::OFF = new TonearmButtons(LOW, LOW, LOW);
+30	TonearmButtons* const TonearmButtons::PLAY = new TonearmButtons(HIGH, LOW, LOW);
+31	TonearmButtons* const TonearmButtons::ROTATE = new TonearmButtons(LOW, HIGH, LOW);
+32	TonearmButtons* const TonearmButtons::STOP = new TonearmButtons(LOW, LOW, HIGH);
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="49" Name="TonearmButtons.cpp, строка 24" Id="dd58d80a-0f1d-4ce3-b3c3-1c8eab0340f7" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\tonearmbuttons.cpp" FileLine="24" FileColumn="1" FunctionName="apply()" FunctionLineOffset="3" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='dd58d80a-0f1d-4ce3-b3c3-1c8eab0340f7'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>17		initInput(PIN_ROTATE_BUTTON);
+18		initInput(PIN_STOP_BUTTON);
+19	}
+20	
+21	void TonearmButtons::apply()
+22	{
+23		digitalWrite(PIN_PLAY_LED, pinPlayValue);
+--&gt;24		digitalWrite(PIN_ROTATE_LED, pinRotateValue);
+25		digitalWrite(PIN_STOP_LED, pinStopValue);
+26	}
+27	
+28	
+29	TonearmButtons* const TonearmButtons::OFF = new TonearmButtons(LOW, LOW, LOW);
+30	TonearmButtons* const TonearmButtons::PLAY = new TonearmButtons(HIGH, LOW, LOW);
+31	TonearmButtons* const TonearmButtons::ROTATE = new TonearmButtons(LOW, HIGH, LOW);
+32	TonearmButtons* const TonearmButtons::STOP = new TonearmButtons(LOW, LOW, HIGH);
+33	
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="50" Name="TonearmButtons.cpp, строка 25" Id="00c3e890-9d4b-4a7d-9e52-bf46f584eabc" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\tonearmbuttons.cpp" FileLine="25" FileColumn="1" FunctionName="apply()" FunctionLineOffset="4" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='00c3e890-9d4b-4a7d-9e52-bf46f584eabc'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>18		initInput(PIN_STOP_BUTTON);
+19	}
+20	
+21	void TonearmButtons::apply()
+22	{
+23		digitalWrite(PIN_PLAY_LED, pinPlayValue);
+24		digitalWrite(PIN_ROTATE_LED, pinRotateValue);
+--&gt;25		digitalWrite(PIN_STOP_LED, pinStopValue);
+26	}
+27	
+28	
+29	TonearmButtons* const TonearmButtons::OFF = new TonearmButtons(LOW, LOW, LOW);
+30	TonearmButtons* const TonearmButtons::PLAY = new TonearmButtons(HIGH, LOW, LOW);
+31	TonearmButtons* const TonearmButtons::ROTATE = new TonearmButtons(LOW, HIGH, LOW);
+32	TonearmButtons* const TonearmButtons::STOP = new TonearmButtons(LOW, LOW, HIGH);
+33	
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="51" Name="StateProcessor.cpp, строка 61" Id="2c9b01c2-2391-4ff1-8cfe-9e716edb3568" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="61" FileColumn="1" FunctionName="init()" FunctionLineOffset="10" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='2c9b01c2-2391-4ff1-8cfe-9e716edb3568'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>54		initOutput(PIN_BOTTOM_CHASSIS_LIGHT);
+55		digitalWrite(PIN_BOTTOM_CHASSIS_LIGHT, HIGH);
+56		initOutput(PIN_UPPER_CHASSIS_LIGHT);
+57		digitalWrite(PIN_UPPER_CHASSIS_LIGHT, HIGH);
+58	
+59		//todo - temporary, remove after debug
+60		Serial.print(State::Stop33FullStop-&gt;getStateName());
+--&gt;61		Serial.print('\n');
+62		Serial.print((int)State::Stop33FullStop-&gt;tonearmButtons);
+63		Serial.print('\n');
+64		Serial.print((int)State::Stop33FullStop-&gt;stroboscope);
+65		Serial.print('\n');
+66		applyNextState(State::Stop33FullStop);
+67		return;
+68		// end of debug
+69	
+70	}
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="52" Name="StateProcessor.cpp, строка 62" Id="22e6ab03-505e-4592-b498-5f184d18042c" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="62" FileColumn="1" FunctionName="init()" FunctionLineOffset="11" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='22e6ab03-505e-4592-b498-5f184d18042c'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>55		digitalWrite(PIN_BOTTOM_CHASSIS_LIGHT, HIGH);
+56		initOutput(PIN_UPPER_CHASSIS_LIGHT);
+57		digitalWrite(PIN_UPPER_CHASSIS_LIGHT, HIGH);
+58	
+59		//todo - temporary, remove after debug
+60		Serial.print(State::Stop33FullStop-&gt;getStateName());
+61		Serial.print('\n');
+--&gt;62		Serial.print((int)State::Stop33FullStop-&gt;tonearmButtons);
+63		Serial.print('\n');
+64		Serial.print((int)State::Stop33FullStop-&gt;stroboscope);
+65		Serial.print('\n');
+66		applyNextState(State::Stop33FullStop);
+67		return;
+68		// end of debug
+69	
+70	}
+71	
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="53" Name="StateProcessor.cpp, строка 63" Id="dc4a16ee-5115-4f7f-833d-6d148bd8c498" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="63" FileColumn="1" FunctionName="init()" FunctionLineOffset="12" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='dc4a16ee-5115-4f7f-833d-6d148bd8c498'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>56		initOutput(PIN_UPPER_CHASSIS_LIGHT);
+57		digitalWrite(PIN_UPPER_CHASSIS_LIGHT, HIGH);
+58	
+59		//todo - temporary, remove after debug
+60		Serial.print(State::Stop33FullStop-&gt;getStateName());
+61		Serial.print('\n');
+62		Serial.print((int)State::Stop33FullStop-&gt;tonearmButtons);
+--&gt;63		Serial.print('\n');
+64		Serial.print((int)State::Stop33FullStop-&gt;stroboscope);
+65		Serial.print('\n');
+66		applyNextState(State::Stop33FullStop);
+67		return;
+68		// end of debug
+69	
+70	}
+71	
+72	void StateProcessor::initTonearmState()
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="54" Name="StateProcessor.cpp, строка 66" Id="9269ee90-8720-4864-8708-123cb6d0c7b4" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="66" FileColumn="1" FunctionName="init()" FunctionLineOffset="13" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='9269ee90-8720-4864-8708-123cb6d0c7b4'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>59		//todo - temporary, remove after debug
+60		Serial.print(State::Stop33FullStop-&gt;getStateName());
+61		Serial.print('\n');
+62		Serial.print((int)State::Stop33FullStop-&gt;tonearmButtons);
+63		Serial.print('\n');
+64		Serial.print((int)State::Stop33FullStop-&gt;stroboscope);
+65		Serial.print('\n');
+--&gt;66		applyNextState(State::Stop33FullStop);
+67		return;
+68		// end of debug
+69	
+70	}
+71	
+72	void StateProcessor::initTonearmState()
+73	{
+74		if (TonearmState::isTonearmOnHolder())
+75			applyNextState(State::InitialPickupIsRaisingOnHolder);
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="55" Name="State.cpp, строка 107" Id="3a369649-9fba-49fb-848a-bdc08dda1137" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="107" FileColumn="1" FunctionName="initStates()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='3a369649-9fba-49fb-848a-bdc08dda1137'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>100	{
+101		return tonearmState;
+102	}
+103	
+104	// initialize states table
+105	void State::initStates()
+106	{
+--&gt;107	/*	State* const  InitialPickupIsRaisingOnHolder = new State(0, "InitialPickupIsRaisingOnHolder", Motor::OFF, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::OFF, SpeedButtons::OFF, DiskLed::OFF, AutostopTimer::OFF, Stroboscope::OFF);
+108		State* const  InitialPickupIsRaisingOutsideHolder = new State(1, "InitialPickupIsRaisingOutsideHolder", Motor::OFF, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::OFF, SpeedButtons::OFF, DiskLed::OFF, AutostopTimer::OFF, Stroboscope::OFF);
+109		State* const  InitialPickupIsMovingToHolder = new State(2, "InitialPickupIsMovingToHolder", Motor::OFF, Microlift::HOLD, Relays::MOVE, TonearmState::FULL_RIGHT, TonearmButtons::OFF, SpeedButtons::OFF, DiskLed::OFF, AutostopTimer::OFF, Stroboscope::OFF);
+110		State* const  Stop33FullStop = new State(3, "Stop33FullStop", Motor::OFF, Microlift::HOLD, Relays::MOVE, TonearmState::STOP, TonearmButtons::STOP, SpeedButtons::LED33, DiskLed::RED, AutostopTimer::OFF, Stroboscope::OFF);
+111		State* const  Rotate33 = new State(4, "Rotate33", Motor::Mode33, Microlift::HOLD, Relays::MOVE, TonearmState::HOLDER, TonearmButtons::ROTATE, SpeedButtons::LED33, DiskLed::BLUE, AutostopTimer::OFF, Stroboscope::STROBO_33);
+112		State* const  Play33AutoMoveToFirstTrack = new State(5, "Play33AutoMoveToFirstTrack", Motor::Mode33, Microlift::HOLD, Relays::MOVE, TonearmState::FULL_LEFT, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, AutostopTimer::OFF, Stroboscope::STROBO_33);
+113		State* const  Play33AutoLowerPickup = new State(6, "Play33AutoLowerPickup", Motor::Mode33, Microlift::DOWN, Relays::MOVE, TonearmState::STOP, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, AutostopTimer::OFF, Stroboscope::STROBO_33);
+114		State* const  Play33Play = new State(7, "Play33Play", Motor::Mode33, Microlift::DOWN, Relays::PLAY, TonearmState::PLAY, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::GREEN, AutostopTimer::OFF, Stroboscope::STROBO_33);
+115		State* const  Play33ManualPickupIsRaising = new State(8, "Play33ManualPickupIsRaising", Motor::Mode33, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, AutostopTimer::OFF, Stroboscope::STROBO_33);
+116		State* const  Play33ManualPickupMoveOverDisk = new State(9, "Play33ManualPickupMoveOverDisk", Motor::Mode33, Microlift::HOLD, Relays::MOVE, TonearmState::MOVE, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, AutostopTimer::OFF, Stroboscope::STROBO_33);
 </Source>
       </BreakPoint>
     </BreakPoints>

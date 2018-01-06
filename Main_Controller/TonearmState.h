@@ -81,6 +81,8 @@ public:
 
 	virtual void apply();
 	
+	virtual char* getTonearmStateName();
+
 	virtual TonearmDirection getDirection()
 	{
 		int outputValue = defineValue();

@@ -8,7 +8,7 @@
 #include "DebugFunctions.h"
 #include "Stroboscope.h"
 #include "StateProcessor.h"
-
+#include "PinInitFunctions.cpp"
 /*
 Main documentation
 _____________________________________________________
@@ -16,7 +16,7 @@ Entire solution consists of three class levels, each aggregates/manages underlyi
 
 Unit states
 	Turntable itself is divided onto several almost independent units - Motor, Tonearm, Microlift etc. Every unit has associated Arduino input and output pins 
-	that should be managed dyring turntable work cycle. Unit class encapsulates pin management logiñ for unit. 
+	that should be managed dyring turntable work cycle. Unit class encapsulates pin management logic for unit. 
 	Unit has set of states - states of all pins. (For example when Play button is lit). Every such state is represented by Unit state class instance- static constant
 	delivered together with class. 
 	Unit classes are polyumorofhic and have two specific methods 
@@ -103,15 +103,22 @@ Buttons and switches
 	* Tonearm position optocouplers have LOW level when optical parh is shaded and HIGH when it is clear. 
 
 */
-
-
 void setup() 
 {
+	Serial.begin(115200);//debug 
+	Serial.print("1___\n") ;//debug
+	StateProcessor::stateProcessor.init();
+	//Serial.print("2____\n");//debug 
 
-	attachInterrupt(digitalPinToInterrupt(PIN_STOP_BUTTON), onStopButtonPress, FALLING);
-	attachInterrupt(digitalPinToInterrupt(PIN_ROTATE_BUTTON), onRotateButtonPress, FALLING);
-	attachInterrupt(digitalPinToInterrupt(PIN_PLAY_BUTTON), onPlayButtonPress, FALLING);
+	initInput(11);
+	
+	//attachInterrupt(11, onRotateButtonPress, FALLING);
+	onRotateButtonPress();
 
+
+	//attachInterrupt(digitalPinToInterrupt(PIN_ROTATE_BUTTON), onRotateButtonPress, FALLING);
+	/*attachInterrupt(digitalPinToInterrupt(PIN_PLAY_BUTTON), onPlayButtonPress, FALLING);
+    Serial.println(3) ;//debug
 	attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_UPPER_SENSOR), onMicroliftSensorEvent, CHANGE);
 	attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_LOWER_SENSOR), onMicroliftSensorEvent, CHANGE);
 
@@ -122,14 +129,28 @@ void setup()
 	attachInterrupt(digitalPinToInterrupt(PIN_FIRST_TRACK), onFirstTrackSensorFallingEvent, FALLING);
 
 	attachInterrupt(digitalPinToInterrupt(PIN_AUTOSTOP), onAutostopSensorRisingEvent, RISING);
-	attachInterrupt(digitalPinToInterrupt(PIN_AUTOSTOP), onAutostopSensorFallingEvent, FALLING);
+	attachInterrupt(digitalPinToInterrupt(PIN_AUTOSTOP), onAutostopSensorFallingEvent, FALLING);*/
 
-	StateProcessor::stateProcessor.init();
+
+	//StateProcessor::stateProcessor.initTonearmState();
+
+  pinMode(13,OUTPUT);
 }
 
 // the loop function runs over and over again until power down or reset
 void loop() 
 {
+
   
+  digitalWrite(13,HIGH);
+
+  delay(1000);  
+  digitalWrite(13,LOW);
+
+  delay(1000);   
+  /*DiskLed::OFF->apply(); 
+  delay(1000);
+  DiskLed::RED->apply(); 
+  delay(1000);*/
 }
 

@@ -12,9 +12,9 @@ DiskLed::DiskLed(bool _pinRedLedValue, bool _pinGreenLedValue, bool _pinBlueLedV
 
 void DiskLed::init()
 {
-	pinMode(PIN_RED_DISK_LED, OUTPUT);
-	pinMode(PIN_GREEN_DISK_LED, OUTPUT);
-	pinMode(PIN_BLUE_DISK_LED, OUTPUT);
+	initOutput(PIN_RED_DISK_LED);
+	initOutput(PIN_GREEN_DISK_LED);
+	initOutput(PIN_BLUE_DISK_LED);
 }
 	
 void DiskLed::apply()
