@@ -12,6 +12,7 @@ void StateProcessor::applyNextState(State *state)
 	if (state)
 	{
 		currentState = state;
+		int stateNumber = state->getStateOrderNumber();//debug
 		currentState->apply();
 	}
 }
@@ -50,11 +51,27 @@ void StateProcessor::processEvent(Events _event)
 void StateProcessor::init() 
 {
 	State::init();
-	pinMode(PIN_BOTTOM_CHASSIS_LIGHT, OUTPUT);
+	initOutput(PIN_BOTTOM_CHASSIS_LIGHT);
 	digitalWrite(PIN_BOTTOM_CHASSIS_LIGHT, HIGH);
-	pinMode(PIN_UPPER_CHASSIS_LIGHT, OUTPUT);
+	initOutput(PIN_UPPER_CHASSIS_LIGHT);
 	digitalWrite(PIN_UPPER_CHASSIS_LIGHT, HIGH);
-	if(TonearmState::isTonearmOnHolder())
+
+	//todo - temporary, remove after debug
+	Serial.print(State::Stop33FullStop->getStateName());
+	Serial.print('\n');
+	Serial.print((int)State::Stop33FullStop->tonearmButtons);
+	Serial.print('\n');
+	Serial.print((int)State::Stop33FullStop->stroboscope);
+	Serial.print('\n');
+	applyNextState(State::Stop33FullStop);
+	return;
+	// end of debug
+
+}
+
+void StateProcessor::initTonearmState()
+{
+	if (TonearmState::isTonearmOnHolder())
 		applyNextState(State::InitialPickupIsRaisingOnHolder);
 	else
 		applyNextState(State::InitialPickupIsRaisingOutsideHolder);

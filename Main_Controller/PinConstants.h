@@ -41,8 +41,8 @@
 #define PIN_JOYSTICK_UP_DOWN A10//
 #define PIN_JOYSTICK_LEFT_RIGHT A11//
 
-#define PIN_PLAY_BUTTON 1//
-#define PIN_ROTATE_BUTTON 0//
+#define PIN_PLAY_BUTTON 19//
+#define PIN_ROTATE_BUTTON 20//
 #define PIN_STOP_BUTTON 18//
 
 #define PIN_33_BUTTON 16//
@@ -54,6 +54,5 @@
 #define PIN_TONEARM_HOLDER 28//
 #define PIN_FIRST_TRACK 30//
 #define PIN_AUTOSTOP 32//
-
 
 #endif

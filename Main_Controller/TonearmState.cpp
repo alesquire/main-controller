@@ -62,15 +62,15 @@ int TonearmState::returnFullRightValue()
 
 void TonearmState::init()
 {
-	pinMode(PIN_TONEARM_VOLTAGE_OUTPUT, OUTPUT);
-	pinMode(PIN_TONEARM_REFERENCE_OUTPUT, OUTPUT);
-	pinMode(PIN_ANTISCATE, INPUT);
-	pinMode(PIN_DAMPER, INPUT);
-	pinMode(PIN_JOYSTICK_LEFT_RIGHT, INPUT);
-	pinMode(PIN_JOYSTICK_UP_DOWN, INPUT);
-	pinMode(PIN_TONEARM_HOLDER, INPUT);
-	pinMode(PIN_FIRST_TRACK, INPUT);
-	pinMode(PIN_AUTOSTOP, INPUT);
+	initOutput(PIN_TONEARM_VOLTAGE_OUTPUT);
+	initOutput(PIN_TONEARM_REFERENCE_OUTPUT);
+	initInput(PIN_ANTISCATE);
+	initInput(PIN_DAMPER);
+	initInput(PIN_JOYSTICK_LEFT_RIGHT);
+	initInput(PIN_JOYSTICK_UP_DOWN);
+	initInput(PIN_TONEARM_HOLDER);
+	initInput(PIN_FIRST_TRACK);
+	initInput(PIN_AUTOSTOP);
 
 	analogWrite(PIN_TONEARM_REFERENCE_OUTPUT,tonearmReferenceOutput);
 }
@@ -103,6 +103,11 @@ protected:
 	{
 		return IDLE;
 	}
+public:
+	char* getTonearmStateName() 
+	{
+		return "StopMode";
+	}
 };
 TonearmState* const TonearmState::STOP = new StopMode();
 
@@ -122,7 +127,11 @@ protected:
 	{
 		return ANTISCATE;
 	}
-
+public:
+	char* getTonearmStateName()
+	{
+		return "Play";
+	}
 };
 TonearmState* const TonearmState::PLAY = new Play();
 
@@ -137,7 +146,11 @@ protected:
 	{
 		return transformJoystickToOutput(readNormalizedJoystickValue());
 	}
-
+public:
+	char* getTonearmStateName()
+	{
+		return "Move";
+	}
 };
 TonearmState* const TonearmState::MOVE = new Move();
 
@@ -154,7 +167,11 @@ protected:
 		else
 			return transformJoystickToOutput(value);
 	}
-
+public:
+	char* getTonearmStateName()
+	{
+		return "Autostop";
+	}
 };
 TonearmState* const TonearmState::AUTOSTOP = new Autostop();
 
@@ -171,6 +188,11 @@ protected:
 		else
 			return transformJoystickToOutput(value);
 	}
+public:
+	char* getTonearmStateName()
+	{
+		return "Holder";
+	}
 };
 TonearmState* const TonearmState::HOLDER = new Holder();
 
@@ -183,6 +205,11 @@ protected:
 	{
 		return returnFullLeftValue();
 	}
+public:
+	char* getTonearmStateName()
+	{
+		return "FullLeft";
+	}
 };
 TonearmState* const TonearmState::FULL_LEFT = new FullLeft();
 
@@ -194,6 +221,11 @@ protected:
 	virtual int defineValue()
 	{
 		return returnFullRightValue();
+	}
+public:
+	char* getTonearmStateName()
+	{
+		return "FullRight";
 	}
 };
 TonearmState* const TonearmState::FULL_RIGHT = new FullRight();

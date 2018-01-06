@@ -15,10 +15,10 @@ Microlift::Microlift(bool _pinHoldValue, bool _pinUpValue)
 
 void Microlift::init()
 {
-	pinMode(PIN_MICROLIFT_HOLD_OUTPUT, OUTPUT);
-	pinMode(PIN_MICROLIFT_UP_OUTPUT, OUTPUT);
-	pinMode(PIN_MICROLIFT_LOWER_SENSOR, INPUT);
-	pinMode(PIN_MICROLIFT_UPPER_SENSOR, INPUT);
+	initOutput(PIN_MICROLIFT_HOLD_OUTPUT);
+	initOutput(PIN_MICROLIFT_UP_OUTPUT);
+	initInput(PIN_MICROLIFT_LOWER_SENSOR);
+	initInput(PIN_MICROLIFT_UPPER_SENSOR);
 }
 
 void Microlift::apply()

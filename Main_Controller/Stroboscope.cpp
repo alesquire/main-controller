@@ -5,7 +5,7 @@
 #include "Stroboscope.h"
 void Stroboscope::init()
 {
-	pinMode(PIN_STROBOSCOPE, OUTPUT);
+	initOutput(PIN_STROBOSCOPE);
 	Timer2.attachInterrupt(onStroboscope);
 	Timer3.attachInterrupt(turnOffStroboLed);
 };

@@ -77,6 +77,10 @@ public:
 	*/
 	void onTimer();
 
+	//moves tonearm and other controls to initial state- tonearm on holder, microlift in HOLD state
+	void initTonearmState();
+
+
 	static StateProcessor stateProcessor;
 };
 
