@@ -98,10 +98,12 @@ public:
 
 	void print(char*);
 	void print(int, int);
+	void print(int);
 
 	void println();
 	void println(char*);
 	void println(int, int);
+
 	void println(unsigned int, int);
 	void println(unsigned long, int);
 	int available();

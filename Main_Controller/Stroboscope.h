@@ -34,5 +34,25 @@ public:
 
 };
 
+class OffStroboscope :public Stroboscope
+{
+public:
+	virtual void apply();
+};
+
+
+class Stroboscope33 :public Stroboscope
+{
+public:
+	virtual void apply();
+};
+
+
+class Stroboscope45 :public Stroboscope
+{
+public:
+	virtual void apply();
+};
+
 #endif
 

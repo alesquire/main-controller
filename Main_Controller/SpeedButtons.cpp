@@ -25,6 +25,3 @@ void SpeedButtons::apply()
 }
 
 
-SpeedButtons* const SpeedButtons::OFF = new SpeedButtons(LOW, LOW);
-SpeedButtons* const SpeedButtons::LED33 = new SpeedButtons(HIGH, LOW);
-SpeedButtons* const SpeedButtons::LED45 = new SpeedButtons(LOW, HIGH);

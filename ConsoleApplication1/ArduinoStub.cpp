@@ -75,6 +75,11 @@ void CSerial::print(char *pString)
 	printf("%s", pString);
 }
 
+void CSerial::print(int intValue)
+{
+	printf("%d", intValue);
+}
+
 void CSerial::print(int value, int)
 {
 	printf("%d", value);

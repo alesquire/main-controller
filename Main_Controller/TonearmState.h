@@ -81,7 +81,10 @@ public:
 
 	virtual void apply();
 	
-	virtual char* getTonearmStateName();
+	virtual char* getTonearmStateName() 
+	{
+		return "Illegal state- parent class is used instead of child class";
+	};
 
 	virtual TonearmDirection getDirection()
 	{
@@ -102,5 +105,86 @@ public:
 	static TonearmState* const FULL_RIGHT;	//automatic move right on full speed
 	static TonearmState* const FULL_LEFT;	//automatic move left on full speed
 };
+
+class StopMode : public TonearmState
+{
+protected:
+	virtual int defineValue();
+	virtual TonearmDirection getDirection();
+public:
+	virtual char* getTonearmStateName();
+};
+
+
+//-----------------------------------------------------------------------------------
+/*
+Poickup is on disk- antiscate force is applied. joystick is ignored
+*/
+class Play : public TonearmState
+{
+protected:
+	virtual int defineValue();
+	virtual TonearmDirection getDirection();
+public:
+	virtual char* getTonearmStateName();
+};
+
+
+//-----------------------------------------------------------------------------------
+/*
+tonearm can be moved to any direction
+*/
+class Move : public TonearmState
+{
+protected:
+	virtual int defineValue();
+public:
+	virtual char* getTonearmStateName();
+};
+
+
+//-----------------------------------------------------------------------------------
+
+class Autostop : public TonearmState
+{
+protected:
+	virtual int defineValue();
+public:
+	virtual char* getTonearmStateName();
+};
+
+
+//-----------------------------------------------------------------------------------
+
+class Holder : public TonearmState
+{
+protected:
+	virtual int defineValue();
+public:
+	virtual char* getTonearmStateName();
+};
+
+
+//-----------------------------------------------------------------------------------
+
+class FullLeft : public TonearmState
+{
+protected:
+	virtual int defineValue();
+public:
+	virtual char* getTonearmStateName();
+};
+
+
+//-----------------------------------------------------------------------------------
+
+class FullRight : public TonearmState
+{
+protected:
+	virtual int defineValue();
+public:
+	virtual char* getTonearmStateName();
+};
+
 #endif
 

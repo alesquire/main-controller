@@ -27,6 +27,3 @@ void Microlift::apply()
 	digitalWrite(PIN_MICROLIFT_UP_OUTPUT, pinUpValue);
 }
 
-Microlift* const Microlift::DOWN = new Microlift(LOW, LOW);
-Microlift* const Microlift::UP = new Microlift(LOW, HIGH);
-Microlift* const Microlift::HOLD = new Microlift(HIGH, LOW);

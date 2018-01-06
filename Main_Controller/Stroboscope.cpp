@@ -10,32 +10,20 @@ void Stroboscope::init()
 	Timer3.attachInterrupt(turnOffStroboLed);
 };
 
-class OffStroboscope :public Stroboscope
+void OffStroboscope::apply()
 {
-public:
-	virtual void apply()
-	{
-		Timer2.stop();
-	}
+	Timer2.stop();
 };
-Stroboscope* const Stroboscope::OFF = new OffStroboscope();
 
-class Stroboscope33 :public Stroboscope
-{
-public:
-	virtual void apply()
-	{
-		Timer2.start(SPEED_33_STROBO_INTERVAL);
-	}
-};
-Stroboscope* const Stroboscope::STROBO_33 = new Stroboscope33();
 
-class Stroboscope45 :public Stroboscope
+void Stroboscope33::apply()
 {
-public:
-	virtual void apply()
-	{
-		Timer2.start(SPEED_45_STROBO_INTERVAL);
-	}
+	Timer2.start(SPEED_33_STROBO_INTERVAL);
 };
-Stroboscope* const Stroboscope::STROBO_45 = new Stroboscope45();
+
+
+void Stroboscope45::apply()
+{
+	Timer2.start(SPEED_45_STROBO_INTERVAL);
+};
+

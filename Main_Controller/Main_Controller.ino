@@ -103,6 +103,11 @@ Buttons and switches
 	* Tonearm position optocouplers have LOW level when optical parh is shaded and HIGH when it is clear. 
 
 */
+
+
+
+
+
 void setup() 
 {
 	Serial.begin(115200);//debug 
