@@ -121,6 +121,7 @@
     <ClCompile Include="Motor.cpp" />
     <ClCompile Include="PinInitFunctions.cpp" />
     <ClCompile Include="Relays.cpp" />
+    <ClCompile Include="Initializers.cpp" />
     <ClCompile Include="SpeedButtons.cpp" />
     <ClCompile Include="StateProcessor.cpp" />
     <ClCompile Include="State.cpp" />

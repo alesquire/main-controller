@@ -22,6 +22,4 @@ void Relays::apply()
 	digitalWrite(PIN_DAMPER_RELAY, pinDamperRelayValue);
 }
 
-Relays* const Relays::PLAY = new Relays(LOW, LOW);
-Relays* const Relays::MOVE = new Relays(HIGH, HIGH);
 

@@ -9,44 +9,44 @@
       <VCCodeMacros />
     </VCCodeModel>
     <BreakPoints>
-      <BreakPoint Index="1" Name="TesterApplication.cpp, строка 51" Id="70e2aad8-c6dd-44cb-82fd-0a4d0eeded95" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\consoleapplication1\testerapplication.cpp" FileLine="51" FileColumn="1" FunctionName="automaticPlaybackTest()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='70e2aad8-c6dd-44cb-82fd-0a4d0eeded95'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>44		onMicroliftSensorEvent(); //tonearm is up
-45		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_TONEARM_HOLDER, LOW);
-46		onHolderSensorFallingEvent();//tonearm is on holder
-47	}
-48	
-49	void automaticPlaybackTest()
-50	{
---&gt;51		onPlayButtonPress();
-52		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_TONEARM_HOLDER, HIGH);
-53		onHolderSensorRisingEvent();
-54	
-55		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, LOW);
-56		onFirstTrackSensorFallingEvent();
-57		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, HIGH);
-58		onFirstTrackSensorRisingEvent();
-59	
-60		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
+      <BreakPoint Index="1" Name="TesterApplication.cpp, строка 53" Id="70e2aad8-c6dd-44cb-82fd-0a4d0eeded95" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\consoleapplication1\testerapplication.cpp" FileLine="53" FileColumn="1" FunctionName="automaticPlaybackTest()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='70e2aad8-c6dd-44cb-82fd-0a4d0eeded95'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>46		onMicroliftSensorEvent(); //tonearm is up
+47		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_TONEARM_HOLDER, LOW);
+48		onHolderSensorFallingEvent();//tonearm is on holder
+49	}
+50	
+51	void automaticPlaybackTest()
+52	{
+--&gt;53		onPlayButtonPress();
+54		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_TONEARM_HOLDER, HIGH);
+55		onHolderSensorRisingEvent();
+56	
+57		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, LOW);
+58		onFirstTrackSensorFallingEvent();
+59		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, HIGH);
+60		onFirstTrackSensorRisingEvent();
+61	
+62		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
 </Source>
       </BreakPoint>
-      <BreakPoint Index="2" Name="TesterApplication.cpp, строка 67" Id="3c6489d1-8e8c-4502-a120-c9daad3115e0" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\consoleapplication1\testerapplication.cpp" FileLine="67" FileColumn="1" FunctionName="automaticPlaybackTest()" FunctionLineOffset="18" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='3c6489d1-8e8c-4502-a120-c9daad3115e0'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>60		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
-61		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_LOWER_SENSOR, LOW);
-62		onMicroliftSensorEvent();
-63	
-64		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_AUTOSTOP, LOW);
-65		onAutostopSensorFallingEvent();
-66	
---&gt;67		onAutostopTimerEvent();
+      <BreakPoint Index="2" Name="TesterApplication.cpp, строка 69" Id="3c6489d1-8e8c-4502-a120-c9daad3115e0" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\consoleapplication1\testerapplication.cpp" FileLine="69" FileColumn="1" FunctionName="automaticPlaybackTest()" FunctionLineOffset="18" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='3c6489d1-8e8c-4502-a120-c9daad3115e0'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>62		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
+63		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_LOWER_SENSOR, LOW);
+64		onMicroliftSensorEvent();
+65	
+66		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_AUTOSTOP, LOW);
+67		onAutostopSensorFallingEvent();
 68	
-69		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
-70		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_LOWER_SENSOR, HIGH);
-71		onMicroliftSensorEvent();
-72	
-73		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_AUTOSTOP, HIGH);
-74		onAutostopSensorRisingEvent();
-75	
-76		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, LOW);
+--&gt;69		onAutostopTimerEvent();
+70	
+71		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
+72		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_LOWER_SENSOR, HIGH);
+73		onMicroliftSensorEvent();
+74	
+75		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_AUTOSTOP, HIGH);
+76		onAutostopSensorRisingEvent();
+77	
+78		ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, LOW);
 </Source>
       </BreakPoint>
       <BreakPoint Index="3" Name="StateProcessor.cpp, строка 29" Id="e7711aeb-099d-4f43-9cf3-b7883100b1ba" Enabled="1" Message="{currentStateOrder}" MessageTextType="2" PreProcessedMessage="{0}" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="29" FileColumn="1" FunctionName="processEvent(Events _event)" FunctionLineOffset="3" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='e7711aeb-099d-4f43-9cf3-b7883100b1ba'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="0">
@@ -292,24 +292,24 @@
 52	{
 </Source>
       </BreakPoint>
-      <BreakPoint Index="15" Name="Main_Controller.ino, строка 148" Id="6f79963f-f518-4f27-8a68-8a2123949e32" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\main_controller.ino" FileLine="148" FileColumn="1" FunctionName="setup()" FunctionLineOffset="10" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='6f79963f-f518-4f27-8a68-8a2123949e32'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>141		Serial.print("1___\n") ;//debug
-142		StateProcessor::stateProcessor.init();
-143		//Serial.print("2____\n");//debug 
-144	
-145		initInput(11);
-146		
-147		//attachInterrupt(11, onRotateButtonPress, FALLING);
---&gt;148		onRotateButtonPress();
-149	
-150	
-151		//attachInterrupt(digitalPinToInterrupt(PIN_ROTATE_BUTTON), onRotateButtonPress, FALLING);
-152		/*attachInterrupt(digitalPinToInterrupt(PIN_PLAY_BUTTON), onPlayButtonPress, FALLING);
-153	    Serial.println(3) ;//debug
-154		attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_UPPER_SENSOR), onMicroliftSensorEvent, CHANGE);
-155		attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_LOWER_SENSOR), onMicroliftSensorEvent, CHANGE);
-156	
-157		attachInterrupt(digitalPinToInterrupt(PIN_TONEARM_HOLDER), onHolderSensorRisingEvent,RISING);
+      <BreakPoint Index="15" Name="Main_Controller.ino, строка 121" Id="6f79963f-f518-4f27-8a68-8a2123949e32" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\main_controller.ino" FileLine="121" FileColumn="1" FunctionName="setup()" FunctionLineOffset="10" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='6f79963f-f518-4f27-8a68-8a2123949e32'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>114		Serial.print("1___\n") ;//debug
+115		StateProcessor::stateProcessor.init();
+116		//Serial.print("2____\n");//debug 
+117	
+118		initInput(11);
+119		
+120		//attachInterrupt(11, onRotateButtonPress, FALLING);
+--&gt;121		onRotateButtonPress();
+122	
+123	
+124		//attachInterrupt(digitalPinToInterrupt(PIN_ROTATE_BUTTON), onRotateButtonPress, FALLING);
+125		/*attachInterrupt(digitalPinToInterrupt(PIN_PLAY_BUTTON), onPlayButtonPress, FALLING);
+126	    Serial.println(3) ;//debug
+127		attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_UPPER_SENSOR), onMicroliftSensorEvent, CHANGE);
+128		attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_LOWER_SENSOR), onMicroliftSensorEvent, CHANGE);
+129	
+130		attachInterrupt(digitalPinToInterrupt(PIN_TONEARM_HOLDER), onHolderSensorRisingEvent,RISING);
 </Source>
       </BreakPoint>
       <BreakPoint Index="16" Name="EventFunctions.cpp, строка 28" Id="480bfdd7-a827-4bc2-93e9-953a8ded3e84" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\eventfunctions.cpp" FileLine="28" FileColumn="1" FunctionName="onRotateButtonPress()" FunctionLineOffset="8" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='480bfdd7-a827-4bc2-93e9-953a8ded3e84'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
@@ -332,44 +332,44 @@
 37	}
 </Source>
       </BreakPoint>
-      <BreakPoint Index="17" Name="Main_Controller.ino, строка 142" Id="b4b77918-7316-46e7-8847-461c2bd9fc12" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\main_controller.ino" FileLine="142" FileColumn="1" FunctionName="setup()" FunctionLineOffset="5" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='b4b77918-7316-46e7-8847-461c2bd9fc12'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>135	
-136	
-137	void setup() 
-138	{
-139	
-140		Serial.begin(115200);//debug 
-141		Serial.print("1___\n") ;//debug
---&gt;142		StateProcessor::stateProcessor.init();
-143		//Serial.print("2____\n");//debug 
-144	
-145		initInput(11);
-146		
-147		//attachInterrupt(11, onRotateButtonPress, FALLING);
-148		onRotateButtonPress();
-149	
-150	
-151		//attachInterrupt(digitalPinToInterrupt(PIN_ROTATE_BUTTON), onRotateButtonPress, FALLING);
+      <BreakPoint Index="17" Name="Main_Controller.ino, строка 115" Id="b4b77918-7316-46e7-8847-461c2bd9fc12" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\main_controller.ino" FileLine="115" FileColumn="1" FunctionName="setup()" FunctionLineOffset="5" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='b4b77918-7316-46e7-8847-461c2bd9fc12'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>108	
+109	
+110	
+111	void setup() 
+112	{
+113		Serial.begin(115200);//debug 
+114		Serial.print("1___\n") ;//debug
+--&gt;115		StateProcessor::stateProcessor.init();
+116		//Serial.print("2____\n");//debug 
+117	
+118		initInput(11);
+119		
+120		//attachInterrupt(11, onRotateButtonPress, FALLING);
+121		onRotateButtonPress();
+122	
+123	
+124		//attachInterrupt(digitalPinToInterrupt(PIN_ROTATE_BUTTON), onRotateButtonPress, FALLING);
 </Source>
       </BreakPoint>
-      <BreakPoint Index="18" Name="Main_Controller.ino, строка 145" Id="dad7bfc7-2170-41a7-a2c6-a5707cc49210" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\main_controller.ino" FileLine="145" FileColumn="1" FunctionName="setup()" FunctionLineOffset="8" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='dad7bfc7-2170-41a7-a2c6-a5707cc49210'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>138	{
-139	
-140		Serial.begin(115200);//debug 
-141		Serial.print("1___\n") ;//debug
-142		StateProcessor::stateProcessor.init();
-143		//Serial.print("2____\n");//debug 
-144	
---&gt;145		initInput(11);
-146		
-147		//attachInterrupt(11, onRotateButtonPress, FALLING);
-148		onRotateButtonPress();
-149	
-150	
-151		//attachInterrupt(digitalPinToInterrupt(PIN_ROTATE_BUTTON), onRotateButtonPress, FALLING);
-152		/*attachInterrupt(digitalPinToInterrupt(PIN_PLAY_BUTTON), onPlayButtonPress, FALLING);
-153	    Serial.println(3) ;//debug
-154		attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_UPPER_SENSOR), onMicroliftSensorEvent, CHANGE);
+      <BreakPoint Index="18" Name="Main_Controller.ino, строка 118" Id="dad7bfc7-2170-41a7-a2c6-a5707cc49210" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\main_controller.ino" FileLine="118" FileColumn="1" FunctionName="setup()" FunctionLineOffset="8" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='dad7bfc7-2170-41a7-a2c6-a5707cc49210'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>111	void setup() 
+112	{
+113		Serial.begin(115200);//debug 
+114		Serial.print("1___\n") ;//debug
+115		StateProcessor::stateProcessor.init();
+116		//Serial.print("2____\n");//debug 
+117	
+--&gt;118		initInput(11);
+119		
+120		//attachInterrupt(11, onRotateButtonPress, FALLING);
+121		onRotateButtonPress();
+122	
+123	
+124		//attachInterrupt(digitalPinToInterrupt(PIN_ROTATE_BUTTON), onRotateButtonPress, FALLING);
+125		/*attachInterrupt(digitalPinToInterrupt(PIN_PLAY_BUTTON), onPlayButtonPress, FALLING);
+126	    Serial.println(3) ;//debug
+127		attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_UPPER_SENSOR), onMicroliftSensorEvent, CHANGE);
 </Source>
       </BreakPoint>
       <BreakPoint Index="19" Name="EventFunctions.cpp, строка 24" Id="c631090f-6fb1-41f6-9efa-67aa226d92e8" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\eventfunctions.cpp" FileLine="24" FileColumn="1" FunctionName="onRotateButtonPress()" FunctionLineOffset="4" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='c631090f-6fb1-41f6-9efa-67aa226d92e8'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
@@ -585,14 +585,14 @@
 64		motorState-&gt;apply();
 --&gt;65		microliftStates-&gt;apply();
 66		relaysState-&gt;apply();
-67	
-68		//debug
-69		int i = 0;
-70		char* tonearmStateName=NULL;
-71		//if (tonearmState)
-72		//{
-73		//	int z = 0;
-74		//	tonearmStateName = tonearmState-&gt;getTonearmStateName();
+67		tonearmState-&gt;apply();
+68		tonearmButtons-&gt;apply();
+69		speedButtons-&gt;apply();
+70		diskLed-&gt;apply();
+71		autostopTimer-&gt;apply();
+72		stroboscope-&gt;apply();
+73	}
+74	
 </Source>
       </BreakPoint>
       <BreakPoint Index="30" Name="State.cpp, строка 66" Id="d9e74717-9a1e-419c-bf30-acfabea30ab6" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="66" FileColumn="1" FunctionName="apply()" FunctionLineOffset="4" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='d9e74717-9a1e-419c-bf30-acfabea30ab6'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
@@ -604,15 +604,15 @@
 64		motorState-&gt;apply();
 65		microliftStates-&gt;apply();
 --&gt;66		relaysState-&gt;apply();
-67	
-68		//debug
-69		int i = 0;
-70		char* tonearmStateName=NULL;
-71		//if (tonearmState)
-72		//{
-73		//	int z = 0;
-74		//	tonearmStateName = tonearmState-&gt;getTonearmStateName();
-75		//}
+67		tonearmState-&gt;apply();
+68		tonearmButtons-&gt;apply();
+69		speedButtons-&gt;apply();
+70		diskLed-&gt;apply();
+71		autostopTimer-&gt;apply();
+72		stroboscope-&gt;apply();
+73	}
+74	
+75	int State::getStateOrderNumber()
 </Source>
       </BreakPoint>
       <BreakPoint Index="31" Name="TonearmState.cpp, строка 85" Id="3feb8e37-da53-4fd8-b590-bd463978acde" Enabled="1" Message="{outputValue}" MessageTextType="2" PreProcessedMessage="{0}" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\tonearmstate.cpp" FileLine="85" FileColumn="1" FunctionName="apply()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='3feb8e37-da53-4fd8-b590-bd463978acde'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
@@ -655,304 +655,222 @@
 92		Tonearm is not moving despite on joystick state
 93	*/
 94	
-95	class StopMode : public TonearmState
+95	int StopMode::defineValue()
 </Source>
       </BreakPoint>
-      <BreakPoint Index="33" Name="State.cpp, строка 69" Id="615e6703-785f-48f6-b67b-46ec26dead6b" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="69" FileColumn="1" FunctionName="apply()" FunctionLineOffset="7" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='615e6703-785f-48f6-b67b-46ec26dead6b'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+      <BreakPoint Index="33" Name="State.cpp, строка 67" Id="9334cd17-72ae-4c90-b02e-2d547afba03f" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="67" FileColumn="1" FunctionName="apply()" FunctionLineOffset="19" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='9334cd17-72ae-4c90-b02e-2d547afba03f'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>60		Serial.print("speedButtons=");
+61		Serial.print((int)speedButtons);
+62		Serial.print('\n');	
+63		
+64		motorState-&gt;apply();
+65		microliftStates-&gt;apply();
+66		relaysState-&gt;apply();
+--&gt;67		tonearmState-&gt;apply();
+68		tonearmButtons-&gt;apply();
+69		speedButtons-&gt;apply();
+70		diskLed-&gt;apply();
+71		autostopTimer-&gt;apply();
+72		stroboscope-&gt;apply();
+73	}
+74	
+75	int State::getStateOrderNumber()
+76	{
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="34" Name="State.cpp, строка 68" Id="879461e9-ff00-4066-bd47-9f1966f058db" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="68" FileColumn="1" FunctionName="apply()" FunctionLineOffset="20" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='879461e9-ff00-4066-bd47-9f1966f058db'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>61		Serial.print((int)speedButtons);
+62		Serial.print('\n');	
+63		
+64		motorState-&gt;apply();
+65		microliftStates-&gt;apply();
+66		relaysState-&gt;apply();
+67		tonearmState-&gt;apply();
+--&gt;68		tonearmButtons-&gt;apply();
+69		speedButtons-&gt;apply();
+70		diskLed-&gt;apply();
+71		autostopTimer-&gt;apply();
+72		stroboscope-&gt;apply();
+73	}
+74	
+75	int State::getStateOrderNumber()
+76	{
+77		return stateOrderNumber;
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="35" Name="State.cpp, строка 69" Id="6a1a662b-df97-4569-b7c5-b3299a5d7e95" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="69" FileColumn="1" FunctionName="apply()" FunctionLineOffset="21" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='6a1a662b-df97-4569-b7c5-b3299a5d7e95'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
         <Source>62		Serial.print('\n');	
 63		
 64		motorState-&gt;apply();
 65		microliftStates-&gt;apply();
 66		relaysState-&gt;apply();
-67	
-68		//debug
---&gt;69		int i = 0;
-70		char* tonearmStateName=NULL;
-71		//if (tonearmState)
-72		//{
-73		//	int z = 0;
-74		//	tonearmStateName = tonearmState-&gt;getTonearmStateName();
-75		//}
-76		//else
-77		//{
-78		//	int y = 0;
+67		tonearmState-&gt;apply();
+68		tonearmButtons-&gt;apply();
+--&gt;69		speedButtons-&gt;apply();
+70		diskLed-&gt;apply();
+71		autostopTimer-&gt;apply();
+72		stroboscope-&gt;apply();
+73	}
+74	
+75	int State::getStateOrderNumber()
+76	{
+77		return stateOrderNumber;
+78	}
 </Source>
       </BreakPoint>
-      <BreakPoint Index="34" Name="State.cpp, строка 73" Id="1baf001d-ef09-4549-bfed-b32c7aa08485" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="73" FileColumn="1" FunctionName="apply()" FunctionLineOffset="11" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='1baf001d-ef09-4549-bfed-b32c7aa08485'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>66		relaysState-&gt;apply();
-67	
-68		//debug
-69		int i = 0;
-70		char* tonearmStateName=NULL;
-71		//if (tonearmState)
-72		//{
---&gt;73		//	int z = 0;
-74		//	tonearmStateName = tonearmState-&gt;getTonearmStateName();
-75		//}
-76		//else
-77		//{
-78		//	int y = 0;
-79		//}
-80		//end debug
-81		//tonearmState-&gt;apply();
-82		//tonearmButtons-&gt;apply();
+      <BreakPoint Index="36" Name="State.cpp, строка 70" Id="11a6c819-9b5e-4c05-81dc-17d006b04ac4" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="70" FileColumn="1" FunctionName="apply()" FunctionLineOffset="22" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='11a6c819-9b5e-4c05-81dc-17d006b04ac4'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>63		
+64		motorState-&gt;apply();
+65		microliftStates-&gt;apply();
+66		relaysState-&gt;apply();
+67		tonearmState-&gt;apply();
+68		tonearmButtons-&gt;apply();
+69		speedButtons-&gt;apply();
+--&gt;70		diskLed-&gt;apply();
+71		autostopTimer-&gt;apply();
+72		stroboscope-&gt;apply();
+73	}
+74	
+75	int State::getStateOrderNumber()
+76	{
+77		return stateOrderNumber;
+78	}
+79	
 </Source>
       </BreakPoint>
-      <BreakPoint Index="35" Name="State.cpp, строка 74" Id="d0860d6d-9807-4a21-b6d2-abb481447084" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="74" FileColumn="1" FunctionName="apply()" FunctionLineOffset="12" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='d0860d6d-9807-4a21-b6d2-abb481447084'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>67	
-68		//debug
-69		int i = 0;
-70		char* tonearmStateName=NULL;
-71		//if (tonearmState)
-72		//{
-73		//	int z = 0;
---&gt;74		//	tonearmStateName = tonearmState-&gt;getTonearmStateName();
-75		//}
-76		//else
-77		//{
-78		//	int y = 0;
-79		//}
-80		//end debug
-81		//tonearmState-&gt;apply();
-82		//tonearmButtons-&gt;apply();
-83		speedButtons-&gt;apply();
+      <BreakPoint Index="37" Name="State.cpp, строка 71" Id="1ef181bd-ff00-492c-a5a0-61dfceba41ca" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="71" FileColumn="1" FunctionName="apply()" FunctionLineOffset="23" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='1ef181bd-ff00-492c-a5a0-61dfceba41ca'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>64		motorState-&gt;apply();
+65		microliftStates-&gt;apply();
+66		relaysState-&gt;apply();
+67		tonearmState-&gt;apply();
+68		tonearmButtons-&gt;apply();
+69		speedButtons-&gt;apply();
+70		diskLed-&gt;apply();
+--&gt;71		autostopTimer-&gt;apply();
+72		stroboscope-&gt;apply();
+73	}
+74	
+75	int State::getStateOrderNumber()
+76	{
+77		return stateOrderNumber;
+78	}
+79	
+80	char * State::getStateName()
 </Source>
       </BreakPoint>
-      <BreakPoint Index="36" Name="State.cpp, строка 78" Id="9785aa37-10b0-4b14-9a9a-547a5c6e3529" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="78" FileColumn="1" FunctionName="apply()" FunctionLineOffset="16" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='9785aa37-10b0-4b14-9a9a-547a5c6e3529'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>71		//if (tonearmState)
-72		//{
-73		//	int z = 0;
-74		//	tonearmStateName = tonearmState-&gt;getTonearmStateName();
-75		//}
-76		//else
-77		//{
---&gt;78		//	int y = 0;
-79		//}
-80		//end debug
-81		//tonearmState-&gt;apply();
-82		//tonearmButtons-&gt;apply();
-83		speedButtons-&gt;apply();
-84		diskLed-&gt;apply();
-85		//autostopTimer-&gt;apply();
-86		//stroboscope-&gt;apply();
-87	}
+      <BreakPoint Index="38" Name="State.cpp, строка 72" Id="477b8189-8c14-4e66-9359-b6001d2869a4" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="72" FileColumn="1" FunctionName="apply()" FunctionLineOffset="24" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='477b8189-8c14-4e66-9359-b6001d2869a4'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>65		microliftStates-&gt;apply();
+66		relaysState-&gt;apply();
+67		tonearmState-&gt;apply();
+68		tonearmButtons-&gt;apply();
+69		speedButtons-&gt;apply();
+70		diskLed-&gt;apply();
+71		autostopTimer-&gt;apply();
+--&gt;72		stroboscope-&gt;apply();
+73	}
+74	
+75	int State::getStateOrderNumber()
+76	{
+77		return stateOrderNumber;
+78	}
+79	
+80	char * State::getStateName()
+81	{
 </Source>
       </BreakPoint>
-      <BreakPoint Index="37" Name="State.cpp, строка 81" Id="9334cd17-72ae-4c90-b02e-2d547afba03f" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="81" FileColumn="1" FunctionName="apply()" FunctionLineOffset="19" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='9334cd17-72ae-4c90-b02e-2d547afba03f'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>74		//	tonearmStateName = tonearmState-&gt;getTonearmStateName();
-75		//}
-76		//else
-77		//{
-78		//	int y = 0;
-79		//}
-80		//end debug
---&gt;81		//tonearmState-&gt;apply();
-82		//tonearmButtons-&gt;apply();
-83		speedButtons-&gt;apply();
-84		diskLed-&gt;apply();
-85		//autostopTimer-&gt;apply();
-86		//stroboscope-&gt;apply();
-87	}
-88	
-89	int State::getStateOrderNumber()
-90	{
+      <BreakPoint Index="39" Name="Main_Controller.ino, строка 113" Id="eaa49501-bc24-4948-bed7-a76c62425abf" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\main_controller.ino" FileLine="113" FileColumn="1" FunctionName="setup()" FunctionLineOffset="3" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='eaa49501-bc24-4948-bed7-a76c62425abf'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>106	
+107	
+108	
+109	
+110	
+111	void setup() 
+112	{
+--&gt;113		Serial.begin(115200);//debug 
+114		Serial.print("1___\n") ;//debug
+115		StateProcessor::stateProcessor.init();
+116		//Serial.print("2____\n");//debug 
+117	
+118		initInput(11);
+119		
+120		//attachInterrupt(11, onRotateButtonPress, FALLING);
+121		onRotateButtonPress();
+122	
 </Source>
       </BreakPoint>
-      <BreakPoint Index="38" Name="State.cpp, строка 82" Id="879461e9-ff00-4066-bd47-9f1966f058db" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="82" FileColumn="1" FunctionName="apply()" FunctionLineOffset="20" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='879461e9-ff00-4066-bd47-9f1966f058db'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>75		//}
-76		//else
-77		//{
-78		//	int y = 0;
-79		//}
-80		//end debug
-81		//tonearmState-&gt;apply();
---&gt;82		//tonearmButtons-&gt;apply();
-83		speedButtons-&gt;apply();
-84		diskLed-&gt;apply();
-85		//autostopTimer-&gt;apply();
-86		//stroboscope-&gt;apply();
-87	}
-88	
-89	int State::getStateOrderNumber()
-90	{
-91		return stateOrderNumber;
+      <BreakPoint Index="40" Name="Main_Controller.ino, строка 114" Id="47d78ce9-aa42-47ec-bcfa-feb544c415c1" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\main_controller.ino" FileLine="114" FileColumn="1" FunctionName="setup()" FunctionLineOffset="4" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='47d78ce9-aa42-47ec-bcfa-feb544c415c1'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>107	
+108	
+109	
+110	
+111	void setup() 
+112	{
+113		Serial.begin(115200);//debug 
+--&gt;114		Serial.print("1___\n") ;//debug
+115		StateProcessor::stateProcessor.init();
+116		//Serial.print("2____\n");//debug 
+117	
+118		initInput(11);
+119		
+120		//attachInterrupt(11, onRotateButtonPress, FALLING);
+121		onRotateButtonPress();
+122	
+123	
 </Source>
       </BreakPoint>
-      <BreakPoint Index="39" Name="State.cpp, строка 83" Id="6a1a662b-df97-4569-b7c5-b3299a5d7e95" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="83" FileColumn="1" FunctionName="apply()" FunctionLineOffset="21" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='6a1a662b-df97-4569-b7c5-b3299a5d7e95'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>76		//else
-77		//{
-78		//	int y = 0;
-79		//}
-80		//end debug
-81		//tonearmState-&gt;apply();
-82		//tonearmButtons-&gt;apply();
---&gt;83		speedButtons-&gt;apply();
-84		diskLed-&gt;apply();
-85		//autostopTimer-&gt;apply();
-86		//stroboscope-&gt;apply();
-87	}
-88	
-89	int State::getStateOrderNumber()
-90	{
-91		return stateOrderNumber;
-92	}
-</Source>
-      </BreakPoint>
-      <BreakPoint Index="40" Name="State.cpp, строка 84" Id="11a6c819-9b5e-4c05-81dc-17d006b04ac4" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="84" FileColumn="1" FunctionName="apply()" FunctionLineOffset="22" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='11a6c819-9b5e-4c05-81dc-17d006b04ac4'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>77		//{
-78		//	int y = 0;
-79		//}
-80		//end debug
-81		//tonearmState-&gt;apply();
-82		//tonearmButtons-&gt;apply();
-83		speedButtons-&gt;apply();
---&gt;84		diskLed-&gt;apply();
-85		//autostopTimer-&gt;apply();
-86		//stroboscope-&gt;apply();
-87	}
-88	
-89	int State::getStateOrderNumber()
-90	{
-91		return stateOrderNumber;
-92	}
-93	
-</Source>
-      </BreakPoint>
-      <BreakPoint Index="41" Name="State.cpp, строка 85" Id="1ef181bd-ff00-492c-a5a0-61dfceba41ca" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="85" FileColumn="1" FunctionName="apply()" FunctionLineOffset="23" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='1ef181bd-ff00-492c-a5a0-61dfceba41ca'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>78		//	int y = 0;
-79		//}
-80		//end debug
-81		//tonearmState-&gt;apply();
-82		//tonearmButtons-&gt;apply();
-83		speedButtons-&gt;apply();
-84		diskLed-&gt;apply();
---&gt;85		//autostopTimer-&gt;apply();
-86		//stroboscope-&gt;apply();
-87	}
-88	
-89	int State::getStateOrderNumber()
-90	{
-91		return stateOrderNumber;
-92	}
-93	
-94	char * State::getStateName()
-</Source>
-      </BreakPoint>
-      <BreakPoint Index="42" Name="State.cpp, строка 86" Id="477b8189-8c14-4e66-9359-b6001d2869a4" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="86" FileColumn="1" FunctionName="apply()" FunctionLineOffset="24" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='477b8189-8c14-4e66-9359-b6001d2869a4'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>79		//}
-80		//end debug
-81		//tonearmState-&gt;apply();
-82		//tonearmButtons-&gt;apply();
-83		speedButtons-&gt;apply();
-84		diskLed-&gt;apply();
-85		//autostopTimer-&gt;apply();
---&gt;86		//stroboscope-&gt;apply();
-87	}
-88	
-89	int State::getStateOrderNumber()
-90	{
-91		return stateOrderNumber;
-92	}
-93	
-94	char * State::getStateName()
-95	{
-</Source>
-      </BreakPoint>
-      <BreakPoint Index="43" Name="Main_Controller.ino, строка 140" Id="eaa49501-bc24-4948-bed7-a76c62425abf" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\main_controller.ino" FileLine="140" FileColumn="1" FunctionName="setup()" FunctionLineOffset="3" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='eaa49501-bc24-4948-bed7-a76c62425abf'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>133	State* const  State::Stop45PickupIsRaising = new State(27, "Stop45PickupIsRaising", Motor::OFF, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::STOP, SpeedButtons::LED45, DiskLed::RED, AutostopTimer::OFF, Stroboscope::STROBO_45);
-134	State* const  State::Stop45PickupIsAutomaticallyMovingToHolder = new State(28, "Stop45PickupIsAutomaticallyMovingToHolder", Motor::OFF, Microlift::HOLD, Relays::MOVE, TonearmState::FULL_RIGHT, TonearmButtons::STOP, SpeedButtons::LED45, DiskLed::RED, AutostopTimer::OFF, Stroboscope::STROBO_45);
-135	
-136	
-137	void setup() 
-138	{
-139	
---&gt;140		Serial.begin(115200);//debug 
-141		Serial.print("1___\n") ;//debug
-142		StateProcessor::stateProcessor.init();
-143		//Serial.print("2____\n");//debug 
-144	
-145		initInput(11);
-146		
-147		//attachInterrupt(11, onRotateButtonPress, FALLING);
-148		onRotateButtonPress();
-149	
-</Source>
-      </BreakPoint>
-      <BreakPoint Index="44" Name="Main_Controller.ino, строка 141" Id="47d78ce9-aa42-47ec-bcfa-feb544c415c1" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\main_controller.ino" FileLine="141" FileColumn="1" FunctionName="setup()" FunctionLineOffset="4" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='47d78ce9-aa42-47ec-bcfa-feb544c415c1'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>134	State* const  State::Stop45PickupIsAutomaticallyMovingToHolder = new State(28, "Stop45PickupIsAutomaticallyMovingToHolder", Motor::OFF, Microlift::HOLD, Relays::MOVE, TonearmState::FULL_RIGHT, TonearmButtons::STOP, SpeedButtons::LED45, DiskLed::RED, AutostopTimer::OFF, Stroboscope::STROBO_45);
-135	
-136	
-137	void setup() 
-138	{
-139	
-140		Serial.begin(115200);//debug 
---&gt;141		Serial.print("1___\n") ;//debug
-142		StateProcessor::stateProcessor.init();
-143		//Serial.print("2____\n");//debug 
-144	
-145		initInput(11);
-146		
-147		//attachInterrupt(11, onRotateButtonPress, FALLING);
-148		onRotateButtonPress();
-149	
-150	
-</Source>
-      </BreakPoint>
-      <BreakPoint Index="45" Name="Stroboscope.cpp, строка 18" Id="3ae546a9-0c78-4548-8d32-8a2188e4bcc6" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stroboscope.cpp" FileLine="18" FileColumn="1" FunctionName="class OffStroboscope::apply()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='3ae546a9-0c78-4548-8d32-8a2188e4bcc6'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>11	};
+      <BreakPoint Index="41" Name="Stroboscope.cpp, строка 15" Id="3ae546a9-0c78-4548-8d32-8a2188e4bcc6" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stroboscope.cpp" FileLine="15" FileColumn="1" FunctionName="class OffStroboscope::apply()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='3ae546a9-0c78-4548-8d32-8a2188e4bcc6'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>8		initOutput(PIN_STROBOSCOPE);
+9		Timer2.attachInterrupt(onStroboscope);
+10		Timer3.attachInterrupt(turnOffStroboLed);
+11	};
 12	
-13	class OffStroboscope :public Stroboscope
+13	void OffStroboscope::apply()
 14	{
-15	public:
-16		virtual void apply()
-17		{
---&gt;18			Timer2.stop();
-19		}
-20	};
-21	Stroboscope* const Stroboscope::OFF = new OffStroboscope();
-22	
-23	class Stroboscope33 :public Stroboscope
-24	{
-25	public:
-26		virtual void apply()
-27		{
+--&gt;15		Timer2.stop();
+16	};
+17	
+18	
+19	void Stroboscope33::apply()
+20	{
+21		Timer2.start(SPEED_33_STROBO_INTERVAL);
+22	};
+23	
+24	
 </Source>
       </BreakPoint>
-      <BreakPoint Index="46" Name="Stroboscope.cpp, строка 28" Id="50df82e1-3583-4dc0-b1f0-595367ca31cf" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stroboscope.cpp" FileLine="28" FileColumn="1" FunctionName="class Stroboscope33::apply()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='50df82e1-3583-4dc0-b1f0-595367ca31cf'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>21	Stroboscope* const Stroboscope::OFF = new OffStroboscope();
-22	
-23	class Stroboscope33 :public Stroboscope
-24	{
-25	public:
-26		virtual void apply()
-27		{
---&gt;28			Timer2.start(SPEED_33_STROBO_INTERVAL);
-29		}
-30	};
-31	Stroboscope* const Stroboscope::STROBO_33 = new Stroboscope33();
-32	
-33	class Stroboscope45 :public Stroboscope
-34	{
-35	public:
-36		virtual void apply()
-37		{
+      <BreakPoint Index="42" Name="Stroboscope.cpp, строка 21" Id="50df82e1-3583-4dc0-b1f0-595367ca31cf" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stroboscope.cpp" FileLine="21" FileColumn="1" FunctionName="class Stroboscope33::apply()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='50df82e1-3583-4dc0-b1f0-595367ca31cf'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>14	{
+15		Timer2.stop();
+16	};
+17	
+18	
+19	void Stroboscope33::apply()
+20	{
+--&gt;21		Timer2.start(SPEED_33_STROBO_INTERVAL);
+22	};
+23	
+24	
+25	void Stroboscope45::apply()
+26	{
+27		Timer2.start(SPEED_45_STROBO_INTERVAL);
+28	};
+29	
 </Source>
       </BreakPoint>
-      <BreakPoint Index="47" Name="Stroboscope.cpp, строка 38" Id="1d500f9c-e1ba-4ea5-a887-bef457cf6bfa" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stroboscope.cpp" FileLine="38" FileColumn="1" FunctionName="class Stroboscope45::apply()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='1d500f9c-e1ba-4ea5-a887-bef457cf6bfa'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>31	Stroboscope* const Stroboscope::STROBO_33 = new Stroboscope33();
-32	
-33	class Stroboscope45 :public Stroboscope
-34	{
-35	public:
-36		virtual void apply()
-37		{
---&gt;38			Timer2.start(SPEED_45_STROBO_INTERVAL);
-39		}
-40	};
-41	Stroboscope* const Stroboscope::STROBO_45 = new Stroboscope45();
+      <BreakPoint Index="43" Name="Stroboscope.cpp, строка 27" Id="1d500f9c-e1ba-4ea5-a887-bef457cf6bfa" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stroboscope.cpp" FileLine="27" FileColumn="1" FunctionName="class Stroboscope45::apply()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='1d500f9c-e1ba-4ea5-a887-bef457cf6bfa'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>20	{
+21		Timer2.start(SPEED_33_STROBO_INTERVAL);
+22	};
+23	
+24	
+25	void Stroboscope45::apply()
+26	{
+--&gt;27		Timer2.start(SPEED_45_STROBO_INTERVAL);
+28	};
+29	
 </Source>
       </BreakPoint>
-      <BreakPoint Index="48" Name="TonearmButtons.cpp, строка 23" Id="2e9c2e67-9ad1-472a-8139-42393b1f1622" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\tonearmbuttons.cpp" FileLine="23" FileColumn="1" FunctionName="apply()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='2e9c2e67-9ad1-472a-8139-42393b1f1622'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+      <BreakPoint Index="44" Name="TonearmButtons.cpp, строка 23" Id="2e9c2e67-9ad1-472a-8139-42393b1f1622" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\tonearmbuttons.cpp" FileLine="23" FileColumn="1" FunctionName="apply()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='2e9c2e67-9ad1-472a-8139-42393b1f1622'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
         <Source>16		initInput(PIN_PLAY_BUTTON);
 17		initInput(PIN_ROTATE_BUTTON);
 18		initInput(PIN_STOP_BUTTON);
@@ -966,13 +884,9 @@
 26	}
 27	
 28	
-29	TonearmButtons* const TonearmButtons::OFF = new TonearmButtons(LOW, LOW, LOW);
-30	TonearmButtons* const TonearmButtons::PLAY = new TonearmButtons(HIGH, LOW, LOW);
-31	TonearmButtons* const TonearmButtons::ROTATE = new TonearmButtons(LOW, HIGH, LOW);
-32	TonearmButtons* const TonearmButtons::STOP = new TonearmButtons(LOW, LOW, HIGH);
 </Source>
       </BreakPoint>
-      <BreakPoint Index="49" Name="TonearmButtons.cpp, строка 24" Id="dd58d80a-0f1d-4ce3-b3c3-1c8eab0340f7" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\tonearmbuttons.cpp" FileLine="24" FileColumn="1" FunctionName="apply()" FunctionLineOffset="3" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='dd58d80a-0f1d-4ce3-b3c3-1c8eab0340f7'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+      <BreakPoint Index="45" Name="TonearmButtons.cpp, строка 24" Id="dd58d80a-0f1d-4ce3-b3c3-1c8eab0340f7" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\tonearmbuttons.cpp" FileLine="24" FileColumn="1" FunctionName="apply()" FunctionLineOffset="3" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='dd58d80a-0f1d-4ce3-b3c3-1c8eab0340f7'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
         <Source>17		initInput(PIN_ROTATE_BUTTON);
 18		initInput(PIN_STOP_BUTTON);
 19	}
@@ -985,14 +899,9 @@
 26	}
 27	
 28	
-29	TonearmButtons* const TonearmButtons::OFF = new TonearmButtons(LOW, LOW, LOW);
-30	TonearmButtons* const TonearmButtons::PLAY = new TonearmButtons(HIGH, LOW, LOW);
-31	TonearmButtons* const TonearmButtons::ROTATE = new TonearmButtons(LOW, HIGH, LOW);
-32	TonearmButtons* const TonearmButtons::STOP = new TonearmButtons(LOW, LOW, HIGH);
-33	
 </Source>
       </BreakPoint>
-      <BreakPoint Index="50" Name="TonearmButtons.cpp, строка 25" Id="00c3e890-9d4b-4a7d-9e52-bf46f584eabc" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\tonearmbuttons.cpp" FileLine="25" FileColumn="1" FunctionName="apply()" FunctionLineOffset="4" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='00c3e890-9d4b-4a7d-9e52-bf46f584eabc'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+      <BreakPoint Index="46" Name="TonearmButtons.cpp, строка 25" Id="00c3e890-9d4b-4a7d-9e52-bf46f584eabc" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\tonearmbuttons.cpp" FileLine="25" FileColumn="1" FunctionName="apply()" FunctionLineOffset="4" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='00c3e890-9d4b-4a7d-9e52-bf46f584eabc'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
         <Source>18		initInput(PIN_STOP_BUTTON);
 19	}
 20	
@@ -1004,14 +913,9 @@
 26	}
 27	
 28	
-29	TonearmButtons* const TonearmButtons::OFF = new TonearmButtons(LOW, LOW, LOW);
-30	TonearmButtons* const TonearmButtons::PLAY = new TonearmButtons(HIGH, LOW, LOW);
-31	TonearmButtons* const TonearmButtons::ROTATE = new TonearmButtons(LOW, HIGH, LOW);
-32	TonearmButtons* const TonearmButtons::STOP = new TonearmButtons(LOW, LOW, HIGH);
-33	
 </Source>
       </BreakPoint>
-      <BreakPoint Index="51" Name="StateProcessor.cpp, строка 61" Id="2c9b01c2-2391-4ff1-8cfe-9e716edb3568" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="61" FileColumn="1" FunctionName="init()" FunctionLineOffset="10" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='2c9b01c2-2391-4ff1-8cfe-9e716edb3568'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+      <BreakPoint Index="47" Name="StateProcessor.cpp, строка 61" Id="2c9b01c2-2391-4ff1-8cfe-9e716edb3568" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="61" FileColumn="1" FunctionName="init()" FunctionLineOffset="10" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='2c9b01c2-2391-4ff1-8cfe-9e716edb3568'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
         <Source>54		initOutput(PIN_BOTTOM_CHASSIS_LIGHT);
 55		digitalWrite(PIN_BOTTOM_CHASSIS_LIGHT, HIGH);
 56		initOutput(PIN_UPPER_CHASSIS_LIGHT);
@@ -1031,7 +935,7 @@
 70	}
 </Source>
       </BreakPoint>
-      <BreakPoint Index="52" Name="StateProcessor.cpp, строка 62" Id="22e6ab03-505e-4592-b498-5f184d18042c" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="62" FileColumn="1" FunctionName="init()" FunctionLineOffset="11" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='22e6ab03-505e-4592-b498-5f184d18042c'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+      <BreakPoint Index="48" Name="StateProcessor.cpp, строка 62" Id="22e6ab03-505e-4592-b498-5f184d18042c" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="62" FileColumn="1" FunctionName="init()" FunctionLineOffset="11" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='22e6ab03-505e-4592-b498-5f184d18042c'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
         <Source>55		digitalWrite(PIN_BOTTOM_CHASSIS_LIGHT, HIGH);
 56		initOutput(PIN_UPPER_CHASSIS_LIGHT);
 57		digitalWrite(PIN_UPPER_CHASSIS_LIGHT, HIGH);
@@ -1051,7 +955,7 @@
 71	
 </Source>
       </BreakPoint>
-      <BreakPoint Index="53" Name="StateProcessor.cpp, строка 63" Id="dc4a16ee-5115-4f7f-833d-6d148bd8c498" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="63" FileColumn="1" FunctionName="init()" FunctionLineOffset="12" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='dc4a16ee-5115-4f7f-833d-6d148bd8c498'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+      <BreakPoint Index="49" Name="StateProcessor.cpp, строка 63" Id="dc4a16ee-5115-4f7f-833d-6d148bd8c498" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="63" FileColumn="1" FunctionName="init()" FunctionLineOffset="12" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='dc4a16ee-5115-4f7f-833d-6d148bd8c498'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
         <Source>56		initOutput(PIN_UPPER_CHASSIS_LIGHT);
 57		digitalWrite(PIN_UPPER_CHASSIS_LIGHT, HIGH);
 58	
@@ -1071,7 +975,7 @@
 72	void StateProcessor::initTonearmState()
 </Source>
       </BreakPoint>
-      <BreakPoint Index="54" Name="StateProcessor.cpp, строка 66" Id="9269ee90-8720-4864-8708-123cb6d0c7b4" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="66" FileColumn="1" FunctionName="init()" FunctionLineOffset="13" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='9269ee90-8720-4864-8708-123cb6d0c7b4'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+      <BreakPoint Index="50" Name="StateProcessor.cpp, строка 66" Id="9269ee90-8720-4864-8708-123cb6d0c7b4" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="66" FileColumn="1" FunctionName="init()" FunctionLineOffset="13" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='9269ee90-8720-4864-8708-123cb6d0c7b4'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
         <Source>59		//todo - temporary, remove after debug
 60		Serial.print(State::Stop33FullStop-&gt;getStateName());
 61		Serial.print('\n');
@@ -1089,26 +993,6 @@
 73	{
 74		if (TonearmState::isTonearmOnHolder())
 75			applyNextState(State::InitialPickupIsRaisingOnHolder);
-</Source>
-      </BreakPoint>
-      <BreakPoint Index="55" Name="State.cpp, строка 107" Id="3a369649-9fba-49fb-848a-bdc08dda1137" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\state.cpp" FileLine="107" FileColumn="1" FunctionName="initStates()" FunctionLineOffset="2" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='3a369649-9fba-49fb-848a-bdc08dda1137'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>100	{
-101		return tonearmState;
-102	}
-103	
-104	// initialize states table
-105	void State::initStates()
-106	{
---&gt;107	/*	State* const  InitialPickupIsRaisingOnHolder = new State(0, "InitialPickupIsRaisingOnHolder", Motor::OFF, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::OFF, SpeedButtons::OFF, DiskLed::OFF, AutostopTimer::OFF, Stroboscope::OFF);
-108		State* const  InitialPickupIsRaisingOutsideHolder = new State(1, "InitialPickupIsRaisingOutsideHolder", Motor::OFF, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::OFF, SpeedButtons::OFF, DiskLed::OFF, AutostopTimer::OFF, Stroboscope::OFF);
-109		State* const  InitialPickupIsMovingToHolder = new State(2, "InitialPickupIsMovingToHolder", Motor::OFF, Microlift::HOLD, Relays::MOVE, TonearmState::FULL_RIGHT, TonearmButtons::OFF, SpeedButtons::OFF, DiskLed::OFF, AutostopTimer::OFF, Stroboscope::OFF);
-110		State* const  Stop33FullStop = new State(3, "Stop33FullStop", Motor::OFF, Microlift::HOLD, Relays::MOVE, TonearmState::STOP, TonearmButtons::STOP, SpeedButtons::LED33, DiskLed::RED, AutostopTimer::OFF, Stroboscope::OFF);
-111		State* const  Rotate33 = new State(4, "Rotate33", Motor::Mode33, Microlift::HOLD, Relays::MOVE, TonearmState::HOLDER, TonearmButtons::ROTATE, SpeedButtons::LED33, DiskLed::BLUE, AutostopTimer::OFF, Stroboscope::STROBO_33);
-112		State* const  Play33AutoMoveToFirstTrack = new State(5, "Play33AutoMoveToFirstTrack", Motor::Mode33, Microlift::HOLD, Relays::MOVE, TonearmState::FULL_LEFT, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, AutostopTimer::OFF, Stroboscope::STROBO_33);
-113		State* const  Play33AutoLowerPickup = new State(6, "Play33AutoLowerPickup", Motor::Mode33, Microlift::DOWN, Relays::MOVE, TonearmState::STOP, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, AutostopTimer::OFF, Stroboscope::STROBO_33);
-114		State* const  Play33Play = new State(7, "Play33Play", Motor::Mode33, Microlift::DOWN, Relays::PLAY, TonearmState::PLAY, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::GREEN, AutostopTimer::OFF, Stroboscope::STROBO_33);
-115		State* const  Play33ManualPickupIsRaising = new State(8, "Play33ManualPickupIsRaising", Motor::Mode33, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, AutostopTimer::OFF, Stroboscope::STROBO_33);
-116		State* const  Play33ManualPickupMoveOverDisk = new State(9, "Play33ManualPickupMoveOverDisk", Motor::Mode33, Microlift::HOLD, Relays::MOVE, TonearmState::MOVE, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, AutostopTimer::OFF, Stroboscope::STROBO_33);
 </Source>
       </BreakPoint>
     </BreakPoints>

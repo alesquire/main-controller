@@ -92,140 +92,108 @@ void TonearmState::apply()
 	Tonearm is not moving despite on joystick state
 */
 
-class StopMode : public TonearmState
+int StopMode::defineValue()
 {
-protected:
-	virtual int defineValue()
-	{
-		return getZeroOutputValue();
-	}
-	virtual TonearmDirection getDirection()
-	{
-		return IDLE;
-	}
-public:
-	char* getTonearmStateName() 
-	{
-		return "StopMode";
-	}
+	return getZeroOutputValue();
 };
-TonearmState* const TonearmState::STOP = new StopMode();
+
+TonearmDirection StopMode::getDirection()
+{
+	return IDLE;
+};
+
+char* StopMode::getTonearmStateName() 
+{
+	return "StopMode";
+};
 
 //-----------------------------------------------------------------------------------
 /*
 	Poickup is on disk- antiscate force is applied. joystick is ignored
 */
-class Play : public TonearmState
+int Play::defineValue()
 {
-protected:
-	virtual int defineValue()
-	{
-		return transformAntiscateToOutput(readNormalizedAntiscateValue());
-	}
-
-	virtual TonearmDirection getDirection()
-	{
-		return ANTISCATE;
-	}
-public:
-	char* getTonearmStateName()
-	{
-		return "Play";
-	}
+	return transformAntiscateToOutput(readNormalizedAntiscateValue());
 };
-TonearmState* const TonearmState::PLAY = new Play();
+
+TonearmDirection Play::getDirection()
+{
+	return ANTISCATE;
+};
+
+char* Play::getTonearmStateName()
+{
+	return "Play";
+};
 
 //-----------------------------------------------------------------------------------
 /*
 	tonearm can be moved to any direction
 */
-class Move : public TonearmState
+int Move::defineValue()
 {
-protected:
-	virtual int defineValue()
-	{
-		return transformJoystickToOutput(readNormalizedJoystickValue());
-	}
-public:
-	char* getTonearmStateName()
-	{
-		return "Move";
-	}
+	return transformJoystickToOutput(readNormalizedJoystickValue());
 };
-TonearmState* const TonearmState::MOVE = new Move();
+
+char* Move::getTonearmStateName()
+{
+	return "Move";
+};
 
 //-----------------------------------------------------------------------------------
 
-class Autostop : public TonearmState
+int Autostop::defineValue()
 {
-protected:
-	virtual int defineValue()
-	{
-		int value = readNormalizedJoystickValue();
-		if (value < 0) // try to move left
-			return getZeroOutputValue();
-		else
-			return transformJoystickToOutput(value);
-	}
-public:
-	char* getTonearmStateName()
-	{
-		return "Autostop";
-	}
+	int value = readNormalizedJoystickValue();
+	if (value < 0) // try to move left
+		return getZeroOutputValue();
+	else
+		return transformJoystickToOutput(value);
 };
-TonearmState* const TonearmState::AUTOSTOP = new Autostop();
+
+char* Autostop::getTonearmStateName()
+{
+	return "Autostop";
+};
 
 //-----------------------------------------------------------------------------------
 
-class Holder : public TonearmState
+int Holder::defineValue()
 {
-protected:
-	virtual int defineValue()
-	{
-		int value = readNormalizedJoystickValue();
-		if (value > 0)  // try to move right
-			return getZeroOutputValue();
-		else
-			return transformJoystickToOutput(value);
-	}
-public:
-	char* getTonearmStateName()
-	{
-		return "Holder";
-	}
+	int value = readNormalizedJoystickValue();
+	if (value > 0)  // try to move right
+		return getZeroOutputValue();
+	else
+		return transformJoystickToOutput(value);
 };
-TonearmState* const TonearmState::HOLDER = new Holder();
+
+char* Holder::getTonearmStateName()
+{
+	return "Holder";
+};
 
 //-----------------------------------------------------------------------------------
 
-class FullLeft : public TonearmState
+int FullLeft::defineValue()
 {
-protected:
-	virtual int defineValue()
-	{
-		return returnFullLeftValue();
-	}
-public:
-	char* getTonearmStateName()
-	{
-		return "FullLeft";
-	}
+	return returnFullLeftValue();
 };
-TonearmState* const TonearmState::FULL_LEFT = new FullLeft();
+
+char* FullLeft::getTonearmStateName()
+{
+	return "FullLeft";
+};
+
 
 //-----------------------------------------------------------------------------------
 
-class FullRight : public TonearmState
+int FullRight::defineValue()
 {
-protected:
-	virtual int defineValue()
-	{
-		return returnFullRightValue();
-	}
-public:
-	char* getTonearmStateName()
-	{
-		return "FullRight";
-	}
+	return returnFullRightValue();
 };
-TonearmState* const TonearmState::FULL_RIGHT = new FullRight();
+
+char* FullRight::getTonearmStateName()
+{
+	return "FullRight";
+};
+
