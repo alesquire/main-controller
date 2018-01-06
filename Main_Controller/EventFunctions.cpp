@@ -16,19 +16,12 @@ void onStopButtonPress()
 	StateProcessor::stateProcessor.processEvent(Events::StopButtonPress);
 }
 
-bool inFunction = false;
+
 void onRotateButtonPress()
 {
-	if (inFunction)
-		return;
-	inFunction = true;
-	//noInterrupts();
 	digitalWrite(13, !digitalRead(13));
-	//Serial.print("void onRotateButtonPress()");
+	debug("void onRotateButtonPress()");
 	StateProcessor::stateProcessor.processEvent(Events::RotateButtonPress);
-	//interrupts();
-	inFunction = false;
-
 }
 
 void onPlayButtonPress()

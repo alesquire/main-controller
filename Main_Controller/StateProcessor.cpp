@@ -55,18 +55,9 @@ void StateProcessor::init()
 	digitalWrite(PIN_BOTTOM_CHASSIS_LIGHT, HIGH);
 	initOutput(PIN_UPPER_CHASSIS_LIGHT);
 	digitalWrite(PIN_UPPER_CHASSIS_LIGHT, HIGH);
-
-	//todo - temporary, remove after debug
-	Serial.print(State::Stop33FullStop->getStateName());
-	Serial.print('\n');
-	Serial.print((int)State::Stop33FullStop->tonearmButtons);
-	Serial.print('\n');
-	Serial.print((int)State::Stop33FullStop->stroboscope);
-	Serial.print('\n');
+	//todo- remove after debug (when real tonearm position can be obtained
 	applyNextState(State::Stop33FullStop);
-	return;
-	// end of debug
-
+	// end todo
 }
 
 void StateProcessor::initTonearmState()

@@ -2,7 +2,6 @@
 
 TonearmButtons::TonearmButtons(bool _pinPlayValue, bool _pinRotateValue, bool _pinStopValue)
 {
-	//Serial.print("TonearmButtons\n");//debug
 	pinPlayValue = _pinPlayValue;
 	pinRotateValue = _pinRotateValue;
 	pinStopValue = _pinStopValue;
