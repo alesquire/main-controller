@@ -3,7 +3,7 @@
 // 
 
 #include "StateProcessor.h"
-#include "Initializers.cpp"
+//#include "Initializers.cpp"
 
 StateProcessor StateProcessor::stateProcessor;
 
