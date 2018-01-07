@@ -2,8 +2,8 @@
 
 void initInput(int pinNumber)
 {
-	pinMode(pinNumber, INPUT);
-	digitalWrite(pinNumber, HIGH);
+	pinMode(pinNumber, INPUT_PULLUP);
+	digitalWrite(pinNumber, LOW);
 }
 
 void initOutput(int pinNumber)

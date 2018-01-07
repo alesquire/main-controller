@@ -13,9 +13,9 @@
 #define PIN_MICROLIFT_HOLD_OUTPUT 2//
 #define PIN_MICROLIFT_UP_OUTPUT 3// todo- in schematics this pin is named DOWN
 
-#define PIN_PLAY_LED 4//
+#define PIN_PLAY_LED 6//
 #define PIN_ROTATE_LED 5//
-#define PIN_STOP_LED 6//
+#define PIN_STOP_LED 4//
 
 #define PIN_33_LED 7//
 #define PIN_45_LED 8//
@@ -41,8 +41,8 @@
 #define PIN_JOYSTICK_UP_DOWN A10//
 #define PIN_JOYSTICK_LEFT_RIGHT A11//
 
-#define PIN_PLAY_BUTTON 19//
-#define PIN_ROTATE_BUTTON 20//
+#define PIN_PLAY_BUTTON 36//
+#define PIN_ROTATE_BUTTON 34//
 #define PIN_STOP_BUTTON 18//
 
 #define PIN_33_BUTTON 16//
@@ -51,8 +51,8 @@
 #define PIN_MICROLIFT_UPPER_SENSOR 14//
 #define PIN_MICROLIFT_LOWER_SENSOR 15//
 
-#define PIN_TONEARM_HOLDER 28//
+#define PIN_TONEARM_HOLDER 32//
 #define PIN_FIRST_TRACK 30//
-#define PIN_AUTOSTOP 32//
+#define PIN_AUTOSTOP 28//
 
 #endif

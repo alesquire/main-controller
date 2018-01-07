@@ -16,11 +16,8 @@ void onStopButtonPress()
 	StateProcessor::stateProcessor.processEvent(Events::StopButtonPress);
 }
 
-
 void onRotateButtonPress()
 {
-	digitalWrite(13, !digitalRead(13));
-	debug("void onRotateButtonPress()");
 	StateProcessor::stateProcessor.processEvent(Events::RotateButtonPress);
 }
 
@@ -31,12 +28,14 @@ void onPlayButtonPress()
 
 void onSpeed33ButtonPress()
 {
+    Serial.println("33");
 	StateProcessor::stateProcessor.processEvent(Events::Speed33ButtonPress);
 }
 
 void onSpeed45ButtonPress()
 {
-	StateProcessor::stateProcessor.processEvent(Events::Speed45ButtonPress);
+    Serial.println("45");
+    StateProcessor::stateProcessor.processEvent(Events::Speed45ButtonPress);
 }
 
 void onMicroliftSensorEvent()
@@ -46,48 +45,57 @@ void onMicroliftSensorEvent()
 
 	if (upperSensorValue&&lowerSensorValue)
 	{
+		Serial.println("U");
 		StateProcessor::stateProcessor.processEvent(Events::TonearmLevelUp);
 	}
 	else if (!upperSensorValue && !lowerSensorValue)
 	{
+    Serial.println("D");
 		StateProcessor::stateProcessor.processEvent(Events::TonearmLevelDown);
 	}
 	else if (!upperSensorValue && lowerSensorValue)
 	{
+    Serial.println("M");
 		StateProcessor::stateProcessor.processEvent(Events::TonearmLevelMiddle);
 	}
 }
 
 void onHolderSensorRisingEvent()
 {
+  Serial.println(1);
 	StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOverGap);
 }
 
 void onHolderSensorFallingEvent()
 {
-	StateProcessor::stateProcessor.processEvent(Events::TonearmPositionHolder);
+  Serial.println(2);
+  StateProcessor::stateProcessor.processEvent(Events::TonearmPositionHolder);
 }
 
 void onFirstTrackSensorRisingEvent()
 {
-	if(StateProcessor::stateProcessor.getTonearmDirection()==LEFT)
+  Serial.println(3);
+  if(StateProcessor::stateProcessor.getTonearmDirection()==LEFT)
 		StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOverDisk);
 }
 
 void onFirstTrackSensorFallingEvent()
 {
-	if (StateProcessor::stateProcessor.getTonearmDirection() == RIGHT)
+  Serial.println(4);
+  if (StateProcessor::stateProcessor.getTonearmDirection() == RIGHT)
 		StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOverGap);
 }
 
 void onAutostopSensorRisingEvent()
 {
-	StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOverDisk);
+  Serial.println(5);
+  StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOverDisk);
 }
 
 void onAutostopSensorFallingEvent()
 {
-	StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOnAutostop);
+  Serial.println(6);
+  StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOnAutostop);
 }
 
 void onStroboscope()

@@ -1,3 +1,8 @@
+#include "StateProcessor.h"
+
+#ifndef _INITIALIZERS_H_
+#define _INITIALIZERS_H_
+
 Motor* const Motor::OFF = new Motor(LOW, LOW);
 Motor* const Motor::Mode33 = new Motor(HIGH, LOW);
 Motor* const Motor::Mode45 = new Motor(LOW, HIGH);
@@ -10,8 +15,8 @@ DiskLed* const DiskLed::BLUE = new DiskLed(LOW, LOW, HIGH);
 AutostopTimer* const AutostopTimer::ON = new  AutostopTimerON();
 AutostopTimer* const AutostopTimer::OFF = new AutostopTimerOFF();
 
-Microlift* const Microlift::DOWN = new Microlift(LOW, LOW);
-Microlift* const Microlift::UP = new Microlift(LOW, HIGH);
+Microlift* const Microlift::UP = new Microlift(LOW, LOW);
+Microlift* const Microlift::DOWN = new Microlift(LOW, HIGH);
 Microlift* const Microlift::HOLD = new Microlift(HIGH, LOW);
 
 Relays* const Relays::PLAY = new Relays(LOW, LOW);
@@ -99,3 +104,4 @@ State* const  StateProcessor::transitionTable[29][15] = {
 	{ NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsRaising,	NULL,	NULL, }
 };
 
+#endif
