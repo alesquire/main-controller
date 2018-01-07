@@ -62,39 +62,39 @@ void onMicroliftSensorEvent()
 
 void onHolderSensorRisingEvent()
 {
-  Serial.println(1);
+  Serial.println("onHolderSensorRisingEvent()");
 	StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOverGap);
 }
 
 void onHolderSensorFallingEvent()
 {
-  Serial.println(2);
+  Serial.println("onHolderSensorFallingEvent()");
   StateProcessor::stateProcessor.processEvent(Events::TonearmPositionHolder);
 }
 
 void onFirstTrackSensorRisingEvent()
 {
-  Serial.println(3);
+  Serial.println("onFirstTrackSensorRisingEvent()");
   if(StateProcessor::stateProcessor.getTonearmDirection()==LEFT)
 		StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOverDisk);
 }
 
 void onFirstTrackSensorFallingEvent()
 {
-  Serial.println(4);
+  Serial.println("onFirstTrackSensorFallingEvent()");
   if (StateProcessor::stateProcessor.getTonearmDirection() == RIGHT)
 		StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOverGap);
 }
 
 void onAutostopSensorRisingEvent()
 {
-  Serial.println(5);
+  Serial.println("onAutostopSensorRisingEvent()");
   StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOverDisk);
 }
 
 void onAutostopSensorFallingEvent()
 {
-  Serial.println(6);
+  Serial.println("onAutostopSensorFallingEvent()");
   StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOnAutostop);
 }
 

@@ -58,6 +58,9 @@ void StateProcessor::init()
 	//todo- remove after debug (when real tonearm position can be obtained
 	applyNextState(State::Stop33FullStop);
 	// end todo
+  //when all controller classes are initilaized- we start timer to read tonearm analog inputs
+  Timer1.attachInterrupt(onTonearmTimerEvent).start(TONEARM_ANALOG_PARAMS_READOUT_INTERVAL);
+
 }
 
 void StateProcessor::initTonearmState()
@@ -66,13 +69,15 @@ void StateProcessor::initTonearmState()
 		applyNextState(State::InitialPickupIsRaisingOnHolder);
 	else
 		applyNextState(State::InitialPickupIsRaisingOutsideHolder);
-	//when all controller classes are initilaized- we start timer to read tonearm analog inputs
-	Timer1.attachInterrupt(onTonearmTimerEvent).start(TONEARM_ANALOG_PARAMS_READOUT_INTERVAL);
 }
 
 void StateProcessor::onTimer()
 {
+	//reads analog inputs - joystick left-right, antiscate and damper values and updates solenoid voltage
 	currentState->getTonearmState()->apply();
+  // reads position sensrs and produces events on position change
+  currentState->getTonearmState()->readSensors();
+  //reads joystick up-down position 
 	JoystickPositionPair joystickPositionPair= joystickUpDownState.getJoystickPositionPair();
 	if (joystickPositionPair.current != joystickPositionPair.previous)
 	{

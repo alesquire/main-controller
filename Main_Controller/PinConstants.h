@@ -38,8 +38,8 @@
 #define PIN_ANTISCATE A1 //Analog input- antiscate force from variable resistor
 #define PIN_DAMPER A0 //Analog input- tonearm damping factor variable resistor
 
-#define PIN_JOYSTICK_UP_DOWN A10//
-#define PIN_JOYSTICK_LEFT_RIGHT A11//
+#define PIN_JOYSTICK_UP_DOWN A10//analog input
+#define PIN_JOYSTICK_LEFT_RIGHT A11//analog input
 
 #define PIN_PLAY_BUTTON 36//
 #define PIN_ROTATE_BUTTON 34//
