@@ -123,15 +123,6 @@ void setup()
 	attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_UPPER_SENSOR), onMicroliftSensorEvent, CHANGE);
 	attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_LOWER_SENSOR), onMicroliftSensorEvent, CHANGE);
 
-	attachInterrupt(digitalPinToInterrupt(PIN_TONEARM_HOLDER), onHolderSensorRisingEvent,RISING);
-	attachInterrupt(digitalPinToInterrupt(PIN_TONEARM_HOLDER), onHolderSensorFallingEvent, FALLING);
-
-	attachInterrupt(digitalPinToInterrupt(PIN_FIRST_TRACK), onFirstTrackSensorRisingEvent, RISING);
-	attachInterrupt(digitalPinToInterrupt(PIN_FIRST_TRACK), onFirstTrackSensorFallingEvent, FALLING);
-
-	attachInterrupt(digitalPinToInterrupt(PIN_AUTOSTOP), onAutostopSensorRisingEvent, RISING);
-	attachInterrupt(digitalPinToInterrupt(PIN_AUTOSTOP), onAutostopSensorFallingEvent, FALLING);
-
   attachInterrupt(digitalPinToInterrupt(PIN_33_BUTTON), onSpeed33ButtonPress, RISING);
   attachInterrupt(digitalPinToInterrupt(PIN_45_BUTTON), onSpeed45ButtonPress, RISING);
 

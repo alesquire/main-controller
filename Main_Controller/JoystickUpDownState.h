@@ -30,9 +30,9 @@ class JoystickUpDownState
 private:
 	JoystickPosition previousPosition = JoystickPosition::MIDDLE;
 
-	int upThreshold = ANALOG_RESOLUTION*80/100;
+	int upThreshold = 1000;
 
-	int downThreshold = (int)ANALOG_RESOLUTION*20/100;
+	int downThreshold = 3500;
 
 public:
 	

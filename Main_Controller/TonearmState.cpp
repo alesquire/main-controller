@@ -7,13 +7,16 @@
 int TonearmState::transformAntiscateToOutput(int input)
 {
 	//todo: implement transformation table
-	return input;
+	return IDLE_TONEARM_OUTPUT_VALUE;
 }
 
 int TonearmState::transformJoystickToOutput(int input)
 {
 	//todo: implement transformation table
-	return input;
+	int value =IDLE_TONEARM_OUTPUT_VALUE+input;
+  if(value>returnFullRightValue()) return returnFullRightValue();
+  if(value<returnFullLeftValue()) return returnFullLeftValue();
+	return value;
 }
 
 /*
@@ -33,7 +36,7 @@ int TonearmState::readNormalizedAntiscateValue()
 */
 int TonearmState::readNormalizedJoystickValue()
 {
-	return analogRead(PIN_JOYSTICK_LEFT_RIGHT);
+	return analogRead(PIN_JOYSTICK_LEFT_RIGHT)- JOYSTICK_LEFT_RIGHT_ZERO_VALUE;
 }
 
 /*
@@ -41,7 +44,7 @@ int TonearmState::readNormalizedJoystickValue()
 */
 int TonearmState::getZeroOutputValue()
 {
-	return ANALOG_RESOLUTION/2;
+	return IDLE_TONEARM_OUTPUT_VALUE;//todo- calculate value for damper and antiscate
 }
 
 /*
@@ -71,7 +74,8 @@ void TonearmState::init()
 	initInput(PIN_TONEARM_HOLDER);
 	initInput(PIN_FIRST_TRACK);
 	initInput(PIN_AUTOSTOP);
-
+	analogReadResolution(12);
+  analogWriteResolution(12);
 	analogWrite(PIN_TONEARM_REFERENCE_OUTPUT,tonearmReferenceOutput);
 }
 
@@ -82,10 +86,17 @@ bool TonearmState::isTonearmOnHolder()
 
 void TonearmState::apply()
 {
+	Serial.println(getTonearmStateName());//debug
 	int outputValue = defineValue();
 	analogWrite(PIN_TONEARM_VOLTAGE_OUTPUT, outputValue);
 }
 
+void TonearmState::readSensors()
+{
+  TonearmSensorsState newState;
+  state.compare(newState);
+  state=newState;
+}
 
 //-----------------------------------------------------------------------------------
 /*
@@ -132,7 +143,13 @@ char* Play::getTonearmStateName()
 */
 int Move::defineValue()
 {
-	return transformJoystickToOutput(readNormalizedJoystickValue());
+  int value =transformJoystickToOutput(readNormalizedJoystickValue());
+  //debug
+  Serial.print("t=");
+  Serial.print(value);
+  Serial.print('\n'); 
+  //debug   
+	return value;
 };
 
 char* Move::getTonearmStateName()

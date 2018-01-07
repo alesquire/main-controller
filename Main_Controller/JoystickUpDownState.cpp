@@ -10,11 +10,12 @@ JoystickPositionPair JoystickUpDownState::getJoystickPositionPair()
 	JoystickPositionPair returnPair;
 	returnPair.previous = previousPosition;
 	JoystickPosition currentPosition;
-	if (joystickValue > upThreshold)
+	//up state correspond to small values, down position- to big values
+	if (joystickValue < upThreshold)
 	{
 		currentPosition = JoystickPosition::UP;
 	}
-	else if(joystickValue < downThreshold)
+	else if(joystickValue > downThreshold)
 	{
 		currentPosition = JoystickPosition::DOWN;
 	}
