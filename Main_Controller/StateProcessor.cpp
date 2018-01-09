@@ -5,6 +5,7 @@
 #include "StateProcessor.h"
 //#include "Initializers.cpp"
 
+
 StateProcessor StateProcessor::stateProcessor;
 
 void StateProcessor::applyNextState(State *state)
@@ -27,12 +28,12 @@ void StateProcessor::processEvent(Events _event)
 {
 
 	int currentStateOrder = currentState->getStateOrderNumber();
-	debug("Current state = ");
-	debug(currentState->getStateName());
-	debug("\n");
-	debug("Processing Event: ");
-	debug(eventNames[_event]);
-	debug("\n");
+	/*Serial.print("Current state = ");
+	Serial.print(currentState->getStateName());
+	Serial.print("\n");
+	Serial.print("Processing Event: ");
+	Serial.print(eventNames[_event]);
+	Serial.print("\n");*/
 
 	State *nextState = transitionTable[currentStateOrder][_event];
 	if (nextState)// most of transition table items are nulls - as event shouldn't be processed on particular state
@@ -51,16 +52,17 @@ void StateProcessor::processEvent(Events _event)
 void StateProcessor::init() 
 {
 	State::init();
+  Serial.print("init\n");
 	initOutput(PIN_BOTTOM_CHASSIS_LIGHT);
 	digitalWrite(PIN_BOTTOM_CHASSIS_LIGHT, HIGH);
 	initOutput(PIN_UPPER_CHASSIS_LIGHT);
 	digitalWrite(PIN_UPPER_CHASSIS_LIGHT, HIGH);
 	//todo- remove after debug (when real tonearm position can be obtained
-	applyNextState(State::Stop33FullStop);
+	//applyNextState(State::Stop33FullStop);
 	// end todo
   //when all controller classes are initilaized- we start timer to read tonearm analog inputs
   Timer1.attachInterrupt(onTonearmTimerEvent).start(TONEARM_ANALOG_PARAMS_READOUT_INTERVAL);
-
+  initTonearmState();
 }
 
 void StateProcessor::initTonearmState()

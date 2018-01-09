@@ -15,9 +15,9 @@ DiskLed* const DiskLed::BLUE = new DiskLed(LOW, LOW, HIGH);
 AutostopTimer* const AutostopTimer::ON = new  AutostopTimerON();
 AutostopTimer* const AutostopTimer::OFF = new AutostopTimerOFF();
 
-Microlift* const Microlift::UP = new Microlift(LOW, LOW);
-Microlift* const Microlift::DOWN = new Microlift(LOW, HIGH);
-Microlift* const Microlift::HOLD = new Microlift(HIGH, LOW);
+Microlift* const Microlift::UP = new Microlift(LOW, LOW, "UP");
+Microlift* const Microlift::DOWN = new Microlift(LOW, HIGH, "DOWN");
+Microlift* const Microlift::HOLD = new Microlift(HIGH, LOW, "HOLD");
 
 Relays* const Relays::PLAY = new Relays(LOW, LOW);
 Relays* const Relays::MOVE = new Relays(HIGH, HIGH);
