@@ -28,13 +28,11 @@ void onPlayButtonPress()
 
 void onSpeed33ButtonPress()
 {
-    Serial.println("33");
 	StateProcessor::stateProcessor.processEvent(Events::Speed33ButtonPress);
 }
 
 void onSpeed45ButtonPress()
 {
-    Serial.println("45");
     StateProcessor::stateProcessor.processEvent(Events::Speed45ButtonPress);
 }
 
@@ -43,6 +41,13 @@ void onMicroliftSensorEvent()
 	bool upperSensorValue = digitalRead(PIN_MICROLIFT_UPPER_SENSOR);
 	bool lowerSensorValue = digitalRead(PIN_MICROLIFT_LOWER_SENSOR);
 
+  Serial.print(upperSensorValue);
+
+
+
+  Serial.print(lowerSensorValue);
+
+  
 	if (upperSensorValue&&lowerSensorValue)
 	{
 		Serial.println("U");

@@ -129,14 +129,24 @@ void setup()
 	//debug - uncomment when all sensors are configured
 	//StateProcessor::stateProcessor.initTonearmState();
   //debug section
-	pinMode(13,OUTPUT);
-  Microlift::DOWN->apply();
+	//pinMode(13,OUTPUT);
+  //Microlift::DOWN->apply();
 }
 
 // the loop function runs over and over again until power down or reset
 void loop() 
 {
-  /*digitalWrite(13,HIGH);
+
+  
+  
+  /*
+  Microlift::UP->apply();
+  delay(5000);
+  Microlift::HOLD->apply();
+  delay(5000);
+  Microlift::DOWN->apply();
+  delay(5000);
+  digitalWrite(13,HIGH);
   DiskLed::RED->apply();
   TonearmButtons::STOP->apply();
   delay(1000);  

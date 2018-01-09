@@ -47,6 +47,9 @@ void State::apply()
 {
 	motorState->apply();
 	microliftStates->apply();
+  Serial.print("microlift mode=");
+  Serial.println(microliftStates->getName());
+  //debug
 	relaysState->apply();
 	tonearmState->apply();
 	tonearmButtons->apply();

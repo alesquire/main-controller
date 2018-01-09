@@ -7,10 +7,11 @@
 #include "Microlift.h"
 
 
-Microlift::Microlift(bool _pinHoldValue, bool _pinUpValue)
+Microlift::Microlift(bool _pinHoldValue, bool _pinUpValue, char* _name)
 {
 	pinHoldValue = _pinHoldValue;
 	pinUpValue = _pinUpValue;
+  modeName=_name;
 }
 
 void Microlift::init()
