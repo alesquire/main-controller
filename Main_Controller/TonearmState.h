@@ -23,114 +23,6 @@ enum TonearmDirection
 	ANTISCATE
 };
 
-/*
-  tonearm movement logic requires to handle in a different way cases when tonearm position sensors are rising and falling. 
-  Arduino doesn't allow to apply multiple interrupts on one pin on different events, so we should emulate interrupt by periodical reading of sensors value and comparing with previous state
-  TonearmSensorsState reads current state,  compare it with previous one and produce events if some state was canged 
- */
-class TonearmSensorsState
-{
-private:
-  bool holderSensor;
-  bool firstTrackSensor;
-  bool autostopSensor;
-  enum Change
-  {
-    RISES,
-    FALLS,
-    UNCHANGED
-  };
-
-  Change compare(bool oldValue, bool newValue)
-  {
-    if(oldValue==false and newValue==true)
-      return RISES;
-    if(oldValue==true and newValue==false)
-      return FALLS;
-    return UNCHANGED;   
-  };
-  
-public:
-
-  TonearmSensorsState()
-  {
-    holderSensor=digitalRead(PIN_TONEARM_HOLDER);
-    firstTrackSensor=digitalRead(PIN_FIRST_TRACK);
-    autostopSensor=digitalRead(PIN_AUTOSTOP);
-  }
-
-  TonearmSensorsState(TonearmSensorsState &tonearmSensorsState)
-  {
-    holderSensor=tonearmSensorsState.holderSensor;
-    firstTrackSensor=tonearmSensorsState.firstTrackSensor;
-    autostopSensor=tonearmSensorsState.autostopSensor; 
-  }
-  
-  TonearmSensorsState & operator = (const TonearmSensorsState & tonearmSensorsState)
-  {
-    holderSensor=tonearmSensorsState.holderSensor;
-    firstTrackSensor=tonearmSensorsState.firstTrackSensor;
-    autostopSensor=tonearmSensorsState.autostopSensor; 
-
-  }
-
-  void printState()
-  {
-    Serial.print("holderSensor=");
-    Serial.println(holderSensor);
-    Serial.print("firstTrackSensor=");
-    Serial.println(firstTrackSensor);
-    Serial.print("autostopSensor=");
-    Serial.println(autostopSensor);
-    
-  }
-
-
-  void compare(TonearmSensorsState &newTonearmSensorsState)
-  {
-    switch (compare(holderSensor,newTonearmSensorsState.holderSensor))
-    {
-      case RISES:
-      {
-        onHolderSensorRisingEvent();
-        break;  
-      }
-      case FALLS:
-      {
-        onHolderSensorFallingEvent();
-        break;  
-      }
-    }
-    switch (compare(firstTrackSensor,newTonearmSensorsState.firstTrackSensor))
-    {
-      case RISES:
-      {
-        onFirstTrackSensorRisingEvent();
-        break;  
-      }
-      case FALLS:
-      {
-        onFirstTrackSensorFallingEvent();
-        break;  
-      }
-    }
-    switch (compare(autostopSensor,newTonearmSensorsState.autostopSensor))
-    {
-      case RISES:
-      {
-        onAutostopSensorRisingEvent();
-        break;  
-      }
-      case FALLS:
-      {
-        onAutostopSensorFallingEvent();
-        break;  
-      }
-    }
-  }
-  
-};
-
 
 /*
 	Class applies voltage to solenoid according to mode. Two global modes defines - which input will drive solenoid voltage ( and force):
@@ -202,7 +94,6 @@ protected:
 
 	static const int tonearmReferenceOutput = 2000; //constant value to be applied on PIN_TONEARM_REFERENCE_OUTPUT (DAC0) that produces 1.61V. 
 
-  static TonearmSensorsState state;
 public:
 	static void init();
  

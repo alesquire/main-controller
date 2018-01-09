@@ -78,6 +78,9 @@
     <ClInclude Include="DebugFunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SensorsState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutostopTimer.cpp">
@@ -132,6 +135,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Initializers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SensorsState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

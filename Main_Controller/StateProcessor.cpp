@@ -77,8 +77,6 @@ void StateProcessor::onTimer()
 {
 	//reads analog inputs - joystick left-right, antiscate and damper values and updates solenoid voltage
 	currentState->getTonearmState()->apply();
-  // reads position sensrs and produces events on position change
-  currentState->getTonearmState()->readSensors();
   //reads joystick up-down position 
 	JoystickPositionPair joystickPositionPair= joystickUpDownState.getJoystickPositionPair();
 	if (joystickPositionPair.current != joystickPositionPair.previous)

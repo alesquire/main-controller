@@ -1,4 +1,5 @@
 #include "StateProcessor.h"
+#include "SensorsState.h"
 
 #ifndef _INITIALIZERS_H_
 #define _INITIALIZERS_H_
@@ -103,5 +104,22 @@ State* const  StateProcessor::transitionTable[29][15] = {
 	{ State::Stop45PickupIsRaising,	NULL,	NULL,	State::Play45ManualPickupIsRaising,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupOnAutostopPause,	NULL,	State::Stop45PickupIsRaising, },
 	{ NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsRaising,	NULL,	NULL, }
 };
-TonearmSensorsState TonearmState::state;
+
+SensorState SensorsState::sensorStates[] =
+{
+	SensorState(PIN_STOP_BUTTON,onStopButtonPress,RISES),
+	SensorState(PIN_PLAY_BUTTON, onPlayButtonPress, RISES),
+	SensorState(PIN_ROTATE_BUTTON, onRotateButtonPress, RISES),
+	SensorState(PIN_33_BUTTON, onSpeed33ButtonPress, RISES),
+	SensorState(PIN_45_BUTTON, onSpeed45ButtonPress, RISES),
+	SensorState(PIN_MICROLIFT_UPPER_SENSOR, onMicroliftSensorEvent, CHANGES),
+	SensorState(PIN_MICROLIFT_LOWER_SENSOR, onMicroliftSensorEvent, CHANGES),
+	SensorState(PIN_TONEARM_HOLDER,onHolderSensorRisingEvent,RISES),
+	SensorState(PIN_TONEARM_HOLDER,onHolderSensorFallingEvent,FALLS),
+	SensorState(PIN_FIRST_TRACK,onFirstTrackSensorRisingEvent,RISES),
+	SensorState(PIN_FIRST_TRACK,onFirstTrackSensorFallingEvent,FALLS),
+	SensorState(PIN_AUTOSTOP,onAutostopSensorRisingEvent,RISES),
+	SensorState(PIN_AUTOSTOP,onAutostopSensorFallingEvent,FALLS)
+};
+SensorsState SensorsState::instance;
 #endif

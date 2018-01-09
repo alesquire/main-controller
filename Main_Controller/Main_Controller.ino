@@ -5,9 +5,11 @@
 */
 
 
+#include "SensorsState.h"
 #include "DebugFunctions.h"
 #include "Stroboscope.h"
 #include "StateProcessor.h"
+#include "SensorsState.h"
 //#include "PinInitFunctions.cpp"
 /*
 Main documentation
@@ -115,7 +117,7 @@ void setup()
 //#endif
 	debug("start\n") ;//debug
 	StateProcessor::stateProcessor.init();
-
+	/*
 	attachInterrupt(digitalPinToInterrupt(PIN_STOP_BUTTON), onStopButtonPress, FALLING);
 	attachInterrupt(digitalPinToInterrupt(PIN_ROTATE_BUTTON), onRotateButtonPress, CHANGE);
 	attachInterrupt(digitalPinToInterrupt(PIN_PLAY_BUTTON), onPlayButtonPress, FALLING);
@@ -123,20 +125,19 @@ void setup()
 	attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_UPPER_SENSOR), onMicroliftSensorEvent, CHANGE);
 	attachInterrupt(digitalPinToInterrupt(PIN_MICROLIFT_LOWER_SENSOR), onMicroliftSensorEvent, CHANGE);
 
-  attachInterrupt(digitalPinToInterrupt(PIN_33_BUTTON), onSpeed33ButtonPress, RISING);
-  attachInterrupt(digitalPinToInterrupt(PIN_45_BUTTON), onSpeed45ButtonPress, RISING);
-
+	attachInterrupt(digitalPinToInterrupt(PIN_33_BUTTON), onSpeed33ButtonPress, RISING);
+	attachInterrupt(digitalPinToInterrupt(PIN_45_BUTTON), onSpeed45ButtonPress, RISING);
+	*/
 	//debug - uncomment when all sensors are configured
 	//StateProcessor::stateProcessor.initTonearmState();
-  //debug section
-	//pinMode(13,OUTPUT);
-  //Microlift::DOWN->apply();
+
 }
 
 // the loop function runs over and over again until power down or reset
 void loop() 
 {
-
+	SensorsState::getInstance().compare();
+	delay(100);
   
   
   /*

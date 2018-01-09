@@ -75,7 +75,7 @@ void TonearmState::init()
 	initInput(PIN_FIRST_TRACK);
 	initInput(PIN_AUTOSTOP);
 	analogReadResolution(12);
-  analogWriteResolution(12);
+    analogWriteResolution(12);
 	analogWrite(PIN_TONEARM_REFERENCE_OUTPUT,tonearmReferenceOutput);
 }
 
@@ -89,13 +89,6 @@ void TonearmState::apply()
 	Serial.println(getTonearmStateName());//debug
 	int outputValue = defineValue();
 	analogWrite(PIN_TONEARM_VOLTAGE_OUTPUT, outputValue);
-}
-
-void TonearmState::readSensors()
-{
-  TonearmSensorsState newState;
-  state.compare(newState);
-  state=newState;
 }
 
 //-----------------------------------------------------------------------------------
