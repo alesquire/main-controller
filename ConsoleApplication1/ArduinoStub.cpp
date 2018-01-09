@@ -60,6 +60,8 @@ extern int analogRead(int pin)
 	return ArduinoInputPinSource::arduinoInputPinSource.readValue(pin);
 }
 
+void analogReadResolution(int) {};
+void analogWriteResolution(int) {};
 //--------------------------------------------------------------------
 // Serial
 //--------------------------------------------------------------------

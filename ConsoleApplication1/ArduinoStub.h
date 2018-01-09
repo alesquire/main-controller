@@ -44,6 +44,7 @@
 
 #define INPUT 0x0
 #define OUTPUT 0x1
+#define INPUT_PULLUP 0x2
 
 #define PI 3.14159265
 #define HALF_PI 1.57079
@@ -124,6 +125,9 @@ extern void digitalWrite(int, int);
 extern void analogWrite(int, int);
 extern bool digitalRead(int);
 extern int analogRead(int);
+extern void analogReadResolution(int);
+extern void analogWriteResolution(int);
+
 
 typedef unsigned int       uint32_t;
 typedef volatile       uint32_t WoReg; /**< Write only 32-bit register (volatile unsigned int) */

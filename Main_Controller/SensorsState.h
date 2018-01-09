@@ -51,7 +51,7 @@ public:
 	// previous value is replaced with new one
 	void check()
 	{
-		int newValue= digitalRead(pinNumber);
+		bool newValue= digitalRead(pinNumber);
 		if (value != newValue)
 		{
 			//vlaue changes
