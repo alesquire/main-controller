@@ -78,7 +78,7 @@
     <ClInclude Include="DebugFunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SensorsState.h">
+    <ClInclude Include="input_detectors\SensorsState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -137,7 +137,7 @@
     <ClCompile Include="Initializers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SensorsState.cpp">
+    <ClCompile Include="input_detectors\SensorsState.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -101,7 +101,7 @@
     <ClInclude Include="Motor.h" />
     <ClInclude Include="PinConstants.h" />
     <ClInclude Include="Relays.h" />
-    <ClInclude Include="SensorsState.h" />
+    <ClInclude Include="input_detectors\SensorsState.h" />
     <ClInclude Include="SpeedButtons.h" />
     <ClInclude Include="StateProcessor.h" />
     <ClInclude Include="State.h" />
@@ -123,7 +123,7 @@
     <ClCompile Include="PinInitFunctions.cpp" />
     <ClCompile Include="Relays.cpp" />
     <ClCompile Include="Initializers.cpp" />
-    <ClCompile Include="SensorsState.cpp" />
+    <ClCompile Include="input_detectors\SensorsState.cpp" />
     <ClCompile Include="SpeedButtons.cpp" />
     <ClCompile Include="StateProcessor.cpp" />
     <ClCompile Include="State.cpp" />
