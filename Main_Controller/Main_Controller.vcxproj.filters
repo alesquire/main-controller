@@ -16,6 +16,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Main_Controller.ino" />
+    <None Include="Readme.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.Main_Controller.vsarduino.h">
