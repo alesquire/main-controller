@@ -79,7 +79,10 @@
     <ClInclude Include="DebugFunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="input_detectors\SensorsState.h">
+    <ClInclude Include="src\unit_state_machines\UnitStateMachine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\input_detectors\SensorsState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -138,7 +141,10 @@
     <ClCompile Include="Initializers.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="input_detectors\SensorsState.cpp">
+    <ClCompile Include="src\input_detectors\SensorsState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\unit_state_machines\UnitStateMachine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

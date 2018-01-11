@@ -6,13 +6,13 @@
 	Interrupt-based sensors reading model showed it's instability. So- external events will be read using periodical sensor readout and compare with previous state.
 */
 #if defined(ARDUINO) && ARDUINO >= 100
-	#include "ArduinoHeader.h"
+	#include "..\..\ArduinoHeader.h"
 #else 
 	#include "ArduinoStub.h"
 #endif
 
-#include "PinConstants.h"
-#include "EventFunctions.h"
+#include "..\..\PinConstants.h"
+#include "..\..\EventFunctions.h"
 
 
 /*
