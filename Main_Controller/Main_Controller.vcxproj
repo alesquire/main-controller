@@ -108,6 +108,7 @@
     <ClInclude Include="State.h" />
     <ClInclude Include="Stroboscope.h" />
     <ClInclude Include="TonearmButtons.h" />
+    <ClInclude Include="src\unit_state_machines\TonearmPositionStateMachine.h" />
     <ClInclude Include="TonearmState.h" />
     <ClInclude Include="src\unit_state_machines\UnitStateMachine.h" />
     <ClInclude Include="__vm\.Main_Controller.vsarduino.h" />
@@ -131,6 +132,7 @@
     <ClCompile Include="State.cpp" />
     <ClCompile Include="Stroboscope.cpp" />
     <ClCompile Include="TonearmButtons.cpp" />
+    <ClCompile Include="src\unit_state_machines\TonearmPositionStateMachine.cpp" />
     <ClCompile Include="TonearmState.cpp" />
     <ClCompile Include="src\unit_state_machines\UnitStateMachine.cpp" />
   </ItemGroup>
