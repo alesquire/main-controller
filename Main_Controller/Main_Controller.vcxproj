@@ -102,6 +102,7 @@
     <ClInclude Include="Motor.h" />
     <ClInclude Include="PinConstants.h" />
     <ClInclude Include="Relays.h" />
+    <ClInclude Include="SensorsState.h" />
     <ClInclude Include="src\input_detectors\SensorsState.h" />
     <ClInclude Include="SpeedButtons.h" />
     <ClInclude Include="StateProcessor.h" />
@@ -109,8 +110,10 @@
     <ClInclude Include="Stroboscope.h" />
     <ClInclude Include="TonearmButtons.h" />
     <ClInclude Include="src\unit_state_machines\TonearmPositionStateMachine.h" />
+    <ClInclude Include="TonearmPositionStateMachine.h" />
     <ClInclude Include="TonearmState.h" />
     <ClInclude Include="src\unit_state_machines\UnitStateMachine.h" />
+    <ClInclude Include="UnitStateMachine.h" />
     <ClInclude Include="__vm\.Main_Controller.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +129,7 @@
     <ClCompile Include="PinInitFunctions.cpp" />
     <ClCompile Include="Relays.cpp" />
     <ClCompile Include="Initializers.cpp" />
+    <ClCompile Include="SensorsState.cpp" />
     <ClCompile Include="src\input_detectors\SensorsState.cpp" />
     <ClCompile Include="SpeedButtons.cpp" />
     <ClCompile Include="StateProcessor.cpp" />
@@ -133,8 +137,10 @@
     <ClCompile Include="Stroboscope.cpp" />
     <ClCompile Include="TonearmButtons.cpp" />
     <ClCompile Include="src\unit_state_machines\TonearmPositionStateMachine.cpp" />
+    <ClCompile Include="TonearmPositionStateMachine.cpp" />
     <ClCompile Include="TonearmState.cpp" />
     <ClCompile Include="src\unit_state_machines\UnitStateMachine.cpp" />
+    <ClCompile Include="UnitStateMachine.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
