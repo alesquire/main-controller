@@ -29,7 +29,7 @@ enum TonearmDirection
 	1. Play mode- when tonearm is on disk. Antiscate voltage is applied
 	2. Move mode- voltage is driven by joystick
 
-  Tonearm is idle whenPIN_TONEARM_VOLTAGE_OUTPUT (DAC1) = 2600 and is moving right when value is >2600
+  Tonearm is idle when PIN_TONEARM_VOLTAGE_OUTPUT (DAC1) = 2600 and is moving right when value is >2600
   Joystick values:
   full right = 4095
   zero left-right postion (joystick is idle)- 2063 (JOYSTICK_LEFT_RIGHT_ZERO_VALUE)
