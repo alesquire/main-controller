@@ -110,8 +110,8 @@ public:
 		return getDirectionByOutputValue(outputValue);
 	}
 
-  //reads position sensors and produces events (calls functions) if position was canged
-  void readSensors();
+	//reads position sensors and produces events (calls functions) if position was canged
+	void readSensors();
 
 	/*
 		method is used for initialization to define - is in necessary to move tonearm back to holder or not

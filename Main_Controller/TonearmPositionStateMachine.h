@@ -1,5 +1,7 @@
 #pragma once
 #include "UnitStateMachine.h"
+#include "Events.h"
+#include "StateProcessor.h"
 
 enum TonearmPositionEvents
 {
@@ -16,14 +18,18 @@ class TonearmPositionState
 private:
 	char* stateName;
 	int stateOrderNumber;
+	Events event; //reference to global event that will be called when state machine enters state
 public:
-	TonearmPositionState(char* _stateName, int _stateOrderNumber) :
-		stateName(_stateName), stateOrderNumber(_stateOrderNumber) {};
+	TonearmPositionState(char* _stateName, int _stateOrderNumber, Events _event) :
+		stateName(_stateName), stateOrderNumber(_stateOrderNumber), event(_event) {};
 	
 	/*
 		function is called to perform actions that should be performed when state macnhne enters new state
 	*/
-	virtual void apply()=0;
+	virtual void apply()
+	{
+		StateProcessor::stateProcessor.processEvent(event);
+	}
 
 	int getStateOrderNumber() 
 	{
@@ -34,6 +40,7 @@ public:
 	{
 		return stateName;
 	}
+	static TonearmPositionState* const OUTSIDE_HOLDER;
 	static TonearmPositionState* const ON_HOLDER;
 	static TonearmPositionState* const OVER_GAP;
 	static TonearmPositionState* const OVER_DISK;
@@ -43,7 +50,7 @@ public:
 
 class TonearmPositionStateMachine: UnitStateMachine<TonearmPositionEvents, TonearmPositionState>
 { 
-	static TonearmPositionState* transitionTable[4][6];
+	static TonearmPositionState* transitionTable[5][6];
 	static TonearmPositionStateMachine* tonearmPositionStateMachine;
 	virtual TonearmPositionState* getStateAtPosition(int stateNumber, int eventNumber)
 	{
@@ -51,6 +58,6 @@ class TonearmPositionStateMachine: UnitStateMachine<TonearmPositionEvents, Tonea
 	};
 
 public:
-	
+
 };
 

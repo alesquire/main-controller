@@ -16,7 +16,8 @@
 
 
 /*
-	Enum describes all changes that we can subscribe on
+	Enum describes all changes that we can subscribe on - all digital inputs.
+	We can't subscrribe on analog inputs, so we should read them explicitly in a loop
 */
 enum ChangeCondition
 {
