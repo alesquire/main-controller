@@ -27,6 +27,12 @@ private:
 	{
 		state->apply();
 	}
+protected:
+	//is called to setup initial state
+	void initCurrentState(StateType* state)
+	{
+		currentState = state;
+	}
 public:
 
 	void processEvent(EventType event)
