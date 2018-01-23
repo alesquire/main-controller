@@ -85,6 +85,46 @@
 119	
 </Source>
       </BreakPoint>
+      <BreakPoint Index="5" Name="SensorsState.h, строка 62" Id="41e96219-f0b5-40ff-8fbd-56bd703817b6" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\sensorsstate.h" FileLine="62" FileColumn="1" FunctionName="class SensorState::check()" FunctionLineOffset="9" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='41e96219-f0b5-40ff-8fbd-56bd703817b6'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>55			bool newValue= digitalRead(pinNumber);
+56			if (value != newValue)
+57			{
+58				debug("Pin changes :");
+59				debug(pinNumber);
+60				debug("\n");
+61				//value changes
+--&gt;62				if (event == CHANGES)
+63					listener();
+64			}
+65			if (value == false &amp;&amp; newValue == true)
+66			{
+67				debug("Pin rises :");
+68				debug(pinNumber);
+69				debug("\n");
+70				// value rises
+71				if (event == RISES)
+</Source>
+      </BreakPoint>
+      <BreakPoint Index="6" Name="SensorsState.h, строка 43" Id="4470b2c8-3175-4a43-8824-009ec4f34fea" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\sensorsstate.h" FileLine="43" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='6018b8ea-5455-4d7e-a8d3-a51fbbfe5047'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>36	{
+37	private:
+38		int pinNumber;
+39		callback listener=NULL;
+40		ChangeCondition event;
+41		bool value = LOW; //value that was read from digital input
+42	public:
+--&gt;43		SensorState(int _pinNumber, callback _listener, ChangeCondition _event):
+44			pinNumber(_pinNumber),
+45			listener(_listener),
+46			event(_event)
+47		{
+48			value = digitalRead(pinNumber);
+49		}
+50	
+51		//reads pin value and if value is changed and correspondent for curent change  listener exists- calls listener.
+52		// previous value is replaced with new one
+</Source>
+      </BreakPoint>
     </BreakPoints>
   </Program>
 </VisualMicro>

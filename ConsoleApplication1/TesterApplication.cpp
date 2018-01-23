@@ -102,6 +102,12 @@ void sensorsStateTest()
 {
 	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
 	SensorsState::getInstance().compare();
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
+	SensorsState::getInstance().compare();
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
+	SensorsState::getInstance().compare();
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
+	SensorsState::getInstance().compare();
 
 }
 

@@ -99,7 +99,8 @@ public:
 
 	void compare()
 	{
-		for (int i = 0;  i < sizeof(sensorStates); i++)
+		int size = sizeof(sensorStates) / sizeof(sensorStates[0]);
+		for (int i = 0;  i < size; i++)
 		{
 			sensorStates[i].check();
 		}

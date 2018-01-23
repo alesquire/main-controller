@@ -6,6 +6,7 @@
 
 #ifndef _DebugFunctions_cpp
 #define _DebugFunctions_cpp
+#define DEBUG
 
 /*
 	there is a bug somewhere in preprocessor directives. in some cases - this file is ignored, so it was included explicitly
