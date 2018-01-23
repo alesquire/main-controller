@@ -1,5 +1,6 @@
 #include "EventFunctions.h"
 #include "StateProcessor.h"
+#include "TonearmPositionStateMachine.h"
 
 void onAutostopTimerEvent() 
 {
@@ -68,39 +69,37 @@ void onMicroliftSensorEvent()
 void onHolderSensorRisingEvent()
 {
   Serial.println("onHolderSensorRisingEvent()");
-	StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOverGap);
+  TonearmPositionStateMachine::tonearmPositionStateMachine.processEvent(TonearmPositionEvents::HOLDER_RISE);
 }
 
 void onHolderSensorFallingEvent()
 {
   Serial.println("onHolderSensorFallingEvent()");
-  StateProcessor::stateProcessor.processEvent(Events::TonearmPositionHolder);
+  TonearmPositionStateMachine::tonearmPositionStateMachine.processEvent(TonearmPositionEvents::AUTOSTOP_FALL);
 }
 
 void onFirstTrackSensorRisingEvent()
 {
   Serial.println("onFirstTrackSensorRisingEvent()");
-  if(StateProcessor::stateProcessor.getTonearmDirection()==LEFT)
-		StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOverDisk);
+  TonearmPositionStateMachine::tonearmPositionStateMachine.processEvent(TonearmPositionEvents::FIRST_TRACK_RISE);
 }
 
 void onFirstTrackSensorFallingEvent()
 {
   Serial.println("onFirstTrackSensorFallingEvent()");
-  if (StateProcessor::stateProcessor.getTonearmDirection() == RIGHT)
-		StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOverGap);
+  TonearmPositionStateMachine::tonearmPositionStateMachine.processEvent(TonearmPositionEvents::FIRST_TRACK_FALL);
 }
 
 void onAutostopSensorRisingEvent()
 {
   Serial.println("onAutostopSensorRisingEvent()");
-  StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOverDisk);
+  TonearmPositionStateMachine::tonearmPositionStateMachine.processEvent(TonearmPositionEvents::AUTOSTOP_RISE);
 }
 
 void onAutostopSensorFallingEvent()
 {
   Serial.println("onAutostopSensorFallingEvent()");
-  StateProcessor::stateProcessor.processEvent(Events::TonearmPositionOnAutostop);
+  TonearmPositionStateMachine::tonearmPositionStateMachine.processEvent(TonearmPositionEvents::AUTOSTOP_FALL);
 }
 
 void onStroboscope()

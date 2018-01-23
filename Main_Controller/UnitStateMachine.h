@@ -35,7 +35,7 @@ protected:
 	}
 public:
 
-	void processEvent(EventType event)
+	virtual void processEvent(EventType event)
 	{
 		StateType *nextState = getNextState(event);
 		if (nextState)

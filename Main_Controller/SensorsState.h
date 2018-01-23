@@ -55,18 +55,27 @@ public:
 		bool newValue= digitalRead(pinNumber);
 		if (value != newValue)
 		{
-			//vlaue changes
+			debug("Pin changes :");
+			debug(pinNumber);
+			debug("\n");
+			//value changes
 			if (event == CHANGES)
 				listener();
 		}
 		if (value == false && newValue == true)
 		{
+			debug("Pin rises :");
+			debug(pinNumber);
+			debug("\n");
 			// value rises
 			if (event == RISES)
 				listener();
 		}
 		if (value == true && newValue == false)
 		{
+			debug("Pin falls :");
+			debug(pinNumber);
+			debug("\n");
 			// value falls
 			if (event == FALLS)
 				listener();
@@ -90,7 +99,7 @@ public:
 
 	void compare()
 	{
-		for (int i = 0; i++; i < sizeof(sensorStates))
+		for (int i = 0;  i < sizeof(sensorStates); i++)
 		{
 			sensorStates[i].check();
 		}

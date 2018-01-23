@@ -1,5 +1,6 @@
 #include "StateProcessor.h"
 #include "SensorsState.h"
+#include "TonearmPositionStateMachine.h"
 
 #ifndef _INITIALIZERS_H_
 #define _INITIALIZERS_H_
@@ -44,6 +45,14 @@ TonearmState* const TonearmState::HOLDER = new Holder();
 TonearmState* const TonearmState::FULL_LEFT = new FullLeft();
 TonearmState* const TonearmState::FULL_RIGHT = new FullRight();
 
+TonearmPositionState* const TonearmPositionState::OUTSIDE_HOLDER = new TonearmPositionState("OUTSIDE_HOLDER", 0, Events::TonearmPositionHolder); //in this state event is never thrown as this state has no entrance- only exit
+TonearmPositionState* const TonearmPositionState::ON_HOLDER = new TonearmPositionState("ON_HOLDER", 0, Events::TonearmPositionHolder);
+TonearmPositionState* const TonearmPositionState::OVER_GAP = new TonearmPositionState("OVER_GAP", 0, Events::TonearmPositionOverGap);
+TonearmPositionState* const TonearmPositionState::OVER_DISK = new TonearmPositionState("OVER_DISK", 0, Events::TonearmPositionOverDisk);
+TonearmPositionState* const TonearmPositionState::AUTOSTOP = new TonearmPositionState("AUTOSTOP", 0, Events::TonearmPositionOnAutostop);
+
+TonearmPositionStateMachine TonearmPositionStateMachine::tonearmPositionStateMachine;
+
 State* const  State::InitialPickupIsRaisingOnHolder = new State(0, "InitialPickupIsRaisingOnHolder", Motor::OFF, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::OFF, SpeedButtons::OFF, DiskLed::OFF, AutostopTimer::OFF, Stroboscope::OFF);
 State* const  State::InitialPickupIsRaisingOutsideHolder = new State(1, "InitialPickupIsRaisingOutsideHolder", Motor::OFF, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::OFF, SpeedButtons::OFF, DiskLed::OFF, AutostopTimer::OFF, Stroboscope::OFF);
 State* const  State::InitialPickupIsMovingToHolder = new State(2, "InitialPickupIsMovingToHolder", Motor::OFF, Microlift::HOLD, Relays::MOVE, TonearmState::FULL_RIGHT, TonearmButtons::OFF, SpeedButtons::OFF, DiskLed::OFF, AutostopTimer::OFF, Stroboscope::OFF);
@@ -73,6 +82,15 @@ State* const  State::Play45ManualPickupFalls = new State(25, "Play45ManualPickup
 State* const  State::Stop45PickupOnAutostopPause = new State(26, "Stop45PickupOnAutostopPause", Motor::Mode45, Microlift::DOWN, Relays::PLAY, TonearmState::PLAY, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::RED, AutostopTimer::ON, Stroboscope::STROBO_45);
 State* const  State::Stop45PickupIsRaising = new State(27, "Stop45PickupIsRaising", Motor::OFF, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::STOP, SpeedButtons::LED45, DiskLed::RED, AutostopTimer::OFF, Stroboscope::STROBO_45);
 State* const  State::Stop45PickupIsAutomaticallyMovingToHolder = new State(28, "Stop45PickupIsAutomaticallyMovingToHolder", Motor::OFF, Microlift::HOLD, Relays::MOVE, TonearmState::FULL_RIGHT, TonearmButtons::STOP, SpeedButtons::LED45, DiskLed::RED, AutostopTimer::OFF, Stroboscope::STROBO_45);
+
+TonearmPositionState* const TonearmPositionStateMachine::transitionTable[5][6] = {
+	{ NULL,	TonearmPositionState::ON_HOLDER,	NULL,	NULL,	NULL,	NULL, },
+	{ TonearmPositionState::OVER_GAP,	NULL,	NULL,	NULL,	NULL,	NULL, },
+	{ NULL,	TonearmPositionState::ON_HOLDER,	TonearmPositionState::OVER_DISK,	NULL,	NULL,	NULL, },
+	{ NULL,	NULL,	NULL,	TonearmPositionState::OVER_GAP,	NULL,	TonearmPositionState::AUTOSTOP, },
+	{ NULL,	NULL,	NULL,	NULL,	TonearmPositionState::OVER_DISK,	NULL }
+};
+
 
 State* const  StateProcessor::transitionTable[29][15] = {
 	{ NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33FullStop,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL, },

@@ -79,16 +79,7 @@
     <ClInclude Include="DebugFunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\unit_state_machines\UnitStateMachine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\input_detectors\SensorsState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\unit_state_machines\TonearmPositionStateMachine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TonearmPositionStateMachine.h">
+     <ClInclude Include="TonearmPositionStateMachine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="UnitStateMachine.h">
@@ -151,15 +142,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Initializers.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\input_detectors\SensorsState.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\unit_state_machines\UnitStateMachine.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\unit_state_machines\TonearmPositionStateMachine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="TonearmPositionStateMachine.cpp">

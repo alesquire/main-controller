@@ -10,6 +10,7 @@
 #include "Stroboscope.h"
 #include "StateProcessor.h"
 #include "SensorsState.h"
+#include "TonearmPositionStateMachine.h"
 //#include "PinInitFunctions.cpp"
 /*
 
@@ -24,8 +25,9 @@ void setup()
 //#if defined (DEBUG)	
 	Serial.begin(115200);//debug 
 //#endif
-	debug("start\n") ;//debug
+	Serial.print("start\n") ;//debug
 	StateProcessor::stateProcessor.init();
+	TonearmPositionStateMachine::tonearmPositionStateMachine.init();
 	/*
 	attachInterrupt(digitalPinToInterrupt(PIN_STOP_BUTTON), onStopButtonPress, FALLING);
 	attachInterrupt(digitalPinToInterrupt(PIN_ROTATE_BUTTON), onRotateButtonPress, CHANGE);

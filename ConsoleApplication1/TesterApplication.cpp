@@ -98,10 +98,21 @@ void joystickMoveTest()
 
 }
 
+void sensorsStateTest()
+{
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
+	SensorsState::getInstance().compare();
+
+}
+
 int main()
 {
-	init();
-	automaticPlaybackTest();
+	//init();
+	StateProcessor::stateProcessor.init();
+	TonearmPositionStateMachine::tonearmPositionStateMachine.init();
+
+	sensorsStateTest();
+	//automaticPlaybackTest();
 	//joystickMoveTest();
 	return 0;
 }
