@@ -18,9 +18,11 @@ void debug(char* value)
 #if defined (DEBUG)
 	#if defined(ARDUINO)
 		Serial.print(value);
-	#else
+		Serial.print("\n");
+#else
 		printf(value);
-	#endif // (ARDUINO)
+		printf("\n");
+#endif // (ARDUINO)
 #endif //(DEBUG)
 }
 
@@ -29,9 +31,11 @@ void debug(int value)
 #if defined (DEBUG)
 	#if defined(ARDUINO)
 		Serial.print(value);
-	#else
+		Serial.print("\n");
+#else
 		printf("%i", value);
-	#endif // (ARDUINO)
+		printf("\n");
+#endif // (ARDUINO)
 #endif //(DEBUG)
 }
 

@@ -46,10 +46,10 @@ TonearmState* const TonearmState::FULL_LEFT = new FullLeft();
 TonearmState* const TonearmState::FULL_RIGHT = new FullRight();
 
 TonearmPositionState* const TonearmPositionState::OUTSIDE_HOLDER = new TonearmPositionState("OUTSIDE_HOLDER", 0, Events::TonearmPositionHolder); //in this state event is never thrown as this state has no entrance- only exit
-TonearmPositionState* const TonearmPositionState::ON_HOLDER = new TonearmPositionState("ON_HOLDER", 0, Events::TonearmPositionHolder);
-TonearmPositionState* const TonearmPositionState::OVER_GAP = new TonearmPositionState("OVER_GAP", 0, Events::TonearmPositionOverGap);
-TonearmPositionState* const TonearmPositionState::OVER_DISK = new TonearmPositionState("OVER_DISK", 0, Events::TonearmPositionOverDisk);
-TonearmPositionState* const TonearmPositionState::AUTOSTOP = new TonearmPositionState("AUTOSTOP", 0, Events::TonearmPositionOnAutostop);
+TonearmPositionState* const TonearmPositionState::ON_HOLDER = new TonearmPositionState("ON_HOLDER", 1, Events::TonearmPositionHolder);
+TonearmPositionState* const TonearmPositionState::OVER_GAP = new TonearmPositionState("OVER_GAP", 2, Events::TonearmPositionOverGap);
+TonearmPositionState* const TonearmPositionState::OVER_DISK = new TonearmPositionState("OVER_DISK", 3, Events::TonearmPositionOverDisk);
+TonearmPositionState* const TonearmPositionState::AUTOSTOP = new TonearmPositionState("AUTOSTOP", 4, Events::TonearmPositionOnAutostop);
 
 TonearmPositionStateMachine TonearmPositionStateMachine::tonearmPositionStateMachine;
 
@@ -139,5 +139,5 @@ SensorState SensorsState::sensorStates[] =
 	SensorState(PIN_AUTOSTOP,onAutostopSensorRisingEvent,RISES),
 	SensorState(PIN_AUTOSTOP,onAutostopSensorFallingEvent,FALLS)
 };
-SensorsState SensorsState::instance;
+SensorsState SensorsState::sensorsState;
 #endif

@@ -86,7 +86,7 @@ bool TonearmState::isTonearmOnHolder()
 
 void TonearmState::apply()
 {
-	Serial.println(getTonearmStateName());//debug
+	//Serial.println(getTonearmStateName());//debug
 	int outputValue = defineValue();
 	analogWrite(PIN_TONEARM_VOLTAGE_OUTPUT, outputValue);
 }

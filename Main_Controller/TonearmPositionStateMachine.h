@@ -68,6 +68,12 @@ public:
 		else
 			tonearmPositionStateMachine.initCurrentState(TonearmPositionState::OUTSIDE_HOLDER);
 	}
+//todo- remove after debug
+ virtual void processEvent(TonearmPositionEvents event)
+ {
+    UnitStateMachine::processEvent(event);
+    debug(getCurrentState()->getStateName());
+ }
 };
 
 

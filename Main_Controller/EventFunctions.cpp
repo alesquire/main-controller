@@ -75,7 +75,7 @@ void onHolderSensorRisingEvent()
 void onHolderSensorFallingEvent()
 {
   Serial.println("onHolderSensorFallingEvent()");
-  TonearmPositionStateMachine::tonearmPositionStateMachine.processEvent(TonearmPositionEvents::AUTOSTOP_FALL);
+  TonearmPositionStateMachine::tonearmPositionStateMachine.processEvent(TonearmPositionEvents::HOLDER_FALL);
 }
 
 void onFirstTrackSensorRisingEvent()
