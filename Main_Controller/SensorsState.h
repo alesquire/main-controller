@@ -47,6 +47,11 @@ public:
 		listener(_listener),
 		subscribed_event(_event)
 	{
+		init();
+	}
+
+	void init()
+	{
 		value = digitalRead(pinNumber);
 	}
 
@@ -98,9 +103,15 @@ private:
 
 public:
 	static SensorsState sensorsState;
-	static SensorsState& getInstance()
+
+	void init()
 	{
-		return sensorsState;
+		int size = sizeof(sensorStates) / sizeof(sensorStates[0]);
+		for (int i = 0; i < size; i++)
+		{
+			sensorStates[i].init();
+		}
+
 	}
 
 	void compare()

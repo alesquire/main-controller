@@ -121,5 +121,5 @@ SensorState SensorsState::sensorStates[] =
 	SensorState(PIN_AUTOSTOP,onAutostopSensorRisingEvent,RISES),
 	SensorState(PIN_AUTOSTOP,onAutostopSensorFallingEvent,FALLS)
 };
-SensorsState SensorsState::instance;
+SensorsState SensorsState::sensorsState;
 #endif
