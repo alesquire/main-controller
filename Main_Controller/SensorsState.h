@@ -13,10 +13,11 @@
 
 #include "PinConstants.h"
 #include "EventFunctions.h"
-
+#include "DebugFunctions.h"
 
 /*
-	Enum describes all changes that we can subscribe on
+	Enum describes all changes that we can subscribe on - all digital inputs.
+	We can't subscrribe on analog inputs, so we should read them explicitly in a loop
 */
 enum ChangeCondition
 {
@@ -26,23 +27,25 @@ enum ChangeCondition
 };
 
 /*
-	class desrcibes one sensor that we can subscribe on. instance reads pin state and compares it with previous 
+	class is a listener configured on pin end event.
+	desrcibes one sensor that we can subscribe on. instance reads pin state and compares it with previous 
 	class instance is associated with pin and has listerer that is called when event 
 	multiple class imstaces can be created for one pin
+	it is assumed thar class instance has associated callback function, othervise it wouldn't be created
 */
 typedef void(*callback)(void); // listener function
 class SensorState
 {
 private:
 	int pinNumber;
-	callback listener=NULL;
-	ChangeCondition event;
+	ChangeCondition subscribed_event; //event that class instance subscribes on  
+	callback listener = NULL; //function that is called when changes correspond to subscribed_event
 	bool value = LOW; //value that was read from digital input
 public:
 	SensorState(int _pinNumber, callback _listener, ChangeCondition _event):
 		pinNumber(_pinNumber),
 		listener(_listener),
-		event(_event)
+		subscribed_event(_event)
 	{
 		value = digitalRead(pinNumber);
 	}
@@ -52,22 +55,34 @@ public:
 	void check()
 	{
 		bool newValue= digitalRead(pinNumber);
+		//if value changes
 		if (value != newValue)
 		{
-			//vlaue changes
-			if (event == CHANGES)
+			//debug("Pin changes :");
+			//debug(pinNumber);
+			//debug("\n");
+			//value changes
+			if (subscribed_event == CHANGES)
 				listener();
 		}
+		//if value rises
 		if (value == false && newValue == true)
 		{
+			//debug("Pin rises :");
+			//debug(pinNumber);
+			//debug("\n");
 			// value rises
-			if (event == RISES)
+			if (subscribed_event == RISES)
 				listener();
 		}
+		//if value falls
 		if (value == true && newValue == false)
 		{
+			//debug("Pin falls :");
+			//debug(pinNumber);
+			//debug("\n");
 			// value falls
-			if (event == FALLS)
+			if (subscribed_event == FALLS)
 				listener();
 		}
 		value = newValue;
@@ -80,16 +95,18 @@ class SensorsState
 {
 private:
 	static SensorState sensorStates[13];
-	static SensorsState instance;
+
 public:
+	static SensorsState sensorsState;
 	static SensorsState& getInstance()
 	{
-		return instance;
+		return sensorsState;
 	}
 
 	void compare()
 	{
-		for (int i = 0; i++; i < sizeof(sensorStates))
+		int size = sizeof(sensorStates) / sizeof(sensorStates[0]);
+		for (int i = 0;  i < size; i++)
 		{
 			sensorStates[i].check();
 		}
