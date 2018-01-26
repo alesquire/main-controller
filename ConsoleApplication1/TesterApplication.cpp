@@ -24,7 +24,12 @@
 #include "..\Main_Controller\DebugFunctions.cpp"
 
 #include "ArduinoInputPinSource.h"
-
+template <typename Source, class Target>
+void assert(Source* source, Target* target)
+{
+	if(source!=target)
+		throw std::runtime_error("error");
+}
 
 void processEvent(Events _event)
 {
@@ -34,18 +39,15 @@ void processEvent(Events _event)
 
 void init()
 {
-	
-	//emulate that microlidt sensor all are in tonearm up position
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_LOWER_SENSOR, HIGH);
+	//tonearm is down
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_LOWER_SENSOR, LOW);
+
 	//and tonarm is not on a holder
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, HIGH);
 	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_TONEARM_HOLDER, HIGH);
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_AUTOSTOP, HIGH);
 
-	StateProcessor::stateProcessor.init();
-
-	onMicroliftSensorEvent(); //tonearm is up
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_TONEARM_HOLDER, LOW);
-	onHolderSensorFallingEvent();//tonearm is on holder
 }
 
 void automaticPlaybackTest()
@@ -98,10 +100,65 @@ void joystickMoveTest()
 
 }
 
+void sensorsStateTest()
+{
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
+	SensorsState::getInstance().compare();
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
+	SensorsState::getInstance().compare();
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
+	SensorsState::getInstance().compare();
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
+	SensorsState::getInstance().compare();
+
+}
+void tonearmPositionTest()
+{
+	//initial state - tonearm is over disk
+	SensorsState::getInstance().compare();
+	assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::OUTSIDE_HOLDER);
+	//move to holder
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_TONEARM_HOLDER, LOW);
+	SensorsState::sensorsState.compare();
+	assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::ON_HOLDER);
+	//move to center
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_TONEARM_HOLDER, HIGH);
+	SensorsState::sensorsState.compare();
+	assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::OVER_GAP);
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, LOW);
+	SensorsState::getInstance().compare();
+	assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::OVER_GAP);
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, HIGH);
+	SensorsState::getInstance().compare();
+	assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::OVER_DISK);
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_AUTOSTOP, LOW);
+	SensorsState::getInstance().compare();
+	assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::AUTOSTOP);
+	//move to holder
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_AUTOSTOP, HIGH);
+	SensorsState::getInstance().compare();
+	assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::OVER_DISK);
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, LOW);
+	SensorsState::getInstance().compare();
+	assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::OVER_GAP);
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, HIGH);
+	SensorsState::getInstance().compare();
+	assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::OVER_GAP);
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_TONEARM_HOLDER, LOW);
+	SensorsState::getInstance().compare();
+	assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::AUTOSTOP);
+}
+
+
 int main()
 {
 	init();
-	automaticPlaybackTest();
+	StateProcessor::stateProcessor.init();
+	TonearmPositionStateMachine::tonearmPositionStateMachine.init();
+
+	tonearmPositionTest();
+	//sensorsStateTest();
+	//automaticPlaybackTest();
 	//joystickMoveTest();
 	return 0;
 }
