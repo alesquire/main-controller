@@ -23,7 +23,7 @@ enum Events
 	TonearmPositionOnAutostop,
 	Speed33ButtonPress,
 	Speed45ButtonPress,
-	AutostopTimerEvent
+	DelayTimerEvent //event is used to wait before autostop and to accelerate disk
 };
 
 static  char *  eventNames[15] = {
@@ -41,7 +41,7 @@ static  char *  eventNames[15] = {
 	"TonearmPositionOnAutostop",
 	"Speed33ButtonPress",
 	"Speed45ButtonPress",
-	"AutostopTimerEvent" 
+	"DelayTimerEvent" 
 };
 
 

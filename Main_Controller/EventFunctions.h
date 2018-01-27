@@ -4,7 +4,7 @@
   #include "ArduinoHeader.h"
 #endif
 
-void onAutostopTimerEvent();
+void onDelayTimerEvent();
 
 /*
 	function that is called on regular basis to read tonerarm controls (joystick, autorsop and damper regulators

@@ -21,7 +21,7 @@ protected:
 public:
 	static void init()
 	{
-		Timer0.attachInterrupt(onAutostopTimerEvent);
+		Timer0.attachInterrupt(onDelayTimerEvent);
 	}
 
 	virtual void apply()

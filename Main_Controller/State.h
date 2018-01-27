@@ -73,6 +73,7 @@ public:
 	static State* const  InitialPickupIsMovingToHolder;
 	static State* const  Stop33FullStop;
 	static State* const  Rotate33;
+	static State* const  Play33AccelerateDisk;
 	static State* const  Play33AutoMoveToFirstTrack;
 	static State* const  Play33AutoLowerPickup;
 	static State* const  Play33Play;
@@ -86,6 +87,7 @@ public:
 	static State* const  Stop33PickupIsAutomaticallyMovingToHolder;
 	static State* const  Stop45FullStop;
 	static State* const  Rotate45;
+	static State* const  Play45AccelerateDisk;
 	static State* const  Play45AutoMoveToFirstTrack;
 	static State* const  Play45AutoLowerPickup;
 	static State* const  Play45Play;

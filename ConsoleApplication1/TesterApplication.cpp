@@ -154,8 +154,10 @@ void automaticPlayTest()
 {
 	//play button is pressed (and unpressed)
 	processPinValue(PIN_PLAY_BUTTON, HIGH);
-	assertState(State::Play33AutoMoveToFirstTrack);
+	assertState(State::Play33AccelerateDisk);
 	processPinValue(PIN_PLAY_BUTTON, LOW);
+	assertState(State::Play33AccelerateDisk);
+	onDelayTimerEvent();
 	assertState(State::Play33AutoMoveToFirstTrack);
 
 	//go to first track
@@ -176,7 +178,7 @@ void automaticPlayTest()
 	assertState(State::Stop33PickupOnAutostopPause);
 
 	//return to first track
-	onAutostopTimerEvent();
+	onDelayTimerEvent();
 	assertState(State::Stop33PickupIsRaising);
 	processPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
 	processPinValue(PIN_MICROLIFT_LOWER_SENSOR, HIGH);

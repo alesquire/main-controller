@@ -23,7 +23,7 @@ private:
 
 	JoystickUpDownState joystickUpDownState;
 
-	static State* const  transitionTable[29][15];
+	static State* const  transitionTable[31][15];
 
 	void applyNextState(State *state);
 

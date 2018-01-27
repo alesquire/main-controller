@@ -1,9 +1,9 @@
 #include "EventFunctions.h"
 #include "StateProcessor.h"
 
-void onAutostopTimerEvent() 
+void onDelayTimerEvent() 
 {
-	StateProcessor::stateProcessor.processEvent(Events::AutostopTimerEvent);
+	StateProcessor::stateProcessor.processEvent(Events::DelayTimerEvent);
 }
 
 void onTonearmTimerEvent()
