@@ -129,7 +129,6 @@ void joystickMoveTest()
 	assertState(State::Play33ManualPickupIsRaising);
 
 
-
 }
 
 
