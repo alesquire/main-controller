@@ -11,10 +11,16 @@
 #include "Appliable.h"
 #include "DueTimer.h"
 #include "EventFunctions.h"
+#include "DebugFunctions.h"
 
-#define AUTOSTOP_DELAY 5E5 //delay in microseconde 
+#define WAIT_DELAY 5E6 //delay in microseconde 
 
-class AutostopTimer : public Appliable
+/*
+	class is used to delay operation execution:
+	- pickup rising on autostop
+	- tonearm move to first track (to accelerate disk)
+*/
+class DelayTimer : public Appliable
 {
 protected:
 
@@ -29,18 +35,18 @@ public:
 		//empty method - should be overridden in child classes with apply behavior
 	}
 
-	static AutostopTimer * const ON;
-	static AutostopTimer * const OFF;
+	static DelayTimer * const ON;
+	static DelayTimer * const OFF;
 };
 
-class AutostopTimerON : public AutostopTimer
+class DelayTimerON : public DelayTimer
 {
 public:
 	virtual void apply();
 };
 
 
-class AutostopTimerOFF : public AutostopTimer
+class DelayTimerOFF : public DelayTimer
 {
 public:
 	virtual void apply();

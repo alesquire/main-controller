@@ -90,7 +90,7 @@
   <ItemGroup>
     <ClInclude Include="Appliable.h" />
     <ClInclude Include="ArduinoHeader.h" />
-    <ClInclude Include="AutostopTimer.h" />
+    <ClInclude Include="DelayTimer.h" />
     <ClInclude Include="DebugFunctions.h" />
     <ClInclude Include="DiskLed.h" />
     <ClInclude Include="DueTimer.h" />
@@ -111,7 +111,7 @@
     <ClInclude Include="__vm\.Main_Controller.vsarduino.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AutostopTimer.cpp" />
+    <ClCompile Include="DelayTimer.cpp" />
     <ClCompile Include="DebugFunctions.cpp" />
     <ClCompile Include="DiskLed.cpp" />
     <ClCompile Include="DueTimer.cpp" />

@@ -45,7 +45,9 @@ void StateProcessor::processEvent(Events _event)
 	}
 	else
 	{
-		debug("Event is ignored \n");
+		debug("Event ");
+    debug(eventNames[_event]);
+    debug(" is ignored \n"); 
 	}
 }
 

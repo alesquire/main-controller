@@ -5,6 +5,7 @@
 
 #include "State.h"
 #include "DebugFunctions.h"
+
 State::State(int _orderNumber,
 	char* _stateName,
 	Motor* _motorState,
@@ -14,7 +15,7 @@ State::State(int _orderNumber,
 	TonearmButtons* _tonearmButtons,
 	SpeedButtons* _speedButtons,
 	DiskLed* _diskLed,
-	AutostopTimer* _autostopTimer,
+	DelayTimer* _autostopTimer,
 	Stroboscope*  _stroboscope)
 {
 	stateOrderNumber = _orderNumber;
@@ -39,7 +40,7 @@ void State::init()
 	TonearmButtons::init();
 	SpeedButtons::init();
 	DiskLed::init();
-	AutostopTimer::init();
+	DelayTimer::init();
 	Stroboscope::init();
 }
 
@@ -47,9 +48,9 @@ void State::apply()
 {
 	motorState->apply();
 	microliftStates->apply();
-  Serial.print("microlift mode=");
-  Serial.println(microliftStates->getName());
-  //debug
+	debug("microlift mode=");
+	debug(microliftStates->getName());
+	debug("\n");
 	relaysState->apply();
 	tonearmState->apply();
 	tonearmButtons->apply();

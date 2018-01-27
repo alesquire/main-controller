@@ -15,7 +15,7 @@
 #include "TonearmState.h"
 #include "TonearmButtons.h"
 #include "DiskLed.h"
-#include "AutostopTimer.h"
+#include "DelayTimer.h"
 #include "Stroboscope.h"
 /*
 	Class declares all consistent state that can be in turntable. State is a set of all outputs - leds, motor driver, relays etc  (and some auxiliary elements as timers). 
@@ -37,7 +37,7 @@ public:  //debug- remove publuic - change to private
 	TonearmButtons*  tonearmButtons;
 	SpeedButtons*  speedButtons;
 	DiskLed*  diskLed;
-	AutostopTimer*  autostopTimer;
+	DelayTimer*  autostopTimer;
 	Stroboscope*  stroboscope;
 public:
 
@@ -50,7 +50,7 @@ public:
 			TonearmButtons* _tonearmButtons, 
 			SpeedButtons* _speedButtons, 
 			DiskLed* _diskLed, 
-			AutostopTimer* _autostopTimer,
+			DelayTimer* _autostopTimer,
 			Stroboscope*  _stroboscope);
 	
 	/*

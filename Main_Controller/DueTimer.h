@@ -79,7 +79,7 @@ public:
 	DueTimer& attachInterrupt(void (*isr)());
 	DueTimer& detachInterrupt(void);
 	DueTimer& start(double microseconds = -1);
-  DueTimer& executeOneTime(double delay = -1);
+	DueTimer& executeOneTime(double delay = -1);
 	DueTimer& stop(void);
 	DueTimer& setFrequency(double frequency);
 	DueTimer& setPeriod(double microseconds);

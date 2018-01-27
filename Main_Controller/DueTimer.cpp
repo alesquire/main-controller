@@ -111,7 +111,6 @@ DueTimer& DueTimer::start(double microseconds){
 		Start the timer
 		If a period is set, then sets the period and start the timer
 	*/
-  oneTimeExecution[timer] = false;
 	if(microseconds > 0)
 		setPeriod(microseconds);
 	
@@ -150,6 +149,7 @@ DueTimer& DueTimer::stop(void){
 	NVIC_DisableIRQ(Timers[timer].irq);
 	
 	TC_Stop(Timers[timer].tc, Timers[timer].channel);
+	oneTimeExecution[timer] = false;
 
 	return *this;
 }

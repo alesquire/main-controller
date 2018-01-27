@@ -27,9 +27,6 @@
     <ClInclude Include="Appliable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AutostopTimer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="DiskLed.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -81,11 +78,11 @@
     <ClInclude Include="SensorsState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DelayTimer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AutostopTimer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="DiskLed.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -138,6 +135,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SensorsState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DelayTimer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
