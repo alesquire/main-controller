@@ -1,5 +1,5 @@
 Main documentation
-![Architecture](/Architecture.png)
+![Architecture](Architecture.png)
 _____________________________________________________
 Entire solution consists of three class levels, each aggregates/manages underlying level
 
