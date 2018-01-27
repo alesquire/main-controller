@@ -7,6 +7,8 @@
 int TonearmState::transformAntiscateToOutput(int input)
 {
 	//todo: implement transformation table
+	debug("Antiscate control value=");
+	debug(input);
 	return IDLE_TONEARM_OUTPUT_VALUE;
 }
 
@@ -86,7 +88,6 @@ bool TonearmState::isTonearmOnHolder()
 
 void TonearmState::apply()
 {
-	Serial.println(getTonearmStateName());//debug
 	int outputValue = defineValue();
 	analogWrite(PIN_TONEARM_VOLTAGE_OUTPUT, outputValue);
 }
