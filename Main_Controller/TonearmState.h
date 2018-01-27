@@ -12,6 +12,7 @@
 #include "EventFunctions.h"
 
 #define JOYSTICK_LEFT_RIGHT_ZERO_VALUE 2063
+#define JOYSTICK_UP_DOWN_ZERO_VALUE 2048
 #define IDLE_TONEARM_OUTPUT_VALUE 2100//2600 //value to be applied to DAC1 to have 0V on tonearm solenoid
 
 //enum shows direction- where tonearm is moving now

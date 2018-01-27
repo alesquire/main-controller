@@ -9,34 +9,44 @@
       <VCCodeMacros />
     </VCCodeModel>
     <BreakPoints>
-      <BreakPoint Index="1" Name="Main_Controller.ino, строка 28" Id="9d1a37b6-6e7b-44f8-a44d-fbb26de15e34" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\main_controller.ino" FileLine="28" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='9d1a37b6-6e7b-44f8-a44d-fbb26de15e34'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>21		that should be managed dyring turntable work cycle. Unit class encapsulates pin management logic for unit. 
-22		Unit has set of states - states of all pins. (For example when Play button is lit). Every such state is represented by Unit state class instance- static constant
-23		delivered together with class. 
-24		Unit classes are polyumorofhic and have two specific methods 
-25		- init. To ititialize pins (pinMode) - static method
-26		- apply. To set particular pin values that correspond to current unit state. 
-27		The following classes sre unit states:
---&gt;28		- Motor
-29		- TonearmState
-30		- DiskLed
-31		- Relays
-32		- SpeedButtons
-33		- TonearmButtons
-34		- TonearmState
-35		- Microlift
-36		- AutostopTimer
-37		
+      <BreakPoint Index="1" Name="TesterApplication.cpp, строка 116" Id="d0d888da-d4f3-4882-b0fc-9706d577b8e4" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\consoleapplication1\testerapplication.cpp" FileLine="116" FileColumn="1" FunctionName="joystickMoveTest()" FunctionLineOffset="21" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='51a427ba-e577-4169-b7ac-c66e83fc467b'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>109		assertState(State::Play33ManualPickupMoveOverGap);
+110		processPinValue(PIN_FIRST_TRACK, LOW);
+111		assertState(State::Play33ManualPickupMoveOverGap);
+112		processPinValue(PIN_FIRST_TRACK, HIGH);
+113		assertState(State::Play33ManualPickupMoveOverDisk);
+114	
+115		//start playback
+--&gt;116		processJoystickValue(PIN_JOYSTICK_UP_DOWN, 4000);
+117		assertState(State::Play33ManualPickupFalls);
+118		processPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
+119		processPinValue(PIN_MICROLIFT_LOWER_SENSOR, LOW);
+120		assertState(State::Play33Play);
+121	
+122	
+123	
+124	}
+125	
 </Source>
       </BreakPoint>
-      <BreakPoint Index="2" Name="TesterApplication.cpp, строка 109" Id="196cc2b7-46db-42ce-97f7-abcf90788c30" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\consoleapplication1\testerapplication.cpp" FileLine="109" FileColumn="1" FunctionName="" FunctionLineOffset="1" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='196cc2b7-46db-42ce-97f7-abcf90788c30'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
-        <Source>102	{
-103		init();
-104		automaticPlaybackTest();
-105		//joystickMoveTest();
-106		return 0;
-107	}
-108	
+      <BreakPoint Index="2" Name="StateProcessor.cpp, строка 81" Id="5a9d65db-8893-4784-952a-49fcb79f2395" Enabled="1" Message="" MessageTextType="2" PreProcessedMessage="" Condition="" ConditionType="1" CurrentHits="0" File="d:\документы\al\turntable\программа\main controller\v2\main_controller\main_controller\stateprocessor.cpp" FileLine="81" FileColumn="1" FunctionName="onTimer()" FunctionLineOffset="5" FunctionColumnOffset="1" HitCountTarget="1" HitCountType="1" Language="C++" LocationType="3" Tag="&lt;vmbp Id='68642b99-6cb0-4d6d-9161-32f7381a4fb1'/&gt;" Type="1" ToString="System.__ComObject" BreakWhenHit="1">
+        <Source>74	}
+75	
+76	void StateProcessor::onTimer()
+77	{
+78		//reads analog inputs - joystick left-right, antiscate and damper values and updates solenoid voltage
+79		currentState-&gt;getTonearmState()-&gt;apply();
+80	  //reads joystick up-down position 
+--&gt;81		JoystickPositionPair joystickPositionPair= joystickUpDownState.getJoystickPositionPair();
+82		if (joystickPositionPair.current != joystickPositionPair.previous)
+83		{
+84			if (joystickPositionPair.current == UP)
+85			{
+86				processEvent(Events::UpJoystickPress);
+87			}
+88			else if (joystickPositionPair.current == DOWN)
+89			{
+90				processEvent(Events::DownJoystickPress);
 </Source>
       </BreakPoint>
     </BreakPoints>

@@ -46,6 +46,11 @@ void processPinValue(int pin, int newValue)
 	SensorsState::sensorsState.compare();
 }
 
+void processJoystickValue(int pin, int newValue)
+{
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(pin, newValue);
+	StateProcessor::stateProcessor.onTimer();
+}
 
 void assertState(State * targetState)
 {
@@ -61,7 +66,6 @@ void assertState(State * targetState)
 	}
 
 }
-
 
 void init()
 {
@@ -82,106 +86,52 @@ void init()
 	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_45_BUTTON, LOW);
 
 	SensorsState::sensorsState.init();
-}
-
-void automaticPlaybackTest()
-{
-	onPlayButtonPress();
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_TONEARM_HOLDER, HIGH);
-	onHolderSensorRisingEvent();
-
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, LOW);
-	onFirstTrackSensorFallingEvent();
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, HIGH);
-	onFirstTrackSensorRisingEvent();
-
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_LOWER_SENSOR, LOW);
-	onMicroliftSensorEvent();
-
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_AUTOSTOP, LOW);
-	onAutostopSensorFallingEvent();
-
-	onAutostopTimerEvent();
-
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_LOWER_SENSOR, HIGH);
-	onMicroliftSensorEvent();
-
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_AUTOSTOP, HIGH);
-	onAutostopSensorRisingEvent();
-
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, LOW);
-	onFirstTrackSensorFallingEvent();
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, HIGH);
-	onFirstTrackSensorRisingEvent();
-
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_TONEARM_HOLDER, LOW);
-	onHolderSensorFallingEvent();//tonearm is on holder
-
+	//all joysticks are in middle position
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_JOYSTICK_UP_DOWN, JOYSTICK_UP_DOWN_ZERO_VALUE);
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_JOYSTICK_LEFT_RIGHT, JOYSTICK_LEFT_RIGHT_ZERO_VALUE);
 
 }
 
 void joystickMoveTest()
 {
-	processEvent(Events::RotateButtonPress);
-	processEvent(Events::TonearmPositionOverGap);
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_JOYSTICK_LEFT_RIGHT, 10);
-	TonearmDirection direction = StateProcessor::stateProcessor.getCurrentState()->getTonearmState()->getDirection();
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_JOYSTICK_LEFT_RIGHT, 3000);
-	direction = StateProcessor::stateProcessor.getCurrentState()->getTonearmState()->getDirection();
-	StateProcessor::stateProcessor.onTimer();
+	//start rotation
+	processPinValue(PIN_ROTATE_BUTTON, HIGH);
+	assertState(State::Rotate33);
+	processPinValue(PIN_ROTATE_BUTTON, LOW);
+	assertState(State::Rotate33);
+
+	//move joystick over gap and try to rise tonearm down
+	processJoystickValue(PIN_JOYSTICK_LEFT_RIGHT, 10);
+	processPinValue(PIN_TONEARM_HOLDER, HIGH);
+	assertState(State::Play33ManualPickupMoveOverGap);
+	processJoystickValue(PIN_JOYSTICK_UP_DOWN, 4000);
+	assertState(State::Play33ManualPickupMoveOverGap);
+	processJoystickValue(PIN_JOYSTICK_UP_DOWN, JOYSTICK_UP_DOWN_ZERO_VALUE);
+	assertState(State::Play33ManualPickupMoveOverGap);
+	processPinValue(PIN_FIRST_TRACK, LOW);
+	assertState(State::Play33ManualPickupMoveOverGap);
+	processPinValue(PIN_FIRST_TRACK, HIGH);
+	assertState(State::Play33ManualPickupMoveOverDisk);
+
+	//start playback
+	processJoystickValue(PIN_JOYSTICK_UP_DOWN, 4000);
+	assertState(State::Play33ManualPickupFalls);
+	processJoystickValue(PIN_JOYSTICK_UP_DOWN, JOYSTICK_UP_DOWN_ZERO_VALUE);
+	assertState(State::Play33ManualPickupFalls);
+	processJoystickValue(PIN_JOYSTICK_LEFT_RIGHT, JOYSTICK_LEFT_RIGHT_ZERO_VALUE);
+	assertState(State::Play33ManualPickupFalls);
+	processPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
+	processPinValue(PIN_MICROLIFT_LOWER_SENSOR, LOW);
+	assertState(State::Play33Play);
+
+	//manual pickup rise 
+	processJoystickValue(PIN_JOYSTICK_UP_DOWN, 50);
+	assertState(State::Play33ManualPickupIsRaising);
+
+
 
 }
 
-void sensorsStateTest()
-{
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
-	SensorsState::sensorsState.compare();
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
-	SensorsState::sensorsState.compare();
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
-	SensorsState::sensorsState.compare();
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
-	SensorsState::sensorsState.compare();
-
-}
-void tonearmPositionTest()
-{
-	//initial state - tonearm is over disk
-	SensorsState::sensorsState.compare();
-	//assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::OUTSIDE_HOLDER);
-	//move to holder
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_TONEARM_HOLDER, LOW);
-	SensorsState::sensorsState.compare();
-	//assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::ON_HOLDER);
-	//move to center
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_TONEARM_HOLDER, HIGH);
-	SensorsState::sensorsState.compare();
-	//assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::OVER_GAP);
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, LOW);
-	SensorsState::sensorsState.compare();
-	//assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::OVER_GAP);
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, HIGH);
-	SensorsState::sensorsState.compare();
-	//assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::OVER_DISK);
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_AUTOSTOP, LOW);
-	SensorsState::sensorsState.compare();
-	//assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::AUTOSTOP);
-	//move to holder
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_AUTOSTOP, HIGH);
-	SensorsState::sensorsState.compare();
-	//assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::OVER_DISK);
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, LOW);
-	SensorsState::sensorsState.compare();
-	//assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::OVER_GAP);
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, HIGH);
-	SensorsState::sensorsState.compare();
-	//assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::OVER_GAP);
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_TONEARM_HOLDER, LOW);
-	SensorsState::sensorsState.compare();
-	//assert(TonearmPositionStateMachine::tonearmPositionStateMachine.getCurrentState(), TonearmPositionState::AUTOSTOP);
-}
 
 void goToInitialPosition()
 {
@@ -197,6 +147,11 @@ void goToInitialPosition()
 	processPinValue(PIN_TONEARM_HOLDER, LOW);
 	assertState(State::Stop33FullStop);
 
+}
+
+//initial and final states are Ptop33FullStop
+void automaticPlayTest()
+{
 	//play button is pressed (and unpressed)
 	processPinValue(PIN_PLAY_BUTTON, HIGH);
 	assertState(State::Play33AutoMoveToFirstTrack);
@@ -236,7 +191,6 @@ void goToInitialPosition()
 	assertState(State::Stop33PickupIsAutomaticallyMovingToHolder);
 	processPinValue(PIN_TONEARM_HOLDER, LOW);
 	assertState(State::Stop33FullStop);
-
 }
 
 int main()
@@ -244,11 +198,8 @@ int main()
 	init();
 	StateProcessor::stateProcessor.init();
 	goToInitialPosition();
-
-	//tonearmPositionTest();
-	//sensorsStateTest();
-	automaticPlaybackTest();
-	//joystickMoveTest();
+	automaticPlayTest();
+	joystickMoveTest();
 	return 0;
 }
 
