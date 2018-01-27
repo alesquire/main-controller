@@ -2,6 +2,8 @@
 //
 
 #include "stdafx.h"
+#include <string>
+#include <sstream>
 #include "ArduinoStub.h"
 #include "..\Main_Controller\StateProcessor.h"
 #include "..\Main_Controller\PinInitFunctions.cpp"
@@ -37,6 +39,29 @@ void processEvent(Events _event)
 	StateProcessor::stateProcessor.processEvent(_event);
 	debug("________________________________________\n");
 }
+
+void processPinValue(int pin, int newValue)
+{
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(pin, newValue);
+	SensorsState::sensorsState.compare();
+}
+
+
+void assertState(State * targetState)
+{
+	State* currentState = StateProcessor::stateProcessor.getCurrentState();
+	if (currentState==NULL)
+		throw std::runtime_error("Current state is null");
+	if (currentState != targetState)
+	{
+		std::stringstream response;
+		response << "Target state =" << targetState->getStateName() << ", current state =" << currentState->getStateName();
+		std::string errorMessage = response.str();
+		throw std::runtime_error(errorMessage);
+	}
+
+}
+
 
 void init()
 {
@@ -164,33 +189,53 @@ void goToInitialPosition()
 	assert(StateProcessor::stateProcessor.getCurrentState(), State::InitialPickupIsRaisingOutsideHolder);
 
 	//tonearm is up
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_LOWER_SENSOR, HIGH);
-	SensorsState::sensorsState.compare();
-	assert(StateProcessor::stateProcessor.getCurrentState(), State::InitialPickupIsMovingToHolder);
+	processPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
+	processPinValue(PIN_MICROLIFT_LOWER_SENSOR, HIGH);
+	assertState(State::InitialPickupIsMovingToHolder);
 
 	//tonearm is on holder
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_TONEARM_HOLDER, LOW);
-	SensorsState::sensorsState.compare();
-	assert(StateProcessor::stateProcessor.getCurrentState(), State::Stop33FullStop);
+	processPinValue(PIN_TONEARM_HOLDER, LOW);
+	assertState(State::Stop33FullStop);
 
 	//play button is pressed (and unpressed)
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_PLAY_BUTTON, HIGH);
-	SensorsState::sensorsState.compare();
-	assert(StateProcessor::stateProcessor.getCurrentState(), State::Play33AutoMoveToFirstTrack);
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_PLAY_BUTTON, LOW);
-	SensorsState::sensorsState.compare();
-	assert(StateProcessor::stateProcessor.getCurrentState(), State::Play33AutoMoveToFirstTrack);
+	processPinValue(PIN_PLAY_BUTTON, HIGH);
+	assertState(State::Play33AutoMoveToFirstTrack);
+	processPinValue(PIN_PLAY_BUTTON, LOW);
+	assertState(State::Play33AutoMoveToFirstTrack);
 
 	//go to first track
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, LOW);
-	SensorsState::sensorsState.compare();
-	assert(StateProcessor::stateProcessor.getCurrentState(), State::Play33AutoMoveToFirstTrack);
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, HIGH);
-	SensorsState::sensorsState.compare();
-	assert(StateProcessor::stateProcessor.getCurrentState(), State::Play33Play);
+	processPinValue(PIN_TONEARM_HOLDER, HIGH);
+	processPinValue(PIN_FIRST_TRACK, LOW);
+	assertState(State::Play33AutoMoveToFirstTrack);
+	processPinValue(PIN_FIRST_TRACK, HIGH);
+	assertState(State::Play33AutoLowerPickup);
+	processPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
+	processPinValue(PIN_MICROLIFT_LOWER_SENSOR, LOW);
+	assertState(State::Play33Play);
 
+	//play
+	processPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
+	processPinValue(PIN_MICROLIFT_LOWER_SENSOR, LOW);
+	assertState(State::Play33Play);
+	processPinValue(PIN_AUTOSTOP, LOW);
+	assertState(State::Stop33PickupOnAutostopPause);
 
+	//return to first track
+	onAutostopTimerEvent();
+	assertState(State::Stop33PickupIsRaising);
+	processPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
+	processPinValue(PIN_MICROLIFT_LOWER_SENSOR, HIGH);
+	assertState(State::Stop33PickupIsAutomaticallyMovingToHolder);
+	processPinValue(PIN_AUTOSTOP, HIGH);
+	assertState(State::Stop33PickupIsAutomaticallyMovingToHolder);
+	processPinValue(PIN_FIRST_TRACK, HIGH);
+	assertState(State::Stop33PickupIsAutomaticallyMovingToHolder);
+	processPinValue(PIN_FIRST_TRACK, LOW);
+	assertState(State::Stop33PickupIsAutomaticallyMovingToHolder);
+	processPinValue(PIN_FIRST_TRACK, HIGH);
+	assertState(State::Stop33PickupIsAutomaticallyMovingToHolder);
+	processPinValue(PIN_TONEARM_HOLDER, LOW);
+	assertState(State::Stop33FullStop);
 
 }
 
