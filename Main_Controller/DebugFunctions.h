@@ -2,7 +2,7 @@
 
 #ifndef _DEBUGFUNCTIONS_h
 #define _DEBUGFUNCTIONS_h
-
+#define DEBUG
 
 #if defined(ARDUINO) && ARDUINO >= 100
 	#include "Arduino.h"

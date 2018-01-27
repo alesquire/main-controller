@@ -3,26 +3,28 @@
 // 
 
 #include "TonearmState.h"
+#include "DebugFunctions.h"
 
 int TonearmState::transformAntiscateToOutput(int input)
 {
 	//todo: implement transformation table
 	debug("Antiscate control value=");
 	debug(input);
-	return IDLE_TONEARM_OUTPUT_VALUE;
+  debug("\n");
+	return IDLE_TONEARM_OUTPUT_VALUE+input/50;
 }
 
 int TonearmState::transformJoystickToOutput(int input)
 {
 	//todo: implement transformation table
-	int value =IDLE_TONEARM_OUTPUT_VALUE+input;
+	int value =IDLE_TONEARM_OUTPUT_VALUE+input/3;
   if(value>returnFullRightValue()) return returnFullRightValue();
   if(value<returnFullLeftValue()) return returnFullLeftValue();
 	return value;
 }
 
 /*
-	returns antiscate value read from input pin normalized value - in range -X/2..0..+X/2
+	returns antiscate value read from input pin normalized value - in range 0..analog_resolution
 	where X is analog resolution (ANALOG_RESOLUTIONS) set globally in PinConstants
 */
 int TonearmState::readNormalizedAntiscateValue()
@@ -77,7 +79,7 @@ void TonearmState::init()
 	initInput(PIN_FIRST_TRACK);
 	initInput(PIN_AUTOSTOP);
 	analogReadResolution(12);
-    analogWriteResolution(12);
+  analogWriteResolution(12);
 	analogWrite(PIN_TONEARM_REFERENCE_OUTPUT,tonearmReferenceOutput);
 }
 
@@ -187,7 +189,7 @@ char* Holder::getTonearmStateName()
 
 int FullLeft::defineValue()
 {
-	return returnFullLeftValue();
+  return IDLE_TONEARM_OUTPUT_VALUE-300;
 };
 
 char* FullLeft::getTonearmStateName()
@@ -200,7 +202,7 @@ char* FullLeft::getTonearmStateName()
 
 int FullRight::defineValue()
 {
-	return returnFullRightValue();
+	return IDLE_TONEARM_OUTPUT_VALUE+300;
 };
 
 char* FullRight::getTonearmStateName()
