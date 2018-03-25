@@ -34,7 +34,13 @@ void StateProcessor::processEvent(Events _event)
 	Serial.print("Processing Event: ");
 	Serial.print(eventNames[_event]);
 	Serial.print("\n");*/
-
+  debug("Next state order= ");
+  debug(currentStateOrder);
+  debug("\n"); 
+  debug("Next event order= ");
+  debug(_event);
+  debug("\n"); 
+   
 	State *nextState = transitionTable[currentStateOrder][_event];
 	if (nextState)// most of transition table items are nulls - as event shouldn't be processed on particular state
 	{
@@ -70,7 +76,7 @@ void StateProcessor::init()
 void StateProcessor::initTonearmState()
 {
 	if (TonearmState::isTonearmOnHolder())
-		applyNextState(State::InitialPickupIsRaisingOnHolder);
+		applyNextState(State::Stop33PickupIsDown);
 	else
 		applyNextState(State::InitialPickupIsRaisingOutsideHolder);
 }

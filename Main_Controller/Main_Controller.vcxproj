@@ -86,6 +86,7 @@
     <None Include="Main_Controller.ino">
       <FileType>CppCode</FileType>
     </None>
+    <None Include="Readme.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Appliable.h" />
@@ -130,6 +131,9 @@
     <ClCompile Include="Stroboscope.cpp" />
     <ClCompile Include="TonearmButtons.cpp" />
     <ClCompile Include="TonearmState.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Architecture.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

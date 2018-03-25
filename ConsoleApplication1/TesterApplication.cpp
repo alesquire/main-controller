@@ -16,7 +16,7 @@
 #include "..\Main_Controller\SpeedButtons.cpp"
 #include "..\Main_Controller\TonearmButtons.cpp"
 #include "..\Main_Controller\TonearmState.cpp"
-#include "..\Main_Controller\AutostopTimer.cpp"
+#include "..\Main_Controller\DelayTimer.cpp"
 #include "..\Main_Controller\Stroboscope.cpp"
 #include "..\Main_Controller\JoystickUpDownState.cpp"
 #include "..\Main_Controller\State.cpp"
@@ -95,11 +95,12 @@ void init()
 void joystickMoveTest()
 {
 	//start rotation
+	/*
 	processPinValue(PIN_ROTATE_BUTTON, HIGH);
 	assertState(State::Rotate33);
 	processPinValue(PIN_ROTATE_BUTTON, LOW);
 	assertState(State::Rotate33);
-
+	*/
 	//move joystick over gap and try to rise tonearm down
 	processJoystickValue(PIN_JOYSTICK_LEFT_RIGHT, 10);
 	processPinValue(PIN_TONEARM_HOLDER, HIGH);
@@ -140,12 +141,17 @@ void goToInitialPosition()
 
 	//tonearm is up
 	processPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
-	processPinValue(PIN_MICROLIFT_LOWER_SENSOR, HIGH);
+	processPinValue(PIN_MICROLIFT_LOWER_SENSOR, LOW);
 	assertState(State::InitialPickupIsMovingToHolder);
 
-	//tonearm is on holder
+	//tonearm is up on holder
 	processPinValue(PIN_TONEARM_HOLDER, LOW);
-	assertState(State::Stop33FullStop);
+	assertState(State::Stop33PickupIsUp);
+
+	//tonearm is down on holder
+	processPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
+	processPinValue(PIN_MICROLIFT_LOWER_SENSOR, HIGH);
+	assertState(State::Stop33PickupIsDown);
 
 }
 
@@ -192,7 +198,7 @@ void automaticPlayTest()
 	processPinValue(PIN_FIRST_TRACK, HIGH);
 	assertState(State::Stop33PickupIsAutomaticallyMovingToHolder);
 	processPinValue(PIN_TONEARM_HOLDER, LOW);
-	assertState(State::Stop33FullStop);
+	assertState(State::Stop33PickupIsUp);
 }
 
 int main()
@@ -200,8 +206,8 @@ int main()
 	init();
 	StateProcessor::stateProcessor.init();
 	goToInitialPosition();
-	automaticPlayTest();
-	joystickMoveTest();
+	//automaticPlayTest();
+	//joystickMoveTest();
 	return 0;
 }
 
