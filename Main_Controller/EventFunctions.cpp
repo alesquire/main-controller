@@ -40,7 +40,7 @@ void onSpeed45ButtonPress()
 void onMicroliftSensorEvent()
 {
 	bool upperSensorValue = digitalRead(PIN_MICROLIFT_UPPER_SENSOR);
-	bool lowerSensorValue = digitalRead(PIN_MICROLIFT_LOWER_SENSOR);
+	bool lowerSensorValue = !digitalRead(PIN_MICROLIFT_LOWER_SENSOR);
 
   Serial.print(upperSensorValue);
   Serial.print(lowerSensorValue);
