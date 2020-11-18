@@ -4,7 +4,7 @@
 
 #include "ArduinoStub.h"
 #include "..\Main_Controller\PinConstants.h"
-
+#include "..\Main_Controller\DebugFunctions.h"
 #ifndef _InputPinValueGenerator_h
 #define _InputPinValueGenerator_h
 
@@ -66,9 +66,16 @@ public:
 	{
 		if (inputPins.find(pin) == inputPins.end())
 		{
+			debug("ERROR: attempt to read incorrect pin= ");
+			debug(pin);
+			debug("\n");
 			return -1; 
 		}
-		return inputPins[pin]->readValue();
+		int result = inputPins[pin]->readValue();
+		debug("ERROR: attempt to read incorrect pin= ");
+		debug(pin);
+		debug("\n");
+		return result;
 	}
 
 	/*

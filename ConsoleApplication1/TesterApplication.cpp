@@ -5,6 +5,7 @@
 #include <string>
 #include <sstream>
 #include "ArduinoStub.h"
+#include "..\Main_Controller\PinConstants.cpp"
 #include "..\Main_Controller\StateProcessor.h"
 #include "..\Main_Controller\PinInitFunctions.cpp"
 #include "..\Main_Controller\DueTimer.cpp"
@@ -25,6 +26,7 @@
 #include "..\Main_Controller\DebugFunctions.h"
 #include "..\Main_Controller\DebugFunctions.cpp"
 #include "..\Main_Controller\SensorsState.cpp"
+
 
 #include "ArduinoInputPinSource.h"
 template <typename Source, class Target>

@@ -17,9 +17,9 @@
 class StateProcessor
 {
 private:
-	State* currentState;
+	State* currentState = NULL;
 
-	State* getNextState(Events _event);
+	//State* getNextState(Events _event);
 
 	JoystickUpDownState joystickUpDownState;
 

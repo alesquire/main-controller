@@ -63,9 +63,9 @@ public:
 		//if value changes
 		if (value != newValue)
 		{
-			//debug("Pin changes :");
-			//debug(pinNumber);
-			//debug("\n");
+			debug("Pin changes :");
+			debug(getPinNameByNumber(pinNumber));
+			debug("\n");
 			//value changes
 			if (subscribed_event == CHANGES)
 				listener();
@@ -73,9 +73,9 @@ public:
 		//if value rises
 		if (value == false && newValue == true)
 		{
-			//debug("Pin rises :");
-			//debug(pinNumber);
-			//debug("\n");
+			debug("Pin rises :");
+			debug(getPinNameByNumber(pinNumber));
+			debug("\n");
 			// value rises
 			if (subscribed_event == RISES)
 				listener();
@@ -83,9 +83,9 @@ public:
 		//if value falls
 		if (value == true && newValue == false)
 		{
-			//debug("Pin falls :");
-			//debug(pinNumber);
-			//debug("\n");
+			debug("Pin falls :");
+			debug(getPinNameByNumber(pinNumber));
+			debug("\n");
 			// value falls
 			if (subscribed_event == FALLS)
 				listener();
