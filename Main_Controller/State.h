@@ -58,7 +58,7 @@ public:
 	*/
 	static void init();
 
-	static void initStates();
+	//static void initStates();
 
 	virtual void apply();
 

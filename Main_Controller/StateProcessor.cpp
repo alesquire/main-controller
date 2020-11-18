@@ -12,6 +12,9 @@ void StateProcessor::applyNextState(State *state)
 {
 	if (state)
 	{
+		debug("Apply state ");
+		debug(state->getStateName());
+		debug("\n");
 		currentState = state;
 		int stateNumber = state->getStateOrderNumber();//debug
 		currentState->apply();
@@ -27,19 +30,24 @@ State* StateProcessor::getCurrentState()
 void StateProcessor::processEvent(Events _event)
 {
 
+	if (!currentState)
+	{
+		debug("CurrentState is null\n");
+		return;
+	}
 	int currentStateOrder = currentState->getStateOrderNumber();
-	/*Serial.print("Current state = ");
-	Serial.print(currentState->getStateName());
-	Serial.print("\n");
-	Serial.print("Processing Event: ");
-	Serial.print(eventNames[_event]);
-	Serial.print("\n");*/
-  debug("Next state order= ");
-  debug(currentStateOrder);
-  debug("\n"); 
-  debug("Next event order= ");
-  debug(_event);
-  debug("\n"); 
+	debug("Current state = ");
+	debug(currentState->getStateName());
+	debug("\n");
+	debug("Processing Event: ");
+	debug(eventNames[_event]);
+	debug("\n");
+	debug("Next state order= ");
+	debug(currentStateOrder);
+	debug("\n"); 
+	debug("Next event order= ");
+	debug(_event);
+	debug("\n"); 
    
 	State *nextState = transitionTable[currentStateOrder][_event];
 	if (nextState)// most of transition table items are nulls - as event shouldn't be processed on particular state
@@ -52,15 +60,15 @@ void StateProcessor::processEvent(Events _event)
 	else
 	{
 		debug("Event ");
-    debug(eventNames[_event]);
-    debug(" is ignored \n"); 
+		debug(eventNames[_event]);
+		debug(" is ignored \n"); 
 	}
 }
 
 void StateProcessor::init() 
 {
 	State::init();
-  Serial.print("init\n");
+	debug("init\n");
 	initOutput(PIN_BOTTOM_CHASSIS_LIGHT);
 	digitalWrite(PIN_BOTTOM_CHASSIS_LIGHT, HIGH);
 	initOutput(PIN_UPPER_CHASSIS_LIGHT);
@@ -68,24 +76,34 @@ void StateProcessor::init()
 	//todo- remove after debug (when real tonearm position can be obtained
 	//applyNextState(State::Stop33FullStop);
 	// end todo
-  //when all controller classes are initilaized- we start timer to read tonearm analog inputs
-  Timer1.attachInterrupt(onTonearmTimerEvent).start(TONEARM_ANALOG_PARAMS_READOUT_INTERVAL);
-  initTonearmState();
+	//when all controller classes are initilaized- we start timer to read tonearm analog inputs
+	Timer1.attachInterrupt(onTonearmTimerEvent).start(TONEARM_ANALOG_PARAMS_READOUT_INTERVAL);
+	
+	//need to define where is the tonearm and pass it to default position
+	initTonearmState();
 }
 
 void StateProcessor::initTonearmState()
 {
+	debug("Initialize Tonearm position\n");
 	if (TonearmState::isTonearmOnHolder())
+	{
+		debug("applyNextState(State::Stop33PickupIsDown)\n");
 		applyNextState(State::Stop33PickupIsDown);
+	}
 	else
+	{
+		debug("applyNextState(State::InitialPickupIsRaisingOutsideHolder)\n");
 		applyNextState(State::InitialPickupIsRaisingOutsideHolder);
+	}
 }
 
 void StateProcessor::onTimer()
 {
+	debug("on timer1\n");
 	//reads analog inputs - joystick left-right, antiscate and damper values and updates solenoid voltage
 	currentState->getTonearmState()->apply();
-  //reads joystick up-down position 
+    //reads joystick up-down position 
 	JoystickPositionPair joystickPositionPair= joystickUpDownState.getJoystickPositionPair();
 	if (joystickPositionPair.current != joystickPositionPair.previous)
 	{

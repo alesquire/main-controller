@@ -121,7 +121,7 @@ State* const  StateProcessor::transitionTable[36][15] = {
 
 
 
-
+//assign listeners on state changes
 SensorState SensorsState::sensorStates[] =
 {
 	SensorState(PIN_STOP_BUTTON,onStopButtonPress,RISES),

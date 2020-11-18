@@ -3,10 +3,14 @@
 // 
 
 #include "JoystickUpDownState.h"
+#include "DebugFunctions.h"
 
 JoystickPositionPair JoystickUpDownState::getJoystickPositionPair()
 {
 	int joystickValue = analogRead(PIN_JOYSTICK_UP_DOWN);
+	debug("Joustick UP/DOWN  value = ");
+	debug(joystickValue);
+	debug("\n");
 	JoystickPositionPair returnPair;
 	returnPair.previous = previousPosition;
 	JoystickPosition currentPosition;

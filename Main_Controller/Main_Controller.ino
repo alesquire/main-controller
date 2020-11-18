@@ -18,7 +18,9 @@ void setup()
 	Serial.begin(115200);//debug 
 //#endif
 	debug("start\n") ;//debug
+	//initialize pinMode, read current value and setup listeners
 	SensorsState::sensorsState.init();
+
 	StateProcessor::stateProcessor.init();
 }
 

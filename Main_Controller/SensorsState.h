@@ -53,6 +53,12 @@ public:
 	void init()
 	{
 		value = digitalRead(pinNumber);
+		// is called in static initializer, so- attempt ro debut will not work- program will be stuck. 
+		//debug("Init :");
+		//debug(getPinNameByNumber(pinNumber));
+		//debug(" = ");
+		//debug(value);
+		//debug("\n");
 	}
 
 	//reads pin value and if value is changed and correspondent for curent change  listener exists- calls listener.
@@ -65,6 +71,8 @@ public:
 		{
 			debug("Pin changes :");
 			debug(getPinNameByNumber(pinNumber));
+			debug("new value = ");
+			debug(newValue);
 			debug("\n");
 			//value changes
 			if (subscribed_event == CHANGES)
@@ -99,9 +107,11 @@ public:
 class SensorsState
 {
 private:
+	//here is an empty declaration, but array itself (with pre-created values) is stored in Initializers.cpp
 	static SensorState sensorStates[13];
 
 public:
+	//singleton- static instance of class
 	static SensorsState sensorsState;
 
 	void init()
