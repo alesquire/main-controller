@@ -5,29 +5,27 @@
 */
 
 
-//#include "SensorsState.h"
+#include "SensorsState.h"
 #include "DebugFunctions.h"
-//#include "Stroboscope.h"
-//#include "StateProcessor.h"
-//#include "SensorsState.h"
+#include "Stroboscope.h"
+#include "StateProcessor.h"
+#include "SensorsState.h"
 
 
 void setup() 
 {
-	Serial.print("test1\n");
 //#if defined (DEBUG)	
 	Serial.begin(115200);//debug 
 //#endif
 	debug("start\n") ;//debug
-	//SensorsState::sensorsState.init();
-	//StateProcessor::stateProcessor.init();
+	SensorsState::sensorsState.init();
+	StateProcessor::stateProcessor.init();
 }
 
 // the loop function runs over and over again until power down or reset
 void loop() 
 {
-	Serial.print("test\n");
+	debug("-\n");
 	//SensorsState::sensorsState.compare();
 	delay(100);
 }
-
