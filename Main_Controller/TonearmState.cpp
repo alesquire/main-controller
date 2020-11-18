@@ -17,7 +17,7 @@ int TonearmState::transformAntiscateToOutput(int input)
 int TonearmState::transformJoystickToOutput(int input)
 {
 	//todo: implement transformation table
-	int value =IDLE_TONEARM_OUTPUT_VALUE+input/3;
+	int value =IDLE_TONEARM_OUTPUT_VALUE+input/10;
   if(value>returnFullRightValue()) return returnFullRightValue();
   if(value<returnFullLeftValue()) return returnFullLeftValue();
 	return value;
@@ -56,7 +56,7 @@ int TonearmState::getZeroOutputValue()
 */
 int TonearmState::returnFullLeftValue()
 {
-	return 0;
+	return IDLE_TONEARM_OUTPUT_VALUE-100;
 }
 
 /*
@@ -64,7 +64,7 @@ int TonearmState::returnFullLeftValue()
 */
 int TonearmState::returnFullRightValue()
 {
-	return ANALOG_RESOLUTION-1;
+	return IDLE_TONEARM_OUTPUT_VALUE+100;//ANALOG_RESOLUTION-1;
 }
 
 void TonearmState::init()
@@ -79,7 +79,7 @@ void TonearmState::init()
 	initInput(PIN_FIRST_TRACK);
 	initInput(PIN_AUTOSTOP);
 	analogReadResolution(12);
-  analogWriteResolution(12);
+	analogWriteResolution(12);
 	analogWrite(PIN_TONEARM_REFERENCE_OUTPUT,tonearmReferenceOutput);
 }
 
@@ -189,7 +189,7 @@ char* Holder::getTonearmStateName()
 
 int FullLeft::defineValue()
 {
-  return IDLE_TONEARM_OUTPUT_VALUE-300;
+  return returnFullLeftValue();
 };
 
 char* FullLeft::getTonearmStateName()
@@ -202,7 +202,7 @@ char* FullLeft::getTonearmStateName()
 
 int FullRight::defineValue()
 {
-	return IDLE_TONEARM_OUTPUT_VALUE+300;
+	return returnFullRightValue();
 };
 
 char* FullRight::getTonearmStateName()

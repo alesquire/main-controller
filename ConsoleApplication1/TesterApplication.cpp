@@ -5,6 +5,7 @@
 #include <string>
 #include <sstream>
 #include "ArduinoStub.h"
+#include "..\Main_Controller\PinConstants.cpp"
 #include "..\Main_Controller\StateProcessor.h"
 #include "..\Main_Controller\PinInitFunctions.cpp"
 #include "..\Main_Controller\DueTimer.cpp"
@@ -16,7 +17,7 @@
 #include "..\Main_Controller\SpeedButtons.cpp"
 #include "..\Main_Controller\TonearmButtons.cpp"
 #include "..\Main_Controller\TonearmState.cpp"
-#include "..\Main_Controller\AutostopTimer.cpp"
+#include "..\Main_Controller\DelayTimer.cpp"
 #include "..\Main_Controller\Stroboscope.cpp"
 #include "..\Main_Controller\JoystickUpDownState.cpp"
 #include "..\Main_Controller\State.cpp"
@@ -25,6 +26,7 @@
 #include "..\Main_Controller\DebugFunctions.h"
 #include "..\Main_Controller\DebugFunctions.cpp"
 #include "..\Main_Controller\SensorsState.cpp"
+
 
 #include "ArduinoInputPinSource.h"
 template <typename Source, class Target>
@@ -49,7 +51,7 @@ void processPinValue(int pin, int newValue)
 void processJoystickValue(int pin, int newValue)
 {
 	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(pin, newValue);
-	StateProcessor::stateProcessor.onTimer();
+	StateProcessor::stateProcessor.scanTonearmState();
 }
 
 void assertState(State * targetState)
@@ -71,7 +73,7 @@ void init()
 {
 	//tonearm is down
 	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
-	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_LOWER_SENSOR, LOW);
+	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_MICROLIFT_LOWER_SENSOR, HIGH);
 
 	//and tonarm is not on a holder
 	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(PIN_FIRST_TRACK, HIGH);
@@ -92,14 +94,27 @@ void init()
 
 }
 
+void processPickupIsDown()
+{
+	processPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
+	processPinValue(PIN_MICROLIFT_LOWER_SENSOR, HIGH);
+}
+
+void processPickupIsUp()
+{
+	processPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
+	processPinValue(PIN_MICROLIFT_LOWER_SENSOR, LOW);
+}
+
 void joystickMoveTest()
 {
 	//start rotation
 	processPinValue(PIN_ROTATE_BUTTON, HIGH);
-	assertState(State::Rotate33);
+	assertState(State::Rotate33PickupIsRising);
 	processPinValue(PIN_ROTATE_BUTTON, LOW);
-	assertState(State::Rotate33);
-
+	processPickupIsUp();
+	assertState(State::Rotate33RotateOnHolder);
+	
 	//move joystick over gap and try to rise tonearm down
 	processJoystickValue(PIN_JOYSTICK_LEFT_RIGHT, 10);
 	processPinValue(PIN_TONEARM_HOLDER, HIGH);
@@ -120,8 +135,7 @@ void joystickMoveTest()
 	assertState(State::Play33ManualPickupFalls);
 	processJoystickValue(PIN_JOYSTICK_LEFT_RIGHT, JOYSTICK_LEFT_RIGHT_ZERO_VALUE);
 	assertState(State::Play33ManualPickupFalls);
-	processPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
-	processPinValue(PIN_MICROLIFT_LOWER_SENSOR, LOW);
+	processPickupIsDown();
 	assertState(State::Play33Play);
 
 	//manual pickup rise 
@@ -133,19 +147,23 @@ void joystickMoveTest()
 }
 
 
+
 void goToInitialPosition()
 {
 
 	assert(StateProcessor::stateProcessor.getCurrentState(), State::InitialPickupIsRaisingOutsideHolder);
 
 	//tonearm is up
-	processPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
-	processPinValue(PIN_MICROLIFT_LOWER_SENSOR, HIGH);
+	processPickupIsUp();
 	assertState(State::InitialPickupIsMovingToHolder);
 
-	//tonearm is on holder
+	//tonearm is up on holder
 	processPinValue(PIN_TONEARM_HOLDER, LOW);
-	assertState(State::Stop33FullStop);
+	assertState(State::Stop33PickupIsUp);
+
+	//tonearm is down on holder
+	processPickupIsDown();
+	assertState(State::Stop33PickupIsDown);
 
 }
 
@@ -154,9 +172,15 @@ void automaticPlayTest()
 {
 	//play button is pressed (and unpressed)
 	processPinValue(PIN_PLAY_BUTTON, HIGH);
-	assertState(State::Play33AccelerateDisk);
+	assertState(State::Play33PickupIsRising);
 	processPinValue(PIN_PLAY_BUTTON, LOW);
+
+	//tonearm is up
+	processPickupIsUp();
 	assertState(State::Play33AccelerateDisk);
+
+
+	//accelerate disk
 	onDelayTimerEvent();
 	assertState(State::Play33AutoMoveToFirstTrack);
 
@@ -166,13 +190,9 @@ void automaticPlayTest()
 	assertState(State::Play33AutoMoveToFirstTrack);
 	processPinValue(PIN_FIRST_TRACK, HIGH);
 	assertState(State::Play33AutoLowerPickup);
-	processPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
-	processPinValue(PIN_MICROLIFT_LOWER_SENSOR, LOW);
-	assertState(State::Play33Play);
 
 	//play
-	processPinValue(PIN_MICROLIFT_UPPER_SENSOR, LOW);
-	processPinValue(PIN_MICROLIFT_LOWER_SENSOR, LOW);
+	processPickupIsDown();
 	assertState(State::Play33Play);
 	processPinValue(PIN_AUTOSTOP, LOW);
 	assertState(State::Stop33PickupOnAutostopPause);
@@ -180,8 +200,7 @@ void automaticPlayTest()
 	//return to first track
 	onDelayTimerEvent();
 	assertState(State::Stop33PickupIsRaising);
-	processPinValue(PIN_MICROLIFT_UPPER_SENSOR, HIGH);
-	processPinValue(PIN_MICROLIFT_LOWER_SENSOR, HIGH);
+	processPickupIsUp();
 	assertState(State::Stop33PickupIsAutomaticallyMovingToHolder);
 	processPinValue(PIN_AUTOSTOP, HIGH);
 	assertState(State::Stop33PickupIsAutomaticallyMovingToHolder);
@@ -192,7 +211,12 @@ void automaticPlayTest()
 	processPinValue(PIN_FIRST_TRACK, HIGH);
 	assertState(State::Stop33PickupIsAutomaticallyMovingToHolder);
 	processPinValue(PIN_TONEARM_HOLDER, LOW);
-	assertState(State::Stop33FullStop);
+	assertState(State::Stop33PickupIsUp);
+	
+	//put pickup on holder
+	processPickupIsDown();
+	assertState(State::Stop33PickupIsDown);
+
 }
 
 int main()

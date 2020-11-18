@@ -48,9 +48,6 @@ void State::apply()
 {
 	motorState->apply();
 	microliftStates->apply();
-	debug("microlift mode=");
-	debug(microliftStates->getName());
-	debug("\n");
 	relaysState->apply();
 	tonearmState->apply();
 	tonearmButtons->apply();

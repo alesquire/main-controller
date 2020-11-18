@@ -3,6 +3,14 @@
 #ifndef _PINCONSTANTS_H_
 #define _PINCONSTANTS_H_
 
+#include <cstdio>
+
+#if defined(ARDUINO)
+  #include "variant.h"
+#endif
+
+
+
 // global definitions
 #define ANALOG_RESOLUTION 4096
 
@@ -55,4 +63,6 @@
 #define PIN_FIRST_TRACK 30//
 #define PIN_AUTOSTOP 28//
 
+
+char* getPinNameByNumber(int pinNumber);
 #endif

@@ -6,9 +6,10 @@ void onDelayTimerEvent()
 	StateProcessor::stateProcessor.processEvent(Events::DelayTimerEvent);
 }
 
+//commented- replaced with loop
 void onTonearmTimerEvent()
 {
-	StateProcessor::stateProcessor.onTimer();
+	StateProcessor::stateProcessor.scanTonearmState();
 }
 
 void onStopButtonPress()
@@ -37,13 +38,16 @@ void onSpeed45ButtonPress()
     StateProcessor::stateProcessor.processEvent(Events::Speed45ButtonPress);
 }
 
+/*
+	Tonearm is down when lower sensor is High and upper sensor is L ow
+*/
 void onMicroliftSensorEvent()
 {
 	bool upperSensorValue = digitalRead(PIN_MICROLIFT_UPPER_SENSOR);
-	bool lowerSensorValue = digitalRead(PIN_MICROLIFT_LOWER_SENSOR);
+	bool lowerSensorValue = !digitalRead(PIN_MICROLIFT_LOWER_SENSOR);
 
-  Serial.print(upperSensorValue);
-  Serial.print(lowerSensorValue);
+	Serial.print(upperSensorValue);
+	Serial.print(lowerSensorValue);
 
   
 	if (upperSensorValue&&lowerSensorValue)
