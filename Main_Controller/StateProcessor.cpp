@@ -77,7 +77,10 @@ void StateProcessor::init()
 	//applyNextState(State::Stop33FullStop);
 	// end todo
 	//when all controller classes are initilaized- we start timer to read tonearm analog inputs
-	Timer1.attachInterrupt(onTonearmTimerEvent).start(TONEARM_ANALOG_PARAMS_READOUT_INTERVAL);
+	
+	
+	//todo- commented tonearm interrupt
+	//Timer1.attachInterrupt(onTonearmTimerEvent).start(TONEARM_ANALOG_PARAMS_READOUT_INTERVAL);
 	
 	//need to define where is the tonearm and pass it to default position
 	initTonearmState();
@@ -98,7 +101,7 @@ void StateProcessor::initTonearmState()
 	}
 }
 
-void StateProcessor::onTimer()
+void StateProcessor::scanTonearmState()
 {
 	debug("on timer1\n");
 	//reads analog inputs - joystick left-right, antiscate and damper values and updates solenoid voltage

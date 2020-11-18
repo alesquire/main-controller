@@ -12,7 +12,7 @@
 #include "JoystickUpDownState.h"
 #include "DebugFunctions.h"
 
-#define TONEARM_ANALOG_PARAMS_READOUT_INTERVAL 33E4//1E5 // (0.1 s)
+#define TONEARM_ANALOG_PARAMS_READOUT_INTERVAL 45E5//1E5 // (0.1 s)
 
 class StateProcessor
 {
@@ -46,7 +46,7 @@ public:
 		onTimer method itself should be caled externally
 
 	*/
-	void onTimer();
+	void scanTonearmState();
 
 	//moves tonearm and other controls to initial state- tonearm on holder, microlift in HOLD state
 	void initTonearmState();

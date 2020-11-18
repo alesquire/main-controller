@@ -6,9 +6,10 @@ void onDelayTimerEvent()
 	StateProcessor::stateProcessor.processEvent(Events::DelayTimerEvent);
 }
 
+//commented- replaced with loop
 void onTonearmTimerEvent()
 {
-	StateProcessor::stateProcessor.onTimer();
+	StateProcessor::stateProcessor.scanTonearmState();
 }
 
 void onStopButtonPress()

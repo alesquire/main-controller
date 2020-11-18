@@ -51,7 +51,7 @@ void processPinValue(int pin, int newValue)
 void processJoystickValue(int pin, int newValue)
 {
 	ArduinoInputPinSource::arduinoInputPinSource.setPinValue(pin, newValue);
-	StateProcessor::stateProcessor.onTimer();
+	StateProcessor::stateProcessor.scanTonearmState();
 }
 
 void assertState(State * targetState)
