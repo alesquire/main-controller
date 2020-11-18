@@ -28,6 +28,6 @@ void setup()
 void loop() 
 {
 	debug("-\n");
-	//SensorsState::sensorsState.compare();
+	SensorsState::sensorsState.compare();
 	delay(100);
 }

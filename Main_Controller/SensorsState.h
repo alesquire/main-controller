@@ -71,7 +71,7 @@ public:
 		{
 			debug("Pin changes :");
 			debug(getPinNameByNumber(pinNumber));
-			debug("new value = ");
+			debug(" new value = ");
 			debug(newValue);
 			debug("\n");
 			//value changes
