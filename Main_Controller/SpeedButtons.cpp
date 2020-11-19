@@ -3,6 +3,7 @@
 // 
 
 #include "SpeedButtons.h"
+//#include "DebugFunctions.h"
 
 SpeedButtons::SpeedButtons(bool _pin33LedValue, bool _pin45LedValue)
 {
@@ -20,6 +21,10 @@ void SpeedButtons::init()
 
 void SpeedButtons::apply()
 {
+	//debug("LED33 value =");
+	//debug(pin33LedValue);
+	//debug("LED45 value =");
+	//debug(pin45LedValue);
 	digitalWrite(PIN_33_LED, pin33LedValue);
 	digitalWrite(PIN_45_LED, pin45LedValue);
 }
