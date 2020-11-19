@@ -26,8 +26,7 @@
 #include "..\Main_Controller\DebugFunctions.h"
 #include "..\Main_Controller\DebugFunctions.cpp"
 #include "..\Main_Controller\SensorsState.cpp"
-
-
+#include "..\Main_Controller\DelayedActionTimer.h"
 #include "ArduinoInputPinSource.h"
 template <typename Source, class Target>
 void assert(Source* source, Target* target)
@@ -219,8 +218,16 @@ void automaticPlayTest()
 
 }
 
+void testCallback()
+{
+	debug("DelayedActionTimer\n");
+}
+
 int main()
 {
+	DelayedActionTimer::delayedTimer.registerCallback(testCallback);
+	DelayedActionTimer::delayedTimer.postponeExecution(1);
+	DelayedActionTimer::delayedTimer.tick();
 	init();
 	StateProcessor::stateProcessor.init();
 	goToInitialPosition();
