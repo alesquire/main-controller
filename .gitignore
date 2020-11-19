@@ -259,3 +259,9 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+
+#VC- specific items
+_vm/
+Main_Controller.sln
+*.vcxproj
