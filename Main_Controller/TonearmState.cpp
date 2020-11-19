@@ -79,7 +79,7 @@ void TonearmState::init()
 	initInput(PIN_FIRST_TRACK);
 	initInput(PIN_AUTOSTOP);
 	analogReadResolution(12);
-  analogWriteResolution(12);
+	analogWriteResolution(12);
 	analogWrite(PIN_TONEARM_REFERENCE_OUTPUT,tonearmReferenceOutput);
 }
 

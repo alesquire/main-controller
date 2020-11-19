@@ -18,14 +18,17 @@ void setup()
 	Serial.begin(115200);//debug 
 //#endif
 	debug("start\n") ;//debug
+	//initialize pinMode, read current value and setup listeners
 	SensorsState::sensorsState.init();
+
 	StateProcessor::stateProcessor.init();
 }
 
 // the loop function runs over and over again until power down or reset
 void loop() 
 {
+	debug("loop\n");
 	SensorsState::sensorsState.compare();
+	StateProcessor::stateProcessor.scanTonearmState();
 	delay(100);
 }
-

@@ -58,7 +58,7 @@ public:
 	*/
 	static void init();
 
-	static void initStates();
+	//static void initStates();
 
 	virtual void apply();
 
@@ -68,12 +68,14 @@ public:
 
 	TonearmState* getTonearmState();
 
-	static State* const  InitialPickupIsRaisingOnHolder;
 	static State* const  InitialPickupIsRaisingOutsideHolder;
 	static State* const  InitialPickupIsMovingToHolder;
-	static State* const  Stop33FullStop;
-	static State* const  Rotate33;
+	static State* const  Stop33PickupIsUp;
+	static State* const  Stop33PickupIsDown;
+	static State* const  Rotate33PickupIsRising;
+	static State* const  Rotate33RotateOnHolder;
 	static State* const  Play33AccelerateDisk;
+	static State* const  Play33PickupIsRising;
 	static State* const  Play33AutoMoveToFirstTrack;
 	static State* const  Play33AutoLowerPickup;
 	static State* const  Play33Play;
@@ -85,8 +87,11 @@ public:
 	static State* const  Stop33PickupOnAutostopPause;
 	static State* const  Stop33PickupIsRaising;
 	static State* const  Stop33PickupIsAutomaticallyMovingToHolder;
-	static State* const  Stop45FullStop;
-	static State* const  Rotate45;
+	static State* const  Stop45PickupIsUp;
+	static State* const  Stop45PickupIsDown;
+	static State* const  Rotate45PickupIsRising;
+	static State* const  Rotate45RotateOnHolder;
+	static State* const  Play45PickupIsRising;
 	static State* const  Play45AccelerateDisk;
 	static State* const  Play45AutoMoveToFirstTrack;
 	static State* const  Play45AutoLowerPickup;
@@ -99,6 +104,7 @@ public:
 	static State* const  Stop45PickupOnAutostopPause;
 	static State* const  Stop45PickupIsRaising;
 	static State* const  Stop45PickupIsAutomaticallyMovingToHolder;
+
 
 };
 #endif

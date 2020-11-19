@@ -16,6 +16,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Main_Controller.ino" />
+    <None Include="Readme.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="__vm\.Main_Controller.vsarduino.h">
@@ -140,5 +141,13 @@
     <ClCompile Include="DelayTimer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="PinConstants.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Architecture.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -5,7 +5,7 @@ Entire solution consists of three class levels, each aggregates/manages underlyi
 
 Unit states
 	Turntable itself is divided onto several almost independent units - Motor, Tonearm, Microlift etc. Every unit has associated Arduino input and output pins 
-	that should be managed dyring turntable work cycle. Unit class encapsulates pin management logic for unit. 
+	that should be managed during turntable work cycle. Unit class encapsulates pin management logic for unit. 
 	Unit has set of states - states of all pins. (For example when Play button is lit). Every such state is represented by Unit state class instance- static constant
 	delivered together with class. 
 	Unit classes are polyumorofhic and have two specific methods 
@@ -77,16 +77,16 @@ Antiscate and Damper.
 Timers:
 	* Timer0 is used for autostop delayed function call. Autostop is ititiated not immediately after sensor is activated, but after interval for two reasons:
 		- to simplify sensor position adjustment- sensor detects autostop somewhere near autostop position,
-		- to play recordings in autostop trask (St.Peppers Lonly Hearts Club Band
+		- to play recordings in autostop trask (St.Peppers Lonly Hearts Club Band)
 	* Timer1 is used to periodicaly check tonearm analog controls that can't produce events (joystick, damper and antiscate regulators) and update solenoid output voltage. 
 
 	* Timer 2 is used by Stroboscope
 
 Buttons and switches
 	
-	* Buttons have HIGH voltage in board input when is not presed and LOW when buttn is pressed. 
+	* Buttons have HIGH voltage in board input when is not presed and LOW when button is pressed. 
 	Main event for buttons is presion, so- interrupt FALLING
 
 	* Microlift sensors produce HIGH level when tonearm is up and LOW when it is down
 
-	* Tonearm position optocouplers have LOW level when optical parh is shaded and HIGH when it is clear. 
+	* Tonearm position optocouplers have LOW level when optical pair is shaded and HIGH when it is clear. 

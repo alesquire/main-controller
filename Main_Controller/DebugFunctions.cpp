@@ -16,7 +16,9 @@ void debug(char* value)
 {
 #if defined (DEBUG)
 	#if defined(ARDUINO)
+		//noInterrupts(); // Disable interrupts
 		Serial.print(value);
+		//interrupts();    // Enable interrupts
 	#else
 		printf(value);
 	#endif // (ARDUINO)
@@ -27,7 +29,9 @@ void debug(int value)
 {
 #if defined (DEBUG)
 	#if defined(ARDUINO)
+		//noInterrupts(); // Disable interrupts
 		Serial.print(value);
+		//interrupts();    // Enable interrupts
 	#else
 		printf("%i", value);
 	#endif // (ARDUINO)

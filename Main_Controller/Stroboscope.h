@@ -12,9 +12,9 @@
 #include "DueTimer.h"
 #include "EventFunctions.h"
 
-#define SPEED_33_STROBO_INTERVAL	2E6 //todo - specify strobo values
-#define SPEED_45_STROBO_INTERVAL	1E6 //todo - specify strobo values
-#define STROBO_PULSE_DURATION		1E5 //todo - specify strobo values
+#define SPEED_33_STROBO_INTERVAL	100E2 //todo - specify strobo values
+#define SPEED_45_STROBO_INTERVAL	74E3 //todo - specify strobo values
+#define STROBO_PULSE_DURATION		1E2 //todo - specify strobo values
 
 /*
 	Stroboscope uses Timer 2 to switch on stroboscope LED and Timer 3 to turn it off
