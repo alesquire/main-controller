@@ -103,7 +103,7 @@ void StateProcessor::initTonearmState()
 
 void StateProcessor::scanTonearmState()
 {
-	debug("scanTonearmState\n");
+	//debug("scanTonearmState\n");
 	//reads analog inputs - joystick left-right, antiscate and damper values and updates solenoid voltage
 	currentState->getTonearmState()->apply();
     //reads joystick up-down position 

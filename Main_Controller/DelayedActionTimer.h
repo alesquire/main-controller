@@ -26,14 +26,22 @@ public:
 	
 	void tick()
 	{
+		debug("tick\n");
 		if (!function) return;
+
 		if (targetTimestamp==0) return;
+		debug("getCurrentTimeMillis = ");
+		debug(getCurrentTimeMillis());
+		debug("\n targetTimestamp=");
+		debug(targetTimestamp);
+		debug("\n");
 		if (getCurrentTimeMillis() >= targetTimestamp)
 		{
 			debug("callback from DelayedActionTimer");
 			function();
+			targetTimestamp = 0;
 		}
-		targetTimestamp = 0;
+
 	}
 
 	void postponeExecution(int milliseconds)
