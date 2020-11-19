@@ -13,7 +13,7 @@
 #include "EventFunctions.h"
 #include "DebugFunctions.h"
 
-#define WAIT_DELAY 55E5 //delay in microseconde 
+#define WAIT_DELAY 5E4 //delay in microseconde 
 
 /*
 	class is used to delay operation execution:
@@ -27,7 +27,7 @@ protected:
 public:
 	static void init()
 	{
-		Timer7.attachInterrupt(onDelayTimerEvent);
+		Timer6.attachInterrupt(onDelayTimerEvent);
 	}
 
 	virtual void apply()

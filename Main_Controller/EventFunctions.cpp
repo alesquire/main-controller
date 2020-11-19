@@ -3,6 +3,7 @@
 
 void onDelayTimerEvent() 
 {
+	debug("8 onDelayTimerEvent\n");
 	StateProcessor::stateProcessor.processEvent(Events::DelayTimerEvent);
 }
 

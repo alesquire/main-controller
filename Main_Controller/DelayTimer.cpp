@@ -6,7 +6,8 @@
 
 void DelayTimerON :: apply()
 {
-	Timer0.executeOneTime(WAIT_DELAY);
+	debug("init delayed timer \n");
+	Timer6.executeOneTime(WAIT_DELAY);
 }
 
 

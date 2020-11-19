@@ -30,5 +30,5 @@ void loop()
 	debug("loop\n");
 	SensorsState::sensorsState.compare();
 	StateProcessor::stateProcessor.scanTonearmState();
-	delay(200);
+	delay(300);
 }
