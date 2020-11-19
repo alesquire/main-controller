@@ -1,1 +1,2 @@
-#include "DelauedActionTimer.h"
+#include "DelayedActionTimer.h"
+DelayedActionTimer DelayedActionTimer::delayedTimer;

@@ -7,7 +7,7 @@
 void DelayTimerON :: apply()
 {
 	debug("init delayed timer \n");
-	Timer6.executeOneTime(WAIT_DELAY);
+	DelayedActionTimer::delayedTimer.postponeExecution(WAIT_DELAY);
 }
 
 

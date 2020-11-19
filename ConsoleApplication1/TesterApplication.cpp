@@ -225,9 +225,6 @@ void testCallback()
 
 int main()
 {
-	DelayedActionTimer::delayedTimer.registerCallback(testCallback);
-	DelayedActionTimer::delayedTimer.postponeExecution(1);
-	DelayedActionTimer::delayedTimer.tick();
 	init();
 	StateProcessor::stateProcessor.init();
 	goToInitialPosition();

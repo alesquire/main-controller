@@ -12,8 +12,9 @@
 #include "DueTimer.h"
 #include "EventFunctions.h"
 #include "DebugFunctions.h"
+#include "DelayedActionTimer.h"
 
-#define WAIT_DELAY 5E4 //delay in microseconde 
+#define WAIT_DELAY 3000 //delay in milliseconds
 
 /*
 	class is used to delay operation execution:
@@ -27,7 +28,7 @@ protected:
 public:
 	static void init()
 	{
-		Timer6.attachInterrupt(onDelayTimerEvent);
+		DelayedActionTimer::delayedTimer.registerCallback(onDelayTimerEvent);
 	}
 
 	virtual void apply()

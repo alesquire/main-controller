@@ -7,6 +7,8 @@
 	//#include <sys\time.h>
 #endif
 
+#include "DebugFunctions.h"
+
 typedef void(*callback_fun)(void); // listener function
 class DelayedActionTimer
 {
@@ -27,7 +29,10 @@ public:
 		if (!function) return;
 		if (targetTimestamp==0) return;
 		if (getCurrentTimeMillis() >= targetTimestamp)
+		{
+			debug("callback from DelayedActionTimer");
 			function();
+		}
 		targetTimestamp = 0;
 	}
 
@@ -41,12 +46,12 @@ public:
 #if defined ARDUINO
 		return millis();
 #else
-		return testTime++;
+		return testTime+=1000;//on Windows method doesn't return real time - it returns next second every time
 #endif
 	}
 
 	static DelayedActionTimer delayedTimer;
 };
 
-DelayedActionTimer DelayedActionTimer::delayedTimer;
+
 #endif

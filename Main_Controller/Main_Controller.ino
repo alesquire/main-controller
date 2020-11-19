@@ -5,11 +5,7 @@
 */
 
 
-#include "SensorsState.h"
-#include "DebugFunctions.h"
-#include "Stroboscope.h"
-#include "StateProcessor.h"
-#include "SensorsState.h"
+#include "Controller.h"
 
 
 void setup() 
@@ -17,18 +13,15 @@ void setup()
 //#if defined (DEBUG)	
 	Serial.begin(115200);//debug 
 //#endif
-	debug("start\n") ;//debug
-	//initialize pinMode, read current value and setup listeners
-	SensorsState::sensorsState.init();
-
-	StateProcessor::stateProcessor.init();
+	debug("start\n");//debug
+	Controller::controller.init();
 }
 
 // the loop function runs over and over again until power down or reset
 void loop() 
 {
-	debug("loop\n");
-	SensorsState::sensorsState.compare();
-	StateProcessor::stateProcessor.scanTonearmState();
-	delay(300);
+	//debug("loop\n");
+	
+	Controller::controller.process();
+	delay(50);
 }
