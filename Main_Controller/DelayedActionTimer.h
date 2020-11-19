@@ -26,13 +26,12 @@ public:
 	
 	void tick()
 	{
-		debug("tick\n");
+		//debug("tick\n");
 		if (!function) return;
-
 		if (targetTimestamp==0) return;
-		debug("getCurrentTimeMillis = ");
-		debug(getCurrentTimeMillis());
-		debug("\n targetTimestamp=");
+		//debug("getCurrentTimeMillis = ");
+		//debug(getCurrentTimeMillis());
+		//debug("\n targetTimestamp=");
 		debug(targetTimestamp);
 		debug("\n");
 		if (getCurrentTimeMillis() >= targetTimestamp)
