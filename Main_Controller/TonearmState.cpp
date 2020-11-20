@@ -10,16 +10,16 @@ int TonearmState::transformAntiscateToOutput(int input)
 	//todo: implement transformation table
 	debug("Antiscate control value=");
 	debug(input);
-  debug("\n");
+	debug("\n");
 	return IDLE_TONEARM_OUTPUT_VALUE+input/50;
 }
 
 int TonearmState::transformJoystickToOutput(int input)
 {
 	//todo: implement transformation table
-	int value =IDLE_TONEARM_OUTPUT_VALUE+input/10;
-  if(value>returnFullRightValue()) return returnFullRightValue();
-  if(value<returnFullLeftValue()) return returnFullLeftValue();
+	int value = IDLE_TONEARM_OUTPUT_VALUE + input /5;///10;
+	if(value>returnFullRightValue()) return returnFullRightValue();
+	if(value<returnFullLeftValue()) return returnFullLeftValue();
 	return value;
 }
 
@@ -56,7 +56,7 @@ int TonearmState::getZeroOutputValue()
 */
 int TonearmState::returnFullLeftValue()
 {
-	return IDLE_TONEARM_OUTPUT_VALUE-100;
+	return TONEARM_FULL_LEFT_VALUE;//1700
 }
 
 /*
@@ -64,7 +64,7 @@ int TonearmState::returnFullLeftValue()
 */
 int TonearmState::returnFullRightValue()
 {
-	return IDLE_TONEARM_OUTPUT_VALUE+100;//ANALOG_RESOLUTION-1;
+	return TONEARM_FULL_RIGHT_VALUE;//2500
 }
 
 void TonearmState::init()
