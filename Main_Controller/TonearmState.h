@@ -16,6 +16,8 @@
 #define IDLE_TONEARM_OUTPUT_VALUE 2100//2600 //value to be applied to DAC1 to have 0V on tonearm solenoid
 #define TONEARM_FULL_RIGHT_VALUE 2500
 #define TONEARM_FULL_LEFT_VALUE 1700
+#define TONEARM_MOVE_RIGHT_VALUE 2300// used when tonearm is moved right automatically- fast return
+#define TONEARM_MOVE_LEFT_VALUE 2000// used when tonearm is moved left automatically- slow move
 
 //enum shows direction- where tonearm is moving now
 enum TonearmDirection

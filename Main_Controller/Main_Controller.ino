@@ -15,6 +15,8 @@ void setup()
 //#endif
 	debug("start\n");//debug
 	Controller::controller.init();
+
+
 }
 
 // the loop function runs over and over again until power down or reset

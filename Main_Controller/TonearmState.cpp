@@ -18,8 +18,8 @@ int TonearmState::transformJoystickToOutput(int input)
 {
 	//todo: implement transformation table
 	int value = IDLE_TONEARM_OUTPUT_VALUE + input /5;///10;
-	if(value>returnFullRightValue()) return returnFullRightValue();
-	if(value<returnFullLeftValue()) return returnFullLeftValue();
+	if(value> TONEARM_FULL_RIGHT_VALUE) return TONEARM_FULL_RIGHT_VALUE;
+	if(value< TONEARM_FULL_LEFT_VALUE) return TONEARM_FULL_LEFT_VALUE;
 	return value;
 }
 
@@ -56,7 +56,7 @@ int TonearmState::getZeroOutputValue()
 */
 int TonearmState::returnFullLeftValue()
 {
-	return TONEARM_FULL_LEFT_VALUE;//1700
+	return TONEARM_MOVE_LEFT_VALUE;
 }
 
 /*
@@ -64,7 +64,7 @@ int TonearmState::returnFullLeftValue()
 */
 int TonearmState::returnFullRightValue()
 {
-	return TONEARM_FULL_RIGHT_VALUE;//2500
+	return TONEARM_MOVE_RIGHT_VALUE;
 }
 
 void TonearmState::init()

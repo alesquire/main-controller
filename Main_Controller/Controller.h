@@ -13,6 +13,7 @@ public:
 	{
 		//init all button and other sensors
 		SensorsState::sensorsState.init();
+
 		//initial state
 		StateProcessor::stateProcessor.init();
 	}
