@@ -20,8 +20,8 @@ Microlift* const Microlift::UP = new Microlift(LOW, LOW, "UP");
 Microlift* const Microlift::DOWN = new Microlift(LOW, HIGH, "DOWN");
 Microlift* const Microlift::HOLD = new Microlift(HIGH, LOW, "HOLD");
 
-Relays* const Relays::PLAY = new Relays(LOW, LOW);
-Relays* const Relays::MOVE = new Relays(HIGH, HIGH);
+Relays* const Relays::MOVE = new Relays(LOW, LOW);
+Relays* const Relays::PLAY = new Relays(HIGH, HIGH);
 
 SpeedButtons* const SpeedButtons::OFF = new SpeedButtons(LOW, LOW);
 SpeedButtons* const SpeedButtons::LED33 = new SpeedButtons(HIGH, LOW);
