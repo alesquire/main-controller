@@ -4,6 +4,8 @@
 #ifndef _INITIALIZERS_H_
 #define _INITIALIZERS_H_
 
+
+
 Motor* const Motor::OFF = new Motor(LOW, LOW);
 Motor* const Motor::Mode33 = new Motor(HIGH, LOW);
 Motor* const Motor::Mode45 = new Motor(LOW, HIGH);
@@ -44,13 +46,16 @@ TonearmState* const TonearmState::HOLDER = new Holder();
 TonearmState* const TonearmState::FULL_LEFT = new FullLeft();
 TonearmState* const TonearmState::FULL_RIGHT = new FullRight();
 
+
+// most of these items are auto-generated in Excel spreadsheet "States and Events v2"
+
 State* const  State::InitialPickupIsRaisingOutsideHolder = new State(0, "InitialPickupIsRaisingOutsideHolder", Motor::OFF, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::OFF, SpeedButtons::OFF, DiskLed::OFF, DelayTimer::OFF, Stroboscope::OFF);
 State* const  State::InitialPickupIsMovingToHolder = new State(1, "InitialPickupIsMovingToHolder", Motor::OFF, Microlift::HOLD, Relays::MOVE, TonearmState::FULL_RIGHT, TonearmButtons::OFF, SpeedButtons::OFF, DiskLed::OFF, DelayTimer::OFF, Stroboscope::OFF);
 State* const  State::Stop33PickupIsUp = new State(2, "Stop33PickupIsUp", Motor::OFF, Microlift::DOWN, Relays::MOVE, TonearmState::STOP, TonearmButtons::STOP, SpeedButtons::LED33, DiskLed::RED, DelayTimer::OFF, Stroboscope::OFF);
 State* const  State::Stop33PickupIsDown = new State(3, "Stop33PickupIsDown", Motor::OFF, Microlift::DOWN, Relays::MOVE, TonearmState::STOP, TonearmButtons::STOP, SpeedButtons::LED33, DiskLed::RED, DelayTimer::OFF, Stroboscope::OFF);
 State* const  State::Rotate33PickupIsRising = new State(4, "Rotate33PickupIsRising", Motor::Mode33, Microlift::UP, Relays::MOVE, TonearmState::HOLDER, TonearmButtons::ROTATE, SpeedButtons::LED33, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::OFF);
 State* const  State::Rotate33RotateOnHolder = new State(5, "Rotate33RotateOnHolder", Motor::Mode33, Microlift::HOLD, Relays::MOVE, TonearmState::HOLDER, TonearmButtons::ROTATE, SpeedButtons::LED33, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_33);
-State* const  State::Play33PickupIsRising = new State(6, "Play33PickupIsRising", Motor::Mode33, Microlift::UP, Relays::PLAY, TonearmState::STOP, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::OFF);
+State* const  State::Play33PickupIsRising = new State(6, "Play33PickupIsRising", Motor::Mode33, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::OFF);
 State* const  State::Play33AccelerateDisk = new State(7, "Play33AccelerateDisk", Motor::Mode33, Microlift::HOLD, Relays::MOVE, TonearmState::HOLDER, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, DelayTimer::ON, Stroboscope::STROBO_33);
 State* const  State::Play33AutoMoveToFirstTrack = new State(8, "Play33AutoMoveToFirstTrack", Motor::Mode33, Microlift::HOLD, Relays::MOVE, TonearmState::FULL_LEFT, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_33);
 State* const  State::Play33AutoLowerPickup = new State(9, "Play33AutoLowerPickup", Motor::Mode33, Microlift::DOWN, Relays::MOVE, TonearmState::STOP, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_33);
@@ -71,15 +76,16 @@ State* const  State::Play45PickupIsRising = new State(23, "Play45PickupIsRising"
 State* const  State::Play45AccelerateDisk = new State(24, "Play45AccelerateDisk", Motor::Mode45, Microlift::HOLD, Relays::MOVE, TonearmState::HOLDER, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::BLUE, DelayTimer::ON, Stroboscope::STROBO_45);
 State* const  State::Play45AutoMoveToFirstTrack = new State(25, "Play45AutoMoveToFirstTrack", Motor::Mode45, Microlift::HOLD, Relays::MOVE, TonearmState::FULL_LEFT, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_45);
 State* const  State::Play45AutoLowerPickup = new State(26, "Play45AutoLowerPickup", Motor::Mode45, Microlift::DOWN, Relays::MOVE, TonearmState::STOP, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_45);
-State* const  State::Play45Play = new State(27, "Play45Play", Motor::Mode45, Microlift::DOWN, Relays::MOVE, TonearmState::PLAY, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::GREEN, DelayTimer::OFF, Stroboscope::STROBO_45);
+State* const  State::Play45Play = new State(27, "Play45Play", Motor::Mode45, Microlift::DOWN, Relays::PLAY, TonearmState::PLAY, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::GREEN, DelayTimer::OFF, Stroboscope::STROBO_45);
 State* const  State::Play45ManualPickupIsRaising = new State(28, "Play45ManualPickupIsRaising", Motor::Mode45, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_45);
 State* const  State::Play45ManualPickupMoveOverDisk = new State(29, "Play45ManualPickupMoveOverDisk", Motor::Mode45, Microlift::HOLD, Relays::MOVE, TonearmState::MOVE, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_45);
 State* const  State::Play45ManualPickupMoveOverGap = new State(30, "Play45ManualPickupMoveOverGap", Motor::Mode45, Microlift::HOLD, Relays::MOVE, TonearmState::MOVE, TonearmButtons::ROTATE, SpeedButtons::LED45, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_45);
 State* const  State::Play45ManualPickupMoveAutostop = new State(31, "Play45ManualPickupMoveAutostop", Motor::Mode45, Microlift::HOLD, Relays::MOVE, TonearmState::AUTOSTOP, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_45);
 State* const  State::Play45ManualPickupFalls = new State(32, "Play45ManualPickupFalls", Motor::Mode45, Microlift::DOWN, Relays::MOVE, TonearmState::STOP, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_45);
-State* const  State::Stop45PickupOnAutostopPause = new State(33, "Stop45PickupOnAutostopPause", Motor::Mode45, Microlift::DOWN, Relays::MOVE, TonearmState::PLAY, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::RED, DelayTimer::ON, Stroboscope::STROBO_45);
+State* const  State::Stop45PickupOnAutostopPause = new State(33, "Stop45PickupOnAutostopPause", Motor::Mode45, Microlift::DOWN, Relays::PLAY, TonearmState::PLAY, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::RED, DelayTimer::ON, Stroboscope::STROBO_45);
 State* const  State::Stop45PickupIsRaising = new State(34, "Stop45PickupIsRaising", Motor::Mode45, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::STOP, SpeedButtons::LED45, DiskLed::RED, DelayTimer::OFF, Stroboscope::STROBO_45);
 State* const  State::Stop45PickupIsAutomaticallyMovingToHolder = new State(35, "Stop45PickupIsAutomaticallyMovingToHolder", Motor::OFF, Microlift::HOLD, Relays::MOVE, TonearmState::FULL_RIGHT, TonearmButtons::STOP, SpeedButtons::LED45, DiskLed::RED, DelayTimer::OFF, Stroboscope::OFF);
+
 
 State* const  StateProcessor::transitionTable[36][15] = {
 	{ NULL,	NULL,	NULL,	NULL,	NULL,	State::InitialPickupIsMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL, },
