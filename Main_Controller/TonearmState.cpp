@@ -141,9 +141,9 @@ int Move::defineValue()
 {
   int value =transformJoystickToOutput(readNormalizedJoystickValue());
   //debug
-  Serial.print("t=");
-  Serial.print(value);
-  Serial.print('\n'); 
+  //Serial.print("t=");
+  //Serial.print(value);
+  //Serial.print('\n'); 
   //debug   
 	return value;
 };

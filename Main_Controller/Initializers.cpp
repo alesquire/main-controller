@@ -60,10 +60,10 @@ State* const  State::Play33AccelerateDisk = new State(7, "Play33AccelerateDisk",
 State* const  State::Play33AutoMoveToFirstTrack = new State(8, "Play33AutoMoveToFirstTrack", Motor::Mode33, Microlift::HOLD, Relays::MOVE, TonearmState::FULL_LEFT, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_33);
 State* const  State::Play33AutoLowerPickup = new State(9, "Play33AutoLowerPickup", Motor::Mode33, Microlift::DOWN, Relays::MOVE, TonearmState::STOP, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_33);
 State* const  State::Play33Play = new State(10, "Play33Play", Motor::Mode33, Microlift::DOWN, Relays::PLAY, TonearmState::PLAY, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::GREEN, DelayTimer::OFF, Stroboscope::STROBO_33);
-State* const  State::Play33ManualPickupIsRaising = new State(11, "Play33ManualPickupIsRaising", Motor::Mode33, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_33);
-State* const  State::Play33ManualPickupMoveOverDisk = new State(12, "Play33ManualPickupMoveOverDisk", Motor::Mode33, Microlift::HOLD, Relays::MOVE, TonearmState::MOVE, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_33);
+State* const  State::Play33ManualPickupIsRaising = new State(11, "Play33ManualPickupIsRaising", Motor::Mode33, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::ROTATE, SpeedButtons::LED33, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_33);
+State* const  State::Play33ManualPickupMoveOverDisk = new State(12, "Play33ManualPickupMoveOverDisk", Motor::Mode33, Microlift::HOLD, Relays::MOVE, TonearmState::MOVE, TonearmButtons::ROTATE, SpeedButtons::LED33, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_33);
 State* const  State::Play33ManualPickupMoveOverGap = new State(13, "Play33ManualPickupMoveOverGap", Motor::Mode33, Microlift::HOLD, Relays::MOVE, TonearmState::MOVE, TonearmButtons::ROTATE, SpeedButtons::LED33, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_33);
-State* const  State::Play33ManualPickupMoveAutostop = new State(14, "Play33ManualPickupMoveAutostop", Motor::Mode33, Microlift::HOLD, Relays::MOVE, TonearmState::AUTOSTOP, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_33);
+State* const  State::Play33ManualPickupMoveAutostop = new State(14, "Play33ManualPickupMoveAutostop", Motor::Mode33, Microlift::HOLD, Relays::MOVE, TonearmState::AUTOSTOP, TonearmButtons::ROTATE, SpeedButtons::LED33, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_33);
 State* const  State::Play33ManualPickupFalls = new State(15, "Play33ManualPickupFalls", Motor::Mode33, Microlift::DOWN, Relays::MOVE, TonearmState::STOP, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_33);
 State* const  State::Stop33PickupOnAutostopPause = new State(16, "Stop33PickupOnAutostopPause", Motor::Mode33, Microlift::DOWN, Relays::PLAY, TonearmState::PLAY, TonearmButtons::PLAY, SpeedButtons::LED33, DiskLed::RED, DelayTimer::ON, Stroboscope::STROBO_33);
 State* const  State::Stop33PickupIsRaising = new State(17, "Stop33PickupIsRaising", Motor::Mode33, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::STOP, SpeedButtons::LED33, DiskLed::RED, DelayTimer::OFF, Stroboscope::STROBO_33);
@@ -77,10 +77,10 @@ State* const  State::Play45AccelerateDisk = new State(24, "Play45AccelerateDisk"
 State* const  State::Play45AutoMoveToFirstTrack = new State(25, "Play45AutoMoveToFirstTrack", Motor::Mode45, Microlift::HOLD, Relays::MOVE, TonearmState::FULL_LEFT, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_45);
 State* const  State::Play45AutoLowerPickup = new State(26, "Play45AutoLowerPickup", Motor::Mode45, Microlift::DOWN, Relays::MOVE, TonearmState::STOP, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_45);
 State* const  State::Play45Play = new State(27, "Play45Play", Motor::Mode45, Microlift::DOWN, Relays::PLAY, TonearmState::PLAY, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::GREEN, DelayTimer::OFF, Stroboscope::STROBO_45);
-State* const  State::Play45ManualPickupIsRaising = new State(28, "Play45ManualPickupIsRaising", Motor::Mode45, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_45);
-State* const  State::Play45ManualPickupMoveOverDisk = new State(29, "Play45ManualPickupMoveOverDisk", Motor::Mode45, Microlift::HOLD, Relays::MOVE, TonearmState::MOVE, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_45);
+State* const  State::Play45ManualPickupIsRaising = new State(28, "Play45ManualPickupIsRaising", Motor::Mode45, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::ROTATE, SpeedButtons::LED45, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_45);
+State* const  State::Play45ManualPickupMoveOverDisk = new State(29, "Play45ManualPickupMoveOverDisk", Motor::Mode45, Microlift::HOLD, Relays::MOVE, TonearmState::MOVE, TonearmButtons::ROTATE, SpeedButtons::LED45, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_45);
 State* const  State::Play45ManualPickupMoveOverGap = new State(30, "Play45ManualPickupMoveOverGap", Motor::Mode45, Microlift::HOLD, Relays::MOVE, TonearmState::MOVE, TonearmButtons::ROTATE, SpeedButtons::LED45, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_45);
-State* const  State::Play45ManualPickupMoveAutostop = new State(31, "Play45ManualPickupMoveAutostop", Motor::Mode45, Microlift::HOLD, Relays::MOVE, TonearmState::AUTOSTOP, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_45);
+State* const  State::Play45ManualPickupMoveAutostop = new State(31, "Play45ManualPickupMoveAutostop", Motor::Mode45, Microlift::HOLD, Relays::MOVE, TonearmState::AUTOSTOP, TonearmButtons::ROTATE, SpeedButtons::LED45, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_45);
 State* const  State::Play45ManualPickupFalls = new State(32, "Play45ManualPickupFalls", Motor::Mode45, Microlift::DOWN, Relays::MOVE, TonearmState::STOP, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::BLUE, DelayTimer::OFF, Stroboscope::STROBO_45);
 State* const  State::Stop45PickupOnAutostopPause = new State(33, "Stop45PickupOnAutostopPause", Motor::Mode45, Microlift::DOWN, Relays::PLAY, TonearmState::PLAY, TonearmButtons::PLAY, SpeedButtons::LED45, DiskLed::RED, DelayTimer::ON, Stroboscope::STROBO_45);
 State* const  State::Stop45PickupIsRaising = new State(34, "Stop45PickupIsRaising", Motor::Mode45, Microlift::UP, Relays::MOVE, TonearmState::STOP, TonearmButtons::STOP, SpeedButtons::LED45, DiskLed::RED, DelayTimer::OFF, Stroboscope::STROBO_45);
@@ -88,47 +88,43 @@ State* const  State::Stop45PickupIsAutomaticallyMovingToHolder = new State(35, "
 
 
 State* const  StateProcessor::transitionTable[36][15] = {
-	{	NULL,	NULL,	NULL,	NULL,	NULL,	State::InitialPickupIsMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	},
-	{	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsUp,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	},
-	{	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsDown,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsUp,	NULL,	},
-	{	NULL,	State::Rotate33PickupIsRising,	State::Play33PickupIsRising,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsDown,	NULL,	},
-	{	State::Stop33PickupIsDown,	NULL,	NULL,	NULL,	NULL,	State::Rotate33RotateOnHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Rotate45PickupIsRising,	NULL,	},
-	{	State::Stop33PickupIsUp,	NULL,	State::Play33AutoMoveToFirstTrack,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play33ManualPickupMoveOverGap,	NULL,	NULL,	NULL,	State::Rotate45RotateOnHolder,	NULL,	},
-	{	State::Stop33PickupIsDown,	NULL,	NULL,	NULL,	NULL,	State::Play33AccelerateDisk,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45PickupIsRising,	NULL,	},
-	{	State::Stop33PickupIsUp,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45AccelerateDisk,	State::Play33AutoMoveToFirstTrack,	},
-	{	State::Stop33PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play33AutoLowerPickup,	NULL,	NULL,	State::Play45AutoMoveToFirstTrack,	NULL,	},
-	{	State::Stop33PickupIsRaising,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play33Play,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45AutoLowerPickup,	NULL,	},
-	{	State::Stop33PickupIsRaising,	State::Play33ManualPickupMoveOverDisk,	NULL,	State::Play33ManualPickupIsRaising,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsDown,	NULL,	NULL,	State::Stop33PickupOnAutostopPause,	NULL,	State::Play45Play,	NULL,	},
-	{	State::Stop33PickupIsRaising,	NULL,	NULL,	NULL,	State::Play33ManualPickupFalls,	State::Play33ManualPickupMoveOverDisk,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45ManualPickupIsRaising,	NULL,	},
-	{	State::Stop33PickupIsAutomaticallyMovingToHolder,	NULL,	State::Play33ManualPickupFalls,	NULL,	State::Play33ManualPickupFalls,	NULL,	NULL,	NULL,	NULL,	State::Play33ManualPickupMoveOverGap,	NULL,	State::Play33ManualPickupMoveAutostop,	NULL,	State::Play45ManualPickupMoveOverDisk,	NULL,	},
-	{	State::Stop33PickupIsAutomaticallyMovingToHolder,	NULL,	State::Play33AutoMoveToFirstTrack,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Rotate33RotateOnHolder,	NULL,	State::Play33ManualPickupMoveOverDisk,	NULL,	NULL,	State::Play45ManualPickupMoveOverGap,	NULL,	},
-	{	State::Stop33PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play33ManualPickupMoveOverDisk,	NULL,	NULL,	State::Play45ManualPickupMoveAutostop,	NULL,	},
-	{	State::Stop33PickupIsRaising,	NULL,	NULL,	State::Play33ManualPickupIsRaising,	NULL,	NULL,	NULL,	State::Play33Play,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45ManualPickupFalls,	NULL,	},
-	{	State::Stop33PickupIsRaising,	NULL,	NULL,	State::Play33ManualPickupIsRaising,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupOnAutostopPause,	State::Stop33PickupIsRaising,	},
-	{	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsRaising,	NULL,	},
-	{	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsUp,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsAutomaticallyMovingToHolder,	NULL,	},
-	{	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsDown,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsUp,	NULL,	NULL,	},
-	{	NULL,	State::Rotate45PickupIsRising,	State::Play45PickupIsRising,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsDown,	NULL,	NULL,	},
-	{	State::Stop45PickupIsDown,	NULL,	NULL,	NULL,	NULL,	State::Rotate45RotateOnHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Rotate33PickupIsRising,	NULL,	NULL,	},
-	{	State::Stop45PickupIsUp,	NULL,	State::Play45AutoMoveToFirstTrack,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45ManualPickupMoveOverGap,	NULL,	NULL,	State::Rotate33RotateOnHolder,	NULL,	NULL,	},
-	{	State::Stop45PickupIsDown,	NULL,	NULL,	NULL,	NULL,	State::Play45AccelerateDisk,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play33PickupIsRising,	NULL,	NULL,	},
-	{	State::Stop45PickupIsUp,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play33AccelerateDisk,	NULL,	State::Play45AutoMoveToFirstTrack,	},
-	{	State::Stop45PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45AutoLowerPickup,	NULL,	State::Play33AutoMoveToFirstTrack,	NULL,	NULL,	},
-	{	State::Stop45PickupIsRaising,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45Play,	NULL,	NULL,	NULL,	NULL,	State::Play33AutoLowerPickup,	NULL,	NULL,	},
-	{	State::Stop45PickupIsRaising,	State::Play45ManualPickupMoveOverDisk,	NULL,	State::Play45ManualPickupIsRaising,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsDown,	NULL,	NULL,	State::Stop45PickupOnAutostopPause,	State::Play33Play,	NULL,	NULL,	},
-	{	State::Stop45PickupIsRaising,	NULL,	NULL,	NULL,	State::Play45ManualPickupFalls,	State::Play45ManualPickupMoveOverDisk,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play33ManualPickupIsRaising,	NULL,	NULL,	},
-	{	State::Stop45PickupIsAutomaticallyMovingToHolder,	NULL,	State::Play45ManualPickupFalls,	NULL,	State::Play45ManualPickupFalls,	NULL,	NULL,	NULL,	NULL,	State::Play45ManualPickupMoveOverGap,	NULL,	State::Play45ManualPickupMoveAutostop,	State::Play33ManualPickupMoveOverDisk,	NULL,	NULL,	},
-	{	State::Stop45PickupIsAutomaticallyMovingToHolder,	NULL,	State::Play45AutoMoveToFirstTrack,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Rotate45RotateOnHolder,	NULL,	State::Play45ManualPickupMoveOverDisk,	NULL,	State::Play33ManualPickupMoveOverGap,	NULL,	NULL,	},
-	{	State::Stop45PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45ManualPickupMoveOverDisk,	NULL,	State::Play33ManualPickupMoveAutostop,	NULL,	NULL,	},
-	{	State::Stop45PickupIsRaising,	NULL,	NULL,	State::Play45ManualPickupIsRaising,	NULL,	NULL,	NULL,	State::Play45Play,	NULL,	NULL,	NULL,	NULL,	State::Play33ManualPickupFalls,	NULL,	NULL,	},
-	{	State::Stop45PickupIsRaising,	NULL,	NULL,	State::Play45ManualPickupIsRaising,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupOnAutostopPause,	NULL,	State::Stop45PickupIsRaising,	},
-	{	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsRaising,	NULL,	NULL,	},
-	{	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsUp,	NULL,	NULL,	NULL,	State::Stop33PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	}
+{	NULL,	NULL,	NULL,	NULL,	NULL,	State::InitialPickupIsMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	},
+{	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsUp,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	},
+{	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsDown,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsUp,	NULL,	},
+{	NULL,	State::Rotate33PickupIsRising,	State::Play33PickupIsRising,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsDown,	NULL,	},
+{	State::Stop33PickupIsDown,	NULL,	NULL,	NULL,	NULL,	State::Rotate33RotateOnHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Rotate45PickupIsRising,	NULL,	},
+{	State::Stop33PickupIsUp,	NULL,	State::Play33AutoMoveToFirstTrack,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play33ManualPickupMoveOverGap,	NULL,	NULL,	NULL,	State::Rotate45RotateOnHolder,	NULL,	},
+{	State::Stop33PickupIsDown,	NULL,	NULL,	NULL,	NULL,	State::Play33AccelerateDisk,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45PickupIsRising,	NULL,	},
+{	State::Stop33PickupIsUp,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45AccelerateDisk,	State::Play33AutoMoveToFirstTrack,	},
+{	State::Stop33PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play33AutoLowerPickup,	NULL,	NULL,	State::Play45AutoMoveToFirstTrack,	NULL,	},
+{	State::Stop33PickupIsRaising,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play33Play,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45AutoLowerPickup,	NULL,	},
+{	State::Stop33PickupIsRaising,	State::Play33ManualPickupIsRaising,	NULL,	State::Play33ManualPickupIsRaising,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsDown,	NULL,	NULL,	State::Stop33PickupOnAutostopPause,	NULL,	State::Play45Play,	NULL,	},
+{	State::Stop33PickupIsRaising,	NULL,	NULL,	NULL,	State::Play33ManualPickupFalls,	State::Play33ManualPickupMoveOverDisk,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45ManualPickupIsRaising,	NULL,	},
+{	State::Stop33PickupIsAutomaticallyMovingToHolder,	NULL,	State::Play33ManualPickupFalls,	NULL,	State::Play33ManualPickupFalls,	NULL,	NULL,	NULL,	State::Rotate33RotateOnHolder,	State::Play33ManualPickupMoveOverGap,	NULL,	State::Play33ManualPickupMoveAutostop,	NULL,	State::Play45ManualPickupMoveOverDisk,	NULL,	},
+{	State::Stop33PickupIsAutomaticallyMovingToHolder,	NULL,	State::Play33AutoMoveToFirstTrack,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Rotate33RotateOnHolder,	NULL,	State::Play33ManualPickupMoveOverDisk,	NULL,	NULL,	State::Play45ManualPickupMoveOverGap,	NULL,	},
+{	State::Stop33PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play33ManualPickupMoveOverDisk,	NULL,	NULL,	State::Play45ManualPickupMoveAutostop,	NULL,	},
+{	State::Stop33PickupIsRaising,	NULL,	NULL,	State::Play33ManualPickupIsRaising,	NULL,	NULL,	NULL,	State::Play33Play,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45ManualPickupFalls,	NULL,	},
+{	State::Stop33PickupIsRaising,	NULL,	NULL,	State::Play33ManualPickupIsRaising,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupOnAutostopPause,	State::Stop33PickupIsRaising,	},
+{	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsRaising,	NULL,	},
+{	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsUp,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsAutomaticallyMovingToHolder,	NULL,	},
+{	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsDown,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsUp,	NULL,	NULL,	},
+{	NULL,	State::Rotate45PickupIsRising,	State::Play45PickupIsRising,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsDown,	NULL,	NULL,	},
+{	State::Stop45PickupIsDown,	NULL,	NULL,	NULL,	NULL,	State::Rotate45RotateOnHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Rotate33PickupIsRising,	NULL,	NULL,	},
+{	State::Stop45PickupIsUp,	NULL,	State::Play45AutoMoveToFirstTrack,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45ManualPickupMoveOverGap,	NULL,	NULL,	State::Rotate33RotateOnHolder,	NULL,	NULL,	},
+{	State::Stop45PickupIsDown,	NULL,	NULL,	NULL,	NULL,	State::Play45AccelerateDisk,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play33PickupIsRising,	NULL,	NULL,	},
+{	State::Stop45PickupIsUp,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play33AccelerateDisk,	NULL,	State::Play45AutoMoveToFirstTrack,	},
+{	State::Stop45PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45AutoLowerPickup,	NULL,	State::Play33AutoMoveToFirstTrack,	NULL,	NULL,	},
+{	State::Stop45PickupIsRaising,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45Play,	NULL,	NULL,	NULL,	NULL,	State::Play33AutoLowerPickup,	NULL,	NULL,	},
+{	State::Stop45PickupIsRaising,	State::Play45ManualPickupIsRaising,	NULL,	State::Play45ManualPickupIsRaising,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsDown,	NULL,	NULL,	State::Stop45PickupOnAutostopPause,	State::Play33Play,	NULL,	NULL,	},
+{	State::Stop45PickupIsRaising,	NULL,	NULL,	NULL,	State::Play45ManualPickupFalls,	State::Play45ManualPickupMoveOverDisk,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play33ManualPickupIsRaising,	NULL,	NULL,	},
+{	State::Stop45PickupIsAutomaticallyMovingToHolder,	NULL,	State::Play45ManualPickupFalls,	NULL,	State::Play45ManualPickupFalls,	NULL,	NULL,	NULL,	State::Rotate45RotateOnHolder,	State::Play45ManualPickupMoveOverGap,	NULL,	State::Play45ManualPickupMoveAutostop,	State::Play33ManualPickupMoveOverDisk,	NULL,	NULL,	},
+{	State::Stop45PickupIsAutomaticallyMovingToHolder,	NULL,	State::Play45AutoMoveToFirstTrack,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Rotate45RotateOnHolder,	NULL,	State::Play45ManualPickupMoveOverDisk,	NULL,	State::Play33ManualPickupMoveOverGap,	NULL,	NULL,	},
+{	State::Stop45PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Play45ManualPickupMoveOverDisk,	NULL,	State::Play33ManualPickupMoveAutostop,	NULL,	NULL,	},
+{	State::Stop45PickupIsRaising,	NULL,	NULL,	State::Play45ManualPickupIsRaising,	NULL,	NULL,	NULL,	State::Play45Play,	NULL,	NULL,	NULL,	NULL,	State::Play33ManualPickupFalls,	NULL,	NULL,	},
+{	State::Stop45PickupIsRaising,	NULL,	NULL,	State::Play45ManualPickupIsRaising,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupOnAutostopPause,	NULL,	State::Stop45PickupIsRaising,	},
+{	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop33PickupIsRaising,	NULL,	NULL,	},
+{	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	NULL,	State::Stop45PickupIsUp,	NULL,	NULL,	NULL,	State::Stop33PickupIsAutomaticallyMovingToHolder,	NULL,	NULL,	}
 };
-
-
-
-
 
 
 //assign listeners on state changes
